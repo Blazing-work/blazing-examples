@@ -1,0 +1,52 @@
+[
+  {
+    "id": "basic_task",
+    "title": "Basic Task Execution",
+    "description": "Create and execute distributed tasks with automatic retry.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "10 min",
+    "tags": [
+      "tasks",
+      "async",
+      "distributed"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/basic_task.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/basic_task.py",
+    "href": "/docs/basic_task"
+  },
+  {
+    "id": "hello_world",
+    "title": "Hello World",
+    "description": "Deploy your first serverless function in under 5 minutes.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "quickstart",
+      "python"
+    ],
+    "product": "blazing-core",
+    "file_path": "01_getting_started/hello_world.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/hello_world.py",
+    "href": "/docs/hello_world"
+  },
+  {
+    "id": "parallel_execution",
+    "title": "Parallel Execution",
+    "description": "Execute multiple tasks concurrently for 10x speedup.",
+    "category": "Getting Started",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "concurrency",
+      "performance",
+      "parallel"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/parallel_execution.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/parallel_execution.py",
+    "href": "/docs/parallel_execution"
+  }
+]
