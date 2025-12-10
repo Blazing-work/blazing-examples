@@ -1,46 +1,92 @@
 """
 # Hello World
 
-Deploy your first serverless function in under 5 minutes.
+Your first Blazing Flow application in under 5 minutes.
 
 ## Metadata
-- **Product**: Blazing Core
+- **Product**: Blazing Flow
 - **Difficulty**: Beginner
 - **Time**: 5 min
 - **Tags**: quickstart, python
 
+## Recommendation
+
+We recommend using the **async `Blazing` class** for the best performance and production readiness.
+A sync version (`SyncBlazing`) is provided at the bottom for learning purposes only.
+
 ## Description
 
-This is the simplest possible Blazing Core application. It demonstrates how to:
+This is the simplest possible Blazing Flow application. It demonstrates how to:
 - Create a basic Blazing app
-- Deploy a simple function
-- Return a response
+- Define a simple step
+- Execute and return a response
 
 ## What you'll learn
 
-- How to structure a Blazing Core application
-- Basic deployment workflow
-- Function routing and responses
+- How to structure a Blazing Flow application
+- Basic step definition with @app.step
+- Simple execution patterns
 """
 
 from blazing import Blazing
 
-app = Blazing()
+
+async def main():
+    app = Blazing()  # Uses Blazing SaaS by default
+
+    @app.step
+    async def hello(services=None):
+        """A simple hello world step."""
+        return {"message": "Hello, World!"}
+
+    @app.step
+    async def hello_name(name: str, services=None):
+        """A personalized greeting step."""
+        return {"message": f"Hello, {name}!"}
+
+    await app.publish()
+
+    # Execute steps
+    result1 = await app.hello()
+    result2 = await app.hello_name(name="Blazing")
+
+    print(result1)  # {"message": "Hello, World!"}
+    print(result2)  # {"message": "Hello, Blazing!"}
 
 
-@app.function()
-def hello():
-    """A simple hello world function."""
-    return {"message": "Hello, World!"}
+# ==============================================================================
+# SYNC API - For learning and prototyping only
+# NOTE: For production, we strongly recommend using the async Blazing class above
+# ==============================================================================
 
 
-@app.function()
-def hello_name(name: str):
-    """A personalized greeting function."""
-    return {"message": f"Hello, {name}!"}
+def main_sync():
+    """Synchronous version using SyncBlazing - for learning/prototyping only."""
+    from blazing import SyncBlazing
+
+    app = SyncBlazing()
+
+    @app.step
+    async def hello(services=None):
+        """A simple hello world step."""
+        return {"message": "Hello, World!"}
+
+    @app.step
+    async def hello_name(name: str, services=None):
+        """A personalized greeting step."""
+        return {"message": f"Hello, {name}!"}
+
+    # No await, no asyncio.run()!
+    app.publish()
+    print(app.hello())  # {"message": "Hello, World!"}
+    print(app.hello_name(name="Blazing"))  # {"message": "Hello, Blazing!"}
 
 
 if __name__ == "__main__":
-    # Test locally
-    print(hello())
-    print(hello_name("Blazing"))
+    # Choose your preferred style:
+    import asyncio
+
+    asyncio.run(main())  # Async version (recommended)
+
+    # Or use SyncBlazing (cleanest sync experience):
+    # main_sync()

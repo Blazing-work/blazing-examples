@@ -9,11 +9,17 @@ Create and execute distributed tasks with automatic retry.
 - **Time**: 10 min
 - **Tags**: tasks, async, distributed
 
+## Recommendation
+
+We recommend using the **async `Blazing` class** for the best performance and production readiness.
+A sync version (`SyncBlazing`) is provided at the bottom for learning purposes only.
+
 ## Description
 
 This example demonstrates how to create and execute distributed tasks using Blazing Flow.
 You'll learn how to:
 - Initialize a Blazing Flow application
+- Define steps and workflows
 - Execute workflows with `app.run()` or direct invocation
 - Wait for results with `.wait_result()`
 - Proper resource cleanup
@@ -26,31 +32,107 @@ You'll learn how to:
 - Error handling basics
 """
 
-import asyncio
-
 from blazing import Blazing
 
 
 async def main():
-    # Initialize Blazing app
-    app = Blazing()
+    app = Blazing()  # Uses Blazing SaaS by default
 
-    try:
-        # Execute a workflow and wait for result
-        print("Running workflow...")
+    # Define a step that processes data
+    @app.step
+    async def validate_data(data: dict, services=None):
+        """Validate that data has required fields."""
+        if "id" not in data or "value" not in data:
+            return {"valid": False, "error": "Missing required fields"}
+        return {"valid": True, "data": data}
 
-        # Option 1: Direct invocation (if workflow is defined locally)
-        # result = await app.process_data(data={"id": 1, "value": "Hello"}).wait_result()
+    @app.step
+    async def transform_data(data: dict, services=None):
+        """Transform the data (uppercase the value)."""
+        return {
+            "id": data["id"],
+            "value": data["value"].upper(),
+            "processed": True
+        }
 
-        # Option 2: By name (useful for pre-registered workflows)
-        result = await app.run("process_data", data={"id": 1, "value": "Hello from Blazing Flow"}).wait_result()
+    # Define a workflow that combines steps
+    @app.workflow
+    async def process_data(data: dict, services=None):
+        """Workflow: validate then transform data."""
+        validation = await validate_data(data, services=services)
+        if not validation["valid"]:
+            return validation
+        result = await transform_data(data, services=services)
+        return result
 
-        print(f"Task completed! Result: {result}")
+    # Publish to the execution engine
+    await app.publish()
 
-    finally:
-        # Always clean up resources
-        await app.close()
+    # Execute workflow and wait for result
+    print("Running workflow...")
+
+    # Option 1: One-liner with wait_result() - SIMPLEST! ⭐
+    result = await app.process_data(data={"id": 1, "value": "Hello from Blazing Flow"}).wait_result()
+
+    # Option 2: Using RemoteRun handle (more explicit)
+    # run = await app.process_data(data={"id": 1, "value": "Hello from Blazing Flow"})
+    # result = await run.result()
+
+    # Option 3: Using run() method (by name)
+    # run = await app.run("process_data", data={"id": 1, "value": "Hello from Blazing Flow"})
+    # result = await run.wait_result()
+
+    print(f"Task completed! Result: {result}")
+
+
+# ==============================================================================
+# SYNC API - For learning and prototyping only
+# NOTE: For production, we strongly recommend using the async Blazing class above
+# ==============================================================================
+
+
+def main_sync():
+    """Synchronous version using SyncBlazing - for learning/prototyping only."""
+    from blazing import SyncBlazing
+
+    app = SyncBlazing()
+
+    @app.step
+    async def validate_data(data: dict, services=None):
+        """Validate that data has required fields."""
+        if "id" not in data or "value" not in data:
+            return {"valid": False, "error": "Missing required fields"}
+        return {"valid": True, "data": data}
+
+    @app.step
+    async def transform_data(data: dict, services=None):
+        """Transform the data (uppercase the value)."""
+        return {
+            "id": data["id"],
+            "value": data["value"].upper(),
+            "processed": True
+        }
+
+    @app.workflow
+    async def process_data(data: dict, services=None):
+        """Workflow: validate then transform data."""
+        validation = await validate_data(data, services=services)
+        if not validation["valid"]:
+            return validation
+        result = await transform_data(data, services=services)
+        return result
+
+    # No await, no asyncio.run()!
+    app.publish()
+    result = app.process_data(data={"id": 1, "value": "Hello from Blazing Flow"})
+    print(f"Task completed! Result: {result}")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    # Choose your preferred style:
+    import asyncio
+
+    asyncio.run(main())  # Async version (recommended)
+
+    # Or use SyncBlazing (cleanest sync experience):
+    # main_sync()

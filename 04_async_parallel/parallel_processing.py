@@ -43,7 +43,12 @@ async def main():
         return {"processed_count": len(results), "results": results}
 
     await app.publish()
-    await app.process_batch([1, 2, 3, 4, 5])
+
+    # Execute the workflow
+    result = await app.process_batch(item_ids=[1, 2, 3, 4, 5]).wait_result()
+    print(f"Processed {result['processed_count']} items")
+    for item in result["results"]:
+        print(f"  Item {item['item_id']}: {item['processed_value']}")
 
 
 if __name__ == "__main__":
