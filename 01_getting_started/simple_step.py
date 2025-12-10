@@ -9,6 +9,11 @@ The simplest possible Blazing Flow example - a single processing step.
 - **Time**: 5 min
 - **Tags**: step, basics, quickstart
 
+## Recommendation
+
+We recommend using the **async `Blazing` class** for the best performance and production readiness.
+A sync version (`SyncBlazing`) is provided at the bottom for learning purposes only.
+
 ## Description
 
 The simplest possible Blazing Flow example - a single processing step.
@@ -36,7 +41,35 @@ async def main():
     print(result)  # "Hello, World!"
 
 
+# ==============================================================================
+# SYNC API - For learning and prototyping only
+# NOTE: For production, we strongly recommend using the async Blazing class above
+# ==============================================================================
+
+
+def main_sync():
+    """Synchronous version using SyncBlazing - for learning/prototyping only."""
+    from blazing import SyncBlazing
+
+    # SyncBlazing is great for learning, but use async Blazing for production
+    app = SyncBlazing()
+
+    @app.step
+    async def hello(name: str, services=None):
+        """Basic step that returns a greeting."""
+        return f"Hello, {name}!"
+
+    # No await, no asyncio.run()!
+    app.publish()
+    result = app.hello("World")
+    print(result)  # "Hello, World!"
+
+
 if __name__ == "__main__":
+    # Choose your preferred style:
     import asyncio
 
-    asyncio.run(main())
+    asyncio.run(main())  # Async version
+
+    # Or use SyncBlazing (cleanest sync experience):
+    # main_sync()

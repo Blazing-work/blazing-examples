@@ -9,6 +9,11 @@ Multi-step orchestration - the foundation of distributed workflows.
 - **Time**: 10 min
 - **Tags**: workflow, orchestration, multi-step
 
+## Recommendation
+
+We recommend using the **async `Blazing` class** for the best performance and production readiness.
+A sync version (`SyncBlazing`) is provided at the bottom for learning purposes only.
+
 ## Description
 
 Multi-step orchestration - the foundation of distributed workflows.
@@ -62,16 +67,18 @@ async def main():
 
 
 # ==============================================================================
-# SYNC API - For users who don't want async/await
+# SYNC API - For learning and prototyping only
+# NOTE: For production, we strongly recommend using the async Blazing class above
 # ==============================================================================
 
 
-# Option 1: Use SyncBlazing class (cleanest sync experience)
+# Option 1: Use SyncBlazing class (for learning/prototyping)
 def main_sync_blazing():
-    """Fully synchronous version using SyncBlazing - no async/await at all!"""
+    """Synchronous version using SyncBlazing - for learning/prototyping only."""
     from blazing import SyncBlazing
 
-    app = SyncBlazing()  # Uses Blazing SaaS by default
+    # SyncBlazing is great for learning, but use async Blazing for production
+    app = SyncBlazing()
 
     @app.step
     async def double(x: int, services=None):
