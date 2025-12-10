@@ -42,18 +42,18 @@ async def main():
         print(f"Creating {num_tasks} tasks...")
         start_time = time.time()
 
-        # Create all tasks first (this is fast)
-        tasks = [
-            await app.create_workflow_task("process_item", item_id=i)
+        # Launch all tasks in parallel (returns RemoteRun handles)
+        runs = [
+            await app.run("process_item", item_id=i)
             for i in range(num_tasks)
         ]
 
-        print(f"Tasks created in {time.time() - start_time:.2f}s")
-        print("Executing tasks in parallel...")
+        print(f"Tasks launched in {time.time() - start_time:.2f}s")
+        print("Waiting for all tasks to complete...")
 
-        # Execute all tasks in parallel
+        # Wait for all results in parallel
         exec_start = time.time()
-        results = await app.gather(tasks)
+        results = await asyncio.gather(*[run.result() for run in runs])
         exec_time = time.time() - exec_start
 
         print(f"\nCompleted {num_tasks} tasks in {exec_time:.2f}s")
