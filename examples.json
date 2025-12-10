@@ -17,6 +17,58 @@
     "href": "/docs/basic_task"
   },
   {
+    "id": "basic_workflow",
+    "title": "Basic Workflow",
+    "description": "Multi-step orchestration - the foundation of distributed workflows.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "10 min",
+    "tags": [
+      "workflow",
+      "orchestration",
+      "multi-step"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/basic_workflow.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/basic_workflow.py",
+    "href": "/docs/basic_workflow"
+  },
+  {
+    "id": "data_processing_step",
+    "title": "Data Processing Step",
+    "description": "Filter and transform data in a single step.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "step",
+      "data",
+      "filtering"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/data_processing_step.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/data_processing_step.py",
+    "href": "/docs/data_processing_step"
+  },
+  {
+    "id": "data_transformation_workflow",
+    "title": "Data Transformation Workflow",
+    "description": "Multi-stage data pipeline with cleaning and normalization.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "10 min",
+    "tags": [
+      "workflow",
+      "data",
+      "transformation",
+      "pipeline"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/data_transformation_workflow.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/data_transformation_workflow.py",
+    "href": "/docs/data_transformation_workflow"
+  },
+  {
     "id": "hello_world",
     "title": "Hello World",
     "description": "Deploy your first serverless function in under 5 minutes.",
@@ -31,6 +83,24 @@
     "file_path": "01_getting_started/hello_world.py",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/hello_world.py",
     "href": "/docs/hello_world"
+  },
+  {
+    "id": "multi_branch_workflow",
+    "title": "Multi-Branch Workflow",
+    "description": "Parallel execution with asyncio.gather for concurrent processing.",
+    "category": "Getting Started",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "workflow",
+      "parallel",
+      "asyncio",
+      "branching"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/multi_branch_workflow.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/multi_branch_workflow.py",
+    "href": "/docs/multi_branch_workflow"
   },
   {
     "id": "parallel_execution",
@@ -48,5 +118,758 @@
     "file_path": "01_getting_started/parallel_execution.py",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/parallel_execution.py",
     "href": "/docs/parallel_execution"
+  },
+  {
+    "id": "simple_step",
+    "title": "Simple Step",
+    "description": "The simplest possible Blazing Flow example - a single processing step.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "step",
+      "basics",
+      "quickstart"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/simple_step.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/simple_step.py",
+    "href": "/docs/simple_step"
+  },
+  {
+    "id": "step_with_math",
+    "title": "Step with Math",
+    "description": "Basic arithmetic operations in a distributed step.",
+    "category": "Getting Started",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "step",
+      "math",
+      "basics"
+    ],
+    "product": "blazing-flow",
+    "file_path": "01_getting_started/step_with_math.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/step_with_math.py",
+    "href": "/docs/step_with_math"
+  },
+  {
+    "id": "authenticated_api",
+    "title": "API with Authentication",
+    "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth).",
+    "category": "Web Endpoints",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "endpoint",
+      "authentication",
+      "jwt",
+      "api-key",
+      "security"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/authenticated_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/authenticated_api.py",
+    "href": "/docs/authenticated_api"
+  },
+  {
+    "id": "basic_calculator_api",
+    "title": "Basic Calculator API",
+    "description": "The simplest possible endpoint: expose a workflow as a public HTTP API.",
+    "category": "Web Endpoints",
+    "difficulty": "Beginner",
+    "time": "10 min",
+    "tags": [
+      "endpoint",
+      "api",
+      "rest",
+      "basic"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/basic_calculator_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/basic_calculator_api.py",
+    "href": "/docs/basic_calculator_api"
+  },
+  {
+    "id": "batch_processing_api",
+    "title": "Batch Processing API",
+    "description": "Process multiple items concurrently with result aggregation.",
+    "category": "Web Endpoints",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "endpoint",
+      "batch",
+      "concurrent",
+      "aggregation"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/batch_processing_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/batch_processing_api.py",
+    "href": "/docs/batch_processing_api"
+  },
+  {
+    "id": "error_handling_api",
+    "title": "Error Handling in APIs",
+    "description": "Proper error handling with custom error responses.",
+    "category": "Web Endpoints",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "endpoint",
+      "error-handling",
+      "validation"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/error_handling_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/error_handling_api.py",
+    "href": "/docs/error_handling_api"
+  },
+  {
+    "id": "multi_step_pipeline_api",
+    "title": "Multi-Step Data Pipeline API",
+    "description": "Expose a multi-step workflow that processes data through several stages.",
+    "category": "Web Endpoints",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "endpoint",
+      "pipeline",
+      "multi-step",
+      "statistics"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/multi_step_pipeline_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/multi_step_pipeline_api.py",
+    "href": "/docs/multi_step_pipeline_api"
+  },
+  {
+    "id": "multiple_endpoints",
+    "title": "Multiple Endpoints with Different Paths",
+    "description": "Organize multiple endpoints with different paths and versions.",
+    "category": "Web Endpoints",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "endpoint",
+      "versioning",
+      "api-design",
+      "organization"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/multiple_endpoints.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/multiple_endpoints.py",
+    "href": "/docs/multiple_endpoints"
+  },
+  {
+    "id": "websocket_realtime",
+    "title": "WebSocket Real-Time Updates",
+    "description": "Enable WebSocket for real-time progress updates from long-running workflows.",
+    "category": "Web Endpoints",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "endpoint",
+      "websocket",
+      "real-time",
+      "streaming"
+    ],
+    "product": "blazing-flow-endpoints",
+    "file_path": "02_web_endpoints/websocket_realtime.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/02_web_endpoints/websocket_realtime.py",
+    "href": "/docs/websocket_realtime"
+  },
+  {
+    "id": "aggregating_results",
+    "title": "Aggregating Results",
+    "description": "Fetch data from multiple sources and aggregate into summary statistics.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "aggregation",
+      "data",
+      "statistics",
+      "parallel"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/aggregating_results.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/aggregating_results.py",
+    "href": "/docs/aggregating_results"
+  },
+  {
+    "id": "csv_import",
+    "title": "CSV Import Pipeline",
+    "description": "Download, parse, validate, and import CSV files from cloud storage.",
+    "category": "Data Processing",
+    "difficulty": "Advanced",
+    "time": "30 min",
+    "tags": [
+      "csv",
+      "file-processing",
+      "import",
+      "validation"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/csv_import.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/csv_import.py",
+    "href": "/docs/csv_import"
+  },
+  {
+    "id": "etl_pipeline",
+    "title": "ETL Pipeline",
+    "description": "Complete Extract-Transform-Load pipeline for data warehousing.",
+    "category": "Data Processing",
+    "difficulty": "Advanced",
+    "time": "30 min",
+    "tags": [
+      "etl",
+      "pipeline",
+      "data-warehouse",
+      "workflow"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/etl_pipeline.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/etl_pipeline.py",
+    "href": "/docs/etl_pipeline"
+  },
+  {
+    "id": "event_processing",
+    "title": "Event Processing Pipeline",
+    "description": "Validate, enrich, and store incoming events with multi-step processing.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "25 min",
+    "tags": [
+      "events",
+      "pipeline",
+      "enrichment",
+      "validation"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/event_processing.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/event_processing.py",
+    "href": "/docs/event_processing"
+  },
+  {
+    "id": "large_dataframe_processing",
+    "title": "Large DataFrame Processing with Arrow Flight",
+    "description": "Process large pandas DataFrames efficiently with automatic Arrow Flight optimization.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "dataframe",
+      "arrow-flight",
+      "big-data",
+      "performance"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/large_dataframe_processing.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/large_dataframe_processing.py",
+    "href": "/docs/large_dataframe_processing"
+  },
+  {
+    "id": "map_reduce",
+    "title": "Map-Reduce Pattern",
+    "description": "Distributed map-reduce for processing large datasets in chunks.",
+    "category": "Data Processing",
+    "difficulty": "Advanced",
+    "time": "30 min",
+    "tags": [
+      "map-reduce",
+      "distributed",
+      "big-data",
+      "parallel"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/map_reduce.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/map_reduce.py",
+    "href": "/docs/map_reduce"
+  },
+  {
+    "id": "pdf_generation",
+    "title": "PDF Generation Workflow",
+    "description": "Generate PDF documents from templates with data from multiple sources.",
+    "category": "Data Processing",
+    "difficulty": "Advanced",
+    "time": "35 min",
+    "tags": [
+      "pdf",
+      "generation",
+      "template",
+      "file-processing"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/pdf_generation.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/pdf_generation.py",
+    "href": "/docs/pdf_generation"
+  },
+  {
+    "id": "retry_logic",
+    "title": "Retry Logic with Exponential Backoff",
+    "description": "Handle transient failures with automatic retry and exponential backoff.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "error-handling",
+      "retry",
+      "backoff",
+      "resilience"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/retry_logic.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/retry_logic.py",
+    "href": "/docs/retry_logic"
+  },
+  {
+    "id": "timeout_handling",
+    "title": "Timeout Handling",
+    "description": "Prevent workflows from hanging with asyncio.wait_for timeouts.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "timeout",
+      "error-handling",
+      "asyncio"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/timeout_handling.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/timeout_handling.py",
+    "href": "/docs/timeout_handling"
+  },
+  {
+    "id": "validation_error_handling",
+    "title": "Validation & Error Handling",
+    "description": "Validate input data and handle errors gracefully in workflows.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "validation",
+      "error-handling",
+      "data-quality"
+    ],
+    "product": "blazing-flow",
+    "file_path": "03_data_processing/validation_error_handling.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/validation_error_handling.py",
+    "href": "/docs/validation_error_handling"
+  },
+  {
+    "id": "cpu_vs_io_optimization",
+    "title": "CPU vs I/O Optimization with Worker Types",
+    "description": "Optimize performance by choosing the right worker type for CPU-intensive vs I/O-bound tasks.",
+    "category": "Async Parallel",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "performance",
+      "optimization",
+      "worker-types",
+      "cpu",
+      "io"
+    ],
+    "product": "blazing-flow",
+    "file_path": "04_async_parallel/cpu_vs_io_optimization.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/04_async_parallel/cpu_vs_io_optimization.py",
+    "href": "/docs/cpu_vs_io_optimization"
+  },
+  {
+    "id": "fan_out_fan_in",
+    "title": "Fan-Out / Fan-In Pattern",
+    "description": "Fetch data from multiple sources in parallel, then combine results.",
+    "category": "Async Parallel",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "parallel",
+      "fan-out",
+      "fan-in",
+      "aggregation"
+    ],
+    "product": "blazing-flow",
+    "file_path": "04_async_parallel/fan_out_fan_in.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/04_async_parallel/fan_out_fan_in.py",
+    "href": "/docs/fan_out_fan_in"
+  },
+  {
+    "id": "parallel_processing",
+    "title": "Parallel Data Processing",
+    "description": "Process multiple items concurrently with asyncio.gather.",
+    "category": "Async Parallel",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "parallel",
+      "asyncio",
+      "batch",
+      "performance"
+    ],
+    "product": "blazing-flow",
+    "file_path": "04_async_parallel/parallel_processing.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/04_async_parallel/parallel_processing.py",
+    "href": "/docs/parallel_processing"
+  },
+  {
+    "id": "rate_limited_api",
+    "title": "Rate-Limited API Calls",
+    "description": "Control concurrency with asyncio.Semaphore for rate limiting.",
+    "category": "Async Parallel",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "rate-limiting",
+      "semaphore",
+      "api",
+      "concurrency"
+    ],
+    "product": "blazing-flow",
+    "file_path": "04_async_parallel/rate_limited_api.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/04_async_parallel/rate_limited_api.py",
+    "href": "/docs/rate_limited_api"
+  },
+  {
+    "id": "cache_service",
+    "title": "Cache Service",
+    "description": "Implement caching with Redis for faster lookups.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "service",
+      "cache",
+      "redis",
+      "performance"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/cache_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/cache_service.py",
+    "href": "/docs/cache_service"
+  },
+  {
+    "id": "database_service",
+    "title": "Database Service",
+    "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "service",
+      "database",
+      "sqlalchemy",
+      "postgres"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/database_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/database_service.py",
+    "href": "/docs/database_service"
+  },
+  {
+    "id": "email_queue",
+    "title": "Email Queue Processor",
+    "description": "Process email queues in batches with Redis.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "25 min",
+    "tags": [
+      "queue",
+      "email",
+      "batch",
+      "redis"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/email_queue.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/email_queue.py",
+    "href": "/docs/email_queue"
+  },
+  {
+    "id": "email_service",
+    "title": "Email Service",
+    "description": "Send emails via SMTP service integration.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "service",
+      "email",
+      "smtp",
+      "notifications"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/email_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/email_service.py",
+    "href": "/docs/email_service"
+  },
+  {
+    "id": "github_webhook",
+    "title": "GitHub Webhook Handler",
+    "description": "Process GitHub webhooks with signature validation and event handling.",
+    "category": "Integrations",
+    "difficulty": "Advanced",
+    "time": "30 min",
+    "tags": [
+      "webhook",
+      "github",
+      "security",
+      "events"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/github_webhook.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/github_webhook.py",
+    "href": "/docs/github_webhook"
+  },
+  {
+    "id": "multi_channel_notification",
+    "title": "Multi-Channel Notification",
+    "description": "Send notifications across email, SMS, and push channels simultaneously.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "25 min",
+    "tags": [
+      "notifications",
+      "multi-channel",
+      "email",
+      "sms",
+      "push"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/multi_channel_notification.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/multi_channel_notification.py",
+    "href": "/docs/multi_channel_notification"
+  },
+  {
+    "id": "rest_api_service",
+    "title": "REST API Service",
+    "description": "Call external REST APIs with httpx and handle responses.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "service",
+      "api",
+      "httpx",
+      "rest"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/rest_api_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/rest_api_service.py",
+    "href": "/docs/rest_api_service"
+  },
+  {
+    "id": "stripe_webhook",
+    "title": "Stripe Payment Webhook",
+    "description": "Handle Stripe payment webhooks with signature verification.",
+    "category": "Integrations",
+    "difficulty": "Advanced",
+    "time": "30 min",
+    "tags": [
+      "webhook",
+      "stripe",
+      "payments",
+      "events"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/stripe_webhook.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/stripe_webhook.py",
+    "href": "/docs/stripe_webhook"
+  },
+  {
+    "id": "cleanup_expired_records",
+    "title": "Cleanup Expired Records",
+    "description": "Batch delete expired database records on a schedule.",
+    "category": "Advanced",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "cleanup",
+      "scheduled",
+      "batch",
+      "database"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/cleanup_expired_records.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/cleanup_expired_records.py",
+    "href": "/docs/cleanup_expired_records"
+  },
+  {
+    "id": "daily_reports",
+    "title": "Daily Report Generation",
+    "description": "Scheduled job to generate and distribute daily reports via email.",
+    "category": "Advanced",
+    "difficulty": "Intermediate",
+    "time": "25 min",
+    "tags": [
+      "scheduled",
+      "reports",
+      "automation",
+      "email"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/daily_reports.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/daily_reports.py",
+    "href": "/docs/daily_reports"
+  },
+  {
+    "id": "event_stream_processor",
+    "title": "Event Stream Processor",
+    "description": "Process event streams from Kafka in batches with aggregation.",
+    "category": "Advanced",
+    "difficulty": "Expert",
+    "time": "40 min",
+    "tags": [
+      "streaming",
+      "kafka",
+      "events",
+      "real-time"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/event_stream_processor.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/event_stream_processor.py",
+    "href": "/docs/event_stream_processor"
+  },
+  {
+    "id": "health_check_workflow",
+    "title": "Health Check Workflow",
+    "description": "Monitor system health across database, cache, and external APIs.",
+    "category": "Advanced",
+    "difficulty": "Intermediate",
+    "time": "20 min",
+    "tags": [
+      "monitoring",
+      "health-check",
+      "observability"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/health_check_workflow.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/health_check_workflow.py",
+    "href": "/docs/health_check_workflow"
+  },
+  {
+    "id": "sandbox_async_service_calls",
+    "title": "Sandbox: Async Service Calls",
+    "description": "User code making concurrent service calls for performance.",
+    "category": "Advanced",
+    "difficulty": "Expert",
+    "time": "30 min",
+    "tags": [
+      "sandbox",
+      "async",
+      "concurrent",
+      "service-bridge"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_async_service_calls.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_async_service_calls.py",
+    "href": "/docs/sandbox_async_service_calls"
+  },
+  {
+    "id": "sandbox_basic_transform",
+    "title": "Sandbox: Basic User-Provided Transform",
+    "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected.",
+    "category": "Advanced",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "sandbox",
+      "wasm",
+      "security",
+      "user-code"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_basic_transform.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_basic_transform.py",
+    "href": "/docs/sandbox_basic_transform"
+  },
+  {
+    "id": "sandbox_database_service",
+    "title": "Sandbox: Service Bridge with Database",
+    "description": "Let user code process data while keeping database credentials safe.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "sandbox",
+      "service-bridge",
+      "database",
+      "security"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_database_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_database_service.py",
+    "href": "/docs/sandbox_database_service"
+  },
+  {
+    "id": "sandbox_multi_tenant",
+    "title": "Sandbox: Multi-Tenant Data Processing",
+    "description": "Safely run different tenants' code in isolated sandboxes.",
+    "category": "Advanced",
+    "difficulty": "Expert",
+    "time": "35 min",
+    "tags": [
+      "sandbox",
+      "multi-tenant",
+      "isolation",
+      "security"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_multi_tenant.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_multi_tenant.py",
+    "href": "/docs/sandbox_multi_tenant"
+  },
+  {
+    "id": "sandbox_rest_api_service",
+    "title": "Sandbox: Service Bridge with REST APIs",
+    "description": "Let users integrate with external APIs while keeping API keys safe.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "sandbox",
+      "service-bridge",
+      "api",
+      "security"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_rest_api_service.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_rest_api_service.py",
+    "href": "/docs/sandbox_rest_api_service"
+  },
+  {
+    "id": "sandbox_security_validation",
+    "title": "Sandbox: Security Validation",
+    "description": "Examples of malicious code that fails in the sandbox.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "sandbox",
+      "security",
+      "validation",
+      "attacks"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandbox_security_validation.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandbox_security_validation.py",
+    "href": "/docs/sandbox_security_validation"
+  },
+  {
+    "id": "sandboxed_step_execution",
+    "title": "Sandboxed Step Execution",
+    "description": "Run untrusted user code safely in WASM sandbox with zero network or filesystem access.",
+    "category": "Advanced",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "sandbox",
+      "wasm",
+      "security",
+      "user-code"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/sandboxed_step_execution.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandboxed_step_execution.py",
+    "href": "/docs/sandboxed_step_execution"
   }
 ]
