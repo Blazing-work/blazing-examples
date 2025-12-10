@@ -52,7 +52,9 @@ async def main():
     await app.publish()
 
     # Execute workflow using the simplest one-liner pattern
-    result = await app.prepare_dataset(raw_data=[1, None, 5, 10, None, 15]).wait_result()
+    result = await app.prepare_dataset(
+        raw_data=[1, None, 5, 10, None, 15]
+    ).wait_result()
     print(result)  # [0.0, 0.29, 0.64, 1.0]
 
 

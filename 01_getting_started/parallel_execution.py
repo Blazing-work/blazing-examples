@@ -44,7 +44,7 @@ async def main():
 
         # Create all tasks first (this is fast)
         tasks = [
-            await app.create_route_task("process_item", item_id=i)
+            await app.create_workflow_task("process_item", item_id=i)
             for i in range(num_tasks)
         ]
 

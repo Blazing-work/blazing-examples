@@ -14,7 +14,7 @@ Create and execute distributed tasks with automatic retry.
 This example demonstrates how to create and execute distributed tasks using Blazing Flow.
 You'll learn how to:
 - Initialize a Blazing Flow application
-- Create tasks with `create_route_task()`
+- Create tasks with `create_workflow_task()`
 - Retrieve results with `gather()`
 - Proper resource cleanup
 
@@ -38,7 +38,7 @@ async def main():
     try:
         # Create a simple task
         print("Creating task...")
-        task = await app.create_route_task(
+        task = await app.create_workflow_task(
             "process_data", data={"id": 1, "value": "Hello from Blazing Flow"}
         )
 
