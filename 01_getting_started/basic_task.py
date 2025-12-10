@@ -27,6 +27,7 @@ You'll learn how to:
 """
 
 import asyncio
+
 from blazing import Blazing
 
 
@@ -38,8 +39,7 @@ async def main():
         # Create a simple task
         print("Creating task...")
         task = await app.create_route_task(
-            "process_data",
-            data={"id": 1, "value": "Hello from Blazing Flow"}
+            "process_data", data={"id": 1, "value": "Hello from Blazing Flow"}
         )
 
         # Wait for the task to complete and get result

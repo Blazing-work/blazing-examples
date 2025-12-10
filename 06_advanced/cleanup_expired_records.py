@@ -20,11 +20,12 @@ Batch delete expired database records on a schedule.
 - Database cleanup strategies
 """
 
-    from sqlalchemy import text
-    from sqlalchemy import text
-    from datetime import datetime, timedelta
+from datetime import datetime, timedelta
+
+from sqlalchemy import text
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -39,7 +40,7 @@ async def main():
             LIMIT 1000
         """)
 
-        result = await services['Database'].execute(query, {"cutoff": cutoff_date})
+        result = await services["Database"].execute(query, {"cutoff": cutoff_date})
         return [row[0] for row in result.fetchall()]
 
     @app.step
@@ -47,7 +48,7 @@ async def main():
         """Delete expired sessions."""
 
         query = text("DELETE FROM sessions WHERE session_id = ANY(:ids)")
-        await services['Database'].execute(query, {"ids": session_ids})
+        await services["Database"].execute(query, {"ids": session_ids})
 
         return {"deleted": len(session_ids)}
 
@@ -66,14 +67,12 @@ async def main():
         # Delete sessions
         result = await delete_sessions(session_ids, services=services)
 
-        return {
-            "cutoff_date": cutoff_date,
-            "deleted": result['deleted']
-        }
+        return {"cutoff_date": cutoff_date, "deleted": result["deleted"]}
 
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

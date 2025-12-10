@@ -20,9 +20,10 @@ Generate PDF documents from templates with data from multiple sources.
 - Document storage and delivery
 """
 
-    from weasyprint import HTML
+from weasyprint import HTML
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,15 +31,15 @@ async def main():
     @app.step
     async def generate_invoice_data(order_id: str, services=None):
         """Fetch data for invoice."""
-        order = await services['OrderDatabase'].get_order(order_id)
-        customer = await services['UserDatabase'].get_user(order['customer_id'])
-        items = await services['OrderDatabase'].get_items(order_id)
+        order = await services["OrderDatabase"].get_order(order_id)
+        customer = await services["UserDatabase"].get_user(order["customer_id"])
+        items = await services["OrderDatabase"].get_items(order_id)
 
         return {
             "order": order,
             "customer": customer,
             "items": items,
-            "total": sum(item['price'] * item['qty'] for item in items)
+            "total": sum(item["price"] * item["qty"] for item in items),
         }
 
     @app.step
@@ -46,7 +47,7 @@ async def main():
         """Render PDF from template."""
 
         # Render HTML from template
-        html_content = await services['TemplateService'].render(template, data)
+        html_content = await services["TemplateService"].render(template, data)
 
         # Convert to PDF
         pdf_bytes = HTML(string=html_content).write_pdf()
@@ -57,10 +58,12 @@ async def main():
     async def upload_invoice(order_id: str, pdf_bytes: bytes, services=None):
         """Upload invoice to storage."""
         file_key = f"invoices/{order_id}.pdf"
-        await services['FileStorageService'].upload(file_key, pdf_bytes)
+        await services["FileStorageService"].upload(file_key, pdf_bytes)
 
         # Generate signed URL
-        url = await services['FileStorageService'].get_signed_url(file_key, expires_in=3600)
+        url = await services["FileStorageService"].get_signed_url(
+            file_key, expires_in=3600
+        )
         return {"url": url, "file_key": file_key}
 
     @app.workflow
@@ -72,8 +75,8 @@ async def main():
 
         return {
             "order_id": order_id,
-            "invoice_url": result['url'],
-            "total": data['total']
+            "invoice_url": result["url"],
+            "total": data["total"],
         }
 
     await app.publish()
@@ -81,4 +84,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

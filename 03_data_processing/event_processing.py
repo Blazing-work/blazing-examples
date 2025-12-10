@@ -20,9 +20,8 @@ Validate, enrich, and store incoming events with multi-step processing.
 - Event storage strategies
 """
 
-
-
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,7 +29,7 @@ async def main():
     @app.step
     async def validate_event(event: dict, services=None):
         """Validate event structure."""
-        required = ['event_type', 'user_id', 'timestamp']
+        required = ["event_type", "user_id", "timestamp"]
         if not all(k in event for k in required):
             raise ValueError("Invalid event structure")
         return event
@@ -38,14 +37,14 @@ async def main():
     @app.step
     async def enrich_event(event: dict, services=None):
         """Enrich event with user data."""
-        user = await services['UserDatabase'].get_user(event['user_id'])
-        return {**event, 'user_name': user['name'], 'user_email': user['email']}
+        user = await services["UserDatabase"].get_user(event["user_id"])
+        return {**event, "user_name": user["name"], "user_email": user["email"]}
 
     @app.step
     async def store_event(event: dict, services=None):
         """Store event in analytics database."""
-        await services['EventDatabase'].insert(event)
-        return {"stored": True, "event_id": event.get('id')}
+        await services["EventDatabase"].insert(event)
+        return {"stored": True, "event_id": event.get("id")}
 
     @app.workflow
     async def process_event(event: dict, services=None):
@@ -60,4 +59,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

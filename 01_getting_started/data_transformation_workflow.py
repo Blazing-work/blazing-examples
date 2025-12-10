@@ -20,9 +20,8 @@ Multi-stage data pipeline with cleaning and normalization.
 - Data normalization techniques
 """
 
-
-
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -52,4 +51,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

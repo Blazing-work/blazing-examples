@@ -20,9 +20,10 @@ Distributed map-reduce for processing large datasets in chunks.
 - Distributed computing fundamentals
 """
 
-    import asyncio
+import asyncio
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,7 +31,7 @@ async def main():
     @app.step
     async def map_operation(chunk: list, services=None):
         """Map operation: process chunk."""
-        return sum(x ** 2 for x in chunk)
+        return sum(x**2 for x in chunk)
 
     @app.step
     async def reduce_operation(results: list, services=None):
@@ -38,17 +39,20 @@ async def main():
         return sum(results)
 
     @app.workflow
-    async def map_reduce_sum_of_squares(numbers: list, chunk_size: int = 100, services=None):
+    async def map_reduce_sum_of_squares(
+        numbers: list, chunk_size: int = 100, services=None
+    ):
         """Map-reduce pattern for sum of squares."""
 
         # Split into chunks (map phase)
-        chunks = [numbers[i:i+chunk_size] for i in range(0, len(numbers), chunk_size)]
+        chunks = [
+            numbers[i : i + chunk_size] for i in range(0, len(numbers), chunk_size)
+        ]
 
         # Process chunks in parallel
-        mapped_results = await asyncio.gather(*[
-            map_operation(chunk, services=services)
-            for chunk in chunks
-        ])
+        mapped_results = await asyncio.gather(
+            *[map_operation(chunk, services=services) for chunk in chunks]
+        )
 
         # Combine results (reduce phase)
         final_result = await reduce_operation(mapped_results, services=services)
@@ -56,7 +60,7 @@ async def main():
         return {
             "result": final_result,
             "chunks_processed": len(chunks),
-            "total_numbers": len(numbers)
+            "total_numbers": len(numbers),
         }
 
     await app.publish()
@@ -64,4 +68,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

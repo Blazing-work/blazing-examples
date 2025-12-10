@@ -28,6 +28,7 @@ This example shows you how to:
 
 import asyncio
 import time
+
 from blazing import Blazing
 
 

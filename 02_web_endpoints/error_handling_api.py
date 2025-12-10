@@ -23,8 +23,10 @@ Proper error handling with custom error responses.
 from blazing import Blazing
 from blazing.web import create_asgi_app
 
+
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
+
     @app.step
     async def validate_input(amount: float, services=None):
         """Validate input parameters."""
@@ -33,6 +35,7 @@ async def main():
         if amount > 1000000:
             raise ValueError("Amount exceeds maximum limit")
         return amount
+
     @app.step
     async def calculate_fee(amount: float, services=None):
         """Calculate transaction fee."""
@@ -42,6 +45,7 @@ async def main():
             return amount * 0.03  # 3% for medium amounts
         else:
             return amount * 0.01  # 1% for large amounts
+
     @app.endpoint(path="/transaction/calculate")
     @app.workflow
     async def calculate_transaction(amount: float, services=None):
@@ -57,15 +61,17 @@ async def main():
                 "amount": validated_amount,
                 "fee": fee,
                 "total": validated_amount + fee,
-                "status": "success"
+                "status": "success",
             }
         except ValueError as e:
             # Errors are automatically caught and returned in job status
             raise e
+
     await app.publish()
-    fastapi_app = await create_asgi_app(app)
+    await create_asgi_app(app)
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

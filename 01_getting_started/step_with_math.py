@@ -20,9 +20,8 @@ Basic arithmetic operations in a distributed step.
 - Basic type annotations for step parameters
 """
 
-
-
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -39,4 +38,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

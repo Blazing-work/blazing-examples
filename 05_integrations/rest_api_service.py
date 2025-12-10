@@ -21,9 +21,10 @@ Call external REST APIs with httpx and handle responses.
 """
 
 import httpx
-from blazing.base import BaseService
 
 from blazing import Blazing
+from blazing.base import BaseService
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -31,27 +32,31 @@ async def main():
     @app.service
     class WeatherAPI(BaseService):
         def __init__(self, connectors):
-            self._api_key = connectors.get('weather_api_key')
+            self._api_key = connectors.get("weather_api_key")
+
         async def get_weather(self, city: str) -> dict:
             """Fetch weather for city."""
             async with httpx.AsyncClient() as client:
                 response = await client.get(
                     f"https://api.weather.com/v1/{city}",
-                    headers={"Authorization": f"Bearer {self._api_key}"}
+                    headers={"Authorization": f"Bearer {self._api_key}"},
                 )
                 return response.json()
+
     @app.step
     async def check_weather(city: str, services=None):
         """Check weather for city."""
-        weather = await services['WeatherAPI'].get_weather(city)
+        weather = await services["WeatherAPI"].get_weather(city)
         return {
             "city": city,
-            "temperature": weather['temp'],
-            "conditions": weather['conditions']
+            "temperature": weather["temp"],
+            "conditions": weather["conditions"],
         }
+
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

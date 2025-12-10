@@ -21,9 +21,11 @@ Blazing automatically optimizes execution by using different worker pools. Use `
 - Performance implications of worker type choice
 """
 
-from blazing import Blazing
 import asyncio
 import time
+
+from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -32,7 +34,7 @@ async def main():
     # CPU-INTENSIVE STEPS - Use step_type='BLOCKING'
     # =========================================================================
 
-    @app.step(step_type='BLOCKING')
+    @app.step(step_type="BLOCKING")
     async def compute_fibonacci(n: int, services=None):
         """
         CPU-INTENSIVE: Use BLOCKING workers.
@@ -44,6 +46,7 @@ async def main():
         - Image/video processing
         - Cryptographic operations
         """
+
         def fib(x):
             if x <= 1:
                 return x
@@ -54,12 +57,12 @@ async def main():
         duration = time.time() - start
 
         return {
-            'result': result,
-            'duration_seconds': duration,
-            'worker_type': 'BLOCKING'
+            "result": result,
+            "duration_seconds": duration,
+            "worker_type": "BLOCKING",
         }
 
-    @app.step(step_type='BLOCKING')
+    @app.step(step_type="BLOCKING")
     async def process_large_array(size: int, services=None):
         """
         CPU-INTENSIVE: Matrix operations.
@@ -79,10 +82,10 @@ async def main():
         duration = time.time() - start
 
         return {
-            'matrix_size': size,
-            'max_eigenvalue': float(eigenvalues.max()),
-            'duration_seconds': duration,
-            'worker_type': 'BLOCKING'
+            "matrix_size": size,
+            "max_eigenvalue": float(eigenvalues.max()),
+            "duration_seconds": duration,
+            "worker_type": "BLOCKING",
         }
 
     # =========================================================================
@@ -112,10 +115,10 @@ async def main():
         duration = time.time() - start
 
         return {
-            'url': url,
-            'status_code': response.status_code,
-            'duration_seconds': duration,
-            'worker_type': 'NON_BLOCKING'
+            "url": url,
+            "status_code": response.status_code,
+            "duration_seconds": duration,
+            "worker_type": "NON_BLOCKING",
         }
 
     @app.step  # Default: NON_BLOCKING
@@ -138,11 +141,11 @@ async def main():
         duration = time.time() - start
 
         return {
-            'url_count': len(urls),
-            'statuses': [r.status_code for r in responses],
-            'duration_seconds': duration,
-            'avg_per_request': duration / len(urls),
-            'worker_type': 'NON_BLOCKING'
+            "url_count": len(urls),
+            "statuses": [r.status_code for r in responses],
+            "duration_seconds": duration,
+            "avg_per_request": duration / len(urls),
+            "worker_type": "NON_BLOCKING",
         }
 
     # =========================================================================
@@ -160,11 +163,14 @@ async def main():
         - Mixed workload: Best of both worlds ✓
         """
         # I/O-bound work (fast, async, concurrent)
-        api_results = await fetch_multiple_apis([
-            'https://httpbin.org/delay/1',
-            'https://httpbin.org/delay/1',
-            'https://httpbin.org/delay/1'
-        ], services=services)
+        api_results = await fetch_multiple_apis(
+            [
+                "https://httpbin.org/delay/1",
+                "https://httpbin.org/delay/1",
+                "https://httpbin.org/delay/1",
+            ],
+            services=services,
+        )
 
         # CPU-bound work (doesn't block the I/O operations)
         fib_result = await compute_fibonacci(30, services=services)
@@ -173,14 +179,14 @@ async def main():
         matrix_result = await process_large_array(100, services=services)
 
         return {
-            'api_calls': api_results,
-            'fibonacci': fib_result,
-            'matrix_ops': matrix_result,
-            'total_duration': (
-                api_results['duration_seconds'] +
-                fib_result['duration_seconds'] +
-                matrix_result['duration_seconds']
-            )
+            "api_calls": api_results,
+            "fibonacci": fib_result,
+            "matrix_ops": matrix_result,
+            "total_duration": (
+                api_results["duration_seconds"]
+                + fib_result["duration_seconds"]
+                + matrix_result["duration_seconds"]
+            ),
         }
 
     await app.publish()
@@ -191,16 +197,19 @@ async def main():
 
     result = await app.mixed_workload()
 
-    print(f"\n✅ Workflow complete!")
-    print(f"\n📊 Results:")
+    print("\n✅ Workflow complete!")
+    print("\n📊 Results:")
     print(f"   API calls: {result['api_calls']['url_count']} concurrent requests")
     print(f"   API duration: {result['api_calls']['duration_seconds']:.2f}s")
     print(f"   Fibonacci(30): {result['fibonacci']['result']}")
     print(f"   Fibonacci duration: {result['fibonacci']['duration_seconds']:.2f}s")
-    print(f"   Matrix size: {result['matrix_ops']['matrix_size']}x{result['matrix_ops']['matrix_size']}")
+    print(
+        f"   Matrix size: {result['matrix_ops']['matrix_size']}x{result['matrix_ops']['matrix_size']}"
+    )
     print(f"   Matrix duration: {result['matrix_ops']['duration_seconds']:.2f}s")
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

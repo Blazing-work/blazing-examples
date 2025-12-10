@@ -20,10 +20,11 @@ Process GitHub webhooks with signature validation and event handling.
 - Secure webhook handling patterns
 """
 
-    import hmac
-    import hashlib
+import hashlib
+import hmac
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -31,8 +32,10 @@ async def main():
     @app.step
     async def validate_github_signature(payload: dict, signature: str, services=None):
         """Validate GitHub webhook signature."""
-        secret = await services['ConfigService'].get('github_webhook_secret')
-        expected = hmac.new(secret.encode(), payload.encode(), hashlib.sha256).hexdigest()
+        secret = await services["ConfigService"].get("github_webhook_secret")
+        expected = hmac.new(
+            secret.encode(), payload.encode(), hashlib.sha256
+        ).hexdigest()
         if not hmac.compare_digest(f"sha256={expected}", signature):
             raise ValueError("Invalid signature")
         return payload
@@ -40,19 +43,21 @@ async def main():
     @app.step
     async def process_pull_request(pr_data: dict, services=None):
         """Process pull request event."""
-        if pr_data['action'] == 'opened':
+        if pr_data["action"] == "opened":
             # Notify team
-            await services['SlackService'].notify(
+            await services["SlackService"].notify(
                 f"New PR: {pr_data['title']} by {pr_data['user']}"
             )
-        return {"processed": True, "action": pr_data['action']}
+        return {"processed": True, "action": pr_data["action"]}
 
     @app.workflow
     async def handle_github_webhook(payload: dict, signature: str, services=None):
         """Handle GitHub webhook."""
-        validated = await validate_github_signature(payload, signature, services=services)
-        if validated['event_type'] == 'pull_request':
-            result = await process_pull_request(validated['data'], services=services)
+        validated = await validate_github_signature(
+            payload, signature, services=services
+        )
+        if validated["event_type"] == "pull_request":
+            result = await process_pull_request(validated["data"], services=services)
         return result
 
     await app.publish()
@@ -60,4 +65,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

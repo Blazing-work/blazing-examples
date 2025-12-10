@@ -20,9 +20,10 @@ Complete Extract-Transform-Load pipeline for data warehousing.
 - Data transformation and loading
 """
 
-
+from datetime import datetime
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,24 +31,21 @@ async def main():
     @app.step
     async def extract(source: str, services=None):
         """Extract data from source."""
-        data = await services['DataSource'].fetch(source)
+        data = await services["DataSource"].fetch(source)
         return data
 
     @app.step
-    async def transform(data: list, services=none):
+    async def transform(data: list, services=None):
         """Transform data."""
         # Clean, normalize, enrich
-        cleaned = [d for d in data if d.get('valid')]
-        enriched = [
-            {**d, 'processed_at': datetime.now().isoformat()}
-            for d in cleaned
-        ]
+        cleaned = [d for d in data if d.get("valid")]
+        enriched = [{**d, "processed_at": datetime.now().isoformat()} for d in cleaned]
         return enriched
 
     @app.step
     async def load(data: list, destination: str, services=None):
         """Load data to destination."""
-        await services['DataWarehouse'].bulk_insert(destination, data)
+        await services["DataWarehouse"].bulk_insert(destination, data)
         return {"loaded": len(data), "destination": destination}
 
     @app.workflow
@@ -59,7 +57,7 @@ async def main():
         return {
             "source": source,
             "destination": destination,
-            "rows_processed": result['loaded']
+            "rows_processed": result["loaded"],
         }
 
     await app.publish()
@@ -67,4 +65,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

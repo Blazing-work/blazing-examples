@@ -20,9 +20,10 @@ Fetch data from multiple sources in parallel, then combine results.
 - Result aggregation techniques
 """
 
-    import asyncio
+import asyncio
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,19 +31,19 @@ async def main():
     @app.step
     async def fetch_user_data(user_id: int, services=None):
         """Fetch user data."""
-        user = await services['UserDatabase'].get_user(user_id)
+        user = await services["UserDatabase"].get_user(user_id)
         return user
 
     @app.step
     async def fetch_user_orders(user_id: int, services=None):
         """Fetch user orders."""
-        orders = await services['OrderDatabase'].get_orders(user_id)
+        orders = await services["OrderDatabase"].get_orders(user_id)
         return orders
 
     @app.step
-    async def fetch_user_preferences(user_id: int, services=none):
+    async def fetch_user_preferences(user_id: int, services=None):
         """Fetch user preferences."""
-        prefs = await services['PreferenceService'].get(user_id)
+        prefs = await services["PreferenceService"].get(user_id)
         return prefs
 
     @app.workflow
@@ -51,17 +52,14 @@ async def main():
         user, orders, prefs = await asyncio.gather(
             fetch_user_data(user_id, services=services),
             fetch_user_orders(user_id, services=services),
-            fetch_user_preferences(user_id, services=services)
+            fetch_user_preferences(user_id, services=services),
         )
-        return {
-            "user": user,
-            "orders": orders,
-            "preferences": prefs
-        }
+        return {"user": user, "orders": orders, "preferences": prefs}
 
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

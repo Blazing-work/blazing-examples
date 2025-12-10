@@ -22,12 +22,15 @@ The simplest possible Blazing Flow example - a single processing step.
 
 from blazing import Blazing
 
+
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
+
     @app.step
     async def hello(name: str, services=None):
         """Basic step that returns a greeting."""
         return f"Hello, {name}!"
+
     await app.publish()
     result = await app.hello("World")
     print(result)  # "Hello, World!"
@@ -35,4 +38,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

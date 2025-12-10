@@ -20,10 +20,9 @@ Implement caching with Redis for faster lookups.
 - Cache-aside pattern implementation
 """
 
-import redis.asyncio as redis
+from blazing import Blazing
 from blazing.base import BaseService
 
-from blazing import Blazing
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -31,27 +30,32 @@ async def main():
     @app.service
     class CacheService(BaseService):
         def __init__(self, connectors):
-            self._redis = connectors.get('redis')
+            self._redis = connectors.get("redis")
+
         async def get(self, key: str) -> str:
             """Get value from cache."""
             value = await self._redis.get(key)
             return value.decode() if value else None
+
         async def set(self, key: str, value: str, ttl: int = 3600):
             """Set value in cache with TTL."""
             await self._redis.set(key, value, ex=ttl)
+
     @app.step
     async def cached_lookup(key: str, services=None):
         """Lookup value with caching."""
-        cached = await services['CacheService'].get(key)
+        cached = await services["CacheService"].get(key)
         if cached:
             return {"source": "cache", "value": cached}
         # Simulate expensive operation
         value = f"computed_value_for_{key}"
-        await services['CacheService'].set(key, value)
+        await services["CacheService"].set(key, value)
         return {"source": "computed", "value": value}
+
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

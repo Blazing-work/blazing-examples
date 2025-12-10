@@ -20,9 +20,10 @@ Parallel execution with asyncio.gather for concurrent processing.
 - When to use parallel vs sequential execution
 """
 
-    import asyncio
+import asyncio
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -44,7 +45,7 @@ async def main():
         """Calculate multiple statistics in parallel."""
         mean, median = await asyncio.gather(
             calculate_mean(numbers, services=services),
-            calculate_median(numbers, services=services)
+            calculate_median(numbers, services=services),
         )
         return {"mean": mean, "median": median, "count": len(numbers)}
 
@@ -55,4 +56,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

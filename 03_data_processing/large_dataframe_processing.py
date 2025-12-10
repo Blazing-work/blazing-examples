@@ -21,9 +21,11 @@ When processing DataFrames larger than 1MB, Blazing automatically uses Apache Ar
 - Working with real data science workloads
 """
 
-from blazing import Blazing
-import pandas as pd
 import numpy as np
+import pandas as pd
+
+from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -36,12 +38,14 @@ async def main():
         For DataFrames >1MB, Blazing automatically uses Arrow Flight
         for faster transfer between steps.
         """
-        df = pd.DataFrame({
-            'id': range(num_rows),
-            'value': np.random.randn(num_rows),
-            'category': np.random.choice(['A', 'B', 'C', 'D'], num_rows),
-            'timestamp': pd.date_range('2024-01-01', periods=num_rows, freq='1min')
-        })
+        df = pd.DataFrame(
+            {
+                "id": range(num_rows),
+                "value": np.random.randn(num_rows),
+                "category": np.random.choice(["A", "B", "C", "D"], num_rows),
+                "timestamp": pd.date_range("2024-01-01", periods=num_rows, freq="1min"),
+            }
+        )
 
         # Check size
         size_mb = df.memory_usage(deep=True).sum() / 1024 / 1024
@@ -58,14 +62,14 @@ async def main():
         if it's large enough (>1MB).
         """
         stats = {
-            'row_count': len(df),
-            'mean_value': float(df['value'].mean()),
-            'std_value': float(df['value'].std()),
-            'category_counts': df['category'].value_counts().to_dict(),
-            'date_range': {
-                'start': str(df['timestamp'].min()),
-                'end': str(df['timestamp'].max())
-            }
+            "row_count": len(df),
+            "mean_value": float(df["value"].mean()),
+            "std_value": float(df["value"].std()),
+            "category_counts": df["category"].value_counts().to_dict(),
+            "date_range": {
+                "start": str(df["timestamp"].min()),
+                "end": str(df["timestamp"].max()),
+            },
         }
         return stats
 
@@ -73,13 +77,14 @@ async def main():
     async def filter_and_aggregate(df: pd.DataFrame, services=None):
         """Apply filtering and aggregation on large DataFrame."""
         # Filter for positive values
-        filtered = df[df['value'] > 0]
+        filtered = df[df["value"] > 0]
 
         # Aggregate by category
-        agg_result = filtered.groupby('category').agg({
-            'value': ['mean', 'sum', 'count'],
-            'id': 'count'
-        }).reset_index()
+        agg_result = (
+            filtered.groupby("category")
+            .agg({"value": ["mean", "sum", "count"], "id": "count"})
+            .reset_index()
+        )
 
         return agg_result
 
@@ -105,9 +110,9 @@ async def main():
         aggregated = await filter_and_aggregate(df, services=services)
 
         return {
-            'statistics': stats,
-            'aggregated_shape': aggregated.shape,
-            'aggregated_data': aggregated.to_dict()
+            "statistics": stats,
+            "aggregated_shape": aggregated.shape,
+            "aggregated_data": aggregated.to_dict(),
         }
 
     await app.publish()
@@ -116,7 +121,7 @@ async def main():
     print("\n🚀 Processing 100K row DataFrame...")
     result = await app.process_large_dataset(100000)
 
-    print(f"\n✅ Processing complete!")
+    print("\n✅ Processing complete!")
     print(f"   Rows processed: {result['statistics']['row_count']:,}")
     print(f"   Mean value: {result['statistics']['mean_value']:.4f}")
     print(f"   Categories: {result['statistics']['category_counts']}")
@@ -125,4 +130,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

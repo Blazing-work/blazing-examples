@@ -20,9 +20,8 @@ Filter and transform data in a single step.
 - Basic data transformation patterns
 """
 
-
-
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -39,4 +38,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

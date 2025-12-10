@@ -20,9 +20,10 @@ Validate input data and handle errors gracefully in workflows.
 - Error propagation strategies
 """
 
-    import re
+import re
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -30,7 +31,7 @@ async def main():
     @app.step
     async def validate_email(email: str, services=None):
         """Validate email format."""
-        pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+        pattern = r"^[\w\.-]+@[\w\.-]+\.\w+$"
         if not re.match(pattern, email):
             raise ValueError(f"Invalid email: {email}")
         return {"valid": True, "email": email}
@@ -40,13 +41,13 @@ async def main():
         """Register user with validation."""
         try:
             # Validate email
-            validation = await validate_email(email, services=services)
+            await validate_email(email, services=services)
 
             # Create user
-            user_id = await services['UserDatabase'].create_user(name, email)
+            user_id = await services["UserDatabase"].create_user(name, email)
 
             # Send welcome email
-            await services['EmailService'].send(email, "Welcome!", f"Hello {name}")
+            await services["EmailService"].send(email, "Welcome!", f"Hello {name}")
 
             return {"success": True, "user_id": user_id}
         except ValueError as e:
@@ -57,4 +58,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

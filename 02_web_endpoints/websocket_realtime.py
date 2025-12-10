@@ -20,17 +20,21 @@ Enable WebSocket for real-time progress updates from long-running workflows.
 - WebSocket client implementation patterns
 """
 
+import asyncio
+
 from blazing import Blazing
 from blazing.web import create_asgi_app
-import asyncio
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
+
     @app.step
     async def process_batch(batch_id: int, services=None):
         """Simulate processing a batch."""
         await asyncio.sleep(2)  # Simulate work
         return {"batch_id": batch_id, "status": "completed"}
+
     # Enable WebSocket with enable_websocket=True
     @app.endpoint(path="/process", enable_websocket=True)
     @app.workflow
@@ -44,10 +48,12 @@ async def main():
             result = await process_batch(i, services=services)
             results.append(result)
         return {"processed": len(results), "results": results}
+
     await app.publish()
-    fastapi_app = await create_asgi_app(app)
+    await create_asgi_app(app)
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

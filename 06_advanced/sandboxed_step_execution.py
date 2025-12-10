@@ -23,6 +23,7 @@ The `sandboxed=True` parameter runs your step in a WebAssembly sandbox with comp
 
 from blazing import Blazing
 
+
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
@@ -45,11 +46,10 @@ async def main():
         # User's transformation logic (safe)
         result = []
         for item in data:
-            if item['value'] > 0:
-                result.append({
-                    'value': item['value'] * 2,
-                    'category': item['category'].upper()
-                })
+            if item["value"] > 0:
+                result.append(
+                    {"value": item["value"] * 2, "category": item["category"].upper()}
+                )
         return result
 
     @app.step(sandboxed=True)
@@ -60,7 +60,7 @@ async def main():
         Sandboxed code is ~2-3x slower than native Python due to WASM overhead,
         but provides complete security isolation.
         """
-        return [item for item in data if item['value'] > threshold]
+        return [item for item in data if item["value"] > threshold]
 
     @app.step(sandboxed=True)
     async def user_aggregate(data: list, services=None):
@@ -74,12 +74,12 @@ async def main():
 
         category_sums = defaultdict(float)
         for item in data:
-            category_sums[item['category']] += item['value']
+            category_sums[item["category"]] += item["value"]
 
         return {
-            'category_totals': dict(category_sums),
-            'item_count': len(data),
-            'max_value': max((item['value'] for item in data), default=0)
+            "category_totals": dict(category_sums),
+            "item_count": len(data),
+            "max_value": max((item["value"] for item in data), default=0),
         }
 
     # =========================================================================
@@ -99,10 +99,10 @@ async def main():
         """
         # Simulate fetching from your database
         return [
-            {'value': 10.5, 'category': 'alpha'},
-            {'value': -5.2, 'category': 'beta'},
-            {'value': 23.7, 'category': 'alpha'},
-            {'value': 8.1, 'category': 'gamma'},
+            {"value": 10.5, "category": "alpha"},
+            {"value": -5.2, "category": "beta"},
+            {"value": 23.7, "category": "alpha"},
+            {"value": 8.1, "category": "gamma"},
         ]
 
     # =========================================================================
@@ -141,7 +141,7 @@ async def main():
     print("\n🔒 Running workflow with sandboxed user code...")
     result = await app.process_user_data(threshold=15.0)
 
-    print(f"\n✅ Workflow complete (user code ran safely in WASM sandbox)!")
+    print("\n✅ Workflow complete (user code ran safely in WASM sandbox)!")
     print(f"   Category totals: {result['category_totals']}")
     print(f"   Items processed: {result['item_count']}")
     print(f"   Max value: {result['max_value']}")
@@ -149,4 +149,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

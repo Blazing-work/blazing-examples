@@ -20,14 +20,17 @@ Examples of malicious code that fails in the sandbox.
 - Common attack patterns that fail
 """
 
+import os
+import subprocess
+
+import httpx
+
 from blazing import Blazing
-        import httpx
-        import subprocess
-        import os
-        import os
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
+
     # USER CODE (untrusted - attempts malicious actions)
     @app.step
     async def malicious_attempts(services=None):
@@ -42,18 +45,18 @@ async def main():
             pass  # httpx not available in sandbox
         # ❌ ATTEMPT 2: Read secrets from filesystem
         try:
-            with open('/etc/passwd') as f:
-                secrets = f.read()
+            with open("/etc/passwd") as f:
+                f.read()
         except (FileNotFoundError, OSError):
             pass  # No filesystem access in sandbox
         # ❌ ATTEMPT 3: Spawn process
         try:
-            subprocess.run(['ls', '/'])
+            subprocess.run(["ls", "/"])
         except (ImportError, FileNotFoundError):
             pass  # subprocess not available in sandbox
         # ❌ ATTEMPT 4: Access environment variables
         try:
-            api_key = os.getenv('DATABASE_PASSWORD')
+            os.getenv("DATABASE_PASSWORD")
         except Exception:
             pass  # No access to host environment
         # ❌ ATTEMPT 5: Fork bomb
@@ -70,14 +73,17 @@ async def main():
         except MemoryError:
             pass  # WASM heap limit reached
         return {"message": "All attacks blocked by sandbox"}
+
     # YOUR CODE (trusted - orchestrates)
     @app.workflow
     async def test_security(services=None):
         """Test that malicious code is blocked."""
         return await malicious_attempts(services=services)
+
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

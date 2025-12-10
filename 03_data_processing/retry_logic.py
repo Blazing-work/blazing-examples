@@ -21,9 +21,10 @@ Handle transient failures with automatic retry and exponential backoff.
 """
 
 import asyncio
-    import random
+import random
 
 from blazing import Blazing
+
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
@@ -35,6 +36,7 @@ async def main():
         if random.random() < 0.3:  # 30% failure rate
             raise ValueError("Transient error")
         return f"processed: {data}"
+
     @app.workflow
     async def with_retry(data: str, max_retries: int = 3, services=None):
         """Workflow with retry logic."""
@@ -45,10 +47,12 @@ async def main():
             except ValueError as e:
                 if attempt == max_retries - 1:
                     return {"success": False, "error": str(e), "attempts": attempt + 1}
-                await asyncio.sleep(2 ** attempt)  # Exponential backoff
+                await asyncio.sleep(2**attempt)  # Exponential backoff
+
     await app.publish()
 
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())
