@@ -25,7 +25,7 @@ Scheduled job to generate and distribute daily reports via email.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def fetch_daily_metrics(date: str, services=None):

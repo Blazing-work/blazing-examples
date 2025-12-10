@@ -24,7 +24,7 @@ from blazing import Blazing
 from blazing.web import create_asgi_app
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # Internal steps (not exposed directly)
     @app.step
     async def validate_data(data: dict, services=None):

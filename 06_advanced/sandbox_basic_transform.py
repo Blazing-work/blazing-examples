@@ -23,7 +23,7 @@ The simplest sandbox example: let users write transformation logic while your in
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # USER CODE (untrusted - runs in WASM sandbox)
     @app.step
     async def user_transform(data: list, services=None):

@@ -25,7 +25,7 @@ Filter and transform data in a single step.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def filter_positive(numbers: list, services=None):

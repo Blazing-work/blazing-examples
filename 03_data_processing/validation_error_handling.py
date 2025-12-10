@@ -25,7 +25,7 @@ Validate input data and handle errors gracefully in workflows.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def validate_email(email: str, services=None):

@@ -24,7 +24,7 @@ from blazing import Blazing
 from blazing.web import create_asgi_app
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # V1 Endpoints
     @app.endpoint(path="/v1/users/create")
     @app.workflow

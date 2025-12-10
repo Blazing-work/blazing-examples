@@ -25,7 +25,7 @@ Fetch data from multiple sources and aggregate into summary statistics.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def fetch_sales_data(region: str, services=None):

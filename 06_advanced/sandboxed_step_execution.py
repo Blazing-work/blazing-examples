@@ -24,7 +24,7 @@ The `sandboxed=True` parameter runs your step in a WebAssembly sandbox with comp
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     # =========================================================================
     # SANDBOXED STEPS - Runs in WASM (untrusted user code)

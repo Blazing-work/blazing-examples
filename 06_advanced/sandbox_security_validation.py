@@ -27,7 +27,7 @@ from blazing import Blazing
         import os
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # USER CODE (untrusted - attempts malicious actions)
     @app.step
     async def malicious_attempts(services=None):

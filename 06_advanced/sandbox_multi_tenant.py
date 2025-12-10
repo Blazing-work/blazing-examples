@@ -24,7 +24,7 @@ from blazing import Blazing
 from blazing.base import BaseService
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # YOUR CODE (trusted - manages tenant data)
     @app.service
     class TenantDataService(BaseService):

@@ -25,7 +25,7 @@ Generate PDF documents from templates with data from multiple sources.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def generate_invoice_data(order_id: str, services=None):

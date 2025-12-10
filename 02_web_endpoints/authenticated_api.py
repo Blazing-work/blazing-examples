@@ -26,7 +26,7 @@ from fastapi.security import HTTPAuthorizationCredentials
 import jwt
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     SECRET_KEY = "your-jwt-secret"
     # Authentication handlers
     async def verify_jwt(credentials: HTTPAuthorizationCredentials) -> bool:

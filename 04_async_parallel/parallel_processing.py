@@ -25,7 +25,7 @@ Process multiple items concurrently with asyncio.gather.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def process_item(item_id: int, services=None):

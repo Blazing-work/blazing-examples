@@ -26,7 +26,7 @@ import asyncio
 import time
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     # =========================================================================
     # CPU-INTENSIVE STEPS - Use step_type='BLOCKING'

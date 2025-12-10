@@ -25,7 +25,7 @@ from blazing.base import BaseService
 import httpx
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     # YOUR CODE (trusted - has real API credentials)
     @app.service
     class ExternalAPIService(BaseService):

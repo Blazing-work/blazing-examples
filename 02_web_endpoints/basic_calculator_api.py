@@ -25,10 +25,7 @@ from blazing.web import create_asgi_app
 import uvicorn
 
 async def main():
-    app = Blazing(
-        api_url="http://localhost:8000",
-        api_token="your-api-token"
-    )
+    app = Blazing()  # Uses Blazing SaaS by default
     @app.endpoint(path="/calculate")
     @app.workflow
     async def calculate(x: int, y: int, services=None):

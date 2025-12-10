@@ -27,7 +27,7 @@ Batch delete expired database records on a schedule.
 from blazing import Blazing
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
 
     @app.step
     async def find_expired_sessions(cutoff_date: str, services=None):

@@ -25,7 +25,7 @@ from blazing.web import create_asgi_app
 import asyncio
 
 async def main():
-    app = Blazing(api_url="http://localhost:8000", api_token="your-token")
+    app = Blazing()  # Uses Blazing SaaS by default
     @app.step
     async def process_batch(batch_id: int, services=None):
         """Simulate processing a batch."""
