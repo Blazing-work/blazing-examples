@@ -22,26 +22,26 @@ Download, parse, validate, and import CSV files from cloud storage.
 
 import csv
 import io
+import random
 
 from blazing import Blazing
-from blazing.base import BaseService
 
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
-    @app.service
-    class FileStorageService(BaseService):
-        def __init__(self, connectors):
-            self._s3 = connectors.get("s3")
-
-        async def download(self, file_key: str) -> bytes:
-            """Download file from S3."""
-            return await self._s3.get_object(file_key)
-
-        async def upload(self, file_key: str, data: bytes):
-            """Upload file to S3."""
-            await self._s3.put_object(file_key, data)
+    @app.step
+    async def download_csv(file_key: str, services=None):
+        """Download CSV file (simulated)."""
+        # In production, use: return await services["FileStorageService"].download(file_key)
+        # Simulate CSV content
+        csv_content = """name,email,department
+John Doe,john@example.com,Engineering
+Jane Smith,jane@example.com,Marketing
+Bob Wilson,,Sales
+Alice Brown,alice@example.com,Engineering
+"""
+        return csv_content.encode("utf-8")
 
     @app.step
     async def parse_csv(file_content: bytes, services=None):
@@ -68,20 +68,20 @@ async def main():
 
     @app.step
     async def import_csv_rows(rows: list, services=None):
-        """Import validated rows to database."""
+        """Import validated rows to database (simulated)."""
+        # In production, use: await services["UserDatabase"].create_user(row["name"], row["email"])
         imported = []
         for row in rows:
-            user_id = await services["UserDatabase"].create_user(
-                row["name"], row["email"]
-            )
+            user_id = random.randint(1000, 9999)
             imported.append(user_id)
+            print(f"[Simulated] Created user: {row['name']} ({row['email']}) -> ID: {user_id}")
         return {"imported": len(imported), "ids": imported}
 
     @app.workflow
     async def import_csv_file(file_key: str, services=None):
-        """Import CSV file from S3."""
+        """Import CSV file."""
         # Download file
-        file_content = await services["FileStorageService"].download(file_key)
+        file_content = await download_csv(file_key, services=services)
         # Parse CSV
         parsed = await parse_csv(file_content, services=services)
         # Validate rows
@@ -96,6 +96,16 @@ async def main():
         }
 
     await app.publish()
+
+    # Execute the CSV import workflow
+    print("Importing CSV file...")
+    result = await app.import_csv_file(file_key="users/import.csv").wait_result()
+
+    print(f"\nCSV Import completed!")
+    print(f"  File: {result['file']}")
+    print(f"  Total rows: {result['total_rows']}")
+    print(f"  Imported: {result['imported']}")
+    print(f"  Errors: {result['errors']}")
 
 
 if __name__ == "__main__":

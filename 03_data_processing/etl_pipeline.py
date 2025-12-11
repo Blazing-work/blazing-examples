@@ -30,9 +30,15 @@ async def main():
 
     @app.step
     async def extract(source: str, services=None):
-        """Extract data from source."""
-        data = await services["DataSource"].fetch(source)
-        return data
+        """Extract data from source (simulated)."""
+        # In production, use: data = await services["DataSource"].fetch(source)
+        # Simulate extracting data from a source
+        return [
+            {"id": 1, "name": "Product A", "price": 100, "valid": True},
+            {"id": 2, "name": "Product B", "price": 200, "valid": True},
+            {"id": 3, "name": "Invalid", "price": None, "valid": False},
+            {"id": 4, "name": "Product C", "price": 150, "valid": True},
+        ]
 
     @app.step
     async def transform(data: list, services=None):
@@ -44,8 +50,9 @@ async def main():
 
     @app.step
     async def load(data: list, destination: str, services=None):
-        """Load data to destination."""
-        await services["DataWarehouse"].bulk_insert(destination, data)
+        """Load data to destination (simulated)."""
+        # In production, use: await services["DataWarehouse"].bulk_insert(destination, data)
+        print(f"[Simulated] Loading {len(data)} records to {destination}")
         return {"loaded": len(data), "destination": destination}
 
     @app.workflow
@@ -61,6 +68,17 @@ async def main():
         }
 
     await app.publish()
+
+    # Execute the ETL pipeline
+    print("Running ETL pipeline...")
+    result = await app.etl_pipeline(
+        source="products_db", destination="analytics_warehouse"
+    ).wait_result()
+
+    print(f"\nETL Pipeline completed!")
+    print(f"  Source: {result['source']}")
+    print(f"  Destination: {result['destination']}")
+    print(f"  Rows processed: {result['rows_processed']}")
 
 
 if __name__ == "__main__":

@@ -18,14 +18,16 @@ A sync version (`SyncBlazing`) is provided at the bottom for learning purposes o
 
 This is the simplest possible Blazing Flow application. It demonstrates how to:
 - Create a basic Blazing app
-- Define a simple step
+- Define a simple step and workflow
+- Publish to the execution engine
 - Execute and return a response
 
 ## What you'll learn
 
 - How to structure a Blazing Flow application
 - Basic step definition with @app.step
-- Simple execution patterns
+- Workflow definition with @app.workflow
+- E2E execution with publish and wait_result
 """
 
 from blazing import Blazing
@@ -34,6 +36,7 @@ from blazing import Blazing
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
+    # Define a step (the unit of work)
     @app.step
     async def hello(services=None):
         """A simple hello world step."""
@@ -44,11 +47,23 @@ async def main():
         """A personalized greeting step."""
         return {"message": f"Hello, {name}!"}
 
+    # Define workflows that orchestrate steps
+    @app.workflow
+    async def greet(services=None):
+        """Workflow: say hello."""
+        return await hello(services=services)
+
+    @app.workflow
+    async def greet_person(name: str, services=None):
+        """Workflow: personalized greeting."""
+        return await hello_name(name, services=services)
+
+    # IMPORTANT: Publish to register steps/workflows with the execution engine
     await app.publish()
 
-    # Execute steps
-    result1 = await app.hello()
-    result2 = await app.hello_name(name="Blazing")
+    # Execute workflows and wait for results
+    result1 = await app.greet().wait_result()
+    result2 = await app.greet_person(name="Blazing").wait_result()
 
     print(result1)  # {"message": "Hello, World!"}
     print(result2)  # {"message": "Hello, Blazing!"}
@@ -76,10 +91,20 @@ def main_sync():
         """A personalized greeting step."""
         return {"message": f"Hello, {name}!"}
 
+    @app.workflow
+    async def greet(services=None):
+        """Workflow: say hello."""
+        return await hello(services=services)
+
+    @app.workflow
+    async def greet_person(name: str, services=None):
+        """Workflow: personalized greeting."""
+        return await hello_name(name, services=services)
+
     # No await, no asyncio.run()!
     app.publish()
-    print(app.hello())  # {"message": "Hello, World!"}
-    print(app.hello_name(name="Blazing"))  # {"message": "Hello, Blazing!"}
+    print(app.greet())  # {"message": "Hello, World!"}
+    print(app.greet_person(name="Blazing"))  # {"message": "Hello, Blazing!"}
 
 
 if __name__ == "__main__":

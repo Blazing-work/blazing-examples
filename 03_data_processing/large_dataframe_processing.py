@@ -118,10 +118,10 @@ async def main():
     await app.publish()
 
     # Process 100K rows (DataFrame will be ~40MB - uses Arrow Flight automatically)
-    print("\n🚀 Processing 100K row DataFrame...")
-    result = await app.process_large_dataset(100000)
+    print("\n Processing 100K row DataFrame...")
+    result = await app.process_large_dataset(num_rows=100000).wait_result()
 
-    print("\n✅ Processing complete!")
+    print("\n Processing complete!")
     print(f"   Rows processed: {result['statistics']['row_count']:,}")
     print(f"   Mean value: {result['statistics']['mean_value']:.4f}")
     print(f"   Categories: {result['statistics']['category_counts']}")

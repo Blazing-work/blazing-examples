@@ -20,11 +20,25 @@ Process event streams from Kafka in batches with aggregation.
 - Real-time event aggregation
 """
 
+import asyncio
 from collections import Counter
 from datetime import datetime
 
 from blazing import Blazing
 from blazing.base import BaseService
+
+
+# Simulated event data for demonstration
+_event_queue = [
+    {"event_type": "page_view", "user_id": 1, "page": "/home"},
+    {"event_type": "click", "user_id": 2, "element": "button-signup"},
+    {"event_type": "page_view", "user_id": 1, "page": "/products"},
+    {"event_type": "purchase", "user_id": 3, "amount": 99.99},
+    {"event_type": "page_view", "user_id": 2, "page": "/checkout"},
+    {"event_type": "click", "user_id": 1, "element": "add-to-cart"},
+    {"event_type": "purchase", "user_id": 1, "amount": 49.99},
+]
+_processed_events = []
 
 
 async def main():
@@ -33,18 +47,34 @@ async def main():
     @app.service
     class EventStreamService(BaseService):
         def __init__(self, connectors):
-            self._kafka = connectors.get("kafka")
+            # In production: self._kafka = connectors.get("kafka")
+            pass
 
         async def consume_batch(self, topic: str, batch_size: int = 100) -> list:
-            """Consume batch of events from Kafka."""
-            events = []
-            async for message in self._kafka.consume(topic, max_messages=batch_size):
-                events.append(message.value)
-            return events
+            """Consume batch of events from Kafka (simulated)."""
+            # In production:
+            # events = []
+            # async for message in self._kafka.consume(topic, max_messages=batch_size):
+            #     events.append(message.value)
+            # return events
+            await asyncio.sleep(0.1)  # Simulate network latency
+            batch = _event_queue[:batch_size]
+            return batch
 
         async def produce(self, topic: str, event: dict):
-            """Produce event to Kafka."""
-            await self._kafka.produce(topic, event)
+            """Produce event to Kafka (simulated)."""
+            await asyncio.sleep(0.02)
+            print(f"[KAFKA] Produced to {topic}: {event.get('event_type', 'unknown')}")
+
+    @app.service
+    class EventDatabase(BaseService):
+        def __init__(self, connectors):
+            pass
+
+        async def insert(self, event: dict):
+            """Insert processed event into database (simulated)."""
+            _processed_events.append(event)
+            await asyncio.sleep(0.01)
 
     @app.step
     async def process_event_batch(events: list, services=None):
@@ -83,6 +113,22 @@ async def main():
         return {"topic": topic, "processed": len(processed), "stats": stats}
 
     await app.publish()
+
+    # Execute the workflow
+    print("Processing event stream batch from 'user-events' topic...")
+    result = await app.stream_processing_job(
+        topic="user-events",
+        batch_size=10
+    ).wait_result()
+
+    print(f"\nStream Processing Results:")
+    print(f"  Topic: {result['topic']}")
+    print(f"  Events Processed: {result['processed']}")
+    print(f"  Event Type Breakdown:")
+    for event_type, count in result['stats']['by_type'].items():
+        print(f"    - {event_type}: {count}")
+
+    print(f"\nTotal events stored in database: {len(_processed_events)}")
 
 
 if __name__ == "__main__":

@@ -51,6 +51,13 @@ async def main():
 
     await app.publish()
 
+    # Execute the retry workflow
+    print("Running workflow with retry logic (30% failure rate)...")
+    result = await app.with_retry(data="test data", max_retries=3).wait_result()
+
+    print(f"Result: {result}")
+    print(f"Attempts made: {result['attempts']}")
+
 
 if __name__ == "__main__":
     import asyncio

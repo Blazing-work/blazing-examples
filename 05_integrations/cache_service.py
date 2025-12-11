@@ -20,39 +20,65 @@ Implement caching with Redis for faster lookups.
 - Cache-aside pattern implementation
 """
 
+import asyncio
+
 from blazing import Blazing
-from blazing.base import BaseService
+
+
+# Simulated in-memory cache for demonstration
+cache = {}
 
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
-    @app.service
-    class CacheService(BaseService):
-        def __init__(self, connectors):
-            self._redis = connectors.get("redis")
-
-        async def get(self, key: str) -> str:
-            """Get value from cache."""
-            value = await self._redis.get(key)
-            return value.decode() if value else None
-
-        async def set(self, key: str, value: str, ttl: int = 3600):
-            """Set value in cache with TTL."""
-            await self._redis.set(key, value, ex=ttl)
+    @app.step
+    async def cache_get(key: str, services=None):
+        """Get value from cache."""
+        return cache.get(key)
 
     @app.step
+    async def cache_set(key: str, value: str, services=None):
+        """Set value in cache."""
+        cache[key] = value
+        return {"cached": True, "key": key}
+
+    @app.step
+    async def expensive_computation(key: str, services=None):
+        """Simulate an expensive computation."""
+        print(f"[Computing] Expensive computation for key: {key}")
+        await asyncio.sleep(1)  # Simulate expensive operation
+        return f"computed_value_for_{key}"
+
+    @app.workflow
     async def cached_lookup(key: str, services=None):
-        """Lookup value with caching."""
-        cached = await services["CacheService"].get(key)
+        """Lookup value with caching (cache-aside pattern)."""
+        # Check cache first
+        cached = await cache_get(key, services=services)
         if cached:
             return {"source": "cache", "value": cached}
-        # Simulate expensive operation
-        value = f"computed_value_for_{key}"
-        await services["CacheService"].set(key, value)
+
+        # Cache miss - compute and store
+        value = await expensive_computation(key, services=services)
+        await cache_set(key, value, services=services)
         return {"source": "computed", "value": value}
 
     await app.publish()
+
+    # First lookup - cache miss, will compute
+    print("First lookup for 'user_123'...")
+    result1 = await app.cached_lookup(key="user_123").wait_result()
+    print(f"Result: {result1}")
+
+    # Second lookup - cache hit
+    print("\nSecond lookup for 'user_123'...")
+    result2 = await app.cached_lookup(key="user_123").wait_result()
+    print(f"Result: {result2}")
+
+    # Different key - cache miss
+    print("\nLookup for 'user_456'...")
+    result3 = await app.cached_lookup(key="user_456").wait_result()
+    print(f"Result: {result3}")
 
 
 if __name__ == "__main__":

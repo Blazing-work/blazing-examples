@@ -65,6 +65,15 @@ async def main():
 
     await app.publish()
 
+    # Execute the map-reduce workflow
+    numbers = list(range(1, 1001))  # 1 to 1000
+    print(f"Computing sum of squares for {len(numbers)} numbers...")
+    result = await app.map_reduce_sum_of_squares(numbers=numbers, chunk_size=100).wait_result()
+
+    print(f"Result: {result['result']}")
+    print(f"Chunks processed: {result['chunks_processed']}")
+    print(f"Total numbers: {result['total_numbers']}")
+
 
 if __name__ == "__main__":
     import asyncio

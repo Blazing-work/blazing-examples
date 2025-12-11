@@ -71,7 +71,7 @@
   {
     "id": "hello_world",
     "title": "Hello World",
-    "description": "Deploy your first serverless function in under 5 minutes.",
+    "description": "Your first Blazing Flow application in under 5 minutes.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
@@ -79,7 +79,7 @@
       "quickstart",
       "python"
     ],
-    "product": "blazing-core",
+    "product": "blazing-flow",
     "file_path": "01_getting_started/hello_world.py",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/01_getting_started/hello_world.py",
     "href": "/docs/hello_world"
@@ -549,6 +549,25 @@
     "href": "/docs/cache_service"
   },
   {
+    "id": "connector_integration",
+    "title": "Connector Integration Patterns",
+    "description": "Configure and use REST and database connectors with services.",
+    "category": "Integrations",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "connectors",
+      "rest",
+      "database",
+      "services",
+      "integration"
+    ],
+    "product": "blazing-flow",
+    "file_path": "05_integrations/connector_integration.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/05_integrations/connector_integration.py",
+    "href": "/docs/connector_integration"
+  },
+  {
     "id": "database_service",
     "title": "Database Service",
     "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy.",
@@ -676,6 +695,25 @@
     "href": "/docs/stripe_webhook"
   },
   {
+    "id": "batch_stock_processing",
+    "title": "Batch Stock Processing",
+    "description": "Process large batches of stock data with throttling and error handling.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "15 min",
+    "tags": [
+      "batch",
+      "stocks",
+      "throttling",
+      "resilient",
+      "fintech"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/batch_stock_processing.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/batch_stock_processing.py",
+    "href": "/docs/batch_stock_processing"
+  },
+  {
     "id": "cleanup_expired_records",
     "title": "Cleanup Expired Records",
     "description": "Batch delete expired database records on a schedule.",
@@ -745,6 +783,24 @@
     "file_path": "06_advanced/health_check_workflow.py",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/health_check_workflow.py",
     "href": "/docs/health_check_workflow"
+  },
+  {
+    "id": "modular_registration",
+    "title": "Modular Registration Pattern",
+    "description": "Organize large applications with domain-specific modules.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "15 min",
+    "tags": [
+      "modular",
+      "architecture",
+      "organization",
+      "domain-driven"
+    ],
+    "product": "blazing-flow",
+    "file_path": "06_advanced/modular_registration.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/modular_registration.py",
+    "href": "/docs/modular_registration"
   },
   {
     "id": "sandbox_async_service_calls",
@@ -871,5 +927,25 @@
     "file_path": "06_advanced/sandboxed_step_execution.py",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/sandboxed_step_execution.py",
     "href": "/docs/sandboxed_step_execution"
+  },
+  {
+    "id": "trading_strategy_sandbox",
+    "title": "Trading Strategy Sandbox",
+    "description": "Build a SaaS platform where your users can submit custom trading strategies.",
+    "category": "Advanced",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "trading",
+      "sandbox",
+      "pyodide",
+      "strategies",
+      "fintech",
+      "dynamic-code"
+    ],
+    "product": "blazing-flow-sandbox",
+    "file_path": "06_advanced/trading_strategy_sandbox.py",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/trading_strategy_sandbox.py",
+    "href": "/docs/trading_strategy_sandbox"
   }
 ]

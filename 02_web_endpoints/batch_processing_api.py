@@ -65,7 +65,11 @@ async def main():
         return {"processed_count": len(results), "results": results}
 
     await app.publish()
-    await create_asgi_app(app)
+    fastapi_app = await create_asgi_app(app, title="Batch Processing API")
+
+    # Run the server
+    import uvicorn
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8080)
 
 
 if __name__ == "__main__":

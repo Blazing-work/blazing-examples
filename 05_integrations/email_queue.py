@@ -21,37 +21,32 @@ Process email queues in batches with Redis.
 """
 
 import asyncio
-import json
 
 from blazing import Blazing
-from blazing.base import BaseService
+
+
+# Simulated in-memory queue for demonstration
+email_queue = []
 
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
-    @app.service
-    class EmailQueueService(BaseService):
-        def __init__(self, connectors):
-            self._queue = connectors.get("redis")
-            self._smtp = connectors.get("smtp")
-
-        async def enqueue(self, to: str, subject: str, body: str):
-            """Add email to queue."""
-            email = json.dumps({"to": to, "subject": subject, "body": body})
-            await self._queue.lpush("email_queue", email)
-
-        async def dequeue(self) -> dict:
-            """Get next email from queue."""
-            email = await self._queue.rpop("email_queue")
-            return json.loads(email) if email else None
+    @app.step
+    async def enqueue_email(to: str, subject: str, body: str, services=None):
+        """Add email to queue."""
+        email = {"to": to, "subject": subject, "body": body}
+        email_queue.append(email)
+        return {"queued": True, "to": to}
 
     @app.step
     async def send_queued_email(services=None):
         """Process one email from queue."""
-        email = await services["EmailQueueService"].dequeue()
-        if email:
-            await services["EmailQueueService"]._smtp.send(email)
+        if email_queue:
+            email = email_queue.pop(0)
+            # In production: await services["SMTPService"].send(email)
+            print(f"[Simulated] Sending email to {email['to']}: {email['subject']}")
+            await asyncio.sleep(0.1)  # Simulate sending
             return {"sent": True, "to": email["to"]}
         return {"sent": False, "reason": "queue_empty"}
 
@@ -65,6 +60,25 @@ async def main():
         return {"processed": batch_size, "sent": sent_count}
 
     await app.publish()
+
+    # First, queue some emails
+    print("Queueing 5 emails...")
+    for i in range(5):
+        await app.enqueue_email(
+            to=f"user{i}@example.com",
+            subject=f"Test Email {i}",
+            body=f"This is test email {i}"
+        ).wait_result()
+
+    print(f"\nQueue has {len(email_queue)} emails")
+
+    # Process the queue
+    print("\nProcessing email queue (batch of 10)...")
+    result = await app.process_email_queue(batch_size=10).wait_result()
+
+    print(f"\nResults:")
+    print(f"  Processed: {result['processed']}")
+    print(f"  Sent: {result['sent']}")
 
 
 if __name__ == "__main__":

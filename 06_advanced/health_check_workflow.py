@@ -23,20 +23,47 @@ Monitor system health across database, cache, and external APIs.
 import asyncio
 from datetime import datetime
 
-import httpx
-from sqlalchemy import text
-
 from blazing import Blazing
+from blazing.base import BaseService
+
+
+# Simulated cache storage
+_cache = {}
 
 
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
+    @app.service
+    class Database(BaseService):
+        def __init__(self, connectors):
+            pass
+
+        async def execute(self, query, params=None):
+            """Execute database query (simulated)."""
+            await asyncio.sleep(0.05)
+            return True  # Simulated success
+
+    @app.service
+    class CacheService(BaseService):
+        def __init__(self, connectors):
+            pass
+
+        async def set(self, key: str, value: str, ttl: int = 60):
+            """Set cache value (simulated)."""
+            await asyncio.sleep(0.02)
+            _cache[key] = value
+
+        async def get(self, key: str):
+            """Get cache value (simulated)."""
+            await asyncio.sleep(0.02)
+            return _cache.get(key)
+
     @app.step
     async def check_database_health(services=None):
         """Check database connectivity."""
         try:
-            await services["Database"].execute(text("SELECT 1"))
+            await services["Database"].execute("SELECT 1", {})
             return {"service": "database", "status": "healthy"}
         except Exception as e:
             return {"service": "database", "status": "unhealthy", "error": str(e)}
@@ -59,26 +86,23 @@ async def main():
 
     @app.step
     async def check_external_api_health(services=None):
-        """Check external API connectivity."""
+        """Check external API connectivity (simulated)."""
         try:
-            async with httpx.AsyncClient() as client:
-                response = await client.get(
-                    "https://api.example.com/health", timeout=5.0
-                )
-                if response.status_code == 200:
-                    return {"service": "external_api", "status": "healthy"}
-                return {
-                    "service": "external_api",
-                    "status": "unhealthy",
-                    "error": f"Status {response.status_code}",
-                }
+            # In production:
+            # async with httpx.AsyncClient() as client:
+            #     response = await client.get("https://api.example.com/health", timeout=5.0)
+            #     if response.status_code == 200:
+            #         return {"service": "external_api", "status": "healthy"}
+
+            # Simulated API check
+            await asyncio.sleep(0.1)
+            return {"service": "external_api", "status": "healthy"}
         except Exception as e:
             return {"service": "external_api", "status": "unhealthy", "error": str(e)}
 
     @app.workflow
     async def health_check(services=None):
         """Run health checks for all services."""
-
         checks = await asyncio.gather(
             check_database_health(services=services),
             check_cache_health(services=services),
@@ -94,6 +118,20 @@ async def main():
         }
 
     await app.publish()
+
+    # Execute the workflow
+    print("Running system health check...")
+    result = await app.health_check().wait_result()
+
+    print(f"\nHealth Check Results:")
+    print(f"  Overall Status: {result['overall_status'].upper()}")
+    print(f"  Timestamp: {result['timestamp']}")
+    print("\n  Service Status:")
+    for check in result["checks"]:
+        status_icon = "OK" if check["status"] == "healthy" else "FAIL"
+        print(f"    [{status_icon}] {check['service']}: {check['status']}")
+        if "error" in check:
+            print(f"         Error: {check['error']}")
 
 
 if __name__ == "__main__":

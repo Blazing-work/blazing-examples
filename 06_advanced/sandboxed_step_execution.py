@@ -138,13 +138,13 @@ async def main():
     await app.publish()
 
     # Execute the workflow
-    print("\n🔒 Running workflow with sandboxed user code...")
-    result = await app.process_user_data(threshold=15.0)
+    print("Running workflow with sandboxed user code...")
+    result = await app.process_user_data(threshold=15.0).wait_result()
 
-    print("\n✅ Workflow complete (user code ran safely in WASM sandbox)!")
-    print(f"   Category totals: {result['category_totals']}")
-    print(f"   Items processed: {result['item_count']}")
-    print(f"   Max value: {result['max_value']}")
+    print("\nWorkflow complete (user code ran safely in WASM sandbox)!")
+    print(f"  Category totals: {result['category_totals']}")
+    print(f"  Items processed: {result['item_count']}")
+    print(f"  Max value: {result['max_value']}")
 
 
 if __name__ == "__main__":

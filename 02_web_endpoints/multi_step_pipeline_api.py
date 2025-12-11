@@ -71,7 +71,11 @@ async def main():
         return report
 
     await app.publish()
-    await create_asgi_app(app, title="Data Analysis API")
+    fastapi_app = await create_asgi_app(app, title="Data Analysis API")
+
+    # Run the server
+    import uvicorn
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8080)
 
 
 if __name__ == "__main__":

@@ -68,7 +68,11 @@ async def main():
             raise e
 
     await app.publish()
-    await create_asgi_app(app)
+    fastapi_app = await create_asgi_app(app, title="Error Handling API")
+
+    # Run the server
+    import uvicorn
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8080)
 
 
 if __name__ == "__main__":

@@ -21,6 +21,7 @@ Validate input data and handle errors gracefully in workflows.
 """
 
 import re
+import random
 
 from blazing import Blazing
 
@@ -43,17 +44,31 @@ async def main():
             # Validate email
             await validate_email(email, services=services)
 
-            # Create user
-            user_id = await services["UserDatabase"].create_user(name, email)
+            # In production, use: user_id = await services["UserDatabase"].create_user(name, email)
+            user_id = random.randint(1000, 9999)
 
-            # Send welcome email
-            await services["EmailService"].send(email, "Welcome!", f"Hello {name}")
+            # In production, use: await services["EmailService"].send(email, "Welcome!", f"Hello {name}")
+            print(f"[Simulated] Sending welcome email to {email}")
 
             return {"success": True, "user_id": user_id}
         except ValueError as e:
             return {"success": False, "error": str(e)}
 
     await app.publish()
+
+    # Test with valid email
+    print("Testing with valid email...")
+    result = await app.process_user_registration(
+        email="john@example.com", name="John Doe"
+    ).wait_result()
+    print(f"Result: {result}")
+
+    # Test with invalid email
+    print("\nTesting with invalid email...")
+    result = await app.process_user_registration(
+        email="invalid-email", name="Jane Doe"
+    ).wait_result()
+    print(f"Result: {result}")
 
 
 if __name__ == "__main__":

@@ -47,6 +47,13 @@ async def main():
 
     await app.publish()
 
+    # Execute the workflow - will timeout since slow_operation takes 10s but timeout is 5s
+    print("Running workflow with 5 second timeout (operation takes 10 seconds)...")
+    result = await app.with_timeout(data="test data", timeout_seconds=5).wait_result()
+
+    print(f"Result: {result}")
+    # Expected: {"success": False, "error": "Operation timed out"}
+
 
 if __name__ == "__main__":
     import asyncio

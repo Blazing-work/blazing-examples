@@ -31,13 +31,23 @@ from blazing import Blazing
 async def main():
     app = Blazing()  # Uses Blazing SaaS by default
 
+    # Define a step (the unit of work)
     @app.step
     async def filter_positive(numbers: list, services=None):
         """Filter out negative numbers."""
         return [n for n in numbers if n > 0]
 
+    # Define a workflow that orchestrates steps
+    @app.workflow
+    async def get_positive_numbers(numbers: list, services=None):
+        """Workflow: filter and return only positive numbers."""
+        return await filter_positive(numbers, services=services)
+
+    # IMPORTANT: Publish to register steps/workflows with the execution engine
     await app.publish()
-    result = await app.filter_positive(numbers=[1, -2, 3, -4, 5])
+
+    # Execute workflow and wait for result
+    result = await app.get_positive_numbers(numbers=[1, -2, 3, -4, 5]).wait_result()
     print(result)  # [1, 3, 5]
 
 
@@ -51,7 +61,6 @@ def main_sync():
     """Synchronous version using SyncBlazing - for learning/prototyping only."""
     from blazing import SyncBlazing
 
-    # SyncBlazing is great for learning, but use async Blazing for production
     app = SyncBlazing()
 
     @app.step
@@ -59,10 +68,14 @@ def main_sync():
         """Filter out negative numbers."""
         return [n for n in numbers if n > 0]
 
+    @app.workflow
+    async def get_positive_numbers(numbers: list, services=None):
+        """Workflow: filter and return only positive numbers."""
+        return await filter_positive(numbers, services=services)
+
     # No await, no asyncio.run()!
     app.publish()
-    result = app.filter_positive(numbers=[1, -2, 3, -4, 5])
-    print(result)  # [1, 3, 5]
+    print(app.get_positive_numbers(numbers=[1, -2, 3, -4, 5]))  # [1, 3, 5]
 
 
 if __name__ == "__main__":

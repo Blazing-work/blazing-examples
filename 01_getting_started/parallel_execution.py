@@ -52,6 +52,12 @@ async def main():
             "status": "processed"
         }
 
+    # Define a workflow that wraps the step
+    @app.workflow
+    async def process_single_item(item_id: int, services=None):
+        """Workflow: process a single item."""
+        return await process_item(item_id, services=services)
+
     # Publish to the execution engine
     await app.publish()
 
@@ -61,9 +67,9 @@ async def main():
     print(f"Creating {num_tasks} tasks...")
     start_time = time.time()
 
-    # Launch all tasks in parallel (returns RemoteRun handles)
+    # Launch all workflows in parallel (returns RemoteRun handles)
     runs = [
-        await app.process_item(item_id=i)
+        await app.process_single_item(item_id=i)
         for i in range(num_tasks)
     ]
 
@@ -104,6 +110,11 @@ def main_sync():
             "status": "processed"
         }
 
+    @app.workflow
+    async def process_single_item(item_id: int, services=None):
+        """Workflow: process a single item."""
+        return await process_item(item_id, services=services)
+
     # No await needed!
     app.publish()
 
@@ -111,12 +122,12 @@ def main_sync():
     print(f"Creating {num_tasks} tasks...")
     start_time = time.time()
 
-    # Launch all tasks (SyncBlazing handles the async internally)
-    runs = [app.process_item(item_id=i) for i in range(num_tasks)]
+    # Launch all workflows (SyncBlazing handles the async internally)
+    results = [app.process_single_item(item_id=i) for i in range(num_tasks)]
 
     print(f"Tasks launched in {time.time() - start_time:.2f}s")
-    print(f"First result: {runs[0]}")
-    print(f"Last result: {runs[-1]}")
+    print(f"First result: {results[0]}")
+    print(f"Last result: {results[-1]}")
 
 
 if __name__ == "__main__":

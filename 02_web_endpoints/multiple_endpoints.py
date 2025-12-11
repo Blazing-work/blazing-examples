@@ -74,12 +74,16 @@ async def main():
         return {"total_users": 1000, "active_jobs": 42, "uptime_seconds": 86400}
 
     await app.publish()
-    await create_asgi_app(
+    fastapi_app = await create_asgi_app(
         app,
         title="User Management API",
         description="Multi-version user management API",
         version="2.0.0",
     )
+
+    # Run the server
+    import uvicorn
+    uvicorn.run(fastapi_app, host="0.0.0.0", port=8080)
 
 
 if __name__ == "__main__":
