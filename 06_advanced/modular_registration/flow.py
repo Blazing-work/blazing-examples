@@ -289,8 +289,8 @@ async def main():
     # Verify registration
     print("\n2. Verify Registration")
     print("-" * 40)
-    print(f"  Total services registered: {len(app._skillset_registry)}")
-    print(f"  Total steps registered:    {len(app._station_funcs)}")
+    print(f"  Total services registered: {len(app._service_registry)}")
+    print(f"  Total steps registered:    {len(app._step_funcs)}")
     print(f"  Total workflows registered: {len(app._route_funcs)}")
 
     # Method 2: Feature-based registration (new app)

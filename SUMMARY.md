@@ -109,7 +109,7 @@ async def long_running_job(items: list):
 ## ✅ Quality Guarantees
 
 ### Lexicon Compliance
-- ✅ **0 instances** of old terminology (`@app.station`, `@app.route`, `@app.skillset`)
+- ✅ **0 instances** of old terminology (`@app.station`, `@app.route`, `@app.service`)
 - ✅ **100% v2.0** (`@app.step`, `@app.workflow`, `@app.service`, `services=None`)
 
 ### Executability
@@ -179,8 +179,8 @@ python3 extract_from_docs.py
 python3 generate_manifest.py
 
 # Verify lexicon compliance
-grep -r "@app\.\(station\|route\|skillset\)" --include="*.py" .  # Should be 0
-grep -r "skillsets=" --include="*.py" .  # Should be 0
+grep -r "@app\.\(station\|route\|service\)" --include="*.py" .  # Should be 0
+grep -r "services=" --include="*.py" .  # Should be 0
 ```
 
 ---

@@ -35,14 +35,14 @@ All examples use **v2.0 lexicon exclusively**:
 
 - ✅ `@app.step` (NOT `@app.station`)
 - ✅ `@app.workflow` (NOT `@app.route`)
-- ✅ `@app.service` (NOT `@app.skillset`)
-- ✅ `services=None` parameter (NOT `skillsets=None`)
-- ✅ `BaseService` class (NOT `BaseSkillset`)
+- ✅ `@app.service` (NOT `@app.service`)
+- ✅ `services=None` parameter (NOT `services=None`)
+- ✅ `BaseService` class (NOT `BaseService`)
 
 **Verification:**
 ```bash
-grep -r "@app\.\(station\|route\|skillset\)" --include="*.py" .  # 0 results ✅
-grep -r "skillsets=" --include="*.py" .  # 0 results ✅
+grep -r "@app\.\(station\|route\|service\)" --include="*.py" .  # 0 results ✅
+grep -r "services=" --include="*.py" .  # 0 results ✅
 ```
 
 ## Examples Breakdown
@@ -200,8 +200,8 @@ ls -1 */*.py | wc -l
 # Result: 49 ✅
 
 # Verify v2.0 lexicon (should be 0)
-grep -r "@app\.\(station\|route\|skillset\)" --include="*.py" .
-grep -r "skillsets=" --include="*.py" .
+grep -r "@app\.\(station\|route\|service\)" --include="*.py" .
+grep -r "services=" --include="*.py" .
 # Result: 0 matches ✅
 
 # Check manifest
