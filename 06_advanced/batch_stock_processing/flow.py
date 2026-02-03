@@ -5,6 +5,9 @@ from typing import Optional
 from blazing import Blazing
 from blazing.base import BaseService
 
+# Create Blazing app instance at module level
+app = Blazing()
+
 
 # =============================================================================
 # Simulated Market Data API
@@ -107,6 +110,7 @@ class StockDataService(BaseService):
 # Batch Processing Workflow
 # =============================================================================
 
+@app.workflow
 async def process_stock_batch_workflow(
     symbols: list[str],
     batch_size: int = 5,
@@ -202,6 +206,9 @@ async def main():
 
     print(f"\nProcessing {len(symbols)} stocks with rate limit: 5 req/0.5s")
     print("-" * 60)
+
+    # Publish the workflow
+    await app.publish()
 
     start_time = time.time()
 

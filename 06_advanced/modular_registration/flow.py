@@ -286,6 +286,9 @@ async def main():
     print(f"    Steps:     {reporting_manifest['steps']}")
     print(f"    Workflows: {reporting_manifest['workflows']}")
 
+    # Publish the app after all modules registered
+    await app.publish()
+
     # Verify registration
     print("\n2. Verify Registration")
     print("-" * 40)
@@ -308,6 +311,9 @@ async def main():
     manifest = register_with_features(app2, features)
     print(f"\n  Enabled modules: {[k for k, v in manifest.items() if v]}")
     print(f"  Disabled modules: {[k for k, v in manifest.items() if not v]}")
+
+    # Publish the second app after feature-based registration
+    await app2.publish()
 
     # Summary
     print("\n" + "=" * 60)

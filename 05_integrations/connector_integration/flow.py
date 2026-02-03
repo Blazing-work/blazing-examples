@@ -1,6 +1,7 @@
 import asyncio
 from dataclasses import dataclass
 from typing import Optional, Any
+from blazing import Blazing
 from blazing.base import BaseService
 
 
@@ -250,6 +251,23 @@ async def main():
     print("Connector Integration Patterns Demo")
     print("=" * 60)
 
+    # Create Blazing app instance
+    app = Blazing()
+
+    @app.workflow
+    async def fetch_and_store_workflow(symbol: str, services=None) -> dict:
+        """
+        Workflow that fetches market data from API and stores in database.
+
+        This wraps the core connector integration pattern.
+        """
+        # Get the service from the services dict
+        service = services.get('MarketDataService') if services else None
+        if not service:
+            return {"success": False, "error": "MarketDataService not available"}
+
+        return await service.fetch_and_store(symbol)
+
     # Define connector configurations
     rest_config = RESTConnectorConfig(
         name="MarketAPI",
@@ -289,6 +307,9 @@ async def main():
     print("\n3. Initializing Service")
     print("-" * 40)
     service = await MarketDataService.create(connector_instances)
+
+    # Publish the app with workflow
+    await app.publish()
 
     # Health check
     print("\n4. Health Check")
