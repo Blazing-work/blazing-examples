@@ -268,9 +268,9 @@
       "security"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -294,9 +294,9 @@
       "basic"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -320,9 +320,9 @@
       "aggregation"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -345,9 +345,9 @@
       "validation"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -371,9 +371,9 @@
       "statistics"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -397,9 +397,9 @@
       "organization"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
@@ -423,9 +423,9 @@
       "streaming"
     ],
     "products": [
-      "blazing-flow"
+      "blazing-flow-endpoint"
     ],
-    "primaryProduct": "blazing-flow",
+    "primaryProduct": "blazing-flow-endpoint",
     "files": {
       "flow": true,
       "sandbox": false,
