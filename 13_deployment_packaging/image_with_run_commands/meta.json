@@ -1,0 +1,16 @@
+{
+  "id": "image_with_run_commands",
+  "title": "Image with Run Commands",
+  "description": "Bake assets into an image using run_commands.\n\nSource: tests/test_executor_image.py",
+  "category": "Deployment & Packaging",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "image",
+    "run-commands"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

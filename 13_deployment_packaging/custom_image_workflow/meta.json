@@ -1,0 +1,16 @@
+{
+  "id": "custom_image_workflow",
+  "title": "Custom Image Workflow",
+  "description": "Run a workflow with a custom container image.\n\nSource: tests/test_z_docker_basic_e2e.py",
+  "category": "Deployment & Packaging",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "image",
+    "deployment"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

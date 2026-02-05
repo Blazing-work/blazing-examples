@@ -1,0 +1,16 @@
+{
+  "id": "build_wheel",
+  "title": "Build a Wheel for Sandbox",
+  "description": "Build a local wheel to upload for sandbox dependencies.\n\nSource: tests/test_z_wheel_e2e.py",
+  "category": "Deployment & Packaging",
+  "difficulty": "Advanced",
+  "time": "10 min",
+  "tags": [
+    "wheel",
+    "packaging"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

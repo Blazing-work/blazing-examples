@@ -1,0 +1,16 @@
+{
+  "id": "secrets_via_env",
+  "title": "Secrets via Environment",
+  "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield",
+  "category": "Deployment & Packaging",
+  "difficulty": "Beginner",
+  "time": "6 min",
+  "tags": [
+    "secrets",
+    "env"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "executor_base_image",
+  "title": "Executor Base Image",
+  "description": "Build a custom executor image with apt and pip dependencies.\n\nSource: tests/test_executor_image.py",
+  "category": "Deployment & Packaging",
+  "difficulty": "Intermediate",
+  "time": "12 min",
+  "tags": [
+    "image",
+    "executor",
+    "pip",
+    "apt"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

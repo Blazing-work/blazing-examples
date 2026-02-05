@@ -1,0 +1,16 @@
+{
+  "id": "image_env_vars",
+  "title": "Image Environment Variables",
+  "description": "Inject environment variables into a custom image.\n\nSource: tests/test_executor_image.py",
+  "category": "Deployment & Packaging",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "image",
+    "env"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}
