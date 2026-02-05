@@ -1399,5 +1399,1329 @@
     "folder_path": "06_advanced/trading_strategy_sandbox",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/06_advanced/trading_strategy_sandbox",
     "href": "/docs/trading_strategy_sandbox"
+  },
+  {
+    "id": "api_execution_patterns",
+    "title": "API Execution Patterns",
+    "description": "Demonstrates wait_result(), handle.result(), and run() patterns.\n\nSource: tests/test_z_api_patterns_e2e.py",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "wait-result",
+      "run",
+      "remote-handle"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/api_execution_patterns",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/api_execution_patterns",
+    "href": "/docs/api_execution_patterns"
+  },
+  {
+    "id": "callable_workflows",
+    "title": "Callable Workflows",
+    "description": "Workflows are callable attributes on the app once registered.\n\nSource: tests/test_callable_workflows.py",
+    "category": "API Patterns",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "workflows",
+      "callable"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/callable_workflows",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/callable_workflows",
+    "href": "/docs/callable_workflows"
+  },
+  {
+    "id": "decorators_and_context",
+    "title": "Decorators and Context Manager",
+    "description": "Register steps, workflows, and services, then use the async context manager for cleanup.\n\nSource: tests/test_blazing_client.py",
+    "category": "API Patterns",
+    "difficulty": "Beginner",
+    "time": "8 min",
+    "tags": [
+      "decorators",
+      "context-manager",
+      "services"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/decorators_and_context",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/decorators_and_context",
+    "href": "/docs/decorators_and_context"
+  },
+  {
+    "id": "run_sync_by_name",
+    "title": "run_sync by Name",
+    "description": "Run a workflow synchronously by name using run_sync.\n\nSource: tests/test_z_api_patterns_e2e.py",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "6 min",
+    "tags": [
+      "sync",
+      "run_sync"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/run_sync_by_name",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/run_sync_by_name",
+    "href": "/docs/run_sync_by_name"
+  },
+  {
+    "id": "syncblazing_quickstart",
+    "title": "SyncBlazing Quickstart",
+    "description": "Use SyncBlazing for synchronous workflows without async/await.\n\nSource: tests/test_z_api_patterns_e2e.py",
+    "category": "API Patterns",
+    "difficulty": "Beginner",
+    "time": "6 min",
+    "tags": [
+      "sync",
+      "syncblazing"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/syncblazing_quickstart",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/syncblazing_quickstart",
+    "href": "/docs/syncblazing_quickstart"
+  },
+  {
+    "id": "wait_result_sync",
+    "title": "wait_result_sync Helper",
+    "description": "Use wait_result_sync on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "6 min",
+    "tags": [
+      "sync",
+      "wait_result_sync"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/wait_result_sync",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/wait_result_sync",
+    "href": "/docs/wait_result_sync"
+  },
+  {
+    "id": "workflow_handle_wait_cancel",
+    "title": "Workflow Handle wait()/cancel()",
+    "description": "Use wait() and cancel() on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "7 min",
+    "tags": [
+      "handle",
+      "wait",
+      "cancel"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/workflow_handle_wait_cancel",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/workflow_handle_wait_cancel",
+    "href": "/docs/workflow_handle_wait_cancel"
+  },
+  {
+    "id": "workflow_version_pins",
+    "title": "Workflow Version Pins",
+    "description": "Pin service versions when registering workflows for stable deployments.\n\nSource: tests/test_skillset_versioning.py",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "6 min",
+    "tags": [
+      "version-pins",
+      "workflows"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/workflow_version_pins",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/workflow_version_pins",
+    "href": "/docs/workflow_version_pins"
+  },
+  {
+    "id": "depth_cross_boundary",
+    "title": "Depth Across Boundaries",
+    "description": "Sandboxed step calling a trusted service in the same workflow.\n\nSource: tests/test_zz_depth_cross_boundary_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "depth",
+      "sandboxed",
+      "services"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/depth_cross_boundary",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/depth_cross_boundary",
+    "href": "/docs/depth_cross_boundary"
+  },
+  {
+    "id": "depth_metrics_api",
+    "title": "Depth Metrics API",
+    "description": "Query the depth metrics endpoint after running a workflow.\n\nSource: tests/test_z_feature_toggles_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "metrics",
+      "depth",
+      "http"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/depth_metrics_api",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/depth_metrics_api",
+    "href": "/docs/depth_metrics_api"
+  },
+  {
+    "id": "depth_statistics_metrics",
+    "title": "Depth Statistics Metrics",
+    "description": "Query depth statistics after running workflows.\n\nSource: tests/test_z_depth_statistics.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "depth-tracking",
+      "metrics"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/depth_statistics_metrics",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/depth_statistics_metrics",
+    "href": "/docs/depth_statistics_metrics"
+  },
+  {
+    "id": "depth_tracking_basic",
+    "title": "Depth Tracking Basics",
+    "description": "Create a simple parent/child workflow chain.\n\nSource: tests/test_z_depth_simple_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Beginner",
+    "time": "6 min",
+    "tags": [
+      "depth-tracking",
+      "workflows"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/depth_tracking_basic",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/depth_tracking_basic",
+    "href": "/docs/depth_tracking_basic"
+  },
+  {
+    "id": "depth_tracking_chain",
+    "title": "Depth Tracking Chain",
+    "description": "Build a deeper chain of steps to observe depth behavior.\n\nSource: tests/test_z_depth_tracking_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "depth-tracking",
+      "chain"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/depth_tracking_chain",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/depth_tracking_chain",
+    "href": "/docs/depth_tracking_chain"
+  },
+  {
+    "id": "executor_routing_mixed",
+    "title": "Mixed Executor Routing",
+    "description": "Route trusted and sandboxed steps to different executors in one workflow.\n\nSource: tests/test_z_executor_routing_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "executor-routing",
+      "sandboxed",
+      "trusted"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/executor_routing_mixed",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/executor_routing_mixed",
+    "href": "/docs/executor_routing_mixed"
+  },
+  {
+    "id": "mixed_load_profile",
+    "title": "Mixed Load Profile",
+    "description": "Blend CPU-bound and IO-bound steps with asyncio.gather.\n\nSource: tests/test_mixed_load_profile.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "mixed-load",
+      "asyncio",
+      "parallel"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/mixed_load_profile",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/mixed_load_profile",
+    "href": "/docs/mixed_load_profile"
+  },
+  {
+    "id": "state_machine_loop",
+    "title": "State Machine Loop",
+    "description": "Implement a simple workflow-driven state machine.\n\nSource: tests/test_z_state_machine_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "state-machine",
+      "loop"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/state_machine_loop",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/state_machine_loop",
+    "href": "/docs/state_machine_loop"
+  },
+  {
+    "id": "worker_type_isolation",
+    "title": "Worker Type Isolation",
+    "description": "Demonstrate behavior differences across worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "worker-types",
+      "isolation"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/worker_type_isolation",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/worker_type_isolation",
+    "href": "/docs/worker_type_isolation"
+  },
+  {
+    "id": "worker_types_overview",
+    "title": "Worker Types Overview",
+    "description": "Run trusted vs sandboxed steps and compare worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+    "category": "Runtime & Routing",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "worker-types",
+      "sandboxed",
+      "blocking"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/worker_types_overview",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/worker_types_overview",
+    "href": "/docs/worker_types_overview"
+  },
+  {
+    "id": "dynamic_code_execution",
+    "title": "Dynamic Code Execution (Sandboxed)",
+    "description": "Execute a dynamic expression inside a sandboxed step.\n\nSource: tests/test_z_dynamic_code_e2e.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Advanced",
+    "time": "10 min",
+    "tags": [
+      "sandboxed",
+      "dynamic-code"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/dynamic_code_execution",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/dynamic_code_execution",
+    "href": "/docs/dynamic_code_execution"
+  },
+  {
+    "id": "isolated_execution",
+    "title": "Isolated Execution",
+    "description": "Isolate a workload using sandboxed steps.\n\nSource: tests/test_zz_isolated_e2e.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "isolation",
+      "sandboxed"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/isolated_execution",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/isolated_execution",
+    "href": "/docs/isolated_execution"
+  },
+  {
+    "id": "isolated_retry",
+    "title": "Isolated Execution with Retry",
+    "description": "Add retry logic around sandboxed workloads.\n\nSource: tests/test_zzz_isolated_flaky.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Advanced",
+    "time": "10 min",
+    "tags": [
+      "isolation",
+      "retry"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/isolated_retry",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/isolated_retry",
+    "href": "/docs/isolated_retry"
+  },
+  {
+    "id": "pyodide_dependencies",
+    "title": "Pyodide Sandbox Dependencies",
+    "description": "Install extra dependencies for sandboxed steps via sandbox_dependencies.\n\nSource: tests/test_z_blazing_pyodide_e2e.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "pyodide",
+      "dependencies"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/pyodide_dependencies",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/pyodide_dependencies",
+    "href": "/docs/pyodide_dependencies"
+  },
+  {
+    "id": "pyodide_parallel_stress",
+    "title": "Pyodide Parallel Stress",
+    "description": "Run many sandboxed tasks in parallel to stress the sandbox executor.\n\nSource: tests/test_z_pyodide_stress_e2e.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "pyodide",
+      "parallel",
+      "stress"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/pyodide_parallel_stress",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/pyodide_parallel_stress",
+    "href": "/docs/pyodide_parallel_stress"
+  },
+  {
+    "id": "sandboxed_step_basic",
+    "title": "Sandboxed Step Basics",
+    "description": "Run untrusted code in a sandboxed step.\n\nSource: tests/test_z_sandboxed_execution_e2e.py",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "sandboxed",
+      "isolation"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/sandboxed_step_basic",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/sandboxed_step_basic",
+    "href": "/docs/sandboxed_step_basic"
+  },
+  {
+    "id": "api_key_middleware",
+    "title": "API Key Middleware",
+    "description": "Protect Blazing endpoints with a FastAPI middleware API key check.\n\nSource: greenfield",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "12 min",
+    "tags": [
+      "auth",
+      "middleware",
+      "fastapi"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/api_key_middleware",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/api_key_middleware",
+    "href": "/docs/api_key_middleware"
+  },
+  {
+    "id": "asgi_server_integration",
+    "title": "ASGI Server Integration",
+    "description": "Integrate Blazing workflows into an existing ASGI server.\n\nSource: tests/test_zz_web_endpoints_server_integration.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "asgi",
+      "server"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/asgi_server_integration",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/asgi_server_integration",
+    "href": "/docs/asgi_server_integration"
+  },
+  {
+    "id": "custom_exception_handler",
+    "title": "Custom Exception Handler",
+    "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "errors",
+      "fastapi",
+      "asgi"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/custom_exception_handler",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/custom_exception_handler",
+    "href": "/docs/custom_exception_handler"
+  },
+  {
+    "id": "framework_endpoints_multi",
+    "title": "Framework Endpoints (ASGI)",
+    "description": "Create an ASGI app from Blazing workflows for use with FastAPI/Starlette.\n\nSource: tests/test_z_all_frameworks_real_http_e2e.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "asgi",
+      "fastapi",
+      "endpoints"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/framework_endpoints_multi",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/framework_endpoints_multi",
+    "href": "/docs/framework_endpoints_multi"
+  },
+  {
+    "id": "get_endpoint_query",
+    "title": "GET Endpoint with Query Params",
+    "description": "Expose a GET endpoint that reads query parameters.\n\nSource: tests/test_web_endpoints_unit.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Beginner",
+    "time": "6 min",
+    "tags": [
+      "http",
+      "get",
+      "query"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/get_endpoint_query",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/get_endpoint_query",
+    "href": "/docs/get_endpoint_query"
+  },
+  {
+    "id": "mount_blazing_asgi",
+    "title": "Mount Blazing in FastAPI",
+    "description": "Mount the Blazing ASGI app inside a larger FastAPI app.\n\nSource: tests/test_z_all_frameworks_real_http_e2e.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "asgi",
+      "fastapi",
+      "mount"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/mount_blazing_asgi",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/mount_blazing_asgi",
+    "href": "/docs/mount_blazing_asgi"
+  },
+  {
+    "id": "multiple_methods",
+    "title": "Multiple HTTP Methods",
+    "description": "Expose GET and POST endpoints in the same app.\n\nSource: tests/test_web_endpoints_unit.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "http",
+      "methods"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/multiple_methods",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/multiple_methods",
+    "href": "/docs/multiple_methods"
+  },
+  {
+    "id": "real_http_endpoints",
+    "title": "Real HTTP Endpoints",
+    "description": "Expose a workflow as a real HTTP endpoint with ASGI.\n\nSource: tests/test_z_web_endpoints_real_http_e2e.py",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "http",
+      "fastapi",
+      "endpoints"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/real_http_endpoints",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/real_http_endpoints",
+    "href": "/docs/real_http_endpoints"
+  },
+  {
+    "id": "streaming_progress_bar",
+    "title": "Streaming Progress Bar",
+    "description": "Use progress_bar to emit SSE updates while iterating.\n\nSource: greenfield",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "streaming",
+      "sse",
+      "progress-bar"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/streaming_progress_bar",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/streaming_progress_bar",
+    "href": "/docs/streaming_progress_bar"
+  },
+  {
+    "id": "streaming_sidecar_route",
+    "title": "Streaming Sidecar Route",
+    "description": "Serve a streaming FastAPI route alongside Blazing endpoints.\n\nSource: greenfield",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "streaming",
+      "fastapi",
+      "asgi"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/streaming_sidecar_route",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/streaming_sidecar_route",
+    "href": "/docs/streaming_sidecar_route"
+  },
+  {
+    "id": "streaming_workflow_progress",
+    "title": "Streaming Workflow Progress",
+    "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield",
+    "category": "Web Endpoints Advanced",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "streaming",
+      "sse",
+      "progress"
+    ],
+    "products": [
+      "blazing-flow-endpoint"
+    ],
+    "primaryProduct": "blazing-flow-endpoint",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "10_web_endpoints_advanced/streaming_workflow_progress",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/10_web_endpoints_advanced/streaming_workflow_progress",
+    "href": "/docs/streaming_workflow_progress"
+  },
+  {
+    "id": "local_dict_connector",
+    "title": "Local Dict Connector",
+    "description": "Persist state locally with LocalDictService.\n\nSource: tests/test_z_local_connector_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "local",
+      "dict",
+      "state"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/local_dict_connector",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/local_dict_connector",
+    "href": "/docs/local_dict_connector"
+  },
+  {
+    "id": "local_multiple_services",
+    "title": "Local Multiple Services",
+    "description": "Use multiple services in a single workflow step chain.\n\nSource: tests/test_z_local_connector_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "local",
+      "services",
+      "composition"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/local_multiple_services",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/local_multiple_services",
+    "href": "/docs/local_multiple_services"
+  },
+  {
+    "id": "local_service_multistep",
+    "title": "Local Service Multistep",
+    "description": "Run a multi-step pipeline locally with a registered service.\n\nSource: tests/test_z_local_connector_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "local",
+      "services",
+      "multistep"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/local_service_multistep",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/local_service_multistep",
+    "href": "/docs/local_service_multistep"
+  },
+  {
+    "id": "publish_with_retry",
+    "title": "Publish with Retry",
+    "description": "Add retry logic for publish/run in flaky environments.\n\nSource: tests/test_z_redis_completion_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "retry",
+      "publish",
+      "resilience"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/publish_with_retry",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/publish_with_retry",
+    "href": "/docs/publish_with_retry"
+  },
+  {
+    "id": "redis_completion_polling",
+    "title": "Redis Completion Polling",
+    "description": "Use Redis completion keys for faster workflow polling.\n\nSource: tests/test_z_redis_completion_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "redis",
+      "polling",
+      "completion"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/redis_completion_polling",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/redis_completion_polling",
+    "href": "/docs/redis_completion_polling"
+  },
+  {
+    "id": "remote_control_plane_connection",
+    "title": "Remote Control Plane Connection",
+    "description": "Connect to a remote Blazing API using environment-based credentials.\n\nSource: tests/test_remote_control_plane.py",
+    "category": "Platform Integrations",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "api-url",
+      "auth"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/remote_control_plane_connection",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/remote_control_plane_connection",
+    "href": "/docs/remote_control_plane_connection"
+  },
+  {
+    "id": "service_composition_pipeline",
+    "title": "Service Composition Pipeline",
+    "description": "Compose multiple services inside a workflow pipeline.\n\nSource: tests/test_z_services_e2e.py",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "12 min",
+    "tags": [
+      "services",
+      "composition"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/service_composition_pipeline",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/service_composition_pipeline",
+    "href": "/docs/service_composition_pipeline"
+  },
+  {
+    "id": "agent_checkpointing_service",
+    "title": "Agent Checkpointing Service",
+    "description": "Persist intermediate results with a simple checkpoint service.\n\nSource: tests/test_z_deepagents_checkpoint_e2e.py",
+    "category": "GPU & Agents",
+    "difficulty": "Intermediate",
+    "time": "12 min",
+    "tags": [
+      "agents",
+      "checkpointing",
+      "services"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/agent_checkpointing_service",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/agent_checkpointing_service",
+    "href": "/docs/agent_checkpointing_service"
+  },
+  {
+    "id": "gpu_matrix_multiplication",
+    "title": "GPU Matrix Multiplication",
+    "description": "Run PyTorch matrix multiplication on GPU via a Blazing step.\n\nSource: tests/test_z_gpu_e2e.py",
+    "category": "GPU & Agents",
+    "difficulty": "Advanced",
+    "time": "15 min",
+    "tags": [
+      "gpu",
+      "pytorch",
+      "ml"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/gpu_matrix_multiplication",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/gpu_matrix_multiplication",
+    "href": "/docs/gpu_matrix_multiplication"
+  },
+  {
+    "id": "sandbox_dependencies_langgraph",
+    "title": "Sandbox Dependencies for Agents",
+    "description": "Provide extra dependencies for agent-style sandboxed workflows.\n\nSource: tests/test_z_langblaze_e2e.py",
+    "category": "GPU & Agents",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "sandbox",
+      "dependencies",
+      "agents"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/sandbox_dependencies_langgraph",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/sandbox_dependencies_langgraph",
+    "href": "/docs/sandbox_dependencies_langgraph"
+  },
+  {
+    "id": "build_wheel",
+    "title": "Build a Wheel for Sandbox",
+    "description": "Build a local wheel to upload for sandbox dependencies.\n\nSource: tests/test_z_wheel_e2e.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Advanced",
+    "time": "10 min",
+    "tags": [
+      "wheel",
+      "packaging"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/build_wheel",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/build_wheel",
+    "href": "/docs/build_wheel"
+  },
+  {
+    "id": "custom_image_workflow",
+    "title": "Custom Image Workflow",
+    "description": "Run a workflow with a custom container image.\n\nSource: tests/test_z_docker_basic_e2e.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "image",
+      "deployment"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/custom_image_workflow",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/custom_image_workflow",
+    "href": "/docs/custom_image_workflow"
+  },
+  {
+    "id": "dockerfile_image",
+    "title": "Dockerfile Image",
+    "description": "Use a Dockerfile to define a custom image for a workflow.\n\nSource: tests/test_executor_image.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "image",
+      "dockerfile"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/dockerfile_image",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/dockerfile_image",
+    "href": "/docs/dockerfile_image"
+  },
+  {
+    "id": "executor_base_image",
+    "title": "Executor Base Image",
+    "description": "Build a custom executor image with apt and pip dependencies.\n\nSource: tests/test_executor_image.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Intermediate",
+    "time": "12 min",
+    "tags": [
+      "image",
+      "executor",
+      "pip",
+      "apt"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/executor_base_image",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/executor_base_image",
+    "href": "/docs/executor_base_image"
+  },
+  {
+    "id": "image_env_vars",
+    "title": "Image Environment Variables",
+    "description": "Inject environment variables into a custom image.\n\nSource: tests/test_executor_image.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Intermediate",
+    "time": "8 min",
+    "tags": [
+      "image",
+      "env"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/image_env_vars",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/image_env_vars",
+    "href": "/docs/image_env_vars"
+  },
+  {
+    "id": "image_with_run_commands",
+    "title": "Image with Run Commands",
+    "description": "Bake assets into an image using run_commands.\n\nSource: tests/test_executor_image.py",
+    "category": "Deployment & Packaging",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "image",
+      "run-commands"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/image_with_run_commands",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/image_with_run_commands",
+    "href": "/docs/image_with_run_commands"
+  },
+  {
+    "id": "model_cache_in_image",
+    "title": "Model Cache in Image",
+    "description": "Bake model artifacts into an image and load them at runtime.\n\nSource: greenfield",
+    "category": "Deployment & Packaging",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "image",
+      "model-cache"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/model_cache_in_image",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/model_cache_in_image",
+    "href": "/docs/model_cache_in_image"
+  },
+  {
+    "id": "multiple_images",
+    "title": "Multiple Images in One App",
+    "description": "Use different container images for different workflows.\n\nSource: greenfield",
+    "category": "Deployment & Packaging",
+    "difficulty": "Advanced",
+    "time": "12 min",
+    "tags": [
+      "image",
+      "multi-image"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/multiple_images",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/multiple_images",
+    "href": "/docs/multiple_images"
+  },
+  {
+    "id": "secrets_via_env",
+    "title": "Secrets via Environment",
+    "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield",
+    "category": "Deployment & Packaging",
+    "difficulty": "Beginner",
+    "time": "6 min",
+    "tags": [
+      "secrets",
+      "env"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/secrets_via_env",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/secrets_via_env",
+    "href": "/docs/secrets_via_env"
   }
 ]

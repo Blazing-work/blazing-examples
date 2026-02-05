@@ -19,12 +19,19 @@ Inspired by [modal-examples](https://github.com/modal-labs/modal-examples).
 
 ```
 blazing-examples/
-├── 01_getting_started/      # Basic examples to get started
+├── 01_getting_started/       # Basic examples to get started
 ├── 02_web_endpoints/         # Web servers, APIs, HTTP endpoints
 ├── 03_data_processing/       # ETL, batch processing, data pipelines
 ├── 04_async_parallel/        # Async patterns and parallel execution
 ├── 05_integrations/          # Third-party service integrations
 ├── 06_advanced/              # Advanced patterns and techniques
+├── 07_api_patterns/          # API usage patterns and sync helpers
+├── 08_runtime_routing/       # Runtime behavior, routing, depth, worker types
+├── 09_sandbox_isolation/     # Sandboxed execution and Pyodide patterns
+├── 10_web_endpoints_advanced/# Advanced endpoint and ASGI integrations
+├── 11_integrations_platform/ # Platform integrations and resilience patterns
+├── 12_gpu_ai_agents/         # GPU workflows and agent-style patterns
+├── 13_deployment_packaging/  # Packaging and deployment patterns
 ├── generate_manifest.py      # Generates examples.json manifest
 └── examples.json             # Generated manifest (auto-updated)
 ```
@@ -49,6 +56,27 @@ Integration examples with popular services (databases, APIs, cloud services).
 ### 06_advanced
 Advanced patterns including CRDT queues, custom runtimes, and zero-trust networking.
 
+### 07_api_patterns
+API usage patterns including wait_result, handle patterns, and sync helpers.
+
+### 08_runtime_routing
+Runtime behavior, routing, depth tracking, worker types, and state machines.
+
+### 09_sandbox_isolation
+Sandboxed execution patterns, Pyodide dependencies, and isolation strategies.
+
+### 10_web_endpoints_advanced
+Advanced HTTP endpoint and ASGI server integration patterns.
+
+### 11_integrations_platform
+Platform integrations, local connectors, and resilience patterns.
+
+### 12_gpu_ai_agents
+GPU workflows and agent-style sandbox patterns.
+
+### 13_deployment_packaging
+Container images and packaging for sandbox/workflow dependencies.
+
 ## Running Examples
 
 ### Prerequisites
@@ -64,17 +92,17 @@ blazing configure
 ### Run Locally
 
 ```bash
-# Navigate to an example
-cd 01_getting_started
+# Navigate to an example directory
+cd 01_getting_started/hello_world
 
 # Run the example
-python hello_world.py
+python flow.py
 ```
 
 ### Deploy to Production
 
 ```bash
-blazing deploy hello_world.py
+blazing deploy flow.py
 ```
 
 ## Writing Examples
@@ -115,9 +143,9 @@ Detailed description of:
 ### Adding a New Example
 
 1. Choose the appropriate category directory
-2. Create a new `.py` file with a descriptive name (use underscores)
-3. Follow the template above
-4. Add metadata in the docstring
+2. Create a new folder with a descriptive name (use underscores)
+3. Add `flow.py`, `meta.json`, and `EXPECTED_OUTPUT.md`
+4. Follow the template above in `flow.py`
 5. Write clear, well-commented code
 6. Test your example locally
 7. Run the manifest generator:

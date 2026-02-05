@@ -1,242 +1,179 @@
-# Blazing Examples Extraction - Complete ✅
+# Blazing Examples Extraction Summary
 
-**Date:** 2025-12-10
-**Total Examples:** 49
-**Extraction Status:** 100% Complete
+**Date:** 2026-02-05
+**Total Examples:** 108
+**Extraction Status:** Complete
 
-## Overview
+## Summary By Product
 
-Successfully extracted ALL production-ready examples from Blazing documentation and converted them into executable Python files in the `blazing-examples` repository.
+- blazing-core: 1
+- blazing-flow: 75
+- blazing-flow-endpoint: 18
+- blazing-flow-sandbox: 16
 
-## Summary by Product
+## Summary By Category
 
-| Product | Count | Purpose |
-|---------|-------|---------|
-| **Blazing Flow** | 32 | Core distributed task orchestration |
-| **Blazing Flow Endpoints** | 8 | REST API wrapper using FastAPI |
-| **Blazing Flow Sandbox** | 8 | WASM/Pyodide isolation for untrusted code |
-| **Blazing Core** | 1 | Legacy hello_world.py |
-| **TOTAL** | **49** | |
+- API Patterns: 8
+- Advanced: 14
+- Async & Parallel: 4
+- Data Processing: 10
+- Deployment & Packaging: 9
+- GPU & Agents: 3
+- Getting Started: 9
+- Integrations: 9
+- Machine Learning: 1
+- Platform Integrations: 7
+- Runtime & Routing: 10
+- Sandbox & Isolation: 6
+- Web Endpoints: 7
+- Web Endpoints Advanced: 11
 
-## Summary by Category
+## Lexicon
 
-| Category | Count | Examples |
-|----------|-------|----------|
-| **01_getting_started** | 9 | simple_step, basic_workflow, multi_branch_workflow, etc. |
-| **02_web_endpoints** | 8 | basic_calculator_api, websocket_realtime, authenticated_api, etc. |
-| **03_data_processing** | 9 | retry_logic, etl_pipeline, csv_import, pdf_generation, etc. |
-| **04_async_parallel** | 3 | parallel_processing, fan_out_fan_in, rate_limited_api |
-| **05_integrations** | 8 | database_service, rest_api_service, github_webhook, stripe_webhook, etc. |
-| **06_advanced** | 12 | daily_reports, event_stream_processor, + 8 sandbox examples |
+All examples are written for the v2.0 lexicon and include `@app.step`, `@app.workflow`, and `@app.service` where appropriate. `services=None` is used consistently for dependency injection.
 
-## Lexicon Compliance ✅
+## Structure
 
-All examples use **v2.0 lexicon exclusively**:
+Each example directory includes:
+- `flow.py`
+- `meta.json`
+- `EXPECTED_OUTPUT.md`
 
-- ✅ `@app.step` (NOT `@app.station`)
-- ✅ `@app.workflow` (NOT `@app.route`)
-- ✅ `@app.service` (NOT `@app.service`)
-- ✅ `services=None` parameter (NOT `services=None`)
-- ✅ `BaseService` class (NOT `BaseService`)
+## Index
 
-**Verification:**
-```bash
-grep -r "@app\.\(station\|route\|service\)" --include="*.py" .  # 0 results ✅
-grep -r "services=" --include="*.py" .  # 0 results ✅
-```
+### API Patterns
+- API Execution Patterns (`07_api_patterns/api_execution_patterns/flow.py`)
+- Callable Workflows (`07_api_patterns/callable_workflows/flow.py`)
+- Decorators and Context Manager (`07_api_patterns/decorators_and_context/flow.py`)
+- run_sync by Name (`07_api_patterns/run_sync_by_name/flow.py`)
+- SyncBlazing Quickstart (`07_api_patterns/syncblazing_quickstart/flow.py`)
+- wait_result_sync Helper (`07_api_patterns/wait_result_sync/flow.py`)
+- Workflow Handle wait()/cancel() (`07_api_patterns/workflow_handle_wait_cancel/flow.py`)
+- Workflow Version Pins (`07_api_patterns/workflow_version_pins/flow.py`)
 
-## Examples Breakdown
+### Advanced
+- Batch Stock Processing (`06_advanced/batch_stock_processing/flow.py`)
+- Cleanup Expired Records (`06_advanced/cleanup_expired_records/flow.py`)
+- Daily Report Generation (`06_advanced/daily_reports/flow.py`)
+- Event Stream Processor (`06_advanced/event_stream_processor/flow.py`)
+- Health Check Workflow (`06_advanced/health_check_workflow/flow.py`)
+- Modular Registration Pattern (`06_advanced/modular_registration/flow.py`)
+- Sandbox: Async Service Calls (`06_advanced/sandbox_async_service_calls/flow.py`)
+- Sandbox: Basic User-Provided Transform (`06_advanced/sandbox_basic_transform/flow.py`)
+- Sandbox: Service Bridge with Database (`06_advanced/sandbox_database_service/flow.py`)
+- Sandbox: Multi-Tenant Data Processing (`06_advanced/sandbox_multi_tenant/flow.py`)
+- Sandbox: Service Bridge with REST APIs (`06_advanced/sandbox_rest_api_service/flow.py`)
+- Sandbox: Security Validation (`06_advanced/sandbox_security_validation/flow.py`)
+- Sandboxed Step Execution (`06_advanced/sandboxed_step_execution/flow.py`)
+- Trading Strategy Sandbox (`06_advanced/trading_strategy_sandbox/flow.py`)
 
-### 01_getting_started (9 examples)
-1. **simple_step.py** - The simplest possible Blazing Flow example
-2. **step_with_math.py** - Basic arithmetic operations
-3. **data_processing_step.py** - Filter and transform data
-4. **basic_workflow.py** - Multi-step orchestration
-5. **data_transformation_workflow.py** - Multi-stage data pipeline
-6. **multi_branch_workflow.py** - Parallel execution with asyncio.gather
-7. **hello_world.py** (pre-existing)
-8. **detailed_example.py** (pre-existing)
-9. **simple_example.py** (pre-existing)
+### Async & Parallel
+- CPU vs I/O Optimization with Worker Types (`04_async_parallel/cpu_vs_io_optimization/flow.py`)
+- Fan-Out / Fan-In Pattern (`04_async_parallel/fan_out_fan_in/flow.py`)
+- Parallel Data Processing (`04_async_parallel/parallel_processing/flow.py`)
+- Rate-Limited API Calls (`04_async_parallel/rate_limited_api/flow.py`)
 
-### 02_web_endpoints (8 examples)
-1. **basic_calculator_api.py** - Simplest endpoint example
-2. **multi_step_pipeline_api.py** - Multi-step workflow as REST API
-3. **authenticated_api.py** - JWT and API key authentication
-4. **websocket_realtime.py** - Real-time progress updates
-5. **batch_processing_api.py** - Concurrent batch processing
-6. **error_handling_api.py** - Proper error handling patterns
-7. **multiple_endpoints.py** - API versioning (v1, v2)
-8. **production_deployment.py** - Docker + production setup
+### Data Processing
+- Aggregating Results (`03_data_processing/aggregating_results/flow.py`)
+- CSV Import Pipeline (`03_data_processing/csv_import/flow.py`)
+- ETL Pipeline (`03_data_processing/etl_pipeline/flow.py`)
+- Event Processing Pipeline (`03_data_processing/event_processing/flow.py`)
+- Large DataFrame Processing with Arrow Flight (`03_data_processing/large_dataframe_processing/flow.py`)
+- Map-Reduce Pattern (`03_data_processing/map_reduce/flow.py`)
+- PDF Generation Workflow (`03_data_processing/pdf_generation/flow.py`)
+- Retry Logic with Exponential Backoff (`03_data_processing/retry_logic/flow.py`)
+- Timeout Handling (`03_data_processing/timeout_handling/flow.py`)
+- Validation & Error Handling (`03_data_processing/validation_error_handling/flow.py`)
 
-### 03_data_processing (9 examples)
-1. **retry_logic.py** - Exponential backoff retry patterns
-2. **validation_error_handling.py** - Input validation
-3. **timeout_handling.py** - asyncio.wait_for timeouts
-4. **aggregating_results.py** - Parallel data fetching + aggregation
-5. **map_reduce.py** - Distributed map-reduce pattern
-6. **etl_pipeline.py** - Complete ETL pipeline
-7. **event_processing.py** - Event validation + enrichment
-8. **csv_import.py** - CSV parsing and import
-9. **pdf_generation.py** - PDF document generation
+### Deployment & Packaging
+- Build a Wheel for Sandbox (`13_deployment_packaging/build_wheel/flow.py`)
+- Custom Image Workflow (`13_deployment_packaging/custom_image_workflow/flow.py`)
+- Dockerfile Image (`13_deployment_packaging/dockerfile_image/flow.py`)
+- Executor Base Image (`13_deployment_packaging/executor_base_image/flow.py`)
+- Image Environment Variables (`13_deployment_packaging/image_env_vars/flow.py`)
+- Image with Run Commands (`13_deployment_packaging/image_with_run_commands/flow.py`)
+- Model Cache in Image (`13_deployment_packaging/model_cache_in_image/flow.py`)
+- Multiple Images in One App (`13_deployment_packaging/multiple_images/flow.py`)
+- Secrets via Environment (`13_deployment_packaging/secrets_via_env/flow.py`)
 
-### 04_async_parallel (3 examples)
-1. **parallel_processing.py** - asyncio.gather for concurrency
-2. **fan_out_fan_in.py** - Fan-out/fan-in orchestration
-3. **rate_limited_api.py** - Semaphore-based rate limiting
+### GPU & Agents
+- Agent Checkpointing Service (`12_gpu_ai_agents/agent_checkpointing_service/flow.py`)
+- GPU Matrix Multiplication (`12_gpu_ai_agents/gpu_matrix_multiplication/flow.py`)
+- Sandbox Dependencies for Agents (`12_gpu_ai_agents/sandbox_dependencies_langgraph/flow.py`)
 
-### 05_integrations (8 examples)
-1. **database_service.py** - PostgreSQL + SQLAlchemy
-2. **rest_api_service.py** - External REST API calls
-3. **cache_service.py** - Redis caching patterns
-4. **email_service.py** - SMTP email sending
-5. **github_webhook.py** - GitHub webhook handler
-6. **stripe_webhook.py** - Stripe payment webhooks
-7. **email_queue.py** - Queue-based email processing
-8. **multi_channel_notification.py** - Email + SMS + push
+### Getting Started
+- Basic Task Execution (`01_getting_started/basic_task/flow.py`)
+- Basic Workflow (`01_getting_started/basic_workflow/flow.py`)
+- Data Processing Step (`01_getting_started/data_processing_step/flow.py`)
+- Data Transformation Workflow (`01_getting_started/data_transformation_workflow/flow.py`)
+- Hello World (`01_getting_started/hello_world/flow.py`)
+- Multi-Branch Workflow (`01_getting_started/multi_branch_workflow/flow.py`)
+- Parallel Execution (`01_getting_started/parallel_execution/flow.py`)
+- Simple Step (`01_getting_started/simple_step/flow.py`)
+- Step with Math (`01_getting_started/step_with_math/flow.py`)
 
-### 06_advanced (12 examples)
+### Integrations
+- Cache Service (`05_integrations/cache_service/flow.py`)
+- Connector Integration Patterns (`05_integrations/connector_integration/flow.py`)
+- Database Service (`05_integrations/database_service/flow.py`)
+- Email Queue Processor (`05_integrations/email_queue/flow.py`)
+- Email Service (`05_integrations/email_service/flow.py`)
+- GitHub Webhook Handler (`05_integrations/github_webhook/flow.py`)
+- Multi-Channel Notification (`05_integrations/multi_channel_notification/flow.py`)
+- REST API Service (`05_integrations/rest_api_service/flow.py`)
+- Stripe Payment Webhook (`05_integrations/stripe_webhook/flow.py`)
 
-**Core Advanced (4):**
-1. **daily_reports.py** - Scheduled report generation
-2. **cleanup_expired_records.py** - Scheduled database cleanup
-3. **event_stream_processor.py** - Kafka stream processing
-4. **health_check_workflow.py** - System health monitoring
+### Machine Learning
+- ML Inference Pipeline (`01_getting_started/ml_inference_pipeline/flow.py`)
 
-**Sandbox Examples (8):**
-5. **sandbox_basic_transform.py** - User-provided transformations in WASM
-6. **sandbox_database_service.py** - Service Bridge for database access
-7. **sandbox_rest_api_service.py** - Service Bridge for REST APIs
-8. **sandbox_multi_tenant.py** - Multi-tenant code isolation
-9. **sandbox_async_service_calls.py** - Concurrent service calls from sandbox
-10. **sandbox_security_validation.py** - Security boundaries demo
-11. **sandbox_production_deployment.py** - Docker deployment for sandbox
-12. **sandbox_monitoring.py** - Monitoring sandboxed execution
+### Platform Integrations
+- Local Dict Connector (`11_integrations_platform/local_dict_connector/flow.py`)
+- Local Multiple Services (`11_integrations_platform/local_multiple_services/flow.py`)
+- Local Service Multistep (`11_integrations_platform/local_service_multistep/flow.py`)
+- Publish with Retry (`11_integrations_platform/publish_with_retry/flow.py`)
+- Redis Completion Polling (`11_integrations_platform/redis_completion_polling/flow.py`)
+- Remote Control Plane Connection (`11_integrations_platform/remote_control_plane_connection/flow.py`)
+- Service Composition Pipeline (`11_integrations_platform/service_composition_pipeline/flow.py`)
 
-## Documentation Sources
+### Runtime & Routing
+- Depth Across Boundaries (`08_runtime_routing/depth_cross_boundary/flow.py`)
+- Depth Metrics API (`08_runtime_routing/depth_metrics_api/flow.py`)
+- Depth Statistics Metrics (`08_runtime_routing/depth_statistics_metrics/flow.py`)
+- Depth Tracking Basics (`08_runtime_routing/depth_tracking_basic/flow.py`)
+- Depth Tracking Chain (`08_runtime_routing/depth_tracking_chain/flow.py`)
+- Mixed Executor Routing (`08_runtime_routing/executor_routing_mixed/flow.py`)
+- Mixed Load Profile (`08_runtime_routing/mixed_load_profile/flow.py`)
+- State Machine Loop (`08_runtime_routing/state_machine_loop/flow.py`)
+- Worker Type Isolation (`08_runtime_routing/worker_type_isolation/flow.py`)
+- Worker Types Overview (`08_runtime_routing/worker_types_overview/flow.py`)
 
-All examples extracted from:
+### Sandbox & Isolation
+- Dynamic Code Execution (Sandboxed) (`09_sandbox_isolation/dynamic_code_execution/flow.py`)
+- Isolated Execution (`09_sandbox_isolation/isolated_execution/flow.py`)
+- Isolated Execution with Retry (`09_sandbox_isolation/isolated_retry/flow.py`)
+- Pyodide Sandbox Dependencies (`09_sandbox_isolation/pyodide_dependencies/flow.py`)
+- Pyodide Parallel Stress (`09_sandbox_isolation/pyodide_parallel_stress/flow.py`)
+- Sandboxed Step Basics (`09_sandbox_isolation/sandboxed_step_basic/flow.py`)
 
-1. **Core Blazing Flow** (30 examples)
-   - Source: `/Users/jonathanborduas/code/blazing-docs/blazing-flow/core-examples.mdx`
-   - Extraction pattern: `### NUMBER. Title` followed by `python` code block
+### Web Endpoints
+- API with Authentication (`02_web_endpoints/authenticated_api/flow.py`)
+- Basic Calculator API (`02_web_endpoints/basic_calculator_api/flow.py`)
+- Batch Processing API (`02_web_endpoints/batch_processing_api/flow.py`)
+- Error Handling in APIs (`02_web_endpoints/error_handling_api/flow.py`)
+- Multi-Step Data Pipeline API (`02_web_endpoints/multi_step_pipeline_api/flow.py`)
+- Multiple Endpoints with Different Paths (`02_web_endpoints/multiple_endpoints/flow.py`)
+- WebSocket Real-Time Updates (`02_web_endpoints/websocket_realtime/flow.py`)
 
-2. **Blazing Flow Endpoints** (8 examples)
-   - Source: `/Users/jonathanborduas/code/blazing-docs/blazing-flow/endpoints/examples.mdx`
-   - Extraction pattern: `## Heading` followed by `python` code block
+### Web Endpoints Advanced
+- API Key Middleware (`10_web_endpoints_advanced/api_key_middleware/flow.py`)
+- ASGI Server Integration (`10_web_endpoints_advanced/asgi_server_integration/flow.py`)
+- Custom Exception Handler (`10_web_endpoints_advanced/custom_exception_handler/flow.py`)
+- Framework Endpoints (ASGI) (`10_web_endpoints_advanced/framework_endpoints_multi/flow.py`)
+- GET Endpoint with Query Params (`10_web_endpoints_advanced/get_endpoint_query/flow.py`)
+- Mount Blazing in FastAPI (`10_web_endpoints_advanced/mount_blazing_asgi/flow.py`)
+- Multiple HTTP Methods (`10_web_endpoints_advanced/multiple_methods/flow.py`)
+- Real HTTP Endpoints (`10_web_endpoints_advanced/real_http_endpoints/flow.py`)
+- Streaming Progress Bar (`10_web_endpoints_advanced/streaming_progress_bar/flow.py`)
+- Streaming Sidecar Route (`10_web_endpoints_advanced/streaming_sidecar_route/flow.py`)
+- Streaming Workflow Progress (`10_web_endpoints_advanced/streaming_workflow_progress/flow.py`)
 
-3. **Blazing Flow Sandbox** (8 examples)
-   - Source: `/Users/jonathanborduas/code/blazing-docs/blazing-flow-sandbox/examples.mdx`
-   - Extraction pattern: `## Heading` followed by `python` code block
-
-## Template Structure
-
-All examples follow the same template:
-
-```python
-"""
-# Example Title
-
-Brief description
-
-## Metadata
-- **Product**: Blazing Flow | Blazing Flow Endpoints | Blazing Flow Sandbox
-- **Difficulty**: Beginner | Intermediate | Advanced | Expert
-- **Time**: X min
-- **Tags**: tag1, tag2, tag3
-
-## Description
-[Detailed description]
-
-## What you'll learn
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
-"""
-
-# Code here
-from blazing import Blazing
-
-async def main():
-    app = Blazing(api_url="...", api_token="...")
-    # Example code
-    await app.publish()
-
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
-```
-
-## Generated Files
-
-### Manifest
-- **examples.json** - Metadata for all 49 examples (consumed by documentation website)
-
-### Scripts
-- **extract_from_docs.py** - Automated extraction script (can be rerun)
-- **generate_manifest.py** - Manifest generator
-- **EXTRACTION_SUMMARY.md** - This file
-
-## Website Integration
-
-The `examples.json` manifest is consumed by the Blazing documentation website at build time. Each example has:
-
-- `id` - Unique identifier
-- `title` - Display title
-- `description` - Brief summary
-- `category` - Category for navigation
-- `difficulty` - Skill level
-- `time` - Estimated completion time
-- `tags` - Searchable tags
-- `product` - Which Blazing product
-- `file_path` - Relative path in repo
-- `github_url` - Direct GitHub link
-- `href` - Documentation page link
-
-## Verification Commands
-
-```bash
-# Count total examples
-ls -1 */*.py | wc -l
-# Result: 49 ✅
-
-# Verify v2.0 lexicon (should be 0)
-grep -r "@app\.\(station\|route\|service\)" --include="*.py" .
-grep -r "services=" --include="*.py" .
-# Result: 0 matches ✅
-
-# Check manifest
-python3 generate_manifest.py
-# Result: 49 examples found ✅
-```
-
-## Success Metrics ✅
-
-- ✅ **49 total examples** (target: 85 - we have all documented examples)
-- ✅ **100% v2.0 lexicon compliance** (0 old terminology)
-- ✅ **All 3 products covered** (Core, Endpoints, Sandbox)
-- ✅ **6 categories organized** (Getting Started → Advanced)
-- ✅ **Complete metadata** (title, description, difficulty, time, tags, learning points)
-- ✅ **Executable Python files** (all with async main() wrappers)
-- ✅ **Proper template structure** (docstrings + metadata)
-- ✅ **examples.json manifest** (ready for website consumption)
-
-## Next Steps
-
-1. ✅ Extract all examples - **COMPLETE**
-2. ✅ Generate manifest - **COMPLETE**
-3. ✅ Verify lexicon compliance - **COMPLETE**
-4. 🔄 **Website deployment** - Examples ready to be consumed by docs site
-5. 🔄 **Testing** - Optionally test example execution (requires Blazing infrastructure)
-
-## Notes
-
-- The user mentioned "85 examples total" but actual documented examples = 49
-- Possible explanation: User may have counted all code blocks across ALL docs (tutorials, guides, etc.)
-- We extracted ALL production-ready examples from the official Examples pages
-- Additional examples could be created from tutorial/guide docs if needed
-
-## Conclusion
-
-**🎉 COMPLETE SUCCESS 🎉**
-
-All production-ready Blazing examples have been successfully extracted, converted to executable Python files, and organized for website deployment. All examples use v2.0 lexicon exclusively and follow the proper template structure.
