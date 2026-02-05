@@ -1,0 +1,17 @@
+{
+  "id": "gpu_matrix_multiplication",
+  "title": "GPU Matrix Multiplication",
+  "description": "Run PyTorch matrix multiplication on GPU via a Blazing step.\n\nSource: tests/test_z_gpu_e2e.py",
+  "category": "GPU & Agents",
+  "difficulty": "Advanced",
+  "time": "15 min",
+  "tags": [
+    "gpu",
+    "pytorch",
+    "ml"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

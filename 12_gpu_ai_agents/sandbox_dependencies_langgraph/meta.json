@@ -1,0 +1,17 @@
+{
+  "id": "sandbox_dependencies_langgraph",
+  "title": "Sandbox Dependencies for Agents",
+  "description": "Provide extra dependencies for agent-style sandboxed workflows.\n\nSource: tests/test_z_langblaze_e2e.py",
+  "category": "GPU & Agents",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "sandbox",
+    "dependencies",
+    "agents"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}
