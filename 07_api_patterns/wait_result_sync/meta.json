@@ -1,0 +1,16 @@
+{
+  "id": "wait_result_sync",
+  "title": "wait_result_sync Helper",
+  "description": "Use wait_result_sync on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "6 min",
+  "tags": [
+    "sync",
+    "wait_result_sync"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

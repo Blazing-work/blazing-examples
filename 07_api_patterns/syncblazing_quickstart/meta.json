@@ -1,0 +1,16 @@
+{
+  "id": "syncblazing_quickstart",
+  "title": "SyncBlazing Quickstart",
+  "description": "Use SyncBlazing for synchronous workflows without async/await.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "category": "API Patterns",
+  "difficulty": "Beginner",
+  "time": "6 min",
+  "tags": [
+    "sync",
+    "syncblazing"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

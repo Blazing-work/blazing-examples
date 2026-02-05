@@ -1,0 +1,16 @@
+{
+  "id": "workflow_version_pins",
+  "title": "Workflow Version Pins",
+  "description": "Pin service versions when registering workflows for stable deployments.\n\nSource: tests/test_skillset_versioning.py",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "6 min",
+  "tags": [
+    "version-pins",
+    "workflows"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

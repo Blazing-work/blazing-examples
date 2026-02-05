@@ -1,0 +1,17 @@
+{
+  "id": "executor_routing_mixed",
+  "title": "Mixed Executor Routing",
+  "description": "Route trusted and sandboxed steps to different executors in one workflow.\n\nSource: tests/test_z_executor_routing_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "executor-routing",
+    "sandboxed",
+    "trusted"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

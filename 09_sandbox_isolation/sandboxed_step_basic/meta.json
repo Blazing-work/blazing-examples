@@ -1,0 +1,16 @@
+{
+  "id": "sandboxed_step_basic",
+  "title": "Sandboxed Step Basics",
+  "description": "Run untrusted code in a sandboxed step.\n\nSource: tests/test_z_sandboxed_execution_e2e.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "sandboxed",
+    "isolation"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

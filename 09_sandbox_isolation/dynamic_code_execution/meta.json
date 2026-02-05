@@ -1,0 +1,16 @@
+{
+  "id": "dynamic_code_execution",
+  "title": "Dynamic Code Execution (Sandboxed)",
+  "description": "Execute a dynamic expression inside a sandboxed step.\n\nSource: tests/test_z_dynamic_code_e2e.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Advanced",
+  "time": "10 min",
+  "tags": [
+    "sandboxed",
+    "dynamic-code"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

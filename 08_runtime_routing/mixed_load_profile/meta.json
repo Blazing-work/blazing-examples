@@ -1,0 +1,17 @@
+{
+  "id": "mixed_load_profile",
+  "title": "Mixed Load Profile",
+  "description": "Blend CPU-bound and IO-bound steps with asyncio.gather.\n\nSource: tests/test_mixed_load_profile.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "mixed-load",
+    "asyncio",
+    "parallel"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

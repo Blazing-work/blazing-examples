@@ -1,0 +1,17 @@
+{
+  "id": "worker_types_overview",
+  "title": "Worker Types Overview",
+  "description": "Run trusted vs sandboxed steps and compare worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "worker-types",
+    "sandboxed",
+    "blocking"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

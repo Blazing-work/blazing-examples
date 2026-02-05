@@ -1,0 +1,17 @@
+{
+  "id": "workflow_handle_wait_cancel",
+  "title": "Workflow Handle wait()/cancel()",
+  "description": "Use wait() and cancel() on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "7 min",
+  "tags": [
+    "handle",
+    "wait",
+    "cancel"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

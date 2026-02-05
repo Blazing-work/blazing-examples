@@ -1,0 +1,16 @@
+{
+  "id": "worker_type_isolation",
+  "title": "Worker Type Isolation",
+  "description": "Demonstrate behavior differences across worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "worker-types",
+    "isolation"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

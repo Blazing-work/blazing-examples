@@ -1,0 +1,17 @@
+{
+  "id": "decorators_and_context",
+  "title": "Decorators and Context Manager",
+  "description": "Register steps, workflows, and services, then use the async context manager for cleanup.\n\nSource: tests/test_blazing_client.py",
+  "category": "API Patterns",
+  "difficulty": "Beginner",
+  "time": "8 min",
+  "tags": [
+    "decorators",
+    "context-manager",
+    "services"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

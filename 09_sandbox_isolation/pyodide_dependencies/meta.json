@@ -1,0 +1,16 @@
+{
+  "id": "pyodide_dependencies",
+  "title": "Pyodide Sandbox Dependencies",
+  "description": "Install extra dependencies for sandboxed steps via sandbox_dependencies.\n\nSource: tests/test_z_blazing_pyodide_e2e.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "pyodide",
+    "dependencies"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

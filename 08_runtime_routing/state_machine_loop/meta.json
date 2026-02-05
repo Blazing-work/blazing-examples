@@ -1,0 +1,16 @@
+{
+  "id": "state_machine_loop",
+  "title": "State Machine Loop",
+  "description": "Implement a simple workflow-driven state machine.\n\nSource: tests/test_z_state_machine_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "state-machine",
+    "loop"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

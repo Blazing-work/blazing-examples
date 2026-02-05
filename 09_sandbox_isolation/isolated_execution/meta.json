@@ -1,0 +1,16 @@
+{
+  "id": "isolated_execution",
+  "title": "Isolated Execution",
+  "description": "Isolate a workload using sandboxed steps.\n\nSource: tests/test_zz_isolated_e2e.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "isolation",
+    "sandboxed"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

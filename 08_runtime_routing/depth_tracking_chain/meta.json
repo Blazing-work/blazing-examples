@@ -1,0 +1,16 @@
+{
+  "id": "depth_tracking_chain",
+  "title": "Depth Tracking Chain",
+  "description": "Build a deeper chain of steps to observe depth behavior.\n\nSource: tests/test_z_depth_tracking_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "depth-tracking",
+    "chain"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

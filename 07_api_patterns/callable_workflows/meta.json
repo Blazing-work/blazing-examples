@@ -1,0 +1,16 @@
+{
+  "id": "callable_workflows",
+  "title": "Callable Workflows",
+  "description": "Workflows are callable attributes on the app once registered.\n\nSource: tests/test_callable_workflows.py",
+  "category": "API Patterns",
+  "difficulty": "Beginner",
+  "time": "5 min",
+  "tags": [
+    "workflows",
+    "callable"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

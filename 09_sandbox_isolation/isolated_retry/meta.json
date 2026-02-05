@@ -1,0 +1,16 @@
+{
+  "id": "isolated_retry",
+  "title": "Isolated Execution with Retry",
+  "description": "Add retry logic around sandboxed workloads.\n\nSource: tests/test_zzz_isolated_flaky.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Advanced",
+  "time": "10 min",
+  "tags": [
+    "isolation",
+    "retry"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

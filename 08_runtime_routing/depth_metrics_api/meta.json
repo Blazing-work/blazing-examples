@@ -1,0 +1,17 @@
+{
+  "id": "depth_metrics_api",
+  "title": "Depth Metrics API",
+  "description": "Query the depth metrics endpoint after running a workflow.\n\nSource: tests/test_z_feature_toggles_e2e.py",
+  "category": "Runtime & Routing",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "metrics",
+    "depth",
+    "http"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

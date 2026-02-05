@@ -1,0 +1,17 @@
+{
+  "id": "pyodide_parallel_stress",
+  "title": "Pyodide Parallel Stress",
+  "description": "Run many sandboxed tasks in parallel to stress the sandbox executor.\n\nSource: tests/test_z_pyodide_stress_e2e.py",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "pyodide",
+    "parallel",
+    "stress"
+  ],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
+  "primaryProduct": "blazing-flow-sandbox"
+}

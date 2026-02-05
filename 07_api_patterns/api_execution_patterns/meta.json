@@ -1,0 +1,17 @@
+{
+  "id": "api_execution_patterns",
+  "title": "API Execution Patterns",
+  "description": "Demonstrates wait_result(), handle.result(), and run() patterns.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "wait-result",
+    "run",
+    "remote-handle"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}
