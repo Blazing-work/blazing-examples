@@ -1,0 +1,16 @@
+{
+  "id": "multiple_methods",
+  "title": "Multiple HTTP Methods",
+  "description": "Expose GET and POST endpoints in the same app.\n\nSource: tests/test_web_endpoints_unit.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "http",
+    "methods"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

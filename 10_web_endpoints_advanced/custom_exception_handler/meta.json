@@ -1,0 +1,17 @@
+{
+  "id": "custom_exception_handler",
+  "title": "Custom Exception Handler",
+  "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "errors",
+    "fastapi",
+    "asgi"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

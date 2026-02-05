@@ -1,0 +1,17 @@
+{
+  "id": "framework_endpoints_multi",
+  "title": "Framework Endpoints (ASGI)",
+  "description": "Create an ASGI app from Blazing workflows for use with FastAPI/Starlette.\n\nSource: tests/test_z_all_frameworks_real_http_e2e.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "asgi",
+    "fastapi",
+    "endpoints"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

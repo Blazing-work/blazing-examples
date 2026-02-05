@@ -1,0 +1,17 @@
+{
+  "id": "get_endpoint_query",
+  "title": "GET Endpoint with Query Params",
+  "description": "Expose a GET endpoint that reads query parameters.\n\nSource: tests/test_web_endpoints_unit.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Beginner",
+  "time": "6 min",
+  "tags": [
+    "http",
+    "get",
+    "query"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

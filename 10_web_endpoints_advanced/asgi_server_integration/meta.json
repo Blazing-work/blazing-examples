@@ -1,0 +1,16 @@
+{
+  "id": "asgi_server_integration",
+  "title": "ASGI Server Integration",
+  "description": "Integrate Blazing workflows into an existing ASGI server.\n\nSource: tests/test_zz_web_endpoints_server_integration.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "asgi",
+    "server"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "streaming_sidecar_route",
+  "title": "Streaming Sidecar Route",
+  "description": "Serve a streaming FastAPI route alongside Blazing endpoints.\n\nSource: greenfield",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "streaming",
+    "fastapi",
+    "asgi"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

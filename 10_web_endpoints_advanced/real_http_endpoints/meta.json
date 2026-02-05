@@ -1,0 +1,17 @@
+{
+  "id": "real_http_endpoints",
+  "title": "Real HTTP Endpoints",
+  "description": "Expose a workflow as a real HTTP endpoint with ASGI.\n\nSource: tests/test_z_web_endpoints_real_http_e2e.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "http",
+    "fastapi",
+    "endpoints"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

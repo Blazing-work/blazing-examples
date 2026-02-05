@@ -1,0 +1,17 @@
+{
+  "id": "mount_blazing_asgi",
+  "title": "Mount Blazing in FastAPI",
+  "description": "Mount the Blazing ASGI app inside a larger FastAPI app.\n\nSource: tests/test_z_all_frameworks_real_http_e2e.py",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "asgi",
+    "fastapi",
+    "mount"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}

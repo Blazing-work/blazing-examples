@@ -1,0 +1,17 @@
+{
+  "id": "api_key_middleware",
+  "title": "API Key Middleware",
+  "description": "Protect Blazing endpoints with a FastAPI middleware API key check.\n\nSource: greenfield",
+  "category": "Web Endpoints Advanced",
+  "difficulty": "Intermediate",
+  "time": "12 min",
+  "tags": [
+    "auth",
+    "middleware",
+    "fastapi"
+  ],
+  "products": [
+    "blazing-flow-endpoint"
+  ],
+  "primaryProduct": "blazing-flow-endpoint"
+}
