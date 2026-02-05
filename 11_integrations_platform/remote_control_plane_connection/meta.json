@@ -1,0 +1,16 @@
+{
+  "id": "remote_control_plane_connection",
+  "title": "Remote Control Plane Connection",
+  "description": "Connect to a remote Blazing API using environment-based credentials.\n\nSource: tests/test_remote_control_plane.py",
+  "category": "Platform Integrations",
+  "difficulty": "Beginner",
+  "time": "5 min",
+  "tags": [
+    "api-url",
+    "auth"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

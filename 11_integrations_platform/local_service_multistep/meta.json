@@ -1,0 +1,17 @@
+{
+  "id": "local_service_multistep",
+  "title": "Local Service Multistep",
+  "description": "Run a multi-step pipeline locally with a registered service.\n\nSource: tests/test_z_local_connector_e2e.py",
+  "category": "Platform Integrations",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "local",
+    "services",
+    "multistep"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

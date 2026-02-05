@@ -1,0 +1,17 @@
+{
+  "id": "redis_completion_polling",
+  "title": "Redis Completion Polling",
+  "description": "Use Redis completion keys for faster workflow polling.\n\nSource: tests/test_z_redis_completion_e2e.py",
+  "category": "Platform Integrations",
+  "difficulty": "Advanced",
+  "time": "12 min",
+  "tags": [
+    "redis",
+    "polling",
+    "completion"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

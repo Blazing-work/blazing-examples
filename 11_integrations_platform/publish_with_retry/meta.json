@@ -1,0 +1,17 @@
+{
+  "id": "publish_with_retry",
+  "title": "Publish with Retry",
+  "description": "Add retry logic for publish/run in flaky environments.\n\nSource: tests/test_z_redis_completion_e2e.py",
+  "category": "Platform Integrations",
+  "difficulty": "Intermediate",
+  "time": "8 min",
+  "tags": [
+    "retry",
+    "publish",
+    "resilience"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "local_multiple_services",
+  "title": "Local Multiple Services",
+  "description": "Use multiple services in a single workflow step chain.\n\nSource: tests/test_z_local_connector_e2e.py",
+  "category": "Platform Integrations",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "local",
+    "services",
+    "composition"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}
