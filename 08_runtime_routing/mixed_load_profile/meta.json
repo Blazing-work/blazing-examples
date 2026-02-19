@@ -1,7 +1,7 @@
 {
   "id": "mixed_load_profile",
   "title": "Mixed Load Profile",
-  "description": "Blend CPU-bound and IO-bound steps with asyncio.gather.\n\nSource: tests/test_mixed_load_profile.py",
+  "description": "Blends a CPU-bound BLOCKING step and an async I/O-bound step in a single workflow using asyncio.gather, demonstrating how Blazing routes different load profiles to appropriate executor pools.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

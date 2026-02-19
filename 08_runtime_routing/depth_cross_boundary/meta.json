@@ -1,7 +1,7 @@
 {
   "id": "depth_cross_boundary",
   "title": "Depth Across Boundaries",
-  "description": "Sandboxed step calling a trusted service in the same workflow.\n\nSource: tests/test_zz_depth_cross_boundary_e2e.py",
+  "description": "Demonstrates a sandboxed step calling a trusted service in the same workflow — a cross-boundary pattern where Pyodide-isolated code accesses a trusted service via the services= injection mechanism.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

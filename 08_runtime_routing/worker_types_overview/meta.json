@@ -1,7 +1,7 @@
 {
   "id": "worker_types_overview",
   "title": "Worker Types Overview",
-  "description": "Run trusted vs sandboxed steps and compare worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+  "description": "Runs all four worker type combinations — trusted BLOCKING, trusted NON-BLOCKING, sandboxed BLOCKING, and sandboxed NON-BLOCKING — in one workflow to demonstrate how step_type and sandboxed flags control executor routing.",
   "category": "Runtime & Routing",
   "difficulty": "Intermediate",
   "time": "10 min",

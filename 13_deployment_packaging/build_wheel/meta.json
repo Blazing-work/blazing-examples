@@ -1,7 +1,7 @@
 {
   "id": "build_wheel",
   "title": "Build a Wheel for Sandbox",
-  "description": "Build a local wheel to upload for sandbox dependencies.\n\nSource: tests/test_z_wheel_e2e.py",
+  "description": "Builds a Python wheel from the current package directory using blazing.wheel_builder.build_wheel(), producing a .whl file that can be uploaded as a sandbox dependency for Pyodide-sandboxed steps.",
   "category": "Deployment & Packaging",
   "difficulty": "Advanced",
   "time": "10 min",

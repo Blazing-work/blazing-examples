@@ -1,7 +1,7 @@
 {
   "id": "api_execution_patterns",
   "title": "API Execution Patterns",
-  "description": "Demonstrates wait_result(), handle.result(), and run() patterns.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "description": "Demonstrates three equivalent patterns for invoking workflows and retrieving results: wait_result() one-liner, handle.result() for deferred fetch, and run() by name for string-based dispatch.",
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "10 min",

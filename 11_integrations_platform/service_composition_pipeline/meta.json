@@ -1,7 +1,7 @@
 {
   "id": "service_composition_pipeline",
   "title": "Service Composition Pipeline",
-  "description": "Compose multiple services inside a workflow pipeline.\n\nSource: tests/test_z_services_e2e.py",
+  "description": "Composes MathService and StringService in a single step to build a two-stage pipeline: compute a product then format it as a labeled string — demonstrates service chaining for multi-step data transformation.",
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "12 min",

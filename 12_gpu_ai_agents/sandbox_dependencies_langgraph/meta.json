@@ -1,7 +1,7 @@
 {
   "id": "sandbox_dependencies_langgraph",
   "title": "Sandbox Dependencies for Agents",
-  "description": "Provide extra dependencies for agent-style sandboxed workflows.\n\nSource: tests/test_z_langblaze_e2e.py",
+  "description": "Installs langchain-core into the Pyodide sandbox via sandbox_dependencies=['langchain-core'], demonstrating how to provide agent framework libraries to sandboxed steps for LangGraph-style agent workflows.",
   "category": "GPU & Agents",
   "difficulty": "Advanced",
   "time": "12 min",

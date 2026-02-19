@@ -1,7 +1,7 @@
 {
   "id": "wait_result_sync",
   "title": "wait_result_sync Helper",
-  "description": "Use wait_result_sync on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "description": "Shows how to use wait_result_sync() on a workflow execution handle for blocking result retrieval in synchronous contexts — useful when mixing sync and async code in the same application.",
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "6 min",

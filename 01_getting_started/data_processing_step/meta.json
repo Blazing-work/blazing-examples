@@ -1,7 +1,7 @@
 {
   "id": "data_processing_step",
   "title": "Data Processing Step",
-  "description": "Filter and transform data in a single step.",
+  "description": "Filter rows and transform fields in a single Blazing step — lightweight inline data processing without a pipeline.",
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "5 min",

@@ -1,7 +1,7 @@
 {
   "id": "real_http_endpoints",
   "title": "Real HTTP Endpoints",
-  "description": "Expose a workflow as a real HTTP endpoint with ASGI.\n\nSource: tests/test_z_web_endpoints_real_http_e2e.py",
+  "description": "Exposes a Blazing workflow as a real HTTP endpoint using @app.endpoint() and create_asgi_app(), serving live HTTP requests via uvicorn — the foundation for production API deployment.",
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",

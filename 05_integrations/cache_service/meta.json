@@ -1,7 +1,7 @@
 {
   "id": "cache_service",
   "title": "Cache Service",
-  "description": "Implement caching with Redis for faster lookups.",
+  "description": "Implement a cache-aside pattern with Redis — check cache, compute on miss, store result, serve on hit.",
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",

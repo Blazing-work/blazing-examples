@@ -1,7 +1,7 @@
 {
   "id": "multiple_methods",
   "title": "Multiple HTTP Methods",
-  "description": "Expose GET and POST endpoints in the same app.\n\nSource: tests/test_web_endpoints_unit.py",
+  "description": "Exposes both GET and POST endpoints in a single Blazing app — a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration.",
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "8 min",

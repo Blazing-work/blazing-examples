@@ -1,7 +1,7 @@
 {
   "id": "get_endpoint_query",
   "title": "GET Endpoint with Query Params",
-  "description": "Expose a GET endpoint that reads query parameters.\n\nSource: tests/test_web_endpoints_unit.py",
+  "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting — demonstrates query param binding for Blazing HTTP endpoints.",
   "category": "Web Endpoints Advanced",
   "difficulty": "Beginner",
   "time": "6 min",

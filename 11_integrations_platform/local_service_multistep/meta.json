@@ -1,7 +1,7 @@
 {
   "id": "local_service_multistep",
   "title": "Local Service Multistep",
-  "description": "Run a multi-step pipeline locally with a registered service.\n\nSource: tests/test_z_local_connector_e2e.py",
+  "description": "Runs a two-step pipeline where compute_sum aggregates a list using MathService.add() and compute_product scales the result using MathService.multiply(), demonstrating multi-step service reuse.",
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",

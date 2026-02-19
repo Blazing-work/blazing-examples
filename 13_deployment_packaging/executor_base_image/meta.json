@@ -1,7 +1,7 @@
 {
   "id": "executor_base_image",
   "title": "Executor Base Image",
-  "description": "Build a custom executor image with apt and pip dependencies.\n\nSource: tests/test_executor_image.py",
+  "description": "Builds a custom executor image from Image.executor() using method chaining: .apt_install('curl') for system packages, .pip_install('numpy') for Python packages, and .env(APP_ENV='prod') for environment variables.",
   "category": "Deployment & Packaging",
   "difficulty": "Intermediate",
   "time": "12 min",

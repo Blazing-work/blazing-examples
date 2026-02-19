@@ -1,7 +1,7 @@
 {
   "id": "custom_image_workflow",
   "title": "Custom Image Workflow",
-  "description": "Run a workflow with a custom container image.\n\nSource: tests/test_z_docker_basic_e2e.py",
+  "description": "Runs a workflow using a custom container image built with Image.debian_slim(python_version='3.11').pip_install('numpy'), demonstrating how to attach a custom Docker image to a specific workflow via @app.workflow(image=image).",
   "category": "Deployment & Packaging",
   "difficulty": "Intermediate",
   "time": "10 min",

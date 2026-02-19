@@ -1,7 +1,7 @@
 {
   "id": "asgi_server_integration",
   "title": "ASGI Server Integration",
-  "description": "Integrate Blazing workflows into an existing ASGI server.\n\nSource: tests/test_zz_web_endpoints_server_integration.py",
+  "description": "Integrates a Blazing workflow into an ASGI server using create_asgi_app() and uvicorn.run(), exposing a /hello endpoint backed by a registered workflow for direct HTTP access.",
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",

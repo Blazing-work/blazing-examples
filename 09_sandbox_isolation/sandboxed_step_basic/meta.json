@@ -1,7 +1,7 @@
 {
   "id": "sandboxed_step_basic",
   "title": "Sandboxed Step Basics",
-  "description": "Run untrusted code in a sandboxed step.\n\nSource: tests/test_z_sandboxed_execution_e2e.py",
+  "description": "The simplest sandboxed step example: marks a step with @app.step(sandboxed=True) to run it in Pyodide WASM isolation, demonstrating the minimal configuration needed for sandbox execution.",
   "category": "Sandbox & Isolation",
   "difficulty": "Intermediate",
   "time": "8 min",

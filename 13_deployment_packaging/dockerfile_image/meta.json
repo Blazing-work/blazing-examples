@@ -1,7 +1,7 @@
 {
   "id": "dockerfile_image",
   "title": "Dockerfile Image",
-  "description": "Use a Dockerfile to define a custom image for a workflow.\n\nSource: tests/test_executor_image.py",
+  "description": "Uses Image.from_dockerfile(path, context) to build a custom workflow image from a Dockerfile in the current directory, enabling full control over the executor environment through standard Docker tooling.",
   "category": "Deployment & Packaging",
   "difficulty": "Advanced",
   "time": "12 min",

@@ -1,7 +1,7 @@
 {
   "id": "publish_with_retry",
   "title": "Publish with Retry",
-  "description": "Add retry logic for publish/run in flaky environments.\n\nSource: tests/test_z_redis_completion_e2e.py",
+  "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes.",
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "8 min",

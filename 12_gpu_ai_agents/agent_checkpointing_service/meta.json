@@ -1,7 +1,7 @@
 {
   "id": "agent_checkpointing_service",
   "title": "Agent Checkpointing Service",
-  "description": "Persist intermediate results with a simple checkpoint service.\n\nSource: tests/test_z_deepagents_checkpoint_e2e.py",
+  "description": "Demonstrates agent-style fault tolerance using a CheckpointService that persists intermediate step results (step_one and step_two outputs) in an in-memory store, enabling recovery from partial workflow failures.",
   "category": "GPU & Agents",
   "difficulty": "Intermediate",
   "time": "12 min",

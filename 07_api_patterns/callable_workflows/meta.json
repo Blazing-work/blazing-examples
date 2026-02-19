@@ -1,7 +1,7 @@
 {
   "id": "callable_workflows",
   "title": "Callable Workflows",
-  "description": "Workflows are callable attributes on the app once registered.\n\nSource: tests/test_callable_workflows.py",
+  "description": "Shows how registered workflows become callable attributes on the app object, enabling natural invocation syntax like app.my_workflow(x=10).wait_result() without string-based dispatch.",
   "category": "API Patterns",
   "difficulty": "Beginner",
   "time": "5 min",

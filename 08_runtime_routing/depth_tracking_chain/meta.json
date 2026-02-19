@@ -1,7 +1,7 @@
 {
   "id": "depth_tracking_chain",
   "title": "Depth Tracking Chain",
-  "description": "Build a deeper chain of steps to observe depth behavior.\n\nSource: tests/test_z_depth_tracking_e2e.py",
+  "description": "Builds a chain of three steps where each calls the previous (step_c → step_b → step_a) to demonstrate how Blazing tracks and records multi-level step depth across a call chain.",
   "category": "Runtime & Routing",
   "difficulty": "Intermediate",
   "time": "8 min",

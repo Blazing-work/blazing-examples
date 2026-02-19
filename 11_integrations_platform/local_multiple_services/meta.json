@@ -1,7 +1,7 @@
 {
   "id": "local_multiple_services",
   "title": "Local Multiple Services",
-  "description": "Use multiple services in a single workflow step chain.\n\nSource: tests/test_z_local_connector_e2e.py",
+  "description": "Registers two services (MathService and StringService) in a single workflow step, demonstrating how a step accesses multiple services via the services= dict injection and chains their results.",
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",

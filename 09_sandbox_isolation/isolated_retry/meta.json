@@ -1,7 +1,7 @@
 {
   "id": "isolated_retry",
   "title": "Isolated Execution with Retry",
-  "description": "Add retry logic around sandboxed workloads.\n\nSource: tests/test_zzz_isolated_flaky.py",
+  "description": "Demonstrates retry logic around sandboxed workloads using a try/except loop — if the sandboxed step raises an exception, the workflow waits and retries up to three times before propagating the error.",
   "category": "Sandbox & Isolation",
   "difficulty": "Advanced",
   "time": "10 min",

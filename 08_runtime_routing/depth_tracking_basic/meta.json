@@ -1,7 +1,7 @@
 {
   "id": "depth_tracking_basic",
   "title": "Depth Tracking Basics",
-  "description": "Create a simple parent/child workflow chain.\n\nSource: tests/test_z_depth_simple_e2e.py",
+  "description": "Creates a simple parent workflow calling a single child step to demonstrate Blazing's depth tracking — how the system records parent-child relationships between workflow and step executions.",
   "category": "Runtime & Routing",
   "difficulty": "Beginner",
   "time": "6 min",

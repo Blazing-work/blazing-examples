@@ -1,7 +1,7 @@
 {
   "id": "syncblazing_quickstart",
   "title": "SyncBlazing Quickstart",
-  "description": "Use SyncBlazing for synchronous workflows without async/await.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "description": "Demonstrates SyncBlazing — the fully synchronous Blazing client — for workflows that must run without any async/await in the calling code, such as scripts and synchronous web frameworks.",
   "category": "API Patterns",
   "difficulty": "Beginner",
   "time": "6 min",

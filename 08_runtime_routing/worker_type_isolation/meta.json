@@ -1,7 +1,7 @@
 {
   "id": "worker_type_isolation",
   "title": "Worker Type Isolation",
-  "description": "Demonstrate behavior differences across worker types.\n\nSource: tests/test_z_worker_types_e2e.py",
+  "description": "Demonstrates behavior differences between trusted and sandboxed NON-BLOCKING workers by running the same input through both and comparing results — trusted steps run in the main process, sandboxed in Pyodide.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

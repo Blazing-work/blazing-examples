@@ -1,7 +1,7 @@
 {
   "id": "pyodide_dependencies",
   "title": "Pyodide Sandbox Dependencies",
-  "description": "Install extra dependencies for sandboxed steps via sandbox_dependencies.\n\nSource: tests/test_z_blazing_pyodide_e2e.py",
+  "description": "Shows how to install extra Python packages into the Pyodide sandbox using the sandbox_dependencies=['numpy'] parameter, making them available inside sandboxed steps without exposing them to trusted workers.",
   "category": "Sandbox & Isolation",
   "difficulty": "Intermediate",
   "time": "10 min",

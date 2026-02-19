@@ -1,7 +1,7 @@
 {
   "id": "depth_statistics_metrics",
   "title": "Depth Statistics Metrics",
-  "description": "Query depth statistics after running workflows.\n\nSource: tests/test_z_depth_statistics.py",
+  "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

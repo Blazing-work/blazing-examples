@@ -1,7 +1,7 @@
 {
   "id": "state_machine_loop",
   "title": "State Machine Loop",
-  "description": "Implement a simple workflow-driven state machine.\n\nSource: tests/test_z_state_machine_e2e.py",
+  "description": "Implements a workflow-driven state machine using a while loop — each iteration calls a step that advances the state until a terminal condition is reached, demonstrating looping patterns in Blazing.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

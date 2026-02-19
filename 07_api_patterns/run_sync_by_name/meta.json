@@ -1,7 +1,7 @@
 {
   "id": "run_sync_by_name",
   "title": "run_sync by Name",
-  "description": "Run a workflow synchronously by name using run_sync.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "description": "Demonstrates the synchronous API for running workflows by name — app.publish_sync() and app.run_sync('workflow_name', **kwargs) — for use in non-async calling contexts.",
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "6 min",

@@ -1,7 +1,7 @@
 {
   "id": "workflow_handle_wait_cancel",
   "title": "Workflow Handle wait()/cancel()",
-  "description": "Use wait() and cancel() on a workflow execution handle.\n\nSource: tests/test_z_api_patterns_e2e.py",
+  "description": "Demonstrates handle lifecycle methods: handle.wait() to block until completion, handle.wait_result() to retrieve the return value, and handle.cancel() to abort an in-flight workflow execution.",
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "7 min",

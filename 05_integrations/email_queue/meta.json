@@ -1,7 +1,7 @@
 {
   "id": "email_queue",
   "title": "Email Queue Processor",
-  "description": "Process email queues in batches with Redis.",
+  "description": "Drain an email queue in configurable batches using Redis LIST operations — rate-limited bulk sending.",
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "25 min",

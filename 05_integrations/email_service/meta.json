@@ -1,7 +1,7 @@
 {
   "id": "email_service",
   "title": "Email Service",
-  "description": "Send emails via SMTP service integration.",
+  "description": "Send transactional emails via SMTP using a Blazing service — templating, retries, and delivery confirmation.",
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",

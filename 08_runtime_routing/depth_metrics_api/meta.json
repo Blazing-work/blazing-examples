@@ -1,7 +1,7 @@
 {
   "id": "depth_metrics_api",
   "title": "Depth Metrics API",
-  "description": "Query the depth metrics endpoint after running a workflow.\n\nSource: tests/test_z_feature_toggles_e2e.py",
+  "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth.",
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",

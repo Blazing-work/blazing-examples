@@ -1,7 +1,7 @@
 {
   "id": "local_dict_connector",
   "title": "Local Dict Connector",
-  "description": "Persist state locally with LocalDictService.\n\nSource: tests/test_z_local_connector_e2e.py",
+  "description": "Uses LocalDictService to persist workflow state in an in-memory key-value store without external dependencies — ideal for local development and testing patterns that will use Redis in production.",
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",
