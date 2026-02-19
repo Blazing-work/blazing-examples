@@ -6,7 +6,7 @@ async def main():
 
     @app.service
     class CheckpointService(BaseService):
-        def __init__(self, connector_instances):
+        def __init__(self, connector_instances=None):
             self._store = {}
 
         async def save(self, key: str, value):

@@ -171,16 +171,16 @@ class MarketDataService(BaseService):
 
     Pattern:
         class TradeGrid(BaseService):
-            def __init__(self, connector_instances):
-                self.connector_instances = connector_instances
+            def __init__(self, connector_instances=None):
+                self.connector_instances = connector_instances or {}
 
             async def _add_stock_price(self, stock_id):
                 data = await self.connector_instances['GuruFocus'].get_data(url)
                 ...
     """
 
-    def __init__(self, connector_instances: dict):
-        self.connector_instances = connector_instances
+    def __init__(self, connector_instances: dict | None = None):
+        self.connector_instances = connector_instances or {}
 
     async def _async_init(self):
         """Connect all connectors during service initialization."""
