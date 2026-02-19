@@ -133,4 +133,28 @@ Each entry maps a test file to one or more example flows generated from it.
 ## tests/test_z_egress_e2e.py
 - Egress Policy (`09_sandbox_isolation/egress_policy/flow.py`)
   Category: Sandbox & Isolation, ID: egress_policy
+## tests/test_batched.py
+- Batched Steps (`07_api_patterns/batched_steps/flow.py`)
+  Category: API Patterns, ID: batched_steps
+## tests/test_z_serialize_mode_e2e.py
+- Serialize Loading Strategy (`13_deployment_packaging/serialize_mode/flow.py`)
+  Category: Deployment & Packaging, ID: serialize_mode
+## tests/test_z_volume_e2e.py
+- Volume File Storage (`11_integrations_platform/volume_file_storage/flow.py`)
+  Category: Platform Integrations, ID: volume_file_storage
+## tests/test_z_scheduler_e2e.py
+- Cron & Periodic Scheduler (`11_integrations_platform/cron_scheduler/flow.py`)
+  Category: Platform Integrations, ID: cron_scheduler
+## tests/test_z_llm_connector_e2e.py
+- OpenAI LLM Connector (`11_integrations_platform/llm_openai_connector/flow.py`)
+  Category: Platform Integrations, ID: llm_openai_connector
+## tests/test_z_local_distributed_e2e.py
+- Distributed Dict & Queue (`11_integrations_platform/distributed_dict_queue/flow.py`)
+  Category: Platform Integrations, ID: distributed_dict_queue
+## tests/test_z_langblaze_e2e.py (advanced patterns)
+- LangBlaze LLM Service (`12_gpu_ai_agents/langblaze_llm_service/flow.py`)
+  Category: GPU & Agents, ID: langblaze_llm_service
+## (new — PyArrow step I/O pattern)
+- Arrow DataFrames (`03_data_processing/arrow_dataframes/flow.py`)
+  Category: Data Processing, ID: arrow_dataframes
 
