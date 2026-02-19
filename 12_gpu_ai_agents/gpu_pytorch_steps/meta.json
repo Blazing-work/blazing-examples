@@ -1,0 +1,11 @@
+{
+  "id": "gpu_pytorch_steps",
+  "title": "GPU PyTorch Steps — A100 + H100 Pipeline",
+  "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow — Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA.",
+  "category": "GPU & Agents",
+  "difficulty": "Advanced",
+  "time": "20 min",
+  "tags": ["gpu", "pytorch", "a100", "h100", "ml", "neural-network", "pipeline"],
+  "products": ["blazing-flow"],
+  "primaryProduct": "blazing-flow"
+}
