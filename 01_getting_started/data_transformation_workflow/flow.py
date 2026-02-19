@@ -1,3 +1,16 @@
+"""
+Data Transformation Workflow
+
+Demonstrates a multi-stage data pipeline with cleaning and normalization.
+Raw data with null values is first cleaned, then normalized to the 0-1 range,
+showing how to compose steps into a sequential transformation pipeline.
+
+Patterns shown:
+  1. Two-step pipeline: null removal then min-max normalization
+  2. Passing step output as input to the next step
+  3. wait_result() one-liner for immediate result retrieval
+  4. SyncBlazing equivalent for synchronous contexts
+"""
 from blazing import Blazing
 
 

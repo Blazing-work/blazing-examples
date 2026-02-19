@@ -1,3 +1,16 @@
+"""
+Database Service
+
+Demonstrates integrating a database service with Blazing steps.
+A UserDatabase service (backed by an in-memory dict; SQL pattern shown in comments)
+is injected into a step via the services dict, showing the canonical service access pattern.
+
+Patterns shown:
+  1. Defining a @app.service class inheriting BaseService
+  2. Accessing the service inside a step via services["UserDatabase"]
+  3. Step delegating DB writes to the service method
+  4. Workflow calling the step and returning the created user record
+"""
 import asyncio
 
 from blazing import Blazing

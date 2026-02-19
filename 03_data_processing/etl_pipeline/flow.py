@@ -1,3 +1,16 @@
+"""
+ETL Pipeline
+
+Demonstrates a complete Extract-Transform-Load pipeline as three chained steps.
+Data is extracted from a source, cleaned and enriched with a processed_at timestamp,
+then loaded to a destination data warehouse.
+
+Patterns shown:
+  1. Extract step returning a list of raw records
+  2. Transform step filtering invalid rows and enriching with metadata
+  3. Load step accepting destination parameter for flexible routing
+  4. Reporting source/destination/row counts in the workflow result
+"""
 from datetime import datetime
 
 from blazing import Blazing

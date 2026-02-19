@@ -1,3 +1,16 @@
+"""
+Simple Step
+
+The simplest possible Blazing Flow example — a single step wrapped in a workflow.
+Shows the minimal boilerplate: one @app.step, one @app.workflow, publish, and
+wait_result().
+
+Patterns shown:
+  1. Defining a single @app.step
+  2. Wrapping a step in a @app.workflow
+  3. app.publish() then wait_result() for a synchronous result
+  4. SyncBlazing variant with no async/await at the call site
+"""
 from blazing import Blazing
 
 

@@ -1,3 +1,16 @@
+"""
+Data Processing Step
+
+Demonstrates filtering and transforming data in a single step.
+A step filters a list to keep only positive numbers, wrapped in a minimal
+workflow to show the step-workflow relationship.
+
+Patterns shown:
+  1. A pure data-transformation step with list comprehension
+  2. A one-step workflow that delegates directly to a step
+  3. app.publish() then wait_result() to obtain results synchronously
+  4. SyncBlazing equivalent for learning contexts
+"""
 from blazing import Blazing
 
 

@@ -1,3 +1,15 @@
+"""
+Validation Error Handling
+
+Demonstrates input validation with graceful error handling in a Blazing workflow.
+An email validation step raises ValueError for malformed addresses; the workflow
+catches it and returns a structured error response instead of failing.
+
+Patterns shown:
+  1. Regex email validation in a dedicated step
+  2. try/except in a workflow to convert ValueError to a structured response
+  3. Testing both valid and invalid inputs in a single run
+"""
 import re
 import random
 

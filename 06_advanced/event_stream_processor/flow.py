@@ -1,3 +1,17 @@
+"""
+Event Stream Processor
+
+Demonstrates consuming, processing, and storing event batches from a streaming source
+(Kafka pattern).  Events are consumed in batches, enriched with a timestamp, aggregated
+by type, and persisted to an event database.
+
+Patterns shown:
+  1. EventStreamService wrapping a Kafka consumer (simulated)
+  2. EventDatabase service for persisted storage of processed events
+  3. Batch transformation step that enriches events with processed_at
+  4. Aggregation step using collections.Counter for event-type breakdown
+  5. Sequential pipeline: consume → process → aggregate → store
+"""
 import asyncio
 from collections import Counter
 from datetime import datetime

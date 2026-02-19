@@ -1,3 +1,16 @@
+"""
+Batch Processing API
+
+Demonstrates processing a list of user IDs concurrently through a web endpoint.
+Fetch and process steps are launched in parallel with asyncio.gather, then
+the combined results are returned as a JSON response.
+
+Patterns shown:
+  1. Concurrent fetch + process via asyncio.gather inside a workflow
+  2. Exposing the batch workflow at a POST endpoint with @app.endpoint
+  3. Returning structured JSON from a Blazing endpoint
+  4. Creating and serving the FastAPI ASGI app with uvicorn
+"""
 import asyncio
 
 from blazing import Blazing

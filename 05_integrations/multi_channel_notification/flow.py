@@ -1,3 +1,16 @@
+"""
+Multi-Channel Notification
+
+Demonstrates sending a notification simultaneously across multiple channels
+(email, SMS, push) using asyncio.gather.  The workflow selects channels from a
+list parameter and launches only the requested steps concurrently.
+
+Patterns shown:
+  1. Per-channel notification steps (email, SMS, push)
+  2. Dynamic task list built from a channels parameter
+  3. asyncio.gather launching only the selected channel steps
+  4. Returning per-channel sent status in the workflow result
+"""
 import asyncio
 
 from blazing import Blazing

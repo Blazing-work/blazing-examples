@@ -1,3 +1,16 @@
+"""
+Daily Reports
+
+Demonstrates a scheduled daily report workflow that fetches metrics, generates a
+formatted text report, and distributes it to a list of recipients via email.
+Three services (MetricsDatabase, EmailService, ConfigService) collaborate in one workflow.
+
+Patterns shown:
+  1. Three @app.service classes (metrics DB, email, config) injected via services dict
+  2. Fetching metrics for a specific date from a service
+  3. Formatting a human-readable report string in a step
+  4. Distributing the report to multiple recipients concurrently with asyncio.gather
+"""
 import asyncio
 
 from blazing import Blazing

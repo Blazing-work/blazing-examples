@@ -1,3 +1,16 @@
+"""
+Map-Reduce
+
+Demonstrates the map-reduce pattern for distributed computation using asyncio.gather.
+A list of numbers is split into chunks, each chunk is mapped concurrently to the sum
+of squares, and the partial sums are reduced to a single total.
+
+Patterns shown:
+  1. Splitting input into chunks for parallel map operations
+  2. Launching all map tasks concurrently with asyncio.gather
+  3. A reduce step that combines partial results into the final value
+  4. Configurable chunk_size for tuning parallelism
+"""
 import asyncio
 
 from blazing import Blazing

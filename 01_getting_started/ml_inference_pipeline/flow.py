@@ -1,6 +1,16 @@
-# Blazing Flow - ML Inference Pipeline Orchestration
-# This pipeline handles batch inference with automatic scaling
+"""
+ML Inference Pipeline
 
+Demonstrates orchestrating a complete ML inference pipeline with Blazing Flow.
+Input data is preprocessed (validation and feature normalization), batched and
+sent to an external model server, then postprocessed into labelled results.
+
+Patterns shown:
+  1. Preprocessing step with field validation and feature normalization
+  2. Batched model inference via httpx call to an external model server
+  3. Postprocessing step combining predictions with original metadata
+  4. Chunked batch iteration inside a workflow for memory-efficient inference
+"""
 import asyncio
 import os
 from blazing import Blazing

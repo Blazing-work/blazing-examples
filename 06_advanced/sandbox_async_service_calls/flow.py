@@ -1,6 +1,16 @@
-# Sandbox: Async Service Calls - Flow Integration
-# This shows how to call the sandboxed code from a Blazing Flow workflow
+"""
+Sandbox: Async Service Calls
 
+Demonstrates how to execute user-provided code that makes concurrent async service calls
+from inside a Blazing sandbox.  The flow.py hosts the run_sandboxed() wrapper workflow;
+the actual concurrent service call logic lives in sandbox.py.
+
+Patterns shown:
+  1. create_signing_key() to generate a per-deployment HMAC signing key
+  2. run_sandboxed() wrapping an external sandbox.py entry point
+  3. Passing input_data and services into the sandboxed execution context
+  4. Returning the sandbox result from a Blazing workflow
+"""
 from blazing import Blazing, run_sandboxed, create_signing_key
 
 app = Blazing()

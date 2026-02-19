@@ -1,3 +1,15 @@
+"""
+REST API Service
+
+Demonstrates wrapping an external REST API in a Blazing service and calling it from
+a step.  A WeatherAPI service fetches weather data for a city; the step accesses it
+via services["WeatherAPI"].
+
+Patterns shown:
+  1. @app.service class that encapsulates an external REST API
+  2. Accessing the service inside a step via services["WeatherAPI"]
+  3. Passing city as a workflow parameter and returning structured weather data
+"""
 import asyncio
 
 from blazing import Blazing

@@ -1,3 +1,16 @@
+"""
+Multi-Step Pipeline API
+
+Demonstrates a three-stage data analysis pipeline exposed as a single web endpoint.
+Internal steps (validate, compute statistics, format report) are not exposed directly;
+only the orchestrating workflow is bound to a URL path.
+
+Patterns shown:
+  1. Internal steps hidden behind a single @app.endpoint workflow
+  2. Sequential step chaining: validate → compute → format
+  3. Returning a structured report object from the endpoint
+  4. Serving with create_asgi_app() and uvicorn
+"""
 from blazing import Blazing
 from blazing.web import create_asgi_app
 

@@ -1,3 +1,16 @@
+"""
+Health Check Workflow
+
+Demonstrates running parallel health checks for multiple services in one workflow.
+Database, cache, and external API checks run concurrently with asyncio.gather, and
+the overall status is healthy only if all checks pass.
+
+Patterns shown:
+  1. Three independent health-check steps (database, cache, external API)
+  2. Running all checks concurrently with asyncio.gather
+  3. Deriving overall_status from all individual check statuses
+  4. Returning per-service health details alongside the aggregate status
+"""
 import asyncio
 from datetime import datetime
 

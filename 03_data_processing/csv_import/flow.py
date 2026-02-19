@@ -1,3 +1,16 @@
+"""
+CSV Import
+
+Demonstrates a four-stage CSV ingestion pipeline: download, parse, validate, and import.
+Rows with missing required fields are collected as errors while valid rows are imported,
+showing per-row validation with error accumulation.
+
+Patterns shown:
+  1. Downloading and decoding raw CSV bytes in a step
+  2. Parsing CSV with csv.DictReader into a list of row dicts
+  3. Per-row validation that separates valid rows from error records
+  4. Simulated bulk DB import with result reporting
+"""
 import csv
 import io
 import random

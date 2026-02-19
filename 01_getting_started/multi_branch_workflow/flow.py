@@ -1,3 +1,16 @@
+"""
+Multi-Branch Workflow
+
+Demonstrates parallel execution with asyncio.gather for concurrent step processing.
+Two statistics steps (mean and median) run concurrently and their results are
+combined in the workflow, cutting total time to the slowest branch.
+
+Patterns shown:
+  1. Running multiple steps concurrently with asyncio.gather
+  2. Combining parallel results into a single response dict
+  3. wait_result() one-liner for immediate result access
+  4. SyncBlazing equivalent with asyncio import alias for compatibility
+"""
 import asyncio
 
 from blazing import Blazing

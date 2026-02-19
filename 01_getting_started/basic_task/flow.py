@@ -1,3 +1,18 @@
+"""
+Basic Task Execution
+
+Demonstrates how to create and execute distributed tasks using Blazing Flow.
+Steps validate and transform incoming data; a workflow chains them together.
+Three invocation patterns are shown: one-liner with wait_result(), RemoteRun
+handle, and run() by name.
+
+Patterns shown:
+  1. Defining steps with @app.step (validation and transformation)
+  2. Chaining steps in a @app.workflow with conditional branching
+  3. app.publish() to register with the execution engine
+  4. wait_result() one-liner vs RemoteRun handle vs run() by name
+  5. SyncBlazing for synchronous/prototyping use cases
+"""
 from blazing import Blazing
 
 

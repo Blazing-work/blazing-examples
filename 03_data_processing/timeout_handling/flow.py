@@ -1,3 +1,15 @@
+"""
+Timeout Handling
+
+Demonstrates wrapping a slow step call with asyncio.wait_for to enforce a timeout.
+A step that takes 10 seconds is called with a 5-second timeout, showing how the
+workflow gracefully handles TimeoutError and returns an error response.
+
+Patterns shown:
+  1. asyncio.wait_for() to impose a per-step deadline
+  2. Catching asyncio.TimeoutError and returning a structured error dict
+  3. Configurable timeout_seconds parameter passed at workflow invocation time
+"""
 import asyncio
 
 from blazing import Blazing

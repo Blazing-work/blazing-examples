@@ -1,3 +1,16 @@
+"""
+Cache Service
+
+Demonstrates the cache-aside pattern in a Blazing workflow: check the cache first,
+compute and store on a miss, return from cache on a hit.  Simulated with an
+in-memory dict; comments show the Redis/service equivalent.
+
+Patterns shown:
+  1. Cache-get step that returns None on a miss
+  2. Expensive computation step invoked only on cache miss
+  3. Cache-set step writing the computed value back
+  4. Workflow logic branching on cache hit vs miss
+"""
 import asyncio
 
 from blazing import Blazing

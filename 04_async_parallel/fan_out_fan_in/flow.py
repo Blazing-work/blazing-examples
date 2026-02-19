@@ -1,3 +1,15 @@
+"""
+Fan-Out / Fan-In
+
+Demonstrates the fan-out/fan-in parallel pattern: three independent data-fetch steps
+run concurrently (fan-out) and their results are merged into a single user profile
+dict (fan-in) using asyncio.gather.
+
+Patterns shown:
+  1. Fan-out: launching multiple async steps concurrently with asyncio.gather
+  2. Fan-in: destructuring gather results and combining into one response
+  3. Measuring elapsed time to verify parallel speedup (0.5 s vs 1.0 s sequential)
+"""
 import asyncio
 
 from blazing import Blazing

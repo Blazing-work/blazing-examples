@@ -1,3 +1,16 @@
+"""
+Multiple Endpoints
+
+Demonstrates registering multiple versioned API endpoints in a single Blazing app.
+V1 and V2 user management endpoints coexist alongside an admin stats endpoint,
+all served from one FastAPI ASGI app.
+
+Patterns shown:
+  1. Multiple @app.endpoint decorators on different workflows in one app
+  2. API versioning via URL path prefixes (/v1/... and /v2/...)
+  3. Pagination parameters (limit, offset) in a v2 endpoint
+  4. Serving all endpoints with create_asgi_app() and uvicorn
+"""
 from blazing import Blazing
 from blazing.web import create_asgi_app
 

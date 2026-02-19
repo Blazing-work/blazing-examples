@@ -1,3 +1,16 @@
+"""
+Basic Workflow
+
+Demonstrates multi-step orchestration — the foundation of distributed workflows.
+Two numeric transformation steps are chained in a workflow to show how data flows
+from one step to the next.
+
+Patterns shown:
+  1. Defining multiple steps with @app.step
+  2. Calling steps sequentially inside a @app.workflow
+  3. Three equivalent ways to execute a workflow (wait_result, handle, run by name)
+  4. SyncBlazing and sync helper methods on async Blazing
+"""
 from blazing import Blazing
 
 

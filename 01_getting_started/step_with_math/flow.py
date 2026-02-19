@@ -1,3 +1,16 @@
+"""
+Step with Math
+
+Demonstrates basic arithmetic operations in a distributed step.
+An addition step is registered and called through a workflow, illustrating
+the minimal pattern for numeric computation in Blazing.
+
+Patterns shown:
+  1. A step that accepts typed numeric arguments (int)
+  2. A workflow that delegates directly to a single step
+  3. Passing keyword arguments when calling a workflow
+  4. SyncBlazing variant without async/await
+"""
 from blazing import Blazing
 
 

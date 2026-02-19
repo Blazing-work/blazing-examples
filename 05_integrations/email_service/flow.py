@@ -1,3 +1,15 @@
+"""
+Email Service
+
+Demonstrates sending a transactional email (welcome message) through a Blazing step.
+The send_email step shows the SMTP connector pattern in comments; the workflow
+composes the subject and body before delegating to the step.
+
+Patterns shown:
+  1. A step that wraps an external email API (SMTP connector pattern in comments)
+  2. Composing message content in the workflow before calling the step
+  3. Returning send status and recipient from the step
+"""
 import asyncio
 
 from blazing import Blazing

@@ -1,3 +1,16 @@
+"""
+Modular Registration
+
+Demonstrates organizing a Blazing app into independently registerable domain modules.
+Trading, analytics, and reporting modules each expose a register function that decorates
+steps and services onto the shared app; a feature-flag helper enables/disables modules.
+
+Patterns shown:
+  1. Domain modules as plain functions that call @app.step/@app.service/@app.workflow
+  2. Returning a manifest dict from each register function for introspection
+  3. Feature-flag-based conditional module registration
+  4. Two independent Blazing apps (full and feature-gated) in the same demo
+"""
 import asyncio
 from blazing import Blazing
 from blazing.base import BaseService

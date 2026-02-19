@@ -1,3 +1,16 @@
+"""
+GitHub Webhook
+
+Demonstrates validating and routing GitHub webhook payloads in a Blazing workflow.
+An HMAC-SHA256 signature is verified before the payload is dispatched to a
+pull-request or push handler step.
+
+Patterns shown:
+  1. HMAC-SHA256 signature validation using hmac.compare_digest
+  2. Event-type routing in a workflow (pull_request vs push)
+  3. Pull-request handler that would notify Slack on open
+  4. Push handler that logs branch and commit count
+"""
 import asyncio
 import hashlib
 import hmac

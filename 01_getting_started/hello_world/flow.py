@@ -1,3 +1,17 @@
+"""
+Hello World
+
+The simplest possible Blazing Flow application — two steps and two workflows.
+Shows how to create a Blazing app, register steps and workflows, publish to the
+execution engine, and retrieve results with wait_result().
+
+Patterns shown:
+  1. Creating a Blazing app and registering steps with @app.step
+  2. Registering workflows with @app.workflow
+  3. app.publish() to register with the execution engine
+  4. Calling a workflow and waiting for its result
+  5. SyncBlazing equivalent for synchronous use
+"""
 from blazing import Blazing
 
 

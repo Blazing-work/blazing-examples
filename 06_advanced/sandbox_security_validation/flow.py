@@ -1,6 +1,16 @@
-# Sandbox: Security Validation - Flow Integration
-# This shows how to call the sandboxed code from a Blazing Flow workflow
+"""
+Sandbox: Security Validation
 
+Demonstrates the sandbox's security enforcement by running code samples that attempt
+malicious operations and verifying they are blocked.  sandbox.py contains examples
+of code that fails AST validation, bytecode validation, and WASM isolation.
+
+Patterns shown:
+  1. run_sandboxed() as the execution harness for security tests
+  2. Verifying that dangerous imports and builtins are blocked by AST validation
+  3. Verifying that network/filesystem access is denied in the WASM sandbox
+  4. Using the same workflow wrapper for both safe and malicious code tests
+"""
 from blazing import Blazing, run_sandboxed, create_signing_key
 
 app = Blazing()

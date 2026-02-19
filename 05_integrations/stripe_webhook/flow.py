@@ -1,3 +1,16 @@
+"""
+Stripe Webhook
+
+Demonstrates verifying and processing Stripe webhook events in a Blazing workflow.
+An HMAC-SHA256 signature is verified first; on a payment_intent.succeeded event,
+the order is marked paid and a receipt email is sent.
+
+Patterns shown:
+  1. HMAC-SHA256 Stripe signature verification (stripe.Webhook.construct_event pattern)
+  2. Event-type routing for payment_intent.succeeded
+  3. Payment success handler that marks the order paid and sends a receipt
+  4. Returning event_type and processed flag in the workflow result
+"""
 import asyncio
 import hashlib
 import hmac

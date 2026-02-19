@@ -1,6 +1,16 @@
-# Sandboxed Step Execution - Flow Integration
-# This shows how to call the sandboxed code from a Blazing Flow workflow
+"""
+Sandboxed Step Execution
 
+Demonstrates the core sandboxed execution pattern: run_sandboxed() executes
+user-provided code in a WebAssembly sandbox with complete isolation from the host
+infrastructure (no network, filesystem, or service access beyond what is explicitly bridged).
+
+Patterns shown:
+  1. run_sandboxed() with signing_key for HMAC code authentication
+  2. Specifying func_name to select the entry point in sandbox.py
+  3. Passing input_data and services into the sandboxed context
+  4. A minimal Blazing workflow wrapper for sandboxed step execution
+"""
 from blazing import Blazing, run_sandboxed, create_signing_key
 
 app = Blazing()

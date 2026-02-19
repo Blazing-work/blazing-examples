@@ -1,3 +1,16 @@
+"""
+Error Handling API
+
+Demonstrates input validation and error propagation in a Blazing web endpoint.
+A validation step raises ValueError for invalid inputs; the workflow catches and
+re-raises the error so Blazing captures it in the job status.
+
+Patterns shown:
+  1. Validation step that raises ValueError for out-of-range inputs
+  2. Tiered fee calculation step based on amount thresholds
+  3. try/except in a workflow that re-raises to surface errors in job status
+  4. Exposing the workflow as a POST endpoint with create_asgi_app()
+"""
 from blazing import Blazing
 from blazing.web import create_asgi_app
 

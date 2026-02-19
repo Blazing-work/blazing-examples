@@ -1,3 +1,16 @@
+"""
+Parallel Execution
+
+Demonstrates executing 100 workflow instances in parallel to maximize throughput.
+All runs are launched concurrently and their results collected with asyncio.gather,
+showing the speedup possible versus sequential execution.
+
+Patterns shown:
+  1. Launching many workflow instances concurrently as RemoteRun handles
+  2. Collecting all results with asyncio.gather(*[run.result() for run in runs])
+  3. Measuring launch time vs execution time separately
+  4. SyncBlazing equivalent for synchronous parallel invocation
+"""
 import asyncio
 import time
 

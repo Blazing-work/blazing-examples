@@ -1,3 +1,16 @@
+"""
+Authenticated API
+
+Demonstrates how to add JWT and API-key authentication to Blazing web endpoints.
+A public health endpoint is defined alongside protected endpoints that require
+a valid JWT bearer token or an API key before the workflow runs.
+
+Patterns shown:
+  1. Public endpoint with no auth_handler
+  2. JWT-protected endpoint with a custom auth_handler that validates HS256 tokens
+  3. API-key-protected endpoint using a simple bearer-comparison handler
+  4. Creating a FastAPI ASGI app from a Blazing app with create_asgi_app()
+"""
 import jwt
 from fastapi.security import HTTPAuthorizationCredentials
 

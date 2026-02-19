@@ -1,3 +1,16 @@
+"""
+Batch Stock Processing
+
+Demonstrates fetching stock prices in rate-limited batches via a service that wraps
+an external market data API.  Symbols are processed in configurable batches and errors
+are collected separately from successful results.
+
+Patterns shown:
+  1. Service class with a simulated rate-limited API and throttle config
+  2. Batch iteration in a workflow (chunk symbols, call service.process_batch per chunk)
+  3. Collecting results and errors across all batches into a summary dict
+  4. ThrottleConfig dataclass for fixed/rolling rate-limit presets
+"""
 import asyncio
 import time
 from dataclasses import dataclass

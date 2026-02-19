@@ -1,3 +1,15 @@
+"""
+Rate-Limited API
+
+Demonstrates limiting concurrent API calls with asyncio.Semaphore to respect
+external rate limits.  Ten endpoints are fetched concurrently, but the semaphore
+caps in-flight requests at 3 at any point in time.
+
+Patterns shown:
+  1. asyncio.Semaphore to cap concurrent outbound calls
+  2. async with semaphore inside a step to gate execution
+  3. asyncio.gather to launch all tasks while semaphore enforces the limit
+"""
 import asyncio
 import random
 

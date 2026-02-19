@@ -1,3 +1,16 @@
+"""
+Event Processing
+
+Demonstrates a three-stage event processing pipeline: validate, enrich, and store.
+Incoming events are validated for required fields, enriched with user metadata,
+and persisted to an analytics database.
+
+Patterns shown:
+  1. Structural validation step that raises ValueError for malformed events
+  2. Enrichment step that adds derived fields (user_name, user_email)
+  3. Storage step that writes to an analytics sink
+  4. Sequential step chaining in a workflow with a single entry-point call
+"""
 from blazing import Blazing
 
 

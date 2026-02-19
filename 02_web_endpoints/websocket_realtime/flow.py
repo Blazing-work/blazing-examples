@@ -1,3 +1,15 @@
+"""
+WebSocket Real-Time API
+
+Demonstrates enabling WebSocket support on a Blazing workflow endpoint for
+real-time progress updates during long-running jobs.  Clients can connect to
+the generated /process/ws URL to receive live status events.
+
+Patterns shown:
+  1. enable_websocket=True on @app.endpoint to add a ws:// companion route
+  2. A long-running workflow that iterates over batches, enabling incremental updates
+  3. Serving the WebSocket-capable app with create_asgi_app() and uvicorn
+"""
 import asyncio
 
 from blazing import Blazing

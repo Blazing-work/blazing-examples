@@ -1,3 +1,15 @@
+"""
+Aggregating Results
+
+Demonstrates gathering results from multiple parallel steps and aggregating them.
+Sales data is fetched for several regions concurrently with asyncio.gather, then
+summed into a grand total in the workflow.
+
+Patterns shown:
+  1. Launching per-region fetch steps concurrently with asyncio.gather
+  2. Aggregating a list of partial results into a single summary dict
+  3. wait_result() to retrieve the final aggregated response
+"""
 import asyncio
 import random
 

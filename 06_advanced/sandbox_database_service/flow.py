@@ -1,6 +1,16 @@
-# Sandbox: Service Bridge with Database - Flow Integration
-# This shows how to call the sandboxed code from a Blazing Flow workflow
+"""
+Sandbox: Service Bridge with Database
 
+Demonstrates running user code that processes data through a database service bridge,
+keeping database credentials safe inside the platform while exposing only a scoped
+service interface to the sandbox.
+
+Patterns shown:
+  1. run_sandboxed() forwarding the services dict to user code
+  2. User code accessing a database service without seeing credentials
+  3. Signing key creation and code signing via create_signing_key()
+  4. Workflow wrapper that delegates entirely to run_sandboxed()
+"""
 from blazing import Blazing, run_sandboxed, create_signing_key
 
 app = Blazing()

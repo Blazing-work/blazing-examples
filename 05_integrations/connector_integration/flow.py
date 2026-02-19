@@ -1,3 +1,17 @@
+"""
+Connector Integration
+
+Demonstrates how to configure and use connectors (REST and SQL) inside a Blazing service.
+A MarketDataService receives connector instances in its constructor, uses the REST connector
+to fetch stock prices, and the SQL connector to persist records.
+
+Patterns shown:
+  1. RESTConnectorConfig and SQLConnectorConfig dataclasses for connection settings
+  2. Service receiving connector_instances dict in __init__
+  3. connect() / disconnect() lifecycle on connectors
+  4. health_check() verifying all connector connectivity
+  5. A workflow that invokes the service's fetch-and-store operation end-to-end
+"""
 import asyncio
 from dataclasses import dataclass
 from typing import Optional, Any

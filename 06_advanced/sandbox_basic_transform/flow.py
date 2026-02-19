@@ -1,6 +1,16 @@
-# Sandbox: Basic User-Provided Transform - Flow Integration
-# This shows how to call the sandboxed code from a Blazing Flow workflow
+"""
+Sandbox: Basic User-Provided Transform
 
+The simplest sandbox integration: let users write transformation logic that runs in a
+WebAssembly sandbox while the platform infrastructure stays protected.  flow.py provides
+the run_sandboxed() workflow; the transform logic lives in sandbox.py.
+
+Patterns shown:
+  1. Reading sandbox source code from a companion sandbox.py file
+  2. create_signing_key() for HMAC code signing
+  3. run_sandboxed() with func_name pointing to the sandbox entry point
+  4. Minimal workflow boilerplate for sandboxed step execution
+"""
 from blazing import Blazing, run_sandboxed, create_signing_key
 
 app = Blazing()

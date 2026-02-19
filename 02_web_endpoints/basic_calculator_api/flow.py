@@ -1,3 +1,15 @@
+"""
+Basic Calculator API
+
+Demonstrates the simplest possible Blazing web endpoint — a single addition workflow
+exposed over HTTP via @app.endpoint.  The Blazing app is converted to a FastAPI ASGI
+app with create_asgi_app() and served with uvicorn.
+
+Patterns shown:
+  1. Decorating a workflow with @app.endpoint to expose it at a URL path
+  2. Converting a Blazing app to a FastAPI ASGI app with create_asgi_app()
+  3. Serving the ASGI app with uvicorn
+"""
 import uvicorn
 
 from blazing import Blazing

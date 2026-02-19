@@ -1,3 +1,15 @@
+"""
+Parallel Processing
+
+Demonstrates processing a list of items concurrently using asyncio.gather inside
+a workflow.  Individual item steps are launched in parallel and all results are
+collected in one pass.
+
+Patterns shown:
+  1. Building a list of step coroutines for a batch of item IDs
+  2. Running all steps concurrently with asyncio.gather
+  3. Returning processed_count alongside the full results list
+"""
 import asyncio
 
 from blazing import Blazing

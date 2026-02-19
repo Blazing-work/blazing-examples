@@ -1,3 +1,18 @@
+"""
+Large DataFrame Processing
+
+Demonstrates processing large pandas DataFrames across multiple steps with automatic
+Arrow Flight transport for datasets over 1 MB.  A 100K-row DataFrame is generated,
+statistics are computed, and filtered/aggregated results are returned.
+
+Patterns shown:
+  1. Generating a large DataFrame in a step (triggers Arrow Flight >1 MB)
+  2. Computing statistics on a DataFrame passed between steps
+  3. Filter + groupby aggregation in a downstream step
+  4. Blazing's automatic small/large data transport selection (Redis vs Arrow Flight)
+
+Requires: pip install numpy pandas
+"""
 import numpy as np
 import pandas as pd
 

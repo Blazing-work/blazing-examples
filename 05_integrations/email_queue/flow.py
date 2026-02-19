@@ -1,3 +1,16 @@
+"""
+Email Queue
+
+Demonstrates a simple email queue with enqueue and batch-send steps.
+Emails are added to an in-memory queue, then a batch workflow dequeues and sends
+them concurrently using asyncio.gather.
+
+Patterns shown:
+  1. An enqueue step that appends to an in-process queue
+  2. A dequeue-and-send step that processes one item at a time
+  3. Launching multiple send steps concurrently with asyncio.gather in a workflow
+  4. Counting sent vs queued to verify batch completion
+"""
 import asyncio
 
 from blazing import Blazing

@@ -1,3 +1,16 @@
+"""
+Cleanup Expired Records
+
+Demonstrates a scheduled cleanup job that finds and deletes expired session records.
+A Database service executes SQL queries (simulated) to SELECT expired rows older than
+a configurable cutoff date, then DELETE them in one batch.
+
+Patterns shown:
+  1. Computing a cutoff datetime with timedelta in the workflow
+  2. A step that queries for expired session IDs using a service
+  3. A step that bulk-deletes the found IDs and returns the deleted count
+  4. Short-circuit return when no expired sessions are found
+"""
 import asyncio
 from datetime import datetime, timedelta
 

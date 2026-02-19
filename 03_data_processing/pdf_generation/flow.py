@@ -1,3 +1,16 @@
+"""
+PDF Generation
+
+Demonstrates generating an invoice PDF through a three-step pipeline: fetch order data,
+render to PDF bytes, then upload to file storage.  The pattern shows how binary data
+(PDF bytes) flows between Blazing steps.
+
+Patterns shown:
+  1. Fetching structured order data in a step
+  2. Rendering a PDF from a template (WeasyPrint pattern shown in comments)
+  3. Uploading binary bytes to file storage and returning a public URL
+  4. Returning a lightweight summary dict (order_id, invoice_url, total) from the workflow
+"""
 from blazing import Blazing
 
 

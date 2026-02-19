@@ -1,3 +1,16 @@
+"""
+Retry Logic
+
+Demonstrates implementing retry with exponential backoff inside a Blazing workflow.
+An unreliable step with a 30% failure rate is retried up to max_retries times, with
+each retry waiting 2^attempt seconds before the next try.
+
+Patterns shown:
+  1. An unreliable step that fails randomly to simulate transient errors
+  2. Retry loop in a workflow with configurable max_retries
+  3. Exponential backoff via asyncio.sleep(2**attempt)
+  4. Returning attempt count alongside the result or error
+"""
 import asyncio
 import random
 

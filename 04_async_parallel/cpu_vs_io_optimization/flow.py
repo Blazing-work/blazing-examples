@@ -1,3 +1,16 @@
+"""
+CPU vs I/O Optimization
+
+Demonstrates how to choose the right worker type for CPU-bound vs I/O-bound steps.
+BLOCKING workers run CPU-intensive work in dedicated threads; NON_BLOCKING workers
+handle async I/O efficiently.  Both are combined in a mixed-workload workflow.
+
+Patterns shown:
+  1. @app.step(step_type="BLOCKING") for CPU-intensive work (Fibonacci, matrix ops)
+  2. @app.step (default NON_BLOCKING) for async I/O (HTTP requests)
+  3. asyncio.gather for concurrent I/O requests in a single step
+  4. A mixed workflow demonstrating both worker types working in parallel
+"""
 import asyncio
 import time
 
