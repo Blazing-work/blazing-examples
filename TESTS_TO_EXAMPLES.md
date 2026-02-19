@@ -127,4 +127,10 @@ Each entry maps a test file to one or more example flows generated from it.
 ## tests/test_zzz_isolated_flaky.py
 - Isolated Execution with Retry (`09_sandbox_isolation/isolated_retry/flow.py`)
   Category: Sandbox & Isolation, ID: isolated_retry
+## tests/test_z_dynamic_code_e2e_security.py
+- Dynamic Code Security (`09_sandbox_isolation/dynamic_code_security/flow.py`)
+  Category: Sandbox & Isolation, ID: dynamic_code_security
+## tests/test_z_egress_e2e.py
+- Egress Policy (`09_sandbox_isolation/egress_policy/flow.py`)
+  Category: Sandbox & Isolation, ID: egress_policy
 
