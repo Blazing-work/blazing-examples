@@ -462,6 +462,32 @@
     "href": "/docs/aggregating_results"
   },
   {
+    "id": "arrow_dataframes",
+    "title": "PyArrow DataFrames",
+    "description": "Pass PyArrow Tables between steps \u2014 zero-copy columnar transfers with type-safe Arrow compute operations.",
+    "category": "Data Processing",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "arrow",
+      "dataframes",
+      "columnar",
+      "performance"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "03_data_processing/arrow_dataframes",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/03_data_processing/arrow_dataframes",
+    "href": "/docs/arrow_dataframes"
+  },
+  {
     "id": "csv_import",
     "title": "CSV Import Pipeline",
     "description": "Download, parse, validate, and import CSV files from cloud storage.",
@@ -1426,6 +1452,32 @@
     "href": "/docs/api_execution_patterns"
   },
   {
+    "id": "batched_steps",
+    "title": "Batched Steps",
+    "description": "Use @batched to auto-collect individual step calls into GPU-efficient batches \u2014 transparent to callers.",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "batched",
+      "gpu",
+      "throughput",
+      "decorator"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/batched_steps",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/batched_steps",
+    "href": "/docs/batched_steps"
+  },
+  {
     "id": "callable_workflows",
     "title": "Callable Workflows",
     "description": "Workflows are callable attributes on the app once registered.\n\nSource: tests/test_callable_workflows.py",
@@ -1473,6 +1525,32 @@
     "folder_path": "07_api_patterns/decorators_and_context",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/decorators_and_context",
     "href": "/docs/decorators_and_context"
+  },
+  {
+    "id": "direct_function_call",
+    "title": "Direct Function Call",
+    "description": "Call @app.step and @app.workflow decorated functions as plain Python \u2014 no backend, no publish(), no infrastructure required. The recommended pattern for unit testing and local development.",
+    "category": "API Patterns",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "direct",
+      "function-call",
+      "testing",
+      "local"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "07_api_patterns/direct_function_call",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/07_api_patterns/direct_function_call",
+    "href": "/docs/direct_function_call"
   },
   {
     "id": "run_sync_by_name",
@@ -1863,6 +1941,58 @@
     "folder_path": "09_sandbox_isolation/dynamic_code_execution",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/dynamic_code_execution",
     "href": "/docs/dynamic_code_execution"
+  },
+  {
+    "id": "dynamic_code_security",
+    "title": "Dynamic Code Security",
+    "description": "Execute user-submitted functions through a 5-layer security pipeline: AST validation, HMAC signing, signature verification, bytecode inspection, and Pyodide sandbox isolation.",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Advanced",
+    "time": "15 min",
+    "tags": [
+      "sandbox",
+      "security",
+      "pyodide",
+      "code-execution"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/dynamic_code_security",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/dynamic_code_security",
+    "href": "/docs/dynamic_code_security"
+  },
+  {
+    "id": "egress_policy",
+    "title": "Egress Policy",
+    "description": "Declare outbound network rules on services \u2014 exact hostnames, wildcard subdomains, CIDR blocks, or deny-all.",
+    "category": "Sandbox & Isolation",
+    "difficulty": "Advanced",
+    "time": "15 min",
+    "tags": [
+      "egress",
+      "security",
+      "network",
+      "service"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "09_sandbox_isolation/egress_policy",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/09_sandbox_isolation/egress_policy",
+    "href": "/docs/egress_policy"
   },
   {
     "id": "isolated_execution",
@@ -2259,6 +2389,85 @@
     "href": "/docs/streaming_workflow_progress"
   },
   {
+    "id": "cron_scheduler",
+    "title": "Cron & Periodic Scheduler",
+    "description": "Register scheduled jobs with SchedulerConnector using cron expressions or fixed intervals.",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "scheduler",
+      "cron",
+      "periodic",
+      "jobs"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/cron_scheduler",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/cron_scheduler",
+    "href": "/docs/cron_scheduler"
+  },
+  {
+    "id": "distributed_dict_queue",
+    "title": "Distributed Dict & Queue",
+    "description": "Share state and pass messages between service instances with DictConnector (key-value store) and QueueConnector (async FIFO queue) \u2014 coordinating workers across deployments and tenants.",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "distributed",
+      "queue",
+      "dict",
+      "state"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/distributed_dict_queue",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/distributed_dict_queue",
+    "href": "/docs/distributed_dict_queue"
+  },
+  {
+    "id": "llm_openai_connector",
+    "title": "OpenAI LLM Connector",
+    "description": "Use OpenAIConnector in services for chat, streaming, tool calling, and multi-turn conversations.",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "llm",
+      "openai",
+      "connector",
+      "chat",
+      "streaming"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/llm_openai_connector",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/llm_openai_connector",
+    "href": "/docs/llm_openai_connector"
+  },
+  {
     "id": "local_dict_connector",
     "title": "Local Dict Connector",
     "description": "Persist state locally with LocalDictService.\n\nSource: tests/test_z_local_connector_e2e.py",
@@ -2432,6 +2641,32 @@
     "href": "/docs/service_composition_pipeline"
   },
   {
+    "id": "volume_file_storage",
+    "title": "Volume File Storage",
+    "description": "Persist files across workflow executions with Volume.persisted() and VolumeConnector inside services.",
+    "category": "Platform Integrations",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "volume",
+      "storage",
+      "files",
+      "persistence"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "11_integrations_platform/volume_file_storage",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/11_integrations_platform/volume_file_storage",
+    "href": "/docs/volume_file_storage"
+  },
+  {
     "id": "agent_checkpointing_service",
     "title": "Agent Checkpointing Service",
     "description": "Persist intermediate results with a simple checkpoint service.\n\nSource: tests/test_z_deepagents_checkpoint_e2e.py",
@@ -2480,6 +2715,32 @@
     "folder_path": "12_gpu_ai_agents/gpu_matrix_multiplication",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/gpu_matrix_multiplication",
     "href": "/docs/gpu_matrix_multiplication"
+  },
+  {
+    "id": "langblaze_llm_service",
+    "title": "LangBlaze LLM Service",
+    "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps \u2014 LLMService on trusted workers proxies API keys so the sandbox never sees them.",
+    "category": "GPU & Agents",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "langblaze",
+      "llm",
+      "agents",
+      "langgraph"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/langblaze_llm_service",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/langblaze_llm_service",
+    "href": "/docs/langblaze_llm_service"
   },
   {
     "id": "sandbox_dependencies_langgraph",
@@ -2723,5 +2984,292 @@
     "folder_path": "13_deployment_packaging/secrets_via_env",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/secrets_via_env",
     "href": "/docs/secrets_via_env"
+  },
+  {
+    "id": "serialize_mode",
+    "title": "Serialize Loading Strategy",
+    "description": "Use loading_strategy='serialize' to skip wheel builds \u2014 fastest iteration mode for local development.",
+    "category": "Deployment & Packaging",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "serialize",
+      "loading-strategy",
+      "development",
+      "packaging"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "13_deployment_packaging/serialize_mode",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/13_deployment_packaging/serialize_mode",
+    "href": "/docs/serialize_mode"
+  },
+  {
+    "id": "hackernews_slackbot",
+    "title": "Hacker News Slackbot",
+    "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack \u2014 demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "scheduled",
+      "http",
+      "slack",
+      "connector"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/01_hackernews_slackbot",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/01_hackernews_slackbot",
+    "href": "/docs/01_hackernews_slackbot"
+  },
+  {
+    "id": "sql_explorer",
+    "title": "SQL Explorer",
+    "description": "Ad-hoc SQL analytics over SQLite, CSV, and Parquet via HTTP endpoints backed by DuckDB \u2014 read-only mode with SQL injection protection and 30-second query timeouts.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "sql",
+      "duckdb",
+      "api",
+      "query"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/02_sql_explorer",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/02_sql_explorer",
+    "href": "/docs/02_sql_explorer"
+  },
+  {
+    "id": "rag_pdf_chatbot",
+    "title": "RAG PDF Chatbot",
+    "description": "Retrieval-augmented generation over PDF documents \u2014 extract text with pdfplumber, chunk with overlap, embed with OpenAI, store in ChromaDB, and answer questions with GPT-4o-mini.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "rag",
+      "pdf",
+      "vector-search",
+      "openai"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/03_rag_pdf_chatbot",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/03_rag_pdf_chatbot",
+    "href": "/docs/03_rag_pdf_chatbot"
+  },
+  {
+    "id": "ocr_job_queue",
+    "title": "OCR Job Queue",
+    "description": "Asynchronous OCR pipeline with UUID-based job IDs, Redis state persistence, and OpenAI Vision API \u2014 demonstrates the submit-poll pattern with a pending/processing/completed state machine.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "ocr",
+      "job-queue",
+      "redis",
+      "polling"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/04_ocr_job_queue",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/04_ocr_job_queue",
+    "href": "/docs/04_ocr_job_queue"
+  },
+  {
+    "id": "docsearch_crawler",
+    "title": "Docsearch Crawler",
+    "description": "BFS documentation crawler that respects robots.txt, extracts text with trafilatura, and batch-indexes content to Algolia with SHA256-based object IDs.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "crawler",
+      "algolia",
+      "indexing",
+      "bfs"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/05_docsearch_crawler",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/05_docsearch_crawler",
+    "href": "/docs/05_docsearch_crawler"
+  },
+  {
+    "id": "sheets_mongo_sync",
+    "title": "Google Sheets to MongoDB Sync",
+    "description": "Bidirectional sync between Google Sheets and MongoDB with last-write-wins conflict resolution \u2014 demonstrates timestamp-based conflict handling and idempotent upserts.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "google-sheets",
+      "mongodb",
+      "sync",
+      "bidirectional"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/06_sheets_mongo_sync",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/06_sheets_mongo_sync",
+    "href": "/docs/06_sheets_mongo_sync"
+  },
+  {
+    "id": "document_embedding_pipeline",
+    "title": "Document Embedding Pipeline",
+    "description": "High-throughput document embedding pipeline \u2014 S3 batch download, tiktoken chunking with overlap, sentence-transformers or OpenAI embeddings, MongoDB vector storage, and checkpoint/resume for fault tolerance.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "embeddings",
+      "mongodb",
+      "s3",
+      "batch",
+      "checkpoint"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/07_document_embedding_pipeline",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/07_document_embedding_pipeline",
+    "href": "/docs/07_document_embedding_pipeline"
+  },
+  {
+    "id": "satellite_image_vectors",
+    "title": "Satellite Image Vectors",
+    "description": "Geospatial ML pipeline \u2014 read GeoTIFF with rasterio, extract 256x256 tiles, generate Clay or sentence-transformer embeddings, and index with MongoDB 2dsphere for geospatial search.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "geospatial",
+      "rasterio",
+      "mongodb",
+      "vectors"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/08_satellite_image_vectors",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/08_satellite_image_vectors",
+    "href": "/docs/08_satellite_image_vectors"
+  },
+  {
+    "id": "order_state_machine",
+    "title": "Order Processing State Machine",
+    "description": "State machine where each transition runs as a sandboxed step calling a trusted OrderService \u2014 PENDING through PAYMENT_CHECK, INVENTORY_CHECK, APPROVED, and COMPLETED with rejection paths.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "state-machine",
+      "orders",
+      "workflow",
+      "sandbox"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/09_order_state_machine",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/09_order_state_machine",
+    "href": "/docs/09_order_state_machine"
+  },
+  {
+    "id": "podcast_transcription",
+    "title": "Podcast Transcription",
+    "description": "Parallel audio transcription pipeline using FFmpeg for chunking and OpenAI Whisper API \u2014 handles the 25MB file size limit automatically with asyncio.Semaphore throttling.",
+    "category": "Real World Applications",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "transcription",
+      "audio",
+      "pipeline",
+      "whisper"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/10_podcast_transcription",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/10_podcast_transcription",
+    "href": "/docs/10_podcast_transcription"
   }
 ]
