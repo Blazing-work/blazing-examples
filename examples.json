@@ -2771,6 +2771,64 @@
     "href": "/docs/gpu_matrix_multiplication"
   },
   {
+    "id": "gpu_pytorch_steps",
+    "title": "GPU PyTorch Steps \u2014 A100 + H100 Pipeline",
+    "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow \u2014 Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA.",
+    "category": "GPU & Agents",
+    "difficulty": "Advanced",
+    "time": "20 min",
+    "tags": [
+      "gpu",
+      "pytorch",
+      "a100",
+      "h100",
+      "ml",
+      "neural-network",
+      "pipeline"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/gpu_pytorch_steps",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/gpu_pytorch_steps",
+    "href": "/docs/gpu_pytorch_steps"
+  },
+  {
+    "id": "gsd_deepagents_sandbox",
+    "title": "GSD Tool Registry in Pyodide Sandbox",
+    "description": "Pass structured GSD-style tool definitions as plain dicts into a Pyodide sandbox and execute list and filter-by-tag operations \u2014 demonstrating data-driven tool management without importing the full GSD framework into the sandboxed environment.",
+    "category": "GPU & Agents",
+    "difficulty": "Expert",
+    "time": "25 min",
+    "tags": [
+      "gsd",
+      "sandbox",
+      "pyodide",
+      "tool-registry",
+      "dynamic-code",
+      "langblaze",
+      "wheel"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/gsd_deepagents_sandbox",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/gsd_deepagents_sandbox",
+    "href": "/docs/gsd_deepagents_sandbox"
+  },
+  {
     "id": "langblaze_llm_service",
     "title": "LangBlaze LLM Service",
     "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps \u2014 LLMService on trusted workers proxies API keys so the sandbox never sees them.",
@@ -3380,5 +3438,60 @@
     "folder_path": "14_real_world/coding_agent_filesystem",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/coding_agent_filesystem",
     "href": "/docs/coding_agent_filesystem"
+  },
+  {
+    "id": "secrets_management",
+    "title": "Secrets Management with SecretsConnector",
+    "description": "Store and retrieve encrypted secrets through trusted services \u2014 DatabaseService fetches DATABASE_URL and credentials; APIClientService fetches API_KEY and API_SECRET. Sandboxed steps cannot access secrets directly, enforcing the same security model as database connectors.",
+    "category": "Connectors",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "secrets",
+      "connectors",
+      "security",
+      "services",
+      "local-stack"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "16_connectors/secrets_management",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/16_connectors/secrets_management",
+    "href": "/docs/secrets_management"
+  },
+  {
+    "id": "connectors_volume_file_storage",
+    "title": "Volume File Storage with VolumeConnector",
+    "description": "Read and write files through a trusted FileProcessorService injected with VolumeConnector \u2014 sandboxed steps call service methods while only the trusted service has direct volume access, enforcing the connector security model.",
+    "category": "Connectors",
+    "difficulty": "Intermediate",
+    "time": "15 min",
+    "tags": [
+      "volume",
+      "connectors",
+      "storage",
+      "files",
+      "security",
+      "local-stack"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "16_connectors/volume_file_storage",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/16_connectors/volume_file_storage",
+    "href": "/docs/volume_file_storage"
   }
 ]
