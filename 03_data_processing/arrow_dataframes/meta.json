@@ -1,0 +1,18 @@
+{
+  "id": "arrow_dataframes",
+  "title": "PyArrow DataFrames",
+  "description": "Pass PyArrow Tables between steps — zero-copy columnar transfers with type-safe Arrow compute operations.",
+  "category": "Data Processing",
+  "difficulty": "Intermediate",
+  "time": "15 min",
+  "tags": [
+    "arrow",
+    "dataframes",
+    "columnar",
+    "performance"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

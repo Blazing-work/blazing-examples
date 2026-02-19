@@ -1,0 +1,18 @@
+{
+  "id": "dynamic_code_security",
+  "title": "Dynamic Code Security",
+  "description": "Execute user-submitted functions through a 5-layer security pipeline: AST validation, HMAC signing, signature verification, bytecode inspection, and Pyodide sandbox isolation.",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Advanced",
+  "time": "15 min",
+  "tags": [
+    "sandbox",
+    "security",
+    "pyodide",
+    "code-execution"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

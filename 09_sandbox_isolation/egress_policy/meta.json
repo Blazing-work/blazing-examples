@@ -1,0 +1,18 @@
+{
+  "id": "egress_policy",
+  "title": "Egress Policy",
+  "description": "Declare outbound network rules on services — exact hostnames, wildcard subdomains, CIDR blocks, or deny-all.",
+  "category": "Sandbox & Isolation",
+  "difficulty": "Advanced",
+  "time": "15 min",
+  "tags": [
+    "egress",
+    "security",
+    "network",
+    "service"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

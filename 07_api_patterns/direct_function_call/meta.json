@@ -1,0 +1,18 @@
+{
+  "id": "direct_function_call",
+  "title": "Direct Function Call",
+  "description": "Call @app.step and @app.workflow decorated functions as plain Python — no backend, no publish(), no infrastructure required. The recommended pattern for unit testing and local development.",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "direct",
+    "function-call",
+    "testing",
+    "local"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}

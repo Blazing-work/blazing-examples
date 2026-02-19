@@ -1,0 +1,18 @@
+{
+  "id": "batched_steps",
+  "title": "Batched Steps",
+  "description": "Use @batched to auto-collect individual step calls into GPU-efficient batches — transparent to callers.",
+  "category": "API Patterns",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "batched",
+    "gpu",
+    "throughput",
+    "decorator"
+  ],
+  "products": [
+    "blazing-flow"
+  ],
+  "primaryProduct": "blazing-flow"
+}
