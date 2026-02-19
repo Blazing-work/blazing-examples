@@ -1919,6 +1919,32 @@
     "href": "/docs/worker_types_overview"
   },
   {
+    "id": "worker_types_with_services",
+    "title": "Worker Types with Services",
+    "description": "One workflow, four worker types \u2014 trusted sync (BLOCKING), trusted async (NON_BLOCKING), and two sandboxed async (NON_BLOCKING_SANDBOXED) steps all calling the same MathOpsService, demonstrating that services['Name'] works identically across all executors.",
+    "category": "Runtime & Routing",
+    "difficulty": "Intermediate",
+    "time": "12 min",
+    "tags": [
+      "worker-types",
+      "services",
+      "sandboxed",
+      "routing"
+    ],
+    "products": [
+      "blazing-flow"
+    ],
+    "primaryProduct": "blazing-flow",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "08_runtime_routing/worker_types_with_services",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/08_runtime_routing/worker_types_with_services",
+    "href": "/docs/worker_types_with_services"
+  },
+  {
     "id": "dynamic_code_execution",
     "title": "Dynamic Code Execution (Sandboxed)",
     "description": "Executes a user-submitted expression string inside a sandboxed step with restricted builtins, demonstrating how to safely evaluate dynamic code while preventing access to dangerous Python built-in functions.",
@@ -2692,6 +2718,34 @@
     "href": "/docs/agent_checkpointing_service"
   },
   {
+    "id": "deepagents_with_checkpoint",
+    "title": "DeepAgents with BlazeCheckpointer",
+    "description": "Run a deepagents (LangGraph-based) agent inside the Pyodide sandbox with multi-turn state persistence via BlazeCheckpointer \u2014 build and upload a custom wheel, then use thread_id to resume sessions across independent invocations.",
+    "category": "GPU & Agents",
+    "difficulty": "Expert",
+    "time": "30 min",
+    "tags": [
+      "deepagents",
+      "langgraph",
+      "checkpoint",
+      "sandbox",
+      "langblaze",
+      "wheel"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/deepagents_with_checkpoint",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/deepagents_with_checkpoint",
+    "href": "/docs/deepagents_with_checkpoint"
+  },
+  {
     "id": "gpu_matrix_multiplication",
     "title": "GPU Matrix Multiplication",
     "description": "Runs a 512x512 PyTorch matrix multiplication on the available accelerator (CUDA, MPS, or CPU) by declaring @app.step(gpu='A100'), demonstrating how to route steps to GPU worker pools.",
@@ -2741,6 +2795,33 @@
     "folder_path": "12_gpu_ai_agents/langblaze_llm_service",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/langblaze_llm_service",
     "href": "/docs/langblaze_llm_service"
+  },
+  {
+    "id": "react_agent_dynamic_code",
+    "title": "ReAct Agent as Dynamic Code",
+    "description": "Run a complete LangGraph-style ReAct agent loop as user-submitted dynamic code in the Pyodide sandbox \u2014 LLM and tool calls route through trusted-worker services while the agent loop itself runs as signed sandbox code.",
+    "category": "GPU & Agents",
+    "difficulty": "Advanced",
+    "time": "25 min",
+    "tags": [
+      "agents",
+      "dynamic-code",
+      "sandbox",
+      "react",
+      "langblaze"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "12_gpu_ai_agents/react_agent_dynamic_code",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/12_gpu_ai_agents/react_agent_dynamic_code",
+    "href": "/docs/react_agent_dynamic_code"
   },
   {
     "id": "sandbox_dependencies_langgraph",
@@ -3271,5 +3352,33 @@
     "folder_path": "14_real_world/10_podcast_transcription",
     "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/10_podcast_transcription",
     "href": "/docs/10_podcast_transcription"
+  },
+  {
+    "id": "coding_agent_filesystem",
+    "title": "Coding Agent with BlazeFileSystem",
+    "description": "A deepagents coding agent in the Pyodide sandbox performs real file I/O through BlazeFileSystem proxied to a trusted StorageService \u2014 init a git repo, write and verify Python files, then persist agent state via BlazeCheckpointer across workflow phases.",
+    "category": "Real World Applications",
+    "difficulty": "Expert",
+    "time": "35 min",
+    "tags": [
+      "coding-agent",
+      "filesystem",
+      "deepagents",
+      "langblaze",
+      "storage",
+      "checkpoint"
+    ],
+    "products": [
+      "blazing-flow-sandbox"
+    ],
+    "primaryProduct": "blazing-flow-sandbox",
+    "files": {
+      "flow": true,
+      "sandbox": false,
+      "core": false
+    },
+    "folder_path": "14_real_world/coding_agent_filesystem",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/14_real_world/coding_agent_filesystem",
+    "href": "/docs/coding_agent_filesystem"
   }
 ]
