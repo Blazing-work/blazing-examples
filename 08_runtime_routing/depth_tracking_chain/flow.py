@@ -1,3 +1,15 @@
+"""
+Depth Tracking Chain
+
+Demonstrates a deep call chain where steps call other steps, creating multiple levels
+of depth.  step_c calls step_b, which calls step_a, creating a four-level depth from
+the workflow — workflow → step_c → step_b → step_a.
+
+Patterns shown:
+  1. Steps calling other steps to create multi-level depth
+  2. Each step in the chain increments the value by 1
+  3. The workflow adds a final increment at the top level
+"""
 from blazing import Blazing
 
 

@@ -1,3 +1,15 @@
+"""
+Multiple Methods
+
+Demonstrates registering two workflows as separate HTTP endpoints with different HTTP
+methods (GET and POST) on the same Blazing ASGI app.  Both endpoints are served by a
+single uvicorn process, showing multi-endpoint composition.
+
+Patterns shown:
+  1. @app.endpoint(path='/status', method='GET') for a no-argument health-check route
+  2. @app.endpoint(path='/echo', method='POST') for a parameterised POST route
+  3. create_asgi_app(app) + uvicorn.run() to serve both endpoints together
+"""
 import uvicorn
 from blazing import Blazing
 from blazing.web import create_asgi_app

@@ -1,3 +1,15 @@
+"""
+Agent Checkpointing Service
+
+Demonstrates an agent-like pipeline where a CheckpointService persists intermediate
+step outputs in an in-memory store.  Two sequential steps save their results to the
+service before passing values forward, simulating agent state checkpointing.
+
+Patterns shown:
+  1. @app.service with an in-memory dict store for checkpoint persistence
+  2. Two-step pipeline where each step saves its output via CheckpointService.save
+  3. Sequential step chaining: step_one output feeds step_two input
+"""
 from blazing import Blazing, BaseService
 
 

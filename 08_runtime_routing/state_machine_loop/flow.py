@@ -1,3 +1,15 @@
+"""
+State Machine Loop
+
+Demonstrates implementing a state machine loop inside a Blazing workflow.
+A step increments the state on each call; the workflow loops until the state
+reaches the limit, showing iterative control flow with repeated step invocations.
+
+Patterns shown:
+  1. A step that transitions state (returns value + 1)
+  2. while loop in a workflow that repeatedly calls the same step
+  3. Returning final state once the loop condition is satisfied
+"""
 from blazing import Blazing
 
 

@@ -1,3 +1,15 @@
+"""
+Mount Blazing ASGI
+
+Demonstrates mounting the Blazing ASGI sub-application under a path prefix on a parent
+FastAPI instance.  This pattern allows Blazing endpoints to coexist with other FastAPI
+routes under distinct URL namespaces.
+
+Patterns shown:
+  1. create_asgi_app(app) to produce the Blazing ASGI sub-application
+  2. api.mount('/blazing', blazing_asgi) to nest Blazing under a prefix
+  3. uvicorn.run(api) to serve the composed FastAPI + Blazing application
+"""
 import uvicorn
 from fastapi import FastAPI
 from blazing import Blazing

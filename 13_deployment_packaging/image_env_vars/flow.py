@@ -1,3 +1,15 @@
+"""
+Image Environment Variables
+
+Demonstrates baking an environment variable into the executor image spec using .env().
+The step reads the variable with os.getenv() at runtime, confirming that image-level
+environment variables are visible to code running inside the container.
+
+Patterns shown:
+  1. Image.executor().env(FOO='bar') to inject an env var into the image spec
+  2. @app.workflow(image=image) to run the workflow inside the configured image
+  3. os.getenv('FOO') inside a step to verify the image-level env var is accessible
+"""
 from blazing import Blazing
 from blazing.image import Image
 

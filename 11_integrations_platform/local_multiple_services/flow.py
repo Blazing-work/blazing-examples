@@ -1,3 +1,15 @@
+"""
+Local Multiple Services
+
+Demonstrates registering two services (MathService and StringService) in a single
+Blazing app and consuming both from one step.  The step multiplies a value via
+MathService and uppercases a label via StringService, returning both results together.
+
+Patterns shown:
+  1. Multiple @app.service classes registered on the same Blazing instance
+  2. Accessing two services in one step via services['MathService'] and services['StringService']
+  3. Combining results from multiple services in a single step return value
+"""
 from blazing import Blazing, BaseService
 
 

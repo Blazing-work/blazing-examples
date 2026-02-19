@@ -1,3 +1,15 @@
+"""
+Multiple Images
+
+Demonstrates registering two workflows in the same Blazing app, each bound to a
+different custom image.  cpu_workflow uses a numpy-equipped image for compute tasks;
+io_workflow uses a curl-equipped image for network I/O tasks.
+
+Patterns shown:
+  1. Two distinct Image specs: one with numpy (CPU), one with curl (I/O)
+  2. @app.workflow(image=cpu_image) and @app.workflow(image=io_image) for per-workflow images
+  3. Running both workflows sequentially and combining their results into a single dict
+"""
 from blazing import Blazing
 from blazing.image import Image
 

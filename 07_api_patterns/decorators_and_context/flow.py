@@ -1,3 +1,16 @@
+"""
+Decorators and Context
+
+Demonstrates using the Blazing app as an async context manager alongside @app.service,
+@app.step, and @app.workflow decorators.  The async with app: block ensures resources
+are cleaned up after the workflow completes.
+
+Patterns shown:
+  1. @app.service decorator for a simple helper service
+  2. Using services["MathService"] inside a step
+  3. async with app: context manager for automatic resource cleanup
+  4. Publishing and running a workflow inside the context block
+"""
 from blazing import Blazing, BaseService
 
 

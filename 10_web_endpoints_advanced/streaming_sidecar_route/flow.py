@@ -1,3 +1,15 @@
+"""
+Streaming Sidecar Route
+
+Demonstrates adding a native FastAPI SSE streaming route alongside a mounted Blazing
+ASGI sub-app.  The /stream route emits server-sent events while /blazing/double runs
+the Blazing workflow, showing how to compose streaming and Blazing endpoints.
+
+Patterns shown:
+  1. @api.get('/stream') with StreamingResponse and an async generator for SSE
+  2. api.mount('/blazing', blazing_asgi) to host the Blazing sub-app alongside native routes
+  3. asyncio.sleep inside the event generator to pace SSE ticks
+"""
 import asyncio
 import uvicorn
 from fastapi import FastAPI

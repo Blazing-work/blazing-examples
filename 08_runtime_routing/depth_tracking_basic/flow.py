@@ -1,3 +1,15 @@
+"""
+Depth Tracking Basic
+
+Demonstrates the basic depth-tracking model: a workflow (parent) calling a step (child).
+This one-level call tree establishes the baseline for understanding how Blazing tracks
+workflow-to-step call depth.
+
+Patterns shown:
+  1. A single parent workflow calling a single child step
+  2. One level of call depth: workflow → step
+  3. Retrieving the result from a one-step workflow
+"""
 from blazing import Blazing
 
 

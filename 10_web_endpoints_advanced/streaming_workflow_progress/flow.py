@@ -1,3 +1,15 @@
+"""
+Streaming Workflow Progress
+
+Demonstrates streaming structured progress updates from a long-running Blazing workflow.
+The endpoint processes a list of items, emitting a log message at the start and a progress
+event after each item, then returns the full results list when complete.
+
+Patterns shown:
+  1. @app.endpoint(path='/process', response_mode='stream') for a streaming endpoint
+  2. log('info', message) to emit a log event at the start of processing
+  3. progress(step=idx, total=total, message=...) to stream per-item progress
+"""
 import asyncio
 import uvicorn
 from blazing import Blazing

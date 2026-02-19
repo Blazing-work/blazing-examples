@@ -1,3 +1,15 @@
+"""
+Isolated Retry
+
+Demonstrates retry logic around a sandboxed step that raises ValueError for invalid inputs.
+The workflow is called in a retry loop up to 3 attempts with asyncio.sleep between
+failures, showing how to handle sandbox errors gracefully.
+
+Patterns shown:
+  1. @app.step(sandboxed=True) for an isolated step that may raise ValueError
+  2. Retry loop with a fixed delay (asyncio.sleep) on exception
+  3. Breaking out of the retry loop on first success
+"""
 import asyncio
 from blazing import Blazing
 

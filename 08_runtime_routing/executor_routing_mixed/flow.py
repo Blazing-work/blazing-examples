@@ -1,3 +1,15 @@
+"""
+Executor Routing Mixed
+
+Demonstrates mixing trusted and sandboxed NON-BLOCKING steps in a single workflow.
+Both a trusted step and a sandboxed step are called sequentially; the workflow
+collects both results to show how routing differs between the two.
+
+Patterns shown:
+  1. @app.step(step_type='NON-BLOCKING') for trusted async execution
+  2. @app.step(sandboxed=True, step_type='NON-BLOCKING') for isolated async execution
+  3. Calling both step types from one workflow and returning results together
+"""
 from blazing import Blazing
 
 

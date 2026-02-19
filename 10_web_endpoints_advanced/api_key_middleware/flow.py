@@ -1,3 +1,15 @@
+"""
+API Key Middleware
+
+Demonstrates protecting a Blazing ASGI app with API key authentication via a FastAPI
+middleware layer.  The middleware checks the x-api-key header for all requests under
+/blazing and returns 401 if the key is missing or incorrect.
+
+Patterns shown:
+  1. create_asgi_app(app) to convert a Blazing app to an ASGI application
+  2. FastAPI middleware inspecting request headers before forwarding to the mounted sub-app
+  3. api.mount('/blazing', blazing_asgi) to host Blazing under a path prefix
+"""
 import os
 import uvicorn
 from fastapi import FastAPI, Request

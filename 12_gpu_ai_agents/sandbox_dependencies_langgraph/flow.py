@@ -1,3 +1,15 @@
+"""
+Sandbox Dependencies LangGraph
+
+Demonstrates pre-installing langchain-core into the Pyodide WebAssembly sandbox via
+the sandbox_dependencies parameter.  A sandboxed step can then import LangChain
+primitives to run agent logic in complete isolation from the host environment.
+
+Patterns shown:
+  1. Blazing(sandbox_dependencies=['langchain-core']) to pre-install packages in Pyodide
+  2. @app.step(sandboxed=True) as the execution boundary for agent logic
+  3. A workflow that invokes the sandboxed agent step and returns its result
+"""
 from blazing import Blazing
 
 

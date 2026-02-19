@@ -1,3 +1,15 @@
+"""
+Custom Exception Handler
+
+Demonstrates registering a FastAPI exception handler to convert ValueError raised
+inside a Blazing workflow into a structured 400 JSON response.  The Blazing ASGI app
+is mounted on a parent FastAPI router that owns the exception handler.
+
+Patterns shown:
+  1. @app.endpoint with a workflow that raises ValueError for invalid input
+  2. @api.exception_handler(ValueError) to catch domain errors and return 400
+  3. api.mount('/blazing', blazing_asgi) to compose Blazing under a FastAPI router
+"""
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse

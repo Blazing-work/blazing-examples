@@ -1,3 +1,15 @@
+"""
+API Execution Patterns
+
+Demonstrates the three equivalent ways to execute a Blazing workflow and retrieve its result.
+All three patterns — wait_result() one-liner, handle.result(), and app.run() by name —
+produce the same output.
+
+Patterns shown:
+  1. wait_result() one-liner: await app.workflow(...).wait_result()
+  2. RemoteRun handle: handle = await app.workflow(...); await handle.result()
+  3. run() by name: run = await app.run('name', ...); await run.result()
+"""
 from blazing import Blazing
 
 

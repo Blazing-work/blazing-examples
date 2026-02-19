@@ -1,3 +1,15 @@
+"""
+Redis Completion Polling
+
+Demonstrates connecting to a remote Blazing control plane via BLAZING_API_URL and
+BLAZING_API_TOKEN environment variables.  The workflow is published and a result
+awaited via wait_result(), polling the remote Redis-backed completion queue.
+
+Patterns shown:
+  1. Blazing(api_url=..., api_token=...) to configure a remote control plane connection
+  2. Reading connection parameters from environment variables with os.getenv defaults
+  3. wait_result() to poll for workflow completion from a remote runner
+"""
 import os
 from blazing import Blazing
 

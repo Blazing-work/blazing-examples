@@ -1,3 +1,16 @@
+"""
+Worker Types Overview
+
+Demonstrates all four step execution modes in a single workflow: BLOCKING, NON-BLOCKING,
+sandboxed BLOCKING, and sandboxed NON-BLOCKING.  All four are called sequentially and
+their results returned in a dict for side-by-side comparison.
+
+Patterns shown:
+  1. step_type='BLOCKING' — CPU-bound step on a dedicated thread
+  2. step_type='NON-BLOCKING' — async I/O step on the event loop (default)
+  3. sandboxed=True, step_type='BLOCKING' — isolated CPU-bound execution
+  4. sandboxed=True, step_type='NON-BLOCKING' — isolated async execution
+"""
 from blazing import Blazing
 
 

@@ -1,3 +1,15 @@
+"""
+Workflow Version Pins
+
+Demonstrates pinning specific service versions for a workflow using the version_pins
+parameter on @app.workflow.  Version pinning ensures the workflow always uses a declared
+service version, enabling reproducible deployments regardless of the latest published version.
+
+Patterns shown:
+  1. version_pins dict mapping service name to a version string
+  2. Passing version_pins= to @app.workflow decorator
+  3. Running the pinned workflow and retrieving the result
+"""
 from blazing import Blazing
 
 

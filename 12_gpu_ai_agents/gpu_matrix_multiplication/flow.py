@@ -1,3 +1,15 @@
+"""
+GPU Matrix Multiplication
+
+Demonstrates running a GPU-accelerated matrix multiplication step on an A100 GPU.
+The step auto-selects the best available device (MPS on Apple Silicon, CUDA on
+NVIDIA, or CPU as fallback) and multiplies two random matrices using PyTorch.
+
+Patterns shown:
+  1. @app.step(gpu='A100') to request an A100 GPU worker for the step
+  2. torch.backends.mps / torch.cuda.is_available() for device auto-selection
+  3. torch.matmul on the selected device, returning device type and output shape
+"""
 from blazing import Blazing
 
 

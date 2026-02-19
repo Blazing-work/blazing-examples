@@ -1,3 +1,17 @@
+"""
+Depth Statistics Metrics
+
+Demonstrates running a workflow and retrieving raw depth statistics from the metrics API.
+After publishing and executing a simple step/workflow, the full /v1/metrics/depth
+response is printed to show all available depth tracking fields.
+
+Patterns shown:
+  1. Connecting to a remote Blazing API with env-var credentials
+  2. Publishing a workflow and running it before querying metrics
+  3. GET /v1/metrics/depth with Authorization header to retrieve depth stats
+
+Requires: docker-compose up -d
+"""
 import os
 import httpx
 from blazing import Blazing

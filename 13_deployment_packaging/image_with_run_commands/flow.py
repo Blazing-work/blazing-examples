@@ -1,3 +1,15 @@
+"""
+Image with Run Commands
+
+Demonstrates using .run_commands() to execute shell commands during image build,
+creating directories and writing seed files into the image layer.  The step then reads
+the seed file at runtime to confirm the build-time commands executed correctly.
+
+Patterns shown:
+  1. Image.executor().run_commands('mkdir -p /app/data', 'echo ... > file') for build-time setup
+  2. @app.workflow(image=image) to deploy into the image with pre-created filesystem artifacts
+  3. Reading a build-time file (open('/app/data/seed.txt')) at step runtime
+"""
 from blazing import Blazing
 from blazing.image import Image
 

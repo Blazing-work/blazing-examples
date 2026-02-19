@@ -1,3 +1,15 @@
+"""
+Pyodide Dependencies
+
+Demonstrates installing Python packages into the Pyodide WebAssembly sandbox
+via the sandbox_dependencies parameter.  numpy is imported inside a sandboxed step
+to compute mean and sum on a list of values.
+
+Patterns shown:
+  1. Blazing(sandbox_dependencies=['numpy']) to pre-install packages in the sandbox
+  2. import numpy as np inside a @app.step(sandboxed=True) body
+  3. Returning computed statistics dict from the sandboxed step
+"""
 from blazing import Blazing
 
 

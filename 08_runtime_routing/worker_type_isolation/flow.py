@@ -1,3 +1,15 @@
+"""
+Worker Type Isolation
+
+Demonstrates the routing difference between trusted NON-BLOCKING and sandboxed
+NON-BLOCKING steps.  Both types are called in the same workflow and results returned
+side by side to show that isolation affects routing but not the async execution model.
+
+Patterns shown:
+  1. @app.step(step_type='NON-BLOCKING') for trusted async execution
+  2. @app.step(sandboxed=True, step_type='NON-BLOCKING') for sandboxed async execution
+  3. Comparing trusted vs sandboxed output in a single workflow dict
+"""
 from blazing import Blazing
 
 

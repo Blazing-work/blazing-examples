@@ -1,3 +1,15 @@
+"""
+Publish with Retry
+
+Demonstrates wrapping app.publish() in an exponential-backoff retry loop to handle
+transient 429 (rate limit) HTTP errors from the control plane.  Up to max_retries
+attempts are made with doubling delays before the error is re-raised.
+
+Patterns shown:
+  1. publish_with_retry(app, max_retries, base_delay) helper function for resilient publish
+  2. Catching httpx.HTTPStatusError and checking status_code == 429 for rate limiting
+  3. asyncio.sleep(base_delay * 2**attempt) for exponential backoff between retries
+"""
 import asyncio
 from blazing import Blazing
 

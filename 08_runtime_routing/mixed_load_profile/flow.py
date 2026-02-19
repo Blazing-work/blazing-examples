@@ -1,3 +1,15 @@
+"""
+Mixed Load Profile
+
+Demonstrates running a CPU-bound BLOCKING step and an I/O-bound NON-BLOCKING step
+concurrently in the same workflow.  asyncio.gather launches both simultaneously so
+neither blocks the other, illustrating optimal worker-type selection.
+
+Patterns shown:
+  1. BLOCKING step for CPU-bound summation (dedicated thread, doesn't block event loop)
+  2. Default NON-BLOCKING step for async I/O (simulated with asyncio.sleep)
+  3. asyncio.gather to run both step types concurrently and collect results
+"""
 import asyncio
 from blazing import Blazing
 

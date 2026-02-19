@@ -1,3 +1,15 @@
+"""
+Local Service Multi-Step
+
+Demonstrates a two-step pipeline where both steps share the same MathService.
+compute_sum iterates through a list calling MathService.add, then compute_product
+scales the result, and the workflow collects both outputs into a summary dict.
+
+Patterns shown:
+  1. A single service shared across multiple steps via services['MathService']
+  2. Sequential step pipeline: compute_sum feeds its result into compute_product
+  3. Workflow returning a structured dict combining both step outputs
+"""
 from blazing import Blazing, BaseService
 
 

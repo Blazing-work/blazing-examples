@@ -1,3 +1,15 @@
+"""
+Dockerfile Image
+
+Demonstrates building a Blazing image spec from an existing Dockerfile using
+Image.from_dockerfile().  The workflow is bound to the image so that executor
+workers build and run steps inside the custom Docker image.
+
+Patterns shown:
+  1. Image.from_dockerfile(path=..., context=...) to reference an existing Dockerfile
+  2. @app.workflow(image=image) to deploy the workflow into the custom image environment
+  3. Path('.') as the Docker build context, resolved relative to the script location
+"""
 from pathlib import Path
 from blazing import Blazing
 from blazing.image import Image

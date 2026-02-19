@@ -1,3 +1,15 @@
+"""
+Depth Cross-Boundary
+
+Demonstrates a step that crosses the sandbox boundary while calling a trusted service.
+A sandboxed NON-BLOCKING step calls a CalculationService via the services dict,
+showing that service bridges work across the sandbox/host boundary.
+
+Patterns shown:
+  1. @app.step(sandboxed=True, step_type='NON-BLOCKING') for cross-boundary execution
+  2. Accessing a trusted CalculationService from within a sandboxed step
+  3. Workflow calling a sandboxed step transparently
+"""
 from blazing import Blazing, BaseService
 
 

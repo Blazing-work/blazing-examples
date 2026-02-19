@@ -1,3 +1,15 @@
+"""
+Remote Control Plane Connection
+
+Demonstrates configuring a Blazing instance to connect to a remote control plane
+using API URL and token from environment variables.  The app is published and a
+simple echo workflow is invoked to confirm the remote connection is working.
+
+Patterns shown:
+  1. Blazing(api_url=..., api_token=...) for remote control plane configuration
+  2. Reading BLAZING_API_URL and BLAZING_API_TOKEN from environment with fallback defaults
+  3. Verifying connectivity by running a minimal echo workflow via wait_result()
+"""
 import os
 from blazing import Blazing
 

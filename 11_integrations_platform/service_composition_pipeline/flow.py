@@ -1,3 +1,15 @@
+"""
+Service Composition Pipeline
+
+Demonstrates composing two services (MathService and StringService) in a single step
+to build a pipeline that multiplies a value and then labels the result.  Both services
+are called sequentially within one step to produce a formatted string output.
+
+Patterns shown:
+  1. Two @app.service classes with different domain operations (math and string formatting)
+  2. Composing multiple service calls inside a single @app.step
+  3. Chaining MathService.multiply output into StringService.label for a formatted result
+"""
 from blazing import Blazing, BaseService
 
 

@@ -1,3 +1,15 @@
+"""
+Dynamic Code Execution
+
+Demonstrates evaluating a user-provided Python expression inside a sandboxed step.
+The step uses a restricted execution environment so only safe math operations
+are permitted, showing a minimal dynamic code execution pattern.
+
+Patterns shown:
+  1. @app.step(sandboxed=True) to run expression evaluation in a WebAssembly sandbox
+  2. Restricting builtins to an empty dict to block dangerous calls
+  3. Passing an expression string as a workflow parameter and returning the result
+"""
 from blazing import Blazing
 
 

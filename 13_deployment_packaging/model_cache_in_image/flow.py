@@ -1,3 +1,15 @@
+"""
+Model Cache in Image
+
+Demonstrates caching model weights inside the executor image using .run_commands() and
+.env() to set the MODEL_PATH.  The step reads the weights file at startup using the
+path from the environment variable, simulating model loading from an image-baked cache.
+
+Patterns shown:
+  1. run_commands to create /models and write placeholder weights during image build
+  2. .env(MODEL_PATH='/models/model.txt') to make the path available at runtime
+  3. os.getenv('MODEL_PATH') inside the step to locate and load the cached model file
+"""
 from blazing import Blazing
 from blazing.image import Image
 
