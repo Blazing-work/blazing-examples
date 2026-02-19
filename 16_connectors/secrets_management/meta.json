@@ -1,0 +1,11 @@
+{
+  "id": "secrets_management",
+  "title": "Secrets Management with SecretsConnector",
+  "description": "Store and retrieve encrypted secrets through trusted services — DatabaseService fetches DATABASE_URL and credentials; APIClientService fetches API_KEY and API_SECRET. Sandboxed steps cannot access secrets directly, enforcing the same security model as database connectors.",
+  "category": "Connectors",
+  "difficulty": "Intermediate",
+  "time": "15 min",
+  "tags": ["secrets", "connectors", "security", "services", "local-stack"],
+  "products": ["blazing-flow"],
+  "primaryProduct": "blazing-flow"
+}
