@@ -25,6 +25,14 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+# Hard assertion: smoke runner must attempt exactly this many examples.
+# Update this constant if examples are intentionally added or removed (CANARY-04 guard).
+EXPECTED_EXAMPLE_COUNT = 137
+
+# SLA wall-clock guard: total smoke run must complete within 15 minutes.
+# Must match canary.yml timeout-minutes: 15 on the smoke-tests job (SMOKE-02 guard).
+SLA_WALL_SECONDS = 900  # 15 minutes — must match canary.yml timeout-minutes: 15
+
 # Technologies in meta.json that require external API keys
 # Key = technology name in meta.json, Value = env var that must be set for the test to run
 EXTERNAL_API_TECHNOLOGIES = {
@@ -165,6 +173,17 @@ def main():
     examples = find_examples(examples_dir)
 
     print(f"Found {len(examples)} examples in {examples_dir}")
+
+    # CANARY-04 guard: fail loudly if example count has changed unexpectedly.
+    # A missing-example regression (wrong glob, deleted directory) must not silently pass.
+    if len(examples) != EXPECTED_EXAMPLE_COUNT:
+        print(
+            f"ERROR: Expected {EXPECTED_EXAMPLE_COUNT} examples, found {len(examples)}. "
+            f"A new example was added or an existing one was removed without updating this check. "
+            f"Update EXPECTED_EXAMPLE_COUNT in smoke_runner.py or fix the examples directory.",
+            file=sys.stderr
+        )
+        sys.exit(2)
     print(f"API URL: {api_url} | Workers: {args.workers} | Timeout: {args.timeout}s")
     print(f"Results: {results_file}")
 
@@ -185,6 +204,16 @@ def main():
                 print(f"         {r['error'][:200]}")
 
     wall_duration = time.monotonic() - wall_start
+
+    # SMOKE-02 guard: fail loudly if total run exceeded the 15-minute SLA.
+    # This check runs after all examples complete so the JSONL results are still written.
+    if wall_duration > SLA_WALL_SECONDS:
+        print(
+            f"ERROR: Smoke runner exceeded SLA wall time: {wall_duration:.1f}s > {SLA_WALL_SECONDS}s (15 min). "
+            f"Reduce per-example timeout or increase --workers.",
+            file=sys.stderr
+        )
+        sys.exit(3)
 
     # Write JSONL results
     with open(results_file, "w") as f:
