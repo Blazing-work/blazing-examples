@@ -1,15 +1,19 @@
 {
   "id": "error_handling_api",
   "title": "Error Handling in APIs",
-  "description": "Proper error handling with custom error responses.",
+  "description": "Proper error handling with custom error responses Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "distributed",
+    "error-handling",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "endpoint",
-    "error-handling",
-    "validation"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

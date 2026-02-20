@@ -1,16 +1,17 @@
 {
   "id": "distributed_dict_queue",
   "title": "Distributed Dict & Queue",
-  "description": "Share state and pass messages between service instances with DictConnector (key-value store) and QueueConnector (async FIFO queue) — coordinating workers across deployments and tenants.",
+  "description": "Share state and pass messages between service instances with DictConnector (key-value store) and QueueConnector (async FIFO queue) \u2014 coordinating workers across deployments and tenants.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "queue"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "distributed",
-    "queue",
-    "dict",
-    "state"
-  ],
   "products": [
     "blazing-flow"
   ],

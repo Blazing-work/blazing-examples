@@ -1,15 +1,17 @@
 {
   "id": "validation_error_handling",
   "title": "Validation & Error Handling",
-  "description": "Validate input data and handle errors gracefully in workflows.",
+  "description": "Validate input data and handle errors gracefully in workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "data-quality",
+    "distributed",
+    "error-handling",
+    "python"
+  ],
+  "technologies": [],
   "category": "Data Processing",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "validation",
-    "error-handling",
-    "data-quality"
-  ],
   "products": [
     "blazing-flow"
   ],

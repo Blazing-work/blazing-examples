@@ -1,16 +1,17 @@
 {
   "id": "sandbox_async_service_calls",
   "title": "Sandbox: Async Service Calls",
-  "description": "User code making concurrent service calls for performance.",
+  "description": "User code making concurrent service calls for performance \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "async",
+    "python",
+    "sandbox",
+    "service-bridge"
+  ],
+  "technologies": [],
   "category": "Advanced",
   "difficulty": "Expert",
   "time": "30 min",
-  "tags": [
-    "sandbox",
-    "async",
-    "concurrent",
-    "service-bridge"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

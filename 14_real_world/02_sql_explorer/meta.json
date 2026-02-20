@@ -1,16 +1,19 @@
 {
   "id": "sql_explorer",
   "title": "SQL Explorer",
-  "description": "Ad-hoc SQL analytics over SQLite, CSV, and Parquet via HTTP endpoints backed by DuckDB — read-only mode with SQL injection protection and 30-second query timeouts.",
+  "description": "Ad-hoc SQL analytics over SQLite, CSV, and Parquet via HTTP endpoints backed by DuckDB \u2014 read-only mode with SQL injection protection and 30-second query timeouts.",
+  "tags": [
+    "api",
+    "distributed",
+    "duckdb",
+    "python"
+  ],
+  "technologies": [
+    "DuckDB"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "sql",
-    "duckdb",
-    "api",
-    "query"
-  ],
   "products": [
     "blazing-flow"
   ],

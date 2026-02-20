@@ -1,15 +1,20 @@
 {
   "id": "custom_exception_handler",
   "title": "Custom Exception Handler",
-  "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield",
+  "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield Built with FastAPI, uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "distributed",
+    "fastapi",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "errors",
-    "fastapi",
-    "asgi"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

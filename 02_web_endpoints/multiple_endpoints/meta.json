@@ -1,16 +1,20 @@
 {
   "id": "multiple_endpoints",
   "title": "Multiple Endpoints with Different Paths",
-  "description": "Organize multiple endpoints with different paths and versions.",
+  "description": "Organize multiple endpoints with different paths and versions Built with FastAPI, uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "api-design",
+    "fastapi",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "endpoint",
-    "versioning",
-    "api-design",
-    "organization"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

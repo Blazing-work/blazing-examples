@@ -1,17 +1,24 @@
 {
   "id": "authenticated_api",
   "title": "API with Authentication",
-  "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth).",
+  "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth) \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "api-key",
+    "fastapi",
+    "jwt",
+    "oauth",
+    "security",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "JWT",
+    "OAuth",
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "endpoint",
-    "authentication",
-    "jwt",
-    "api-key",
-    "security"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

@@ -1,14 +1,19 @@
 {
   "id": "worker_type_isolation",
   "title": "Worker Type Isolation",
-  "description": "Demonstrates behavior differences between trusted and sandboxed NON-BLOCKING workers by running the same input through both and comparing results — trusted steps run in the main process, sandboxed in Pyodide.",
+  "description": "Demonstrates behavior differences between trusted and sandboxed NON-BLOCKING workers by running the same input through both and comparing results \u2014 trusted steps run in the main process, sandboxed in Pyodide.",
+  "tags": [
+    "isolation",
+    "pyodide",
+    "python",
+    "worker-types"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "worker-types",
-    "isolation"
-  ],
   "products": [
     "blazing-flow"
   ],

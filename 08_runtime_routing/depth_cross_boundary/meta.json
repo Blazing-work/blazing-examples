@@ -1,15 +1,19 @@
 {
   "id": "depth_cross_boundary",
   "title": "Depth Across Boundaries",
-  "description": "Demonstrates a sandboxed step calling a trusted service in the same workflow — a cross-boundary pattern where Pyodide-isolated code accesses a trusted service via the services= injection mechanism.",
+  "description": "Demonstrates a sandboxed step calling a trusted service in the same workflow \u2014 a cross-boundary pattern where Pyodide-isolated code accesses a trusted service via the services= injection mechanism.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "depth",
-    "sandboxed",
-    "services"
-  ],
   "products": [
     "blazing-flow"
   ],

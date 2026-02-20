@@ -2,14 +2,18 @@
   "id": "gpu_matrix_multiplication",
   "title": "GPU Matrix Multiplication",
   "description": "Runs a 512x512 PyTorch matrix multiplication on the available accelerator (CUDA, MPS, or CPU) by declaring @app.step(gpu='A100'), demonstrating how to route steps to GPU worker pools.",
+  "tags": [
+    "distributed",
+    "gpu",
+    "python",
+    "pytorch"
+  ],
+  "technologies": [
+    "PyTorch"
+  ],
   "category": "GPU & Agents",
   "difficulty": "Advanced",
   "time": "15 min",
-  "tags": [
-    "gpu",
-    "pytorch",
-    "ml"
-  ],
   "products": [
     "blazing-flow"
   ],

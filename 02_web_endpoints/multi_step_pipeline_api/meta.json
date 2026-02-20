@@ -1,16 +1,19 @@
 {
   "id": "multi_step_pipeline_api",
   "title": "Multi-Step Data Pipeline API",
-  "description": "Expose a multi-step workflow that processes data through several stages.",
+  "description": "Expose a multi-step workflow that processes data through several stages Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "multi-step",
+    "pipeline",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "endpoint",
-    "pipeline",
-    "multi-step",
-    "statistics"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

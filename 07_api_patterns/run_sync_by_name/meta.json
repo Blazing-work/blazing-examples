@@ -1,14 +1,17 @@
 {
   "id": "run_sync_by_name",
   "title": "run_sync by Name",
-  "description": "Demonstrates the synchronous API for running workflows by name — app.publish_sync() and app.run_sync('workflow_name', **kwargs) — for use in non-async calling contexts.",
+  "description": "Demonstrates the synchronous API for running workflows by name \u2014 app.publish_sync() and app.run_sync('workflow_name', **kwargs) \u2014 for use in non-async calling contexts.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "6 min",
-  "tags": [
-    "sync",
-    "run_sync"
-  ],
   "products": [
     "blazing-flow"
   ],

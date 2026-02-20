@@ -1,14 +1,17 @@
 {
   "id": "state_machine_loop",
   "title": "State Machine Loop",
-  "description": "Implements a workflow-driven state machine using a while loop — each iteration calls a step that advances the state until a terminal condition is reached, demonstrating looping patterns in Blazing.",
+  "description": "Implements a workflow-driven state machine using a while loop \u2014 each iteration calls a step that advances the state until a terminal condition is reached, demonstrating looping patterns in Blazing.",
+  "tags": [
+    "distributed",
+    "loop",
+    "python",
+    "state-machine"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "state-machine",
-    "loop"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,15 +1,17 @@
 {
   "id": "data_processing_step",
   "title": "Data Processing Step",
-  "description": "Filter rows and transform fields in a single Blazing step — lightweight inline data processing without a pipeline.",
+  "description": "Filter rows and transform fields in a single Blazing step \u2014 lightweight inline data processing without a pipeline.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "5 min",
-  "tags": [
-    "step",
-    "data",
-    "filtering"
-  ],
   "products": [
     "blazing-flow"
   ],

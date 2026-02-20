@@ -1,17 +1,17 @@
 {
   "id": "multi_channel_notification",
   "title": "Multi-Channel Notification",
-  "description": "Send notifications across email, SMS, and push channels simultaneously.",
+  "description": "Send notifications across email, SMS, and push channels simultaneously \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "multi-channel",
+    "python"
+  ],
+  "technologies": [],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "25 min",
-  "tags": [
-    "notifications",
-    "multi-channel",
-    "email",
-    "sms",
-    "push"
-  ],
   "products": [
     "blazing-flow"
   ],

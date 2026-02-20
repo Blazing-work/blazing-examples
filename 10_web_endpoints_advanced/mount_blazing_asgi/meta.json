@@ -2,14 +2,19 @@
   "id": "mount_blazing_asgi",
   "title": "Mount Blazing in FastAPI",
   "description": "Mounts the Blazing ASGI sub-application at a /blazing path prefix inside a larger FastAPI app using api.mount(), allowing Blazing workflows and custom FastAPI routes to coexist in one server process.",
+  "tags": [
+    "distributed",
+    "fastapi",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "asgi",
-    "fastapi",
-    "mount"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

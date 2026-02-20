@@ -1,15 +1,17 @@
 {
   "id": "timeout_handling",
   "title": "Timeout Handling",
-  "description": "Prevent workflows from hanging with asyncio.wait_for timeouts.",
+  "description": "Prevent workflows from hanging with asyncio.wait_for timeouts \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "asyncio",
+    "error-handling",
+    "python",
+    "timeout"
+  ],
+  "technologies": [],
   "category": "Data Processing",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "timeout",
-    "error-handling",
-    "asyncio"
-  ],
   "products": [
     "blazing-flow"
   ],

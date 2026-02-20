@@ -1,16 +1,17 @@
 {
   "id": "email_service",
   "title": "Email Service",
-  "description": "Send transactional emails via SMTP using a Blazing service — templating, retries, and delivery confirmation.",
+  "description": "Send transactional emails via SMTP using a Blazing service \u2014 templating, retries, and delivery confirmation.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "service",
-    "email",
-    "smtp",
-    "notifications"
-  ],
   "products": [
     "blazing-flow"
   ],

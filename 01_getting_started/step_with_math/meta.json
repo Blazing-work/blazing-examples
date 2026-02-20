@@ -1,15 +1,17 @@
 {
   "id": "step_with_math",
   "title": "Step with Math",
-  "description": "Basic arithmetic operations in a distributed step.",
+  "description": "Basic arithmetic operations in a distributed step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "5 min",
-  "tags": [
-    "step",
-    "math",
-    "basics"
-  ],
   "products": [
     "blazing-flow"
   ],

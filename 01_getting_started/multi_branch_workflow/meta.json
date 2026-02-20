@@ -1,16 +1,17 @@
 {
   "id": "multi_branch_workflow",
   "title": "Multi-Branch Workflow",
-  "description": "Parallel execution with asyncio.gather for concurrent processing.",
+  "description": "Parallel execution with asyncio.gather for concurrent processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "asyncio",
+    "parallel",
+    "python",
+    "workflow"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "workflow",
-    "parallel",
-    "asyncio",
-    "branching"
-  ],
   "products": [
     "blazing-flow"
   ],

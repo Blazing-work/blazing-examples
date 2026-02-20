@@ -2,14 +2,16 @@
   "id": "agent_checkpointing_service",
   "title": "Agent Checkpointing Service",
   "description": "Demonstrates agent-style fault tolerance using a CheckpointService that persists intermediate step results (step_one and step_two outputs) in an in-memory store, enabling recovery from partial workflow failures.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "GPU & Agents",
   "difficulty": "Intermediate",
   "time": "12 min",
-  "tags": [
-    "agents",
-    "checkpointing",
-    "services"
-  ],
   "products": [
     "blazing-flow"
   ],

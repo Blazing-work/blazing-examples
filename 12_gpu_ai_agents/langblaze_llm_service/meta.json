@@ -1,16 +1,22 @@
 {
   "id": "langblaze_llm_service",
   "title": "LangBlaze LLM Service",
-  "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps — LLMService on trusted workers proxies API keys so the sandbox never sees them.",
+  "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps \u2014 LLMService on trusted workers proxies API keys so the sandbox never sees them.",
+  "tags": [
+    "langblaze",
+    "langchain",
+    "langgraph",
+    "pyodide"
+  ],
+  "technologies": [
+    "LangBlaze",
+    "LangChain",
+    "LangGraph",
+    "Pyodide"
+  ],
   "category": "GPU & Agents",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "langblaze",
-    "llm",
-    "agents",
-    "langgraph"
-  ],
   "products": [
     "blazing-flow"
   ],

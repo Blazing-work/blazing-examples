@@ -2,13 +2,16 @@
   "id": "remote_control_plane_connection",
   "title": "Remote Control Plane Connection",
   "description": "Connects to a remote Blazing API by passing api_url and api_token to the Blazing constructor, sourced from BLAZING_API_URL and BLAZING_API_TOKEN environment variables for secure credential management.",
+  "tags": [
+    "api-url",
+    "auth",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Beginner",
   "time": "5 min",
-  "tags": [
-    "api-url",
-    "auth"
-  ],
   "products": [
     "blazing-flow"
   ],

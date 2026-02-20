@@ -1,15 +1,19 @@
 {
   "id": "streaming_progress_bar",
   "title": "Streaming Progress Bar",
-  "description": "Use progress_bar to emit SSE updates while iterating.\n\nSource: greenfield",
+  "description": "Use progress_bar to emit SSE updates while iterating.\n\nSource: greenfield Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "progress-bar",
+    "python",
+    "streaming",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "streaming",
-    "sse",
-    "progress-bar"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

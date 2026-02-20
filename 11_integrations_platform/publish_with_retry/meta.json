@@ -1,15 +1,19 @@
 {
   "id": "publish_with_retry",
   "title": "Publish with Retry",
-  "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes.",
+  "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes \u2014 uses HTTPX.",
+  "tags": [
+    "distributed",
+    "httpx",
+    "python",
+    "retry"
+  ],
+  "technologies": [
+    "HTTPX"
+  ],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "retry",
-    "publish",
-    "resilience"
-  ],
   "products": [
     "blazing-flow"
   ],

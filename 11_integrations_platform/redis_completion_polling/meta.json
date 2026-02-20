@@ -2,14 +2,18 @@
   "id": "redis_completion_polling",
   "title": "Redis Completion Polling",
   "description": "Connects to a Blazing control plane via BLAZING_API_URL and BLAZING_API_TOKEN environment variables, demonstrating how to configure and authenticate with a remote Blazing deployment using Redis-backed completion tracking.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "redis"
+  ],
+  "technologies": [
+    "Redis"
+  ],
   "category": "Platform Integrations",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "redis",
-    "polling",
-    "completion"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,15 +1,17 @@
 {
   "id": "simple_step",
   "title": "Simple Step",
-  "description": "The simplest possible Blazing Flow example - a single processing step.",
+  "description": "The simplest possible Blazing Flow example - a single processing step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "5 min",
-  "tags": [
-    "step",
-    "basics",
-    "quickstart"
-  ],
   "products": [
     "blazing-flow"
   ],

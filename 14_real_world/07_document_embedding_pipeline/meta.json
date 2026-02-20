@@ -1,17 +1,26 @@
 {
   "id": "document_embedding_pipeline",
   "title": "Document Embedding Pipeline",
-  "description": "High-throughput document embedding pipeline — S3 batch download, tiktoken chunking with overlap, sentence-transformers or OpenAI embeddings, MongoDB vector storage, and checkpoint/resume for fault tolerance.",
+  "description": "High-throughput document embedding pipeline \u2014 S3 batch download, tiktoken chunking with overlap, sentence-transformers or OpenAI embeddings, MongoDB vector storage, and checkpoint/resume for fault tolerance.",
+  "tags": [
+    "aws-s3",
+    "batch",
+    "checkpoint",
+    "hugging-face-transformers",
+    "openai",
+    "sentence-transformers",
+    "tiktoken"
+  ],
+  "technologies": [
+    "AWS S3",
+    "Hugging Face Transformers",
+    "OpenAI",
+    "Sentence Transformers",
+    "tiktoken"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "embeddings",
-    "mongodb",
-    "s3",
-    "batch",
-    "checkpoint"
-  ],
   "products": [
     "blazing-flow"
   ],

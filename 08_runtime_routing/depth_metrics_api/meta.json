@@ -1,15 +1,19 @@
 {
   "id": "depth_metrics_api",
   "title": "Depth Metrics API",
-  "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth.",
+  "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth \u2014 uses HTTPX.",
+  "tags": [
+    "http",
+    "httpx",
+    "metrics",
+    "python"
+  ],
+  "technologies": [
+    "HTTPX"
+  ],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "metrics",
-    "depth",
-    "http"
-  ],
   "products": [
     "blazing-flow"
   ],

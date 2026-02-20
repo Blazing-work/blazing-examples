@@ -1,16 +1,17 @@
 {
   "id": "event_processing",
   "title": "Event Processing Pipeline",
-  "description": "Validate, enrich, and store incoming events with multi-step processing.",
+  "description": "Validate, enrich, and store incoming events with multi-step processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "distributed",
+    "events",
+    "pipeline",
+    "python"
+  ],
+  "technologies": [],
   "category": "Data Processing",
   "difficulty": "Intermediate",
   "time": "25 min",
-  "tags": [
-    "events",
-    "pipeline",
-    "enrichment",
-    "validation"
-  ],
   "products": [
     "blazing-flow"
   ],

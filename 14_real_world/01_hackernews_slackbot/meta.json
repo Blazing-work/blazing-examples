@@ -1,16 +1,19 @@
 {
   "id": "hackernews_slackbot",
   "title": "Hacker News Slackbot",
-  "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack — demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control.",
+  "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack \u2014 demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control \u2014 uses HTTPX.",
+  "tags": [
+    "distributed",
+    "http",
+    "httpx",
+    "python"
+  ],
+  "technologies": [
+    "HTTPX"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "scheduled",
-    "http",
-    "slack",
-    "connector"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -2,15 +2,16 @@
   "id": "cron_scheduler",
   "title": "Cron & Periodic Scheduler",
   "description": "Register scheduled jobs with SchedulerConnector using cron expressions or fixed intervals.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "scheduler"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "scheduler",
-    "cron",
-    "periodic",
-    "jobs"
-  ],
   "products": [
     "blazing-flow"
   ],

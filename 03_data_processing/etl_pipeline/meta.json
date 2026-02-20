@@ -1,16 +1,17 @@
 {
   "id": "etl_pipeline",
   "title": "ETL Pipeline",
-  "description": "Complete Extract-Transform-Load pipeline for data warehousing.",
+  "description": "Complete Extract-Transform-Load pipeline for data warehousing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "data-warehouse",
+    "etl",
+    "pipeline",
+    "workflow"
+  ],
+  "technologies": [],
   "category": "Data Processing",
   "difficulty": "Advanced",
   "time": "30 min",
-  "tags": [
-    "etl",
-    "pipeline",
-    "data-warehouse",
-    "workflow"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,15 +1,19 @@
 {
   "id": "executor_routing_mixed",
   "title": "Mixed Executor Routing",
-  "description": "Routes trusted and sandboxed steps to different executors within one workflow — trusted NON-BLOCKING steps run in the main executor while sandboxed NON-BLOCKING steps run in Pyodide isolation.",
+  "description": "Routes trusted and sandboxed steps to different executors within one workflow \u2014 trusted NON-BLOCKING steps run in the main executor while sandboxed NON-BLOCKING steps run in Pyodide isolation.",
+  "tags": [
+    "distributed",
+    "executor-routing",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "executor-routing",
-    "sandboxed",
-    "trusted"
-  ],
   "products": [
     "blazing-flow"
   ],

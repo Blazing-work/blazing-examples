@@ -1,11 +1,19 @@
 {
   "id": "worker_types_with_services",
   "title": "Worker Types with Services",
-  "description": "One workflow, four worker types — trusted sync (BLOCKING), trusted async (NON_BLOCKING), and two sandboxed async (NON_BLOCKING_SANDBOXED) steps all calling the same MathOpsService, demonstrating that services['Name'] works identically across all executors.",
+  "description": "One workflow, four worker types \u2014 trusted sync (BLOCKING), trusted async (NON_BLOCKING), and two sandboxed async (NON_BLOCKING_SANDBOXED) steps all calling the same MathOpsService, demonstrating that services['Name'] works identically across all executors.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "worker-types"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Intermediate",
   "time": "12 min",
-  "tags": ["worker-types", "services", "sandboxed", "routing"],
-  "products": ["blazing-flow"],
+  "products": [
+    "blazing-flow"
+  ],
   "primaryProduct": "blazing-flow"
 }

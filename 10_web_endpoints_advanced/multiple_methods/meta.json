@@ -1,14 +1,19 @@
 {
   "id": "multiple_methods",
   "title": "Multiple HTTP Methods",
-  "description": "Exposes both GET and POST endpoints in a single Blazing app — a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration.",
+  "description": "Exposes both GET and POST endpoints in a single Blazing app \u2014 a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration \u2014 uses uvicorn.",
+  "tags": [
+    "distributed",
+    "http",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "http",
-    "methods"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

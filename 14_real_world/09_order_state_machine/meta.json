@@ -1,16 +1,17 @@
 {
   "id": "order_state_machine",
   "title": "Order Processing State Machine",
-  "description": "State machine where each transition runs as a sandboxed step calling a trusted OrderService — PENDING through PAYMENT_CHECK, INVENTORY_CHECK, APPROVED, and COMPLETED with rejection paths.",
+  "description": "State machine where each transition runs as a sandboxed step calling a trusted OrderService \u2014 PENDING through PAYMENT_CHECK, INVENTORY_CHECK, APPROVED, and COMPLETED with rejection paths.",
+  "tags": [
+    "python",
+    "sandbox",
+    "state-machine",
+    "workflow"
+  ],
+  "technologies": [],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "state-machine",
-    "orders",
-    "workflow",
-    "sandbox"
-  ],
   "products": [
     "blazing-flow"
   ],

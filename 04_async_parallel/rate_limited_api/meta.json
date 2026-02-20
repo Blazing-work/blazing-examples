@@ -1,16 +1,17 @@
 {
   "id": "rate_limited_api",
   "title": "Rate-Limited API Calls",
-  "description": "Control concurrency with asyncio.Semaphore for rate limiting.",
+  "description": "Control concurrency with asyncio.Semaphore for rate limiting \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "api",
+    "concurrency",
+    "python",
+    "rate-limiting"
+  ],
+  "technologies": [],
   "category": "Async & Parallel",
   "difficulty": "Advanced",
   "time": "25 min",
-  "tags": [
-    "rate-limiting",
-    "semaphore",
-    "api",
-    "concurrency"
-  ],
   "products": [
     "blazing-flow"
   ],

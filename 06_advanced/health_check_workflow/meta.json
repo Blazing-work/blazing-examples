@@ -1,15 +1,17 @@
 {
   "id": "health_check_workflow",
   "title": "Health Check Workflow",
-  "description": "Monitor system health across database, cache, and external APIs.",
+  "description": "Monitor system health across database, cache, and external APIs \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "distributed",
+    "health-check",
+    "monitoring",
+    "python"
+  ],
+  "technologies": [],
   "category": "Advanced",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "monitoring",
-    "health-check",
-    "observability"
-  ],
   "products": [
     "blazing-flow"
   ],

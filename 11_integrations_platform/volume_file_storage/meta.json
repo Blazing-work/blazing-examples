@@ -2,15 +2,16 @@
   "id": "volume_file_storage",
   "title": "Volume File Storage",
   "description": "Persist files across workflow executions with Volume.persisted() and VolumeConnector inside services.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "volume"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "volume",
-    "storage",
-    "files",
-    "persistence"
-  ],
   "products": [
     "blazing-flow"
   ],

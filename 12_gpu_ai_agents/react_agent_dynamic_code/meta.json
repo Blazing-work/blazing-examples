@@ -1,11 +1,24 @@
 {
   "id": "react_agent_dynamic_code",
   "title": "ReAct Agent as Dynamic Code",
-  "description": "Run a complete LangGraph-style ReAct agent loop as user-submitted dynamic code in the Pyodide sandbox — LLM and tool calls route through trusted-worker services while the agent loop itself runs as signed sandbox code.",
+  "description": "Run a complete LangGraph-style ReAct agent loop as user-submitted dynamic code in the Pyodide sandbox \u2014 LLM and tool calls route through trusted-worker services while the agent loop itself runs as signed sandbox code.",
+  "tags": [
+    "dynamic-code",
+    "langblaze",
+    "langgraph",
+    "pyodide",
+    "sandbox"
+  ],
+  "technologies": [
+    "LangBlaze",
+    "LangGraph",
+    "Pyodide"
+  ],
   "category": "GPU & Agents",
   "difficulty": "Advanced",
   "time": "25 min",
-  "tags": ["agents", "dynamic-code", "sandbox", "react", "langblaze"],
-  "products": ["blazing-flow-sandbox"],
+  "products": [
+    "blazing-flow-sandbox"
+  ],
   "primaryProduct": "blazing-flow-sandbox"
 }

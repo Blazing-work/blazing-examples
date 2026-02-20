@@ -1,16 +1,17 @@
 {
   "id": "parallel_processing",
   "title": "Parallel Data Processing",
-  "description": "Process multiple items concurrently with asyncio.gather.",
+  "description": "Process multiple items concurrently with asyncio.gather \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "asyncio",
+    "batch",
+    "parallel",
+    "python"
+  ],
+  "technologies": [],
   "category": "Async & Parallel",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "parallel",
-    "asyncio",
-    "batch",
-    "performance"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,16 +1,19 @@
 {
   "id": "database_service",
   "title": "Database Service",
-  "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy.",
+  "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "postgresql",
+    "python"
+  ],
+  "technologies": [
+    "PostgreSQL"
+  ],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "service",
-    "database",
-    "sqlalchemy",
-    "postgres"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,15 +1,20 @@
 {
   "id": "get_endpoint_query",
   "title": "GET Endpoint with Query Params",
-  "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting — demonstrates query param binding for Blazing HTTP endpoints.",
+  "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting \u2014 demonstrates query param binding for Blazing HTTP endpoints \u2014 uses FastAPI, uvicorn.",
+  "tags": [
+    "fastapi",
+    "http",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Beginner",
   "time": "6 min",
-  "tags": [
-    "http",
-    "get",
-    "query"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

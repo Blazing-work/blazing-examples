@@ -2,14 +2,16 @@
   "id": "api_execution_patterns",
   "title": "API Execution Patterns",
   "description": "Demonstrates three equivalent patterns for invoking workflows and retrieving results: wait_result() one-liner, handle.result() for deferred fetch, and run() by name for string-based dispatch.",
+  "tags": [
+    "distributed",
+    "python",
+    "remote-handle",
+    "wait-result"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "wait-result",
-    "run",
-    "remote-handle"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,16 +1,19 @@
 {
   "id": "event_stream_processor",
   "title": "Event Stream Processor",
-  "description": "Process event streams from Kafka in batches with aggregation.",
+  "description": "Process event streams from Kafka in batches with aggregation \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "events",
+    "kafka",
+    "real-time",
+    "streaming"
+  ],
+  "technologies": [
+    "Kafka"
+  ],
   "category": "Advanced",
   "difficulty": "Expert",
   "time": "40 min",
-  "tags": [
-    "streaming",
-    "kafka",
-    "events",
-    "real-time"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -2,13 +2,18 @@
   "id": "asgi_server_integration",
   "title": "ASGI Server Integration",
   "description": "Integrates a Blazing workflow into an ASGI server using create_asgi_app() and uvicorn.run(), exposing a /hello endpoint backed by a registered workflow for direct HTTP access.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "asgi",
-    "server"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

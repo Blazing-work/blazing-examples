@@ -1,11 +1,19 @@
 {
   "id": "connectors_volume_file_storage",
   "title": "Volume File Storage with VolumeConnector",
-  "description": "Read and write files through a trusted FileProcessorService injected with VolumeConnector — sandboxed steps call service methods while only the trusted service has direct volume access, enforcing the connector security model.",
+  "description": "Read and write files through a trusted FileProcessorService injected with VolumeConnector \u2014 sandboxed steps call service methods while only the trusted service has direct volume access, enforcing the connector security model.",
+  "tags": [
+    "connectors",
+    "local-stack",
+    "security",
+    "volume"
+  ],
+  "technologies": [],
   "category": "Connectors",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": ["volume", "connectors", "storage", "files", "security", "local-stack"],
-  "products": ["blazing-flow"],
+  "products": [
+    "blazing-flow"
+  ],
   "primaryProduct": "blazing-flow"
 }

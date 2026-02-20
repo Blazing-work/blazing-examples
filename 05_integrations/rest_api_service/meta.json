@@ -1,16 +1,19 @@
 {
   "id": "rest_api_service",
   "title": "REST API Service",
-  "description": "Call external REST APIs with httpx and handle responses.",
+  "description": "Call external REST APIs with httpx and handle responses \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "api",
+    "httpx",
+    "python",
+    "rest"
+  ],
+  "technologies": [
+    "HTTPX"
+  ],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "service",
-    "api",
-    "httpx",
-    "rest"
-  ],
   "products": [
     "blazing-flow"
   ],

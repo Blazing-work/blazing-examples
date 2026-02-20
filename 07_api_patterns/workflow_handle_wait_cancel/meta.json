@@ -2,14 +2,16 @@
   "id": "workflow_handle_wait_cancel",
   "title": "Workflow Handle wait()/cancel()",
   "description": "Demonstrates handle lifecycle methods: handle.wait() to block until completion, handle.wait_result() to retrieve the return value, and handle.cancel() to abort an in-flight workflow execution.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "7 min",
-  "tags": [
-    "handle",
-    "wait",
-    "cancel"
-  ],
   "products": [
     "blazing-flow"
   ],

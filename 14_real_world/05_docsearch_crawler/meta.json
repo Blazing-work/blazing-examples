@@ -2,15 +2,20 @@
   "id": "docsearch_crawler",
   "title": "Docsearch Crawler",
   "description": "BFS documentation crawler that respects robots.txt, extracts text with trafilatura, and batch-indexes content to Algolia with SHA256-based object IDs.",
+  "tags": [
+    "beautiful-soup",
+    "httpx",
+    "python",
+    "trafilatura"
+  ],
+  "technologies": [
+    "Beautiful Soup",
+    "HTTPX",
+    "Trafilatura"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "crawler",
-    "algolia",
-    "indexing",
-    "bfs"
-  ],
   "products": [
     "blazing-flow"
   ],

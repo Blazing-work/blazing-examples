@@ -2,13 +2,18 @@
   "id": "sandboxed_step_basic",
   "title": "Sandboxed Step Basics",
   "description": "The simplest sandboxed step example: marks a step with @app.step(sandboxed=True) to run it in Pyodide WASM isolation, demonstrating the minimal configuration needed for sandbox execution.",
+  "tags": [
+    "distributed",
+    "isolation",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Sandbox & Isolation",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "sandboxed",
-    "isolation"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

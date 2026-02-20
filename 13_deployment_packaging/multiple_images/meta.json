@@ -1,14 +1,19 @@
 {
   "id": "multiple_images",
   "title": "Multiple Images in One App",
-  "description": "Use different container images for different workflows.\n\nSource: greenfield",
+  "description": "Use different container images for different workflows.\n\nSource: greenfield Built with NumPy on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "distributed",
+    "multi-image",
+    "numpy",
+    "python"
+  ],
+  "technologies": [
+    "NumPy"
+  ],
   "category": "Deployment & Packaging",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "image",
-    "multi-image"
-  ],
   "products": [
     "blazing-flow"
   ],

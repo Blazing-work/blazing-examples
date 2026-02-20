@@ -1,16 +1,19 @@
 {
   "id": "cache_service",
   "title": "Cache Service",
-  "description": "Implement a cache-aside pattern with Redis — check cache, compute on miss, store result, serve on hit.",
+  "description": "Implement a cache-aside pattern with Redis \u2014 check cache, compute on miss, store result, serve on hit.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "redis"
+  ],
+  "technologies": [
+    "Redis"
+  ],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "service",
-    "cache",
-    "redis",
-    "performance"
-  ],
   "products": [
     "blazing-flow"
   ],

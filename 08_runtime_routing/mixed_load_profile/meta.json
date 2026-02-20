@@ -2,14 +2,16 @@
   "id": "mixed_load_profile",
   "title": "Mixed Load Profile",
   "description": "Blends a CPU-bound BLOCKING step and an async I/O-bound step in a single workflow using asyncio.gather, demonstrating how Blazing routes different load profiles to appropriate executor pools.",
+  "tags": [
+    "asyncio",
+    "mixed-load",
+    "parallel",
+    "python"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "mixed-load",
-    "asyncio",
-    "parallel"
-  ],
   "products": [
     "blazing-flow"
   ],

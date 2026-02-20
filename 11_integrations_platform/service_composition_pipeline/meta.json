@@ -1,14 +1,17 @@
 {
   "id": "service_composition_pipeline",
   "title": "Service Composition Pipeline",
-  "description": "Composes MathService and StringService in a single step to build a two-stage pipeline: compute a product then format it as a labeled string — demonstrates service chaining for multi-step data transformation.",
+  "description": "Composes MathService and StringService in a single step to build a two-stage pipeline: compute a product then format it as a labeled string \u2014 demonstrates service chaining for multi-step data transformation.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "12 min",
-  "tags": [
-    "services",
-    "composition"
-  ],
   "products": [
     "blazing-flow"
   ],

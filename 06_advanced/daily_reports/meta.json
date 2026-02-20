@@ -1,16 +1,17 @@
 {
   "id": "daily_reports",
   "title": "Daily Report Generation",
-  "description": "Scheduled job to generate and distribute daily reports via email.",
+  "description": "Scheduled job to generate and distribute daily reports via email \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Advanced",
   "difficulty": "Intermediate",
   "time": "25 min",
-  "tags": [
-    "scheduled",
-    "reports",
-    "automation",
-    "email"
-  ],
   "products": [
     "blazing-flow"
   ],

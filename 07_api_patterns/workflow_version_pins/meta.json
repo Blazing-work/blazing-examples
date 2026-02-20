@@ -2,13 +2,16 @@
   "id": "workflow_version_pins",
   "title": "Workflow Version Pins",
   "description": "Shows how to pin specific service versions when registering a workflow using the version_pins parameter, ensuring stable deployments by preventing automatic service upgrades from affecting a workflow.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "6 min",
-  "tags": [
-    "version-pins",
-    "workflows"
-  ],
   "products": [
     "blazing-flow"
   ],

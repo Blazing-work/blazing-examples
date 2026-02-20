@@ -1,15 +1,20 @@
 {
   "id": "real_http_endpoints",
   "title": "Real HTTP Endpoints",
-  "description": "Exposes a Blazing workflow as a real HTTP endpoint using @app.endpoint() and create_asgi_app(), serving live HTTP requests via uvicorn — the foundation for production API deployment.",
+  "description": "Exposes a Blazing workflow as a real HTTP endpoint using @app.endpoint() and create_asgi_app(), serving live HTTP requests via uvicorn \u2014 the foundation for production API deployment.",
+  "tags": [
+    "fastapi",
+    "http",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "FastAPI",
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "http",
-    "fastapi",
-    "endpoints"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

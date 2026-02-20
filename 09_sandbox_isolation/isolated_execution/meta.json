@@ -2,13 +2,18 @@
   "id": "isolated_execution",
   "title": "Isolated Execution",
   "description": "Runs a compute step inside the Pyodide WASM sandbox using @app.step(sandboxed=True), isolating the workload from the main executor process while still returning results to the workflow.",
+  "tags": [
+    "distributed",
+    "isolation",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Sandbox & Isolation",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "isolation",
-    "sandboxed"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

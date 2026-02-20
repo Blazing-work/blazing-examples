@@ -1,14 +1,17 @@
 {
   "id": "depth_tracking_chain",
   "title": "Depth Tracking Chain",
-  "description": "Builds a chain of three steps where each calls the previous (step_c → step_b → step_a) to demonstrate how Blazing tracks and records multi-level step depth across a call chain.",
+  "description": "Builds a chain of three steps where each calls the previous (step_c \u2192 step_b \u2192 step_a) to demonstrate how Blazing tracks and records multi-level step depth across a call chain.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "depth-tracking",
-    "chain"
-  ],
   "products": [
     "blazing-flow"
   ],

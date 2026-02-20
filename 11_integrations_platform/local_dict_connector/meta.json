@@ -1,15 +1,19 @@
 {
   "id": "local_dict_connector",
   "title": "Local Dict Connector",
-  "description": "Uses LocalDictService to persist workflow state in an in-memory key-value store without external dependencies — ideal for local development and testing patterns that will use Redis in production.",
+  "description": "Uses LocalDictService to persist workflow state in an in-memory key-value store without external dependencies \u2014 ideal for local development and testing patterns that will use Redis in production.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "redis"
+  ],
+  "technologies": [
+    "Redis"
+  ],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "local",
-    "dict",
-    "state"
-  ],
   "products": [
     "blazing-flow"
   ],

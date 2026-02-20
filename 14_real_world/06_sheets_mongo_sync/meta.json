@@ -1,16 +1,17 @@
 {
   "id": "sheets_mongo_sync",
   "title": "Google Sheets to MongoDB Sync",
-  "description": "Bidirectional sync between Google Sheets and MongoDB with last-write-wins conflict resolution — demonstrates timestamp-based conflict handling and idempotent upserts.",
+  "description": "Bidirectional sync between Google Sheets and MongoDB with last-write-wins conflict resolution \u2014 demonstrates timestamp-based conflict handling and idempotent upserts.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "google-sheets",
+    "python"
+  ],
+  "technologies": [],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "google-sheets",
-    "mongodb",
-    "sync",
-    "bidirectional"
-  ],
   "products": [
     "blazing-flow"
   ],

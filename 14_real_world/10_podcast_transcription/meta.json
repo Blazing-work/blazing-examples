@@ -1,16 +1,22 @@
 {
   "id": "podcast_transcription",
   "title": "Podcast Transcription",
-  "description": "Parallel audio transcription pipeline using FFmpeg for chunking and OpenAI Whisper API — handles the 25MB file size limit automatically with asyncio.Semaphore throttling.",
+  "description": "Parallel audio transcription pipeline using FFmpeg for chunking and OpenAI Whisper API \u2014 handles the 25MB file size limit automatically with asyncio.Semaphore throttling.",
+  "tags": [
+    "ffmpeg",
+    "openai",
+    "pipeline",
+    "transcription",
+    "whisper"
+  ],
+  "technologies": [
+    "FFmpeg",
+    "OpenAI",
+    "Whisper"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "transcription",
-    "audio",
-    "pipeline",
-    "whisper"
-  ],
   "products": [
     "blazing-flow"
   ],

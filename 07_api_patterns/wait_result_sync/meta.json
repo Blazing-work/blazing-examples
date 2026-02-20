@@ -1,14 +1,17 @@
 {
   "id": "wait_result_sync",
   "title": "wait_result_sync Helper",
-  "description": "Shows how to use wait_result_sync() on a workflow execution handle for blocking result retrieval in synchronous contexts — useful when mixing sync and async code in the same application.",
+  "description": "Shows how to use wait_result_sync() on a workflow execution handle for blocking result retrieval in synchronous contexts \u2014 useful when mixing sync and async code in the same application.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Intermediate",
   "time": "6 min",
-  "tags": [
-    "sync",
-    "wait_result_sync"
-  ],
   "products": [
     "blazing-flow"
   ],

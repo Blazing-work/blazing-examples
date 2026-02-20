@@ -2,14 +2,20 @@
   "id": "sandbox_dependencies_langgraph",
   "title": "Sandbox Dependencies for Agents",
   "description": "Installs langchain-core into the Pyodide sandbox via sandbox_dependencies=['langchain-core'], demonstrating how to provide agent framework libraries to sandboxed steps for LangGraph-style agent workflows.",
+  "tags": [
+    "langchain",
+    "langgraph",
+    "pyodide",
+    "sandbox"
+  ],
+  "technologies": [
+    "LangChain",
+    "LangGraph",
+    "Pyodide"
+  ],
   "category": "GPU & Agents",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "sandbox",
-    "dependencies",
-    "agents"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

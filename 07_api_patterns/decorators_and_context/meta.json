@@ -2,14 +2,16 @@
   "id": "decorators_and_context",
   "title": "Decorators and Context Manager",
   "description": "Demonstrates how to register steps, workflows, and services using decorators, then use the async context manager (async with app:) to cleanly manage service lifecycle and cleanup.",
+  "tags": [
+    "blazing-flow",
+    "context-manager",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Beginner",
   "time": "8 min",
-  "tags": [
-    "decorators",
-    "context-manager",
-    "services"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -2,14 +2,18 @@
   "id": "pyodide_parallel_stress",
   "title": "Pyodide Parallel Stress",
   "description": "Fires five sandboxed compute tasks simultaneously using asyncio.gather to stress the Pyodide sandbox executor, demonstrating concurrent sandbox execution and verifying that all tasks complete correctly under parallel load.",
+  "tags": [
+    "distributed",
+    "parallel",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "Pyodide"
+  ],
   "category": "Sandbox & Isolation",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "pyodide",
-    "parallel",
-    "stress"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

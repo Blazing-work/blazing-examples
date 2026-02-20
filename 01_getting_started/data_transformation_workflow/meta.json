@@ -1,16 +1,17 @@
 {
   "id": "data_transformation_workflow",
   "title": "Data Transformation Workflow",
-  "description": "Multi-stage data pipeline with cleaning and normalization.",
+  "description": "Multi-stage data pipeline with cleaning and normalization \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "distributed",
+    "pipeline",
+    "python",
+    "workflow"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "10 min",
-  "tags": [
-    "workflow",
-    "data",
-    "transformation",
-    "pipeline"
-  ],
   "products": [
     "blazing-flow"
   ],

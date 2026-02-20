@@ -1,16 +1,19 @@
 {
   "id": "email_queue",
   "title": "Email Queue Processor",
-  "description": "Drain an email queue in configurable batches using Redis LIST operations — rate-limited bulk sending.",
+  "description": "Drain an email queue in configurable batches using Redis LIST operations \u2014 rate-limited bulk sending.",
+  "tags": [
+    "batch",
+    "python",
+    "queue",
+    "redis"
+  ],
+  "technologies": [
+    "Redis"
+  ],
   "category": "Integrations",
   "difficulty": "Intermediate",
   "time": "25 min",
-  "tags": [
-    "queue",
-    "email",
-    "batch",
-    "redis"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -2,16 +2,18 @@
   "id": "llm_openai_connector",
   "title": "OpenAI LLM Connector",
   "description": "Use OpenAIConnector in services for chat, streaming, tool calling, and multi-turn conversations.",
+  "tags": [
+    "distributed",
+    "openai",
+    "python",
+    "streaming"
+  ],
+  "technologies": [
+    "OpenAI"
+  ],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "15 min",
-  "tags": [
-    "llm",
-    "openai",
-    "connector",
-    "chat",
-    "streaming"
-  ],
   "products": [
     "blazing-flow"
   ],

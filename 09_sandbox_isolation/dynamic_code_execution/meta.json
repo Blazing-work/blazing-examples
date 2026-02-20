@@ -2,13 +2,16 @@
   "id": "dynamic_code_execution",
   "title": "Dynamic Code Execution (Sandboxed)",
   "description": "Executes a user-submitted expression string inside a sandboxed step with restricted builtins, demonstrating how to safely evaluate dynamic code while preventing access to dangerous Python built-in functions.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "dynamic-code",
+    "python"
+  ],
+  "technologies": [],
   "category": "Sandbox & Isolation",
   "difficulty": "Advanced",
   "time": "10 min",
-  "tags": [
-    "sandboxed",
-    "dynamic-code"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

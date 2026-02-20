@@ -2,14 +2,16 @@
   "id": "local_service_multistep",
   "title": "Local Service Multistep",
   "description": "Runs a two-step pipeline where compute_sum aggregates a list using MathService.add() and compute_product scales the result using MathService.multiply(), demonstrating multi-step service reuse.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Platform Integrations",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "local",
-    "services",
-    "multistep"
-  ],
   "products": [
     "blazing-flow"
   ],

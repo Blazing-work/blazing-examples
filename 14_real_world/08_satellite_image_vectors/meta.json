@@ -1,16 +1,24 @@
 {
   "id": "satellite_image_vectors",
   "title": "Satellite Image Vectors",
-  "description": "Geospatial ML pipeline — read GeoTIFF with rasterio, extract 256x256 tiles, generate Clay or sentence-transformer embeddings, and index with MongoDB 2dsphere for geospatial search.",
+  "description": "Geospatial ML pipeline \u2014 read GeoTIFF with rasterio, extract 256x256 tiles, generate Clay or sentence-transformer embeddings, and index with MongoDB 2dsphere for geospatial search.",
+  "tags": [
+    "hugging-face-transformers",
+    "numpy",
+    "pytorch",
+    "rasterio",
+    "sentence-transformers"
+  ],
+  "technologies": [
+    "Hugging Face Transformers",
+    "NumPy",
+    "PyTorch",
+    "Rasterio",
+    "Sentence Transformers"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "geospatial",
-    "rasterio",
-    "mongodb",
-    "vectors"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,16 +1,17 @@
 {
   "id": "stripe_webhook",
   "title": "Stripe Payment Webhook",
-  "description": "Handle Stripe payment webhooks with signature verification.",
+  "description": "Handle Stripe payment webhooks with signature verification \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "events",
+    "python"
+  ],
+  "technologies": [],
   "category": "Integrations",
   "difficulty": "Advanced",
   "time": "30 min",
-  "tags": [
-    "webhook",
-    "stripe",
-    "payments",
-    "events"
-  ],
   "products": [
     "blazing-flow"
   ],

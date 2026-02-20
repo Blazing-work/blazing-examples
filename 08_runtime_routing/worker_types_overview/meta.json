@@ -1,15 +1,17 @@
 {
   "id": "worker_types_overview",
   "title": "Worker Types Overview",
-  "description": "Runs all four worker type combinations — trusted BLOCKING, trusted NON-BLOCKING, sandboxed BLOCKING, and sandboxed NON-BLOCKING — in one workflow to demonstrate how step_type and sandboxed flags control executor routing.",
+  "description": "Runs all four worker type combinations \u2014 trusted BLOCKING, trusted NON-BLOCKING, sandboxed BLOCKING, and sandboxed NON-BLOCKING \u2014 in one workflow to demonstrate how step_type and sandboxed flags control executor routing.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "worker-types"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "worker-types",
-    "sandboxed",
-    "blocking"
-  ],
   "products": [
     "blazing-flow"
   ],

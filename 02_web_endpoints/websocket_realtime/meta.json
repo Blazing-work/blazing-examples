@@ -1,16 +1,22 @@
 {
   "id": "websocket_realtime",
   "title": "WebSocket Real-Time Updates",
-  "description": "Enable WebSocket for real-time progress updates from long-running workflows.",
+  "description": "Enable WebSocket for real-time progress updates from long-running workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "fastapi",
+    "real-time",
+    "streaming",
+    "uvicorn",
+    "websocket"
+  ],
+  "technologies": [
+    "FastAPI",
+    "WebSocket",
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Advanced",
   "time": "25 min",
-  "tags": [
-    "endpoint",
-    "websocket",
-    "real-time",
-    "streaming"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

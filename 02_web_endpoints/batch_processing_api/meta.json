@@ -1,16 +1,19 @@
 {
   "id": "batch_processing_api",
   "title": "Batch Processing API",
-  "description": "Process multiple items concurrently with result aggregation.",
+  "description": "Process multiple items concurrently with result aggregation Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "batch",
+    "distributed",
+    "python",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Intermediate",
   "time": "20 min",
-  "tags": [
-    "endpoint",
-    "batch",
-    "concurrent",
-    "aggregation"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

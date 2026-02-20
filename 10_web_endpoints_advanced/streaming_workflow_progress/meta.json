@@ -1,15 +1,19 @@
 {
   "id": "streaming_workflow_progress",
   "title": "Streaming Workflow Progress",
-  "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield",
+  "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield \u2014 uses uvicorn.",
+  "tags": [
+    "distributed",
+    "python",
+    "streaming",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints Advanced",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "streaming",
-    "sse",
-    "progress"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],

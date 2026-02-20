@@ -1,16 +1,17 @@
 {
   "id": "sandbox_rest_api_service",
   "title": "Sandbox: Service Bridge with REST APIs",
-  "description": "Let users integrate with external APIs while keeping API keys safe.",
+  "description": "Let users integrate with external APIs while keeping API keys safe \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "api",
+    "sandbox",
+    "security",
+    "service-bridge"
+  ],
+  "technologies": [],
   "category": "Advanced",
   "difficulty": "Advanced",
   "time": "25 min",
-  "tags": [
-    "sandbox",
-    "service-bridge",
-    "api",
-    "security"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

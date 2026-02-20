@@ -2,13 +2,16 @@
   "id": "model_cache_in_image",
   "title": "Model Cache in Image",
   "description": "Bake model artifacts into an image and load them at runtime.\n\nSource: greenfield",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "model-cache",
+    "python"
+  ],
+  "technologies": [],
   "category": "Deployment & Packaging",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "image",
-    "model-cache"
-  ],
   "products": [
     "blazing-flow"
   ],

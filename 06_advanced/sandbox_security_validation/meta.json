@@ -1,16 +1,17 @@
 {
   "id": "sandbox_security_validation",
   "title": "Sandbox: Security Validation",
-  "description": "Examples of malicious code that fails in the sandbox.",
+  "description": "Examples of malicious code that fails in the sandbox \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "distributed",
+    "python",
+    "sandbox",
+    "security"
+  ],
+  "technologies": [],
   "category": "Advanced",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "sandbox",
-    "security",
-    "validation",
-    "attacks"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

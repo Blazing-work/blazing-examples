@@ -1,16 +1,17 @@
 {
   "id": "serialize_mode",
   "title": "Serialize Loading Strategy",
-  "description": "Use loading_strategy='serialize' to skip wheel builds — fastest iteration mode for local development.",
+  "description": "Use loading_strategy='serialize' to skip wheel builds \u2014 fastest iteration mode for local development.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "loading-strategy",
+    "python"
+  ],
+  "technologies": [],
   "category": "Deployment & Packaging",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "serialize",
-    "loading-strategy",
-    "development",
-    "packaging"
-  ],
   "products": [
     "blazing-flow"
   ],

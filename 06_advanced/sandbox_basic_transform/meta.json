@@ -1,16 +1,17 @@
 {
   "id": "sandbox_basic_transform",
   "title": "Sandbox: Basic User-Provided Transform",
-  "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected.",
-  "category": "Advanced",
-  "difficulty": "Intermediate",
-  "time": "15 min",
+  "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected \u2014 uses WebAssembly.",
   "tags": [
+    "python",
     "sandbox",
-    "wasm",
     "security",
     "user-code"
   ],
+  "technologies": [],
+  "category": "Advanced",
+  "difficulty": "Intermediate",
+  "time": "15 min",
   "products": [
     "blazing-flow-sandbox"
   ],

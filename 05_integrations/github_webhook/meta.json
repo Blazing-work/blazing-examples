@@ -1,16 +1,17 @@
 {
   "id": "github_webhook",
   "title": "GitHub Webhook Handler",
-  "description": "Process GitHub webhooks with signature validation and event handling.",
+  "description": "Process GitHub webhooks with signature validation and event handling \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "distributed",
+    "events",
+    "python",
+    "security"
+  ],
+  "technologies": [],
   "category": "Integrations",
   "difficulty": "Advanced",
   "time": "30 min",
-  "tags": [
-    "webhook",
-    "github",
-    "security",
-    "events"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -2,13 +2,16 @@
   "id": "callable_workflows",
   "title": "Callable Workflows",
   "description": "Shows how registered workflows become callable attributes on the app object, enabling natural invocation syntax like app.my_workflow(x=10).wait_result() without string-based dispatch.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Beginner",
   "time": "5 min",
-  "tags": [
-    "workflows",
-    "callable"
-  ],
   "products": [
     "blazing-flow"
   ],

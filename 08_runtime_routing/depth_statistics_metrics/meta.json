@@ -1,14 +1,19 @@
 {
   "id": "depth_statistics_metrics",
   "title": "Depth Statistics Metrics",
-  "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns.",
+  "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns \u2014 uses HTTPX.",
+  "tags": [
+    "distributed",
+    "httpx",
+    "metrics",
+    "python"
+  ],
+  "technologies": [
+    "HTTPX"
+  ],
   "category": "Runtime & Routing",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "depth-tracking",
-    "metrics"
-  ],
   "products": [
     "blazing-flow"
   ],

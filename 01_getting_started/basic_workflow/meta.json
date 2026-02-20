@@ -1,15 +1,17 @@
 {
   "id": "basic_workflow",
   "title": "Basic Workflow",
-  "description": "Multi-step orchestration - the foundation of distributed workflows.",
+  "description": "Multi-step orchestration - the foundation of distributed workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "multi-step",
+    "orchestration",
+    "python",
+    "workflow"
+  ],
+  "technologies": [],
   "category": "Getting Started",
   "difficulty": "Beginner",
   "time": "10 min",
-  "tags": [
-    "workflow",
-    "orchestration",
-    "multi-step"
-  ],
   "products": [
     "blazing-flow"
   ],

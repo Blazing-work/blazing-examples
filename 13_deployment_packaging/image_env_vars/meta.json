@@ -2,13 +2,16 @@
   "id": "image_env_vars",
   "title": "Image Environment Variables",
   "description": "Injects environment variables into a custom executor image using Image.executor().env(FOO='bar'), making them available to all steps running in that image via os.getenv() without runtime configuration.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Deployment & Packaging",
   "difficulty": "Intermediate",
   "time": "8 min",
-  "tags": [
-    "image",
-    "env"
-  ],
   "products": [
     "blazing-flow"
   ],

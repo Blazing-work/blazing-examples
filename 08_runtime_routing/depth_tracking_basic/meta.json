@@ -1,14 +1,17 @@
 {
   "id": "depth_tracking_basic",
   "title": "Depth Tracking Basics",
-  "description": "Creates a simple parent workflow calling a single child step to demonstrate Blazing's depth tracking — how the system records parent-child relationships between workflow and step executions.",
+  "description": "Creates a simple parent workflow calling a single child step to demonstrate Blazing's depth tracking \u2014 how the system records parent-child relationships between workflow and step executions.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "Runtime & Routing",
   "difficulty": "Beginner",
   "time": "6 min",
-  "tags": [
-    "depth-tracking",
-    "workflows"
-  ],
   "products": [
     "blazing-flow"
   ],

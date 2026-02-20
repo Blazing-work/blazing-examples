@@ -2,13 +2,19 @@
   "id": "pyodide_dependencies",
   "title": "Pyodide Sandbox Dependencies",
   "description": "Shows how to install extra Python packages into the Pyodide sandbox using the sandbox_dependencies=['numpy'] parameter, making them available inside sandboxed steps without exposing them to trusted workers.",
+  "tags": [
+    "distributed",
+    "numpy",
+    "pyodide",
+    "python"
+  ],
+  "technologies": [
+    "NumPy",
+    "Pyodide"
+  ],
   "category": "Sandbox & Isolation",
   "difficulty": "Intermediate",
   "time": "10 min",
-  "tags": [
-    "pyodide",
-    "dependencies"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

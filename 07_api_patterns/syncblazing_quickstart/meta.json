@@ -1,14 +1,17 @@
 {
   "id": "syncblazing_quickstart",
   "title": "SyncBlazing Quickstart",
-  "description": "Demonstrates SyncBlazing — the fully synchronous Blazing client — for workflows that must run without any async/await in the calling code, such as scripts and synchronous web frameworks.",
+  "description": "Demonstrates SyncBlazing \u2014 the fully synchronous Blazing client \u2014 for workflows that must run without any async/await in the calling code, such as scripts and synchronous web frameworks.",
+  "tags": [
+    "async",
+    "blazing-flow",
+    "distributed",
+    "python"
+  ],
+  "technologies": [],
   "category": "API Patterns",
   "difficulty": "Beginner",
   "time": "6 min",
-  "tags": [
-    "sync",
-    "syncblazing"
-  ],
   "products": [
     "blazing-flow"
   ],

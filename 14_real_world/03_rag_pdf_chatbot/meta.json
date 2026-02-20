@@ -1,16 +1,23 @@
 {
   "id": "rag_pdf_chatbot",
   "title": "RAG PDF Chatbot",
-  "description": "Retrieval-augmented generation over PDF documents — extract text with pdfplumber, chunk with overlap, embed with OpenAI, store in ChromaDB, and answer questions with GPT-4o-mini.",
+  "description": "Retrieval-augmented generation over PDF documents \u2014 extract text with pdfplumber, chunk with overlap, embed with OpenAI, store in ChromaDB, and answer questions with GPT-4o-mini.",
+  "tags": [
+    "chromadb",
+    "openai",
+    "pdfplumber",
+    "rag",
+    "vector-search"
+  ],
+  "technologies": [
+    "ChromaDB",
+    "OpenAI",
+    "RAG",
+    "pdfplumber"
+  ],
   "category": "Real World Applications",
   "difficulty": "Advanced",
   "time": "20 min",
-  "tags": [
-    "rag",
-    "pdf",
-    "vector-search",
-    "openai"
-  ],
   "products": [
     "blazing-flow"
   ],

@@ -1,14 +1,17 @@
 {
   "id": "isolated_retry",
   "title": "Isolated Execution with Retry",
-  "description": "Demonstrates retry logic around sandboxed workloads using a try/except loop — if the sandboxed step raises an exception, the workflow waits and retries up to three times before propagating the error.",
+  "description": "Demonstrates retry logic around sandboxed workloads using a try/except loop \u2014 if the sandboxed step raises an exception, the workflow waits and retries up to three times before propagating the error.",
+  "tags": [
+    "distributed",
+    "isolation",
+    "python",
+    "retry"
+  ],
+  "technologies": [],
   "category": "Sandbox & Isolation",
   "difficulty": "Advanced",
   "time": "10 min",
-  "tags": [
-    "isolation",
-    "retry"
-  ],
   "products": [
     "blazing-flow-sandbox"
   ],

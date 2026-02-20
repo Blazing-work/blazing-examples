@@ -1,14 +1,17 @@
 {
   "id": "secrets_via_env",
   "title": "Secrets via Environment",
-  "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield",
+  "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "python",
+    "secrets"
+  ],
+  "technologies": [],
   "category": "Deployment & Packaging",
   "difficulty": "Beginner",
   "time": "6 min",
-  "tags": [
-    "secrets",
-    "env"
-  ],
   "products": [
     "blazing-flow"
   ],

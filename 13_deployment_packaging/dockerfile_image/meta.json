@@ -2,13 +2,18 @@
   "id": "dockerfile_image",
   "title": "Dockerfile Image",
   "description": "Uses Image.from_dockerfile(path, context) to build a custom workflow image from a Dockerfile in the current directory, enabling full control over the executor environment through standard Docker tooling.",
+  "tags": [
+    "blazing-flow",
+    "distributed",
+    "docker",
+    "python"
+  ],
+  "technologies": [
+    "Docker"
+  ],
   "category": "Deployment & Packaging",
   "difficulty": "Advanced",
   "time": "12 min",
-  "tags": [
-    "image",
-    "dockerfile"
-  ],
   "products": [
     "blazing-flow"
   ],

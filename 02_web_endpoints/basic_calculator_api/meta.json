@@ -1,16 +1,19 @@
 {
   "id": "basic_calculator_api",
   "title": "Basic Calculator API",
-  "description": "The simplest possible endpoint: expose a workflow as a public HTTP API.",
+  "description": "The simplest possible endpoint: expose a workflow as a public HTTP API Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
+  "tags": [
+    "api",
+    "python",
+    "rest",
+    "uvicorn"
+  ],
+  "technologies": [
+    "uvicorn"
+  ],
   "category": "Web Endpoints",
   "difficulty": "Beginner",
   "time": "10 min",
-  "tags": [
-    "endpoint",
-    "api",
-    "rest",
-    "basic"
-  ],
   "products": [
     "blazing-flow-endpoint"
   ],
