@@ -1,7 +1,7 @@
 {
   "id": "sandbox_multi_tenant",
   "title": "Sandbox: Multi-Tenant Data Processing",
-  "description": "Safely run different tenants' code in isolated sandboxes \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+  "description": "Safely run different tenants' code in isolated sandboxes — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
   "tags": [
     "isolation",
     "multi-tenant",
@@ -10,7 +10,7 @@
   ],
   "technologies": [],
   "category": "Advanced",
-  "difficulty": "Expert",
+  "difficulty": "Advanced",
   "time": "35 min",
   "products": [
     "blazing-flow-sandbox"

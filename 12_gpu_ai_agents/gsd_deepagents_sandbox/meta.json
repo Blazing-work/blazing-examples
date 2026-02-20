@@ -1,7 +1,7 @@
 {
   "id": "gsd_deepagents_sandbox",
   "title": "GSD Tool Registry in Pyodide Sandbox",
-  "description": "Pass structured GSD-style tool definitions as plain dicts into a Pyodide sandbox and execute list and filter-by-tag operations \u2014 demonstrating data-driven tool management without importing the full GSD framework into the sandboxed environment.",
+  "description": "Pass structured GSD-style tool definitions as plain dicts into a Pyodide sandbox and execute list and filter-by-tag operations — demonstrating data-driven tool management without importing the full GSD framework into the sandboxed environment.",
   "tags": [
     "deepagents",
     "dynamic-code",
@@ -18,7 +18,7 @@
     "Pyodide"
   ],
   "category": "GPU & Agents",
-  "difficulty": "Expert",
+  "difficulty": "Advanced",
   "time": "25 min",
   "products": [
     "blazing-flow-sandbox"

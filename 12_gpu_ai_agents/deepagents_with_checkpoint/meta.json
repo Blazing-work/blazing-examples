@@ -1,7 +1,7 @@
 {
   "id": "deepagents_with_checkpoint",
   "title": "DeepAgents with BlazeCheckpointer",
-  "description": "Run a deepagents (LangGraph-based) agent inside the Pyodide sandbox with multi-turn state persistence via BlazeCheckpointer \u2014 build and upload a custom wheel, then use thread_id to resume sessions across independent invocations.",
+  "description": "Run a deepagents (LangGraph-based) agent inside the Pyodide sandbox with multi-turn state persistence via BlazeCheckpointer — build and upload a custom wheel, then use thread_id to resume sessions across independent invocations.",
   "tags": [
     "checkpoint",
     "deepagents",
@@ -21,7 +21,7 @@
     "Pyodide"
   ],
   "category": "GPU & Agents",
-  "difficulty": "Expert",
+  "difficulty": "Advanced",
   "time": "30 min",
   "products": [
     "blazing-flow-sandbox"

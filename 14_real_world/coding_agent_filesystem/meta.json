@@ -1,7 +1,7 @@
 {
   "id": "coding_agent_filesystem",
   "title": "Coding Agent with BlazeFileSystem",
-  "description": "A deepagents coding agent in the Pyodide sandbox performs real file I/O through BlazeFileSystem proxied to a trusted StorageService \u2014 init a git repo, write and verify Python files, then persist agent state via BlazeCheckpointer across workflow phases.",
+  "description": "A deepagents coding agent in the Pyodide sandbox performs real file I/O through BlazeFileSystem proxied to a trusted StorageService — init a git repo, write and verify Python files, then persist agent state via BlazeCheckpointer across workflow phases.",
   "tags": [
     "checkpoint",
     "coding-agent",
@@ -19,7 +19,7 @@
     "Pyodide"
   ],
   "category": "Real World Applications",
-  "difficulty": "Expert",
+  "difficulty": "Advanced",
   "time": "35 min",
   "products": [
     "blazing-flow-sandbox"
