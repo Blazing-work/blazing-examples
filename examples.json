@@ -7,10 +7,12 @@
     "difficulty": "Beginner",
     "time": "10 min",
     "tags": [
-      "tasks",
       "async",
-      "distributed"
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -27,15 +29,17 @@
   {
     "id": "basic_workflow",
     "title": "Basic Workflow",
-    "description": "Multi-step orchestration - the foundation of distributed workflows.",
+    "description": "Multi-step orchestration - the foundation of distributed workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "10 min",
     "tags": [
-      "workflow",
+      "multi-step",
       "orchestration",
-      "multi-step"
+      "python",
+      "workflow"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -57,10 +61,12 @@
     "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
-      "step",
-      "data",
-      "filtering"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -77,16 +83,17 @@
   {
     "id": "data_transformation_workflow",
     "title": "Data Transformation Workflow",
-    "description": "Multi-stage data pipeline with cleaning and normalization.",
+    "description": "Multi-stage data pipeline with cleaning and normalization \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "10 min",
     "tags": [
-      "workflow",
-      "data",
-      "transformation",
-      "pipeline"
+      "distributed",
+      "pipeline",
+      "python",
+      "workflow"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -108,9 +115,12 @@
     "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
-      "quickstart",
+      "async",
+      "blazing-flow",
+      "distributed",
       "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -127,15 +137,18 @@
   {
     "id": "ml_inference_pipeline",
     "title": "ML Inference Pipeline",
-    "description": "Deploy ML models with Core infrastructure, orchestrate inference with Flow, and run predictions in Flow Sandbox.",
+    "description": "Deploy ML models with Core infrastructure, orchestrate inference with Flow, and run predictions in Flow Sandbox \u2014 uses HTTPX.",
     "category": "Machine Learning",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
-      "ml",
+      "httpx",
       "inference",
-      "pipeline",
-      "multi-product"
+      "multi-product",
+      "pipeline"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-core",
@@ -155,16 +168,17 @@
   {
     "id": "multi_branch_workflow",
     "title": "Multi-Branch Workflow",
-    "description": "Parallel execution with asyncio.gather for concurrent processing.",
+    "description": "Parallel execution with asyncio.gather for concurrent processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "workflow",
-      "parallel",
       "asyncio",
-      "branching"
+      "parallel",
+      "python",
+      "workflow"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -187,9 +201,11 @@
     "time": "15 min",
     "tags": [
       "concurrency",
-      "performance",
-      "parallel"
+      "distributed",
+      "parallel",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -206,15 +222,17 @@
   {
     "id": "simple_step",
     "title": "Simple Step",
-    "description": "The simplest possible Blazing Flow example - a single processing step.",
+    "description": "The simplest possible Blazing Flow example - a single processing step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
-      "step",
-      "basics",
-      "quickstart"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -231,15 +249,17 @@
   {
     "id": "step_with_math",
     "title": "Step with Math",
-    "description": "Basic arithmetic operations in a distributed step.",
+    "description": "Basic arithmetic operations in a distributed step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
-      "step",
-      "math",
-      "basics"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -256,16 +276,23 @@
   {
     "id": "authenticated_api",
     "title": "API with Authentication",
-    "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth).",
+    "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth) \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "endpoint",
-      "authentication",
-      "jwt",
       "api-key",
-      "security"
+      "fastapi",
+      "jwt",
+      "oauth",
+      "security",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "JWT",
+      "OAuth",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -283,15 +310,18 @@
   {
     "id": "basic_calculator_api",
     "title": "Basic Calculator API",
-    "description": "The simplest possible endpoint: expose a workflow as a public HTTP API.",
+    "description": "The simplest possible endpoint: expose a workflow as a public HTTP API Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints",
     "difficulty": "Beginner",
     "time": "10 min",
     "tags": [
-      "endpoint",
       "api",
+      "python",
       "rest",
-      "basic"
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -309,15 +339,18 @@
   {
     "id": "batch_processing_api",
     "title": "Batch Processing API",
-    "description": "Process multiple items concurrently with result aggregation.",
+    "description": "Process multiple items concurrently with result aggregation Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "endpoint",
       "batch",
-      "concurrent",
-      "aggregation"
+      "distributed",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -335,14 +368,18 @@
   {
     "id": "error_handling_api",
     "title": "Error Handling in APIs",
-    "description": "Proper error handling with custom error responses.",
+    "description": "Proper error handling with custom error responses Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "endpoint",
+      "distributed",
       "error-handling",
-      "validation"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -360,15 +397,18 @@
   {
     "id": "multi_step_pipeline_api",
     "title": "Multi-Step Data Pipeline API",
-    "description": "Expose a multi-step workflow that processes data through several stages.",
+    "description": "Expose a multi-step workflow that processes data through several stages Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "endpoint",
-      "pipeline",
       "multi-step",
-      "statistics"
+      "pipeline",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -386,15 +426,19 @@
   {
     "id": "multiple_endpoints",
     "title": "Multiple Endpoints with Different Paths",
-    "description": "Organize multiple endpoints with different paths and versions.",
+    "description": "Organize multiple endpoints with different paths and versions Built with FastAPI, uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "endpoint",
-      "versioning",
       "api-design",
-      "organization"
+      "fastapi",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -412,15 +456,21 @@
   {
     "id": "websocket_realtime",
     "title": "WebSocket Real-Time Updates",
-    "description": "Enable WebSocket for real-time progress updates from long-running workflows.",
+    "description": "Enable WebSocket for real-time progress updates from long-running workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Web Endpoints",
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
-      "endpoint",
-      "websocket",
+      "fastapi",
       "real-time",
-      "streaming"
+      "streaming",
+      "uvicorn",
+      "websocket"
+    ],
+    "technologies": [
+      "FastAPI",
+      "WebSocket",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -438,16 +488,17 @@
   {
     "id": "aggregating_results",
     "title": "Aggregating Results",
-    "description": "Fetch data from multiple sources and aggregate into summary statistics.",
+    "description": "Fetch data from multiple sources and aggregate into summary statistics \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "aggregation",
-      "data",
-      "statistics",
-      "parallel"
+      "blazing-flow",
+      "distributed",
+      "parallel",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -464,15 +515,18 @@
   {
     "id": "arrow_dataframes",
     "title": "PyArrow DataFrames",
-    "description": "Pass PyArrow Tables between steps \u2014 zero-copy columnar transfers with type-safe Arrow compute operations.",
+    "description": "Pass PyArrow Tables between steps \u2014 zero-copy columnar transfers with type-safe Arrow compute operations \u2014 uses Apache Arrow.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
+      "apache-arrow",
       "arrow",
-      "dataframes",
-      "columnar",
-      "performance"
+      "distributed",
+      "python"
+    ],
+    "technologies": [
+      "Apache Arrow"
     ],
     "products": [
       "blazing-flow"
@@ -490,16 +544,17 @@
   {
     "id": "csv_import",
     "title": "CSV Import Pipeline",
-    "description": "Download, parse, validate, and import CSV files from cloud storage.",
+    "description": "Download, parse, validate, and import CSV files from cloud storage \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
-      "csv",
+      "blazing-flow",
+      "distributed",
       "file-processing",
-      "import",
-      "validation"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -516,16 +571,17 @@
   {
     "id": "etl_pipeline",
     "title": "ETL Pipeline",
-    "description": "Complete Extract-Transform-Load pipeline for data warehousing.",
+    "description": "Complete Extract-Transform-Load pipeline for data warehousing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
+      "data-warehouse",
       "etl",
       "pipeline",
-      "data-warehouse",
       "workflow"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -542,16 +598,17 @@
   {
     "id": "event_processing",
     "title": "Event Processing Pipeline",
-    "description": "Validate, enrich, and store incoming events with multi-step processing.",
+    "description": "Validate, enrich, and store incoming events with multi-step processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "25 min",
     "tags": [
+      "distributed",
       "events",
       "pipeline",
-      "enrichment",
-      "validation"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -573,10 +630,18 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "dataframe",
+      "apache-arrow",
+      "apache-arrow-flight",
       "arrow-flight",
       "big-data",
-      "performance"
+      "numpy",
+      "pandas"
+    ],
+    "technologies": [
+      "Apache Arrow",
+      "Apache Arrow Flight",
+      "NumPy",
+      "Pandas"
     ],
     "products": [
       "blazing-flow"
@@ -594,16 +659,17 @@
   {
     "id": "map_reduce",
     "title": "Map-Reduce Pattern",
-    "description": "Distributed map-reduce for processing large datasets in chunks.",
+    "description": "Distributed map-reduce for processing large datasets in chunks \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
-      "map-reduce",
-      "distributed",
       "big-data",
+      "distributed",
+      "map-reduce",
       "parallel"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -620,16 +686,17 @@
   {
     "id": "pdf_generation",
     "title": "PDF Generation Workflow",
-    "description": "Generate PDF documents from templates with data from multiple sources.",
+    "description": "Generate PDF documents from templates with data from multiple sources \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "35 min",
     "tags": [
-      "pdf",
-      "generation",
-      "template",
-      "file-processing"
+      "blazing-flow",
+      "distributed",
+      "file-processing",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -646,16 +713,17 @@
   {
     "id": "retry_logic",
     "title": "Retry Logic with Exponential Backoff",
-    "description": "Handle transient failures with automatic retry and exponential backoff.",
+    "description": "Handle transient failures with automatic retry and exponential backoff \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
+      "distributed",
       "error-handling",
-      "retry",
-      "backoff",
-      "resilience"
+      "python",
+      "retry"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -672,15 +740,17 @@
   {
     "id": "timeout_handling",
     "title": "Timeout Handling",
-    "description": "Prevent workflows from hanging with asyncio.wait_for timeouts.",
+    "description": "Prevent workflows from hanging with asyncio.wait_for timeouts \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "timeout",
+      "asyncio",
       "error-handling",
-      "asyncio"
+      "python",
+      "timeout"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -697,15 +767,17 @@
   {
     "id": "validation_error_handling",
     "title": "Validation & Error Handling",
-    "description": "Validate input data and handle errors gracefully in workflows.",
+    "description": "Validate input data and handle errors gracefully in workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "validation",
+      "data-quality",
+      "distributed",
       "error-handling",
-      "data-quality"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -722,16 +794,19 @@
   {
     "id": "cpu_vs_io_optimization",
     "title": "CPU vs I/O Optimization with Worker Types",
-    "description": "Blazing automatically optimizes execution by using different worker pools. Use `step_type='BLOCKING'` for CPU-intensive work and default (NON_BLOCKING) for I/O-bound operations. This prevents CPU tasks from blocking async I/O operations.",
+    "description": "Blazing automatically optimizes execution by using different worker pools. Use `step_type='BLOCKING'` for CPU-intensive work and default (NON_BLOCKING) for I/O-bound operations. This prevents CPU tasks from blocking async I/O operations \u2014 uses HTTPX, NumPy.",
     "category": "Async & Parallel",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "performance",
-      "optimization",
-      "worker-types",
-      "cpu",
-      "io"
+      "httpx",
+      "numpy",
+      "python",
+      "worker-types"
+    ],
+    "technologies": [
+      "HTTPX",
+      "NumPy"
     ],
     "products": [
       "blazing-flow"
@@ -749,16 +824,17 @@
   {
     "id": "fan_out_fan_in",
     "title": "Fan-Out / Fan-In Pattern",
-    "description": "Fetch data from multiple sources in parallel, then combine results.",
+    "description": "Fetch data from multiple sources in parallel, then combine results \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
-      "parallel",
-      "fan-out",
       "fan-in",
-      "aggregation"
+      "fan-out",
+      "parallel",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -775,16 +851,17 @@
   {
     "id": "parallel_processing",
     "title": "Parallel Data Processing",
-    "description": "Process multiple items concurrently with asyncio.gather.",
+    "description": "Process multiple items concurrently with asyncio.gather \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "parallel",
       "asyncio",
       "batch",
-      "performance"
+      "parallel",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -801,16 +878,17 @@
   {
     "id": "rate_limited_api",
     "title": "Rate-Limited API Calls",
-    "description": "Control concurrency with asyncio.Semaphore for rate limiting.",
+    "description": "Control concurrency with asyncio.Semaphore for rate limiting \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
-      "rate-limiting",
-      "semaphore",
       "api",
-      "concurrency"
+      "concurrency",
+      "python",
+      "rate-limiting"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -832,10 +910,13 @@
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "service",
-      "cache",
-      "redis",
-      "performance"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "redis"
+    ],
+    "technologies": [
+      "Redis"
     ],
     "products": [
       "blazing-flow"
@@ -859,11 +940,11 @@
     "time": "15 min",
     "tags": [
       "connectors",
-      "rest",
-      "database",
-      "services",
-      "integration"
+      "distributed",
+      "python",
+      "rest"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -880,15 +961,18 @@
   {
     "id": "database_service",
     "title": "Database Service",
-    "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy.",
+    "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "service",
-      "database",
-      "sqlalchemy",
-      "postgres"
+      "blazing-flow",
+      "distributed",
+      "postgresql",
+      "python"
+    ],
+    "technologies": [
+      "PostgreSQL"
     ],
     "products": [
       "blazing-flow"
@@ -911,10 +995,13 @@
     "difficulty": "Intermediate",
     "time": "25 min",
     "tags": [
-      "queue",
-      "email",
       "batch",
+      "python",
+      "queue",
       "redis"
+    ],
+    "technologies": [
+      "Redis"
     ],
     "products": [
       "blazing-flow"
@@ -937,11 +1024,12 @@
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "service",
-      "email",
-      "smtp",
-      "notifications"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -958,16 +1046,17 @@
   {
     "id": "github_webhook",
     "title": "GitHub Webhook Handler",
-    "description": "Process GitHub webhooks with signature validation and event handling.",
+    "description": "Process GitHub webhooks with signature validation and event handling \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
-      "webhook",
-      "github",
-      "security",
-      "events"
+      "distributed",
+      "events",
+      "python",
+      "security"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -984,17 +1073,17 @@
   {
     "id": "multi_channel_notification",
     "title": "Multi-Channel Notification",
-    "description": "Send notifications across email, SMS, and push channels simultaneously.",
+    "description": "Send notifications across email, SMS, and push channels simultaneously \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "25 min",
     "tags": [
-      "notifications",
+      "blazing-flow",
+      "distributed",
       "multi-channel",
-      "email",
-      "sms",
-      "push"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1011,15 +1100,18 @@
   {
     "id": "rest_api_service",
     "title": "REST API Service",
-    "description": "Call external REST APIs with httpx and handle responses.",
+    "description": "Call external REST APIs with httpx and handle responses \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "service",
       "api",
       "httpx",
+      "python",
       "rest"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -1037,16 +1129,17 @@
   {
     "id": "stripe_webhook",
     "title": "Stripe Payment Webhook",
-    "description": "Handle Stripe payment webhooks with signature verification.",
+    "description": "Handle Stripe payment webhooks with signature verification \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
-      "webhook",
-      "stripe",
-      "payments",
-      "events"
+      "blazing-flow",
+      "distributed",
+      "events",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1069,11 +1162,11 @@
     "time": "15 min",
     "tags": [
       "batch",
-      "stocks",
-      "throttling",
-      "resilient",
-      "fintech"
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1090,16 +1183,17 @@
   {
     "id": "cleanup_expired_records",
     "title": "Cleanup Expired Records",
-    "description": "Batch delete expired database records on a schedule.",
+    "description": "Batch delete expired database records on a schedule \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "cleanup",
-      "scheduled",
       "batch",
-      "database"
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1116,16 +1210,17 @@
   {
     "id": "daily_reports",
     "title": "Daily Report Generation",
-    "description": "Scheduled job to generate and distribute daily reports via email.",
+    "description": "Scheduled job to generate and distribute daily reports via email \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "25 min",
     "tags": [
-      "scheduled",
-      "reports",
-      "automation",
-      "email"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1142,15 +1237,18 @@
   {
     "id": "event_stream_processor",
     "title": "Event Stream Processor",
-    "description": "Process event streams from Kafka in batches with aggregation.",
+    "description": "Process event streams from Kafka in batches with aggregation \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Expert",
     "time": "40 min",
     "tags": [
-      "streaming",
-      "kafka",
       "events",
-      "real-time"
+      "kafka",
+      "real-time",
+      "streaming"
+    ],
+    "technologies": [
+      "Kafka"
     ],
     "products": [
       "blazing-flow"
@@ -1168,15 +1266,17 @@
   {
     "id": "health_check_workflow",
     "title": "Health Check Workflow",
-    "description": "Monitor system health across database, cache, and external APIs.",
+    "description": "Monitor system health across database, cache, and external APIs \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "20 min",
     "tags": [
-      "monitoring",
+      "distributed",
       "health-check",
-      "observability"
+      "monitoring",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1198,11 +1298,12 @@
     "difficulty": "Advanced",
     "time": "15 min",
     "tags": [
-      "modular",
-      "architecture",
-      "organization",
-      "domain-driven"
+      "blazing-flow",
+      "distributed",
+      "domain-driven",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1219,16 +1320,17 @@
   {
     "id": "sandbox_async_service_calls",
     "title": "Sandbox: Async Service Calls",
-    "description": "User code making concurrent service calls for performance.",
+    "description": "User code making concurrent service calls for performance \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Expert",
     "time": "30 min",
     "tags": [
-      "sandbox",
       "async",
-      "concurrent",
+      "python",
+      "sandbox",
       "service-bridge"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1245,16 +1347,17 @@
   {
     "id": "sandbox_basic_transform",
     "title": "Sandbox: Basic User-Provided Transform",
-    "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected.",
+    "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected \u2014 uses WebAssembly.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
+      "python",
       "sandbox",
-      "wasm",
       "security",
       "user-code"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1271,16 +1374,17 @@
   {
     "id": "sandbox_database_service",
     "title": "Sandbox: Service Bridge with Database",
-    "description": "Let user code process data while keeping database credentials safe.",
+    "description": "Let user code process data while keeping database credentials safe \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
+      "python",
       "sandbox",
-      "service-bridge",
-      "database",
-      "security"
+      "security",
+      "service-bridge"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1297,16 +1401,17 @@
   {
     "id": "sandbox_multi_tenant",
     "title": "Sandbox: Multi-Tenant Data Processing",
-    "description": "Safely run different tenants' code in isolated sandboxes.",
+    "description": "Safely run different tenants' code in isolated sandboxes \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Expert",
     "time": "35 min",
     "tags": [
-      "sandbox",
-      "multi-tenant",
       "isolation",
+      "multi-tenant",
+      "sandbox",
       "security"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1323,16 +1428,17 @@
   {
     "id": "sandbox_rest_api_service",
     "title": "Sandbox: Service Bridge with REST APIs",
-    "description": "Let users integrate with external APIs while keeping API keys safe.",
+    "description": "Let users integrate with external APIs while keeping API keys safe \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
-      "sandbox",
-      "service-bridge",
       "api",
-      "security"
+      "sandbox",
+      "security",
+      "service-bridge"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1349,16 +1455,17 @@
   {
     "id": "sandbox_security_validation",
     "title": "Sandbox: Security Validation",
-    "description": "Examples of malicious code that fails in the sandbox.",
+    "description": "Examples of malicious code that fails in the sandbox \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
+      "distributed",
+      "python",
       "sandbox",
-      "security",
-      "validation",
-      "attacks"
+      "security"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1380,11 +1487,12 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
+      "python",
       "sandbox",
-      "wasm",
       "security",
       "user-code"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1406,12 +1514,13 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "trading",
-      "sandbox",
+      "dynamic-code",
       "pyodide",
-      "strategies",
-      "fintech",
-      "dynamic-code"
+      "python",
+      "sandbox"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -1434,10 +1543,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "wait-result",
-      "run",
-      "remote-handle"
+      "distributed",
+      "python",
+      "remote-handle",
+      "wait-result"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1459,11 +1570,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "batched",
+      "blazing-flow",
+      "distributed",
       "gpu",
-      "throughput",
-      "decorator"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1485,9 +1597,12 @@
     "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
-      "workflows",
-      "callable"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1509,10 +1624,12 @@
     "difficulty": "Beginner",
     "time": "8 min",
     "tags": [
-      "decorators",
+      "blazing-flow",
       "context-manager",
-      "services"
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1534,11 +1651,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "direct",
+      "blazing-flow",
+      "distributed",
       "function-call",
-      "testing",
-      "local"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1560,9 +1678,12 @@
     "difficulty": "Intermediate",
     "time": "6 min",
     "tags": [
-      "sync",
-      "run_sync"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1584,9 +1705,12 @@
     "difficulty": "Beginner",
     "time": "6 min",
     "tags": [
-      "sync",
-      "syncblazing"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1608,9 +1732,12 @@
     "difficulty": "Intermediate",
     "time": "6 min",
     "tags": [
-      "sync",
-      "wait_result_sync"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1632,10 +1759,12 @@
     "difficulty": "Intermediate",
     "time": "7 min",
     "tags": [
-      "handle",
-      "wait",
-      "cancel"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1657,9 +1786,12 @@
     "difficulty": "Intermediate",
     "time": "6 min",
     "tags": [
-      "version-pins",
-      "workflows"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1681,9 +1813,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "depth",
-      "sandboxed",
-      "services"
+      "blazing-flow",
+      "distributed",
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -1701,14 +1837,18 @@
   {
     "id": "depth_metrics_api",
     "title": "Depth Metrics API",
-    "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth.",
+    "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth \u2014 uses HTTPX.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
+      "http",
+      "httpx",
       "metrics",
-      "depth",
-      "http"
+      "python"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -1726,13 +1866,18 @@
   {
     "id": "depth_statistics_metrics",
     "title": "Depth Statistics Metrics",
-    "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns.",
+    "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns \u2014 uses HTTPX.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "depth-tracking",
-      "metrics"
+      "distributed",
+      "httpx",
+      "metrics",
+      "python"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -1755,9 +1900,12 @@
     "difficulty": "Beginner",
     "time": "6 min",
     "tags": [
-      "depth-tracking",
-      "workflows"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1779,9 +1927,12 @@
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
-      "depth-tracking",
-      "chain"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1803,9 +1954,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
+      "distributed",
       "executor-routing",
-      "sandboxed",
-      "trusted"
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -1828,10 +1983,12 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "mixed-load",
       "asyncio",
-      "parallel"
+      "mixed-load",
+      "parallel",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1853,9 +2010,12 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "state-machine",
-      "loop"
+      "distributed",
+      "loop",
+      "python",
+      "state-machine"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1877,8 +2037,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "worker-types",
-      "isolation"
+      "isolation",
+      "pyodide",
+      "python",
+      "worker-types"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -1901,10 +2066,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "worker-types",
-      "sandboxed",
-      "blocking"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "worker-types"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1926,11 +2093,12 @@
     "difficulty": "Intermediate",
     "time": "12 min",
     "tags": [
-      "worker-types",
-      "services",
-      "sandboxed",
-      "routing"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "worker-types"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -1952,9 +2120,12 @@
     "difficulty": "Advanced",
     "time": "10 min",
     "tags": [
-      "sandboxed",
-      "dynamic-code"
+      "blazing-flow",
+      "distributed",
+      "dynamic-code",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -1976,10 +2147,13 @@
     "difficulty": "Advanced",
     "time": "15 min",
     "tags": [
-      "sandbox",
-      "security",
+      "code-execution",
       "pyodide",
-      "code-execution"
+      "sandbox",
+      "security"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -1997,15 +2171,18 @@
   {
     "id": "egress_policy",
     "title": "Egress Policy",
-    "description": "Declare outbound network rules on services \u2014 exact hostnames, wildcard subdomains, CIDR blocks, or deny-all.",
+    "description": "Declare outbound network rules on services \u2014 exact hostnames, wildcard subdomains, CIDR blocks, or deny-all \u2014 uses HTTPX.",
     "category": "Sandbox & Isolation",
     "difficulty": "Advanced",
     "time": "15 min",
     "tags": [
       "egress",
-      "security",
-      "network",
-      "service"
+      "httpx",
+      "python",
+      "security"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -2028,8 +2205,13 @@
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
+      "distributed",
       "isolation",
-      "sandboxed"
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2052,9 +2234,12 @@
     "difficulty": "Advanced",
     "time": "10 min",
     "tags": [
+      "distributed",
       "isolation",
+      "python",
       "retry"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow-sandbox"
     ],
@@ -2076,8 +2261,14 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
+      "distributed",
+      "numpy",
       "pyodide",
-      "dependencies"
+      "python"
+    ],
+    "technologies": [
+      "NumPy",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2100,9 +2291,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "pyodide",
+      "distributed",
       "parallel",
-      "stress"
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2125,8 +2320,13 @@
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
-      "sandboxed",
-      "isolation"
+      "distributed",
+      "isolation",
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2150,8 +2350,13 @@
     "time": "12 min",
     "tags": [
       "auth",
-      "middleware",
-      "fastapi"
+      "fastapi",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2174,8 +2379,13 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "asgi",
-      "server"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2193,14 +2403,19 @@
   {
     "id": "custom_exception_handler",
     "title": "Custom Exception Handler",
-    "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield",
+    "description": "Attach a custom exception handler to the ASGI app.\n\nSource: greenfield Built with FastAPI, uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "errors",
+      "distributed",
       "fastapi",
-      "asgi"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2223,9 +2438,14 @@
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
-      "asgi",
+      "distributed",
       "fastapi",
-      "endpoints"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2243,14 +2463,19 @@
   {
     "id": "get_endpoint_query",
     "title": "GET Endpoint with Query Params",
-    "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting \u2014 demonstrates query param binding for Blazing HTTP endpoints.",
+    "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting \u2014 demonstrates query param binding for Blazing HTTP endpoints \u2014 uses FastAPI, uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Beginner",
     "time": "6 min",
     "tags": [
+      "fastapi",
       "http",
-      "get",
-      "query"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2273,9 +2498,14 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "asgi",
+      "distributed",
       "fastapi",
-      "mount"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2293,13 +2523,18 @@
   {
     "id": "multiple_methods",
     "title": "Multiple HTTP Methods",
-    "description": "Exposes both GET and POST endpoints in a single Blazing app \u2014 a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration.",
+    "description": "Exposes both GET and POST endpoints in a single Blazing app \u2014 a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration \u2014 uses uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
+      "distributed",
       "http",
-      "methods"
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2322,9 +2557,14 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "http",
       "fastapi",
-      "endpoints"
+      "http",
+      "python",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2342,14 +2582,18 @@
   {
     "id": "streaming_progress_bar",
     "title": "Streaming Progress Bar",
-    "description": "Use progress_bar to emit SSE updates while iterating.\n\nSource: greenfield",
+    "description": "Use progress_bar to emit SSE updates while iterating.\n\nSource: greenfield Built with uvicorn on Blazing Flow's distributed worker infrastructure.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
+      "progress-bar",
+      "python",
       "streaming",
-      "sse",
-      "progress-bar"
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2372,9 +2616,14 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "streaming",
       "fastapi",
-      "asgi"
+      "python",
+      "streaming",
+      "uvicorn"
+    ],
+    "technologies": [
+      "FastAPI",
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2392,14 +2641,18 @@
   {
     "id": "streaming_workflow_progress",
     "title": "Streaming Workflow Progress",
-    "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield",
+    "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield \u2014 uses uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
+      "distributed",
+      "python",
       "streaming",
-      "sse",
-      "progress"
+      "uvicorn"
+    ],
+    "technologies": [
+      "uvicorn"
     ],
     "products": [
       "blazing-flow-endpoint"
@@ -2422,11 +2675,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "scheduler",
-      "cron",
-      "periodic",
-      "jobs"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "scheduler"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2448,11 +2702,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
+      "blazing-flow",
       "distributed",
-      "queue",
-      "dict",
-      "state"
+      "python",
+      "queue"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2474,11 +2729,13 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "llm",
+      "distributed",
       "openai",
-      "connector",
-      "chat",
+      "python",
       "streaming"
+    ],
+    "technologies": [
+      "OpenAI"
     ],
     "products": [
       "blazing-flow"
@@ -2501,9 +2758,13 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "local",
-      "dict",
-      "state"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "redis"
+    ],
+    "technologies": [
+      "Redis"
     ],
     "products": [
       "blazing-flow"
@@ -2526,10 +2787,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "local",
-      "services",
-      "composition"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2551,10 +2814,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "local",
-      "services",
-      "multistep"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2571,14 +2836,18 @@
   {
     "id": "publish_with_retry",
     "title": "Publish with Retry",
-    "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes.",
+    "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes \u2014 uses HTTPX.",
     "category": "Platform Integrations",
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
-      "retry",
-      "publish",
-      "resilience"
+      "distributed",
+      "httpx",
+      "python",
+      "retry"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -2601,9 +2870,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "redis",
-      "polling",
-      "completion"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "redis"
+    ],
+    "technologies": [
+      "Redis"
     ],
     "products": [
       "blazing-flow"
@@ -2627,8 +2900,11 @@
     "time": "5 min",
     "tags": [
       "api-url",
-      "auth"
+      "auth",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2650,9 +2926,12 @@
     "difficulty": "Intermediate",
     "time": "12 min",
     "tags": [
-      "services",
-      "composition"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2674,11 +2953,12 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "volume",
-      "storage",
-      "files",
-      "persistence"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "volume"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2700,10 +2980,12 @@
     "difficulty": "Intermediate",
     "time": "12 min",
     "tags": [
-      "agents",
-      "checkpointing",
-      "services"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -2725,12 +3007,22 @@
     "difficulty": "Expert",
     "time": "30 min",
     "tags": [
-      "deepagents",
-      "langgraph",
       "checkpoint",
-      "sandbox",
+      "deepagents",
+      "httpx",
       "langblaze",
-      "wheel"
+      "langchain",
+      "langgraph",
+      "pyodide",
+      "sandbox"
+    ],
+    "technologies": [
+      "DeepAgents",
+      "HTTPX",
+      "LangBlaze",
+      "LangChain",
+      "LangGraph",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2753,9 +3045,13 @@
     "difficulty": "Advanced",
     "time": "15 min",
     "tags": [
+      "distributed",
       "gpu",
-      "pytorch",
-      "ml"
+      "python",
+      "pytorch"
+    ],
+    "technologies": [
+      "PyTorch"
     ],
     "products": [
       "blazing-flow"
@@ -2773,18 +3069,18 @@
   {
     "id": "gpu_pytorch_steps",
     "title": "GPU PyTorch Steps \u2014 A100 + H100 Pipeline",
-    "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow \u2014 Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA.",
+    "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow \u2014 Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA \u2014 uses PyTorch.",
     "category": "GPU & Agents",
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
       "gpu",
-      "pytorch",
-      "a100",
-      "h100",
-      "ml",
       "neural-network",
-      "pipeline"
+      "pipeline",
+      "pytorch"
+    ],
+    "technologies": [
+      "PyTorch"
     ],
     "products": [
       "blazing-flow"
@@ -2807,13 +3103,19 @@
     "difficulty": "Expert",
     "time": "25 min",
     "tags": [
-      "gsd",
-      "sandbox",
-      "pyodide",
-      "tool-registry",
+      "deepagents",
       "dynamic-code",
+      "httpx",
       "langblaze",
-      "wheel"
+      "pyodide",
+      "sandbox",
+      "tool-registry"
+    ],
+    "technologies": [
+      "DeepAgents",
+      "HTTPX",
+      "LangBlaze",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2837,9 +3139,15 @@
     "time": "20 min",
     "tags": [
       "langblaze",
-      "llm",
-      "agents",
-      "langgraph"
+      "langchain",
+      "langgraph",
+      "pyodide"
+    ],
+    "technologies": [
+      "LangBlaze",
+      "LangChain",
+      "LangGraph",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -2862,11 +3170,16 @@
     "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
-      "agents",
       "dynamic-code",
-      "sandbox",
-      "react",
-      "langblaze"
+      "langblaze",
+      "langgraph",
+      "pyodide",
+      "sandbox"
+    ],
+    "technologies": [
+      "LangBlaze",
+      "LangGraph",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2889,9 +3202,15 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "sandbox",
-      "dependencies",
-      "agents"
+      "langchain",
+      "langgraph",
+      "pyodide",
+      "sandbox"
+    ],
+    "technologies": [
+      "LangChain",
+      "LangGraph",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -2914,8 +3233,13 @@
     "difficulty": "Advanced",
     "time": "10 min",
     "tags": [
-      "wheel",
-      "packaging"
+      "blazing-flow",
+      "distributed",
+      "pyodide",
+      "python"
+    ],
+    "technologies": [
+      "Pyodide"
     ],
     "products": [
       "blazing-flow"
@@ -2938,8 +3262,14 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "image",
-      "deployment"
+      "distributed",
+      "docker",
+      "numpy",
+      "python"
+    ],
+    "technologies": [
+      "Docker",
+      "NumPy"
     ],
     "products": [
       "blazing-flow"
@@ -2962,8 +3292,13 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "image",
-      "dockerfile"
+      "blazing-flow",
+      "distributed",
+      "docker",
+      "python"
+    ],
+    "technologies": [
+      "Docker"
     ],
     "products": [
       "blazing-flow"
@@ -2986,10 +3321,13 @@
     "difficulty": "Intermediate",
     "time": "12 min",
     "tags": [
-      "image",
-      "executor",
-      "pip",
-      "apt"
+      "blazing-flow",
+      "distributed",
+      "numpy",
+      "python"
+    ],
+    "technologies": [
+      "NumPy"
     ],
     "products": [
       "blazing-flow"
@@ -3012,9 +3350,12 @@
     "difficulty": "Intermediate",
     "time": "8 min",
     "tags": [
-      "image",
-      "env"
+      "async",
+      "blazing-flow",
+      "distributed",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3036,9 +3377,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "image",
+      "blazing-flow",
+      "distributed",
+      "python",
       "run-commands"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3060,9 +3404,12 @@
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "image",
-      "model-cache"
+      "blazing-flow",
+      "distributed",
+      "model-cache",
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3079,13 +3426,18 @@
   {
     "id": "multiple_images",
     "title": "Multiple Images in One App",
-    "description": "Use different container images for different workflows.\n\nSource: greenfield",
+    "description": "Use different container images for different workflows.\n\nSource: greenfield Built with NumPy on Blazing Flow's distributed worker infrastructure.",
     "category": "Deployment & Packaging",
     "difficulty": "Advanced",
     "time": "12 min",
     "tags": [
-      "image",
-      "multi-image"
+      "distributed",
+      "multi-image",
+      "numpy",
+      "python"
+    ],
+    "technologies": [
+      "NumPy"
     ],
     "products": [
       "blazing-flow"
@@ -3103,14 +3455,17 @@
   {
     "id": "secrets_via_env",
     "title": "Secrets via Environment",
-    "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield",
+    "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Deployment & Packaging",
     "difficulty": "Beginner",
     "time": "6 min",
     "tags": [
-      "secrets",
-      "env"
+      "blazing-flow",
+      "distributed",
+      "python",
+      "secrets"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3132,11 +3487,12 @@
     "difficulty": "Intermediate",
     "time": "10 min",
     "tags": [
-      "serialize",
+      "blazing-flow",
+      "distributed",
       "loading-strategy",
-      "development",
-      "packaging"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3153,15 +3509,18 @@
   {
     "id": "hackernews_slackbot",
     "title": "Hacker News Slackbot",
-    "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack \u2014 demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control.",
+    "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack \u2014 demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control \u2014 uses HTTPX.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "scheduled",
+      "distributed",
       "http",
-      "slack",
-      "connector"
+      "httpx",
+      "python"
+    ],
+    "technologies": [
+      "HTTPX"
     ],
     "products": [
       "blazing-flow"
@@ -3184,10 +3543,13 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "sql",
-      "duckdb",
       "api",
-      "query"
+      "distributed",
+      "duckdb",
+      "python"
+    ],
+    "technologies": [
+      "DuckDB"
     ],
     "products": [
       "blazing-flow"
@@ -3210,10 +3572,17 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
+      "chromadb",
+      "openai",
+      "pdfplumber",
       "rag",
-      "pdf",
-      "vector-search",
-      "openai"
+      "vector-search"
+    ],
+    "technologies": [
+      "ChromaDB",
+      "OpenAI",
+      "RAG",
+      "pdfplumber"
     ],
     "products": [
       "blazing-flow"
@@ -3236,10 +3605,14 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "ocr",
       "job-queue",
-      "redis",
-      "polling"
+      "ocr",
+      "openai",
+      "redis"
+    ],
+    "technologies": [
+      "OpenAI",
+      "Redis"
     ],
     "products": [
       "blazing-flow"
@@ -3262,10 +3635,15 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "crawler",
-      "algolia",
-      "indexing",
-      "bfs"
+      "beautiful-soup",
+      "httpx",
+      "python",
+      "trafilatura"
+    ],
+    "technologies": [
+      "Beautiful Soup",
+      "HTTPX",
+      "Trafilatura"
     ],
     "products": [
       "blazing-flow"
@@ -3288,11 +3666,12 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
+      "blazing-flow",
+      "distributed",
       "google-sheets",
-      "mongodb",
-      "sync",
-      "bidirectional"
+      "python"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3314,11 +3693,20 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "embeddings",
-      "mongodb",
-      "s3",
+      "aws-s3",
       "batch",
-      "checkpoint"
+      "checkpoint",
+      "hugging-face-transformers",
+      "openai",
+      "sentence-transformers",
+      "tiktoken"
+    ],
+    "technologies": [
+      "AWS S3",
+      "Hugging Face Transformers",
+      "OpenAI",
+      "Sentence Transformers",
+      "tiktoken"
     ],
     "products": [
       "blazing-flow"
@@ -3341,10 +3729,18 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "geospatial",
+      "hugging-face-transformers",
+      "numpy",
+      "pytorch",
       "rasterio",
-      "mongodb",
-      "vectors"
+      "sentence-transformers"
+    ],
+    "technologies": [
+      "Hugging Face Transformers",
+      "NumPy",
+      "PyTorch",
+      "Rasterio",
+      "Sentence Transformers"
     ],
     "products": [
       "blazing-flow"
@@ -3367,11 +3763,12 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
+      "python",
+      "sandbox",
       "state-machine",
-      "orders",
-      "workflow",
-      "sandbox"
+      "workflow"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3393,10 +3790,16 @@
     "difficulty": "Advanced",
     "time": "20 min",
     "tags": [
-      "transcription",
-      "audio",
+      "ffmpeg",
+      "openai",
       "pipeline",
+      "transcription",
       "whisper"
+    ],
+    "technologies": [
+      "FFmpeg",
+      "OpenAI",
+      "Whisper"
     ],
     "products": [
       "blazing-flow"
@@ -3419,12 +3822,20 @@
     "difficulty": "Expert",
     "time": "35 min",
     "tags": [
+      "checkpoint",
       "coding-agent",
-      "filesystem",
       "deepagents",
+      "httpx",
       "langblaze",
-      "storage",
-      "checkpoint"
+      "langchain",
+      "pyodide"
+    ],
+    "technologies": [
+      "DeepAgents",
+      "HTTPX",
+      "LangBlaze",
+      "LangChain",
+      "Pyodide"
     ],
     "products": [
       "blazing-flow-sandbox"
@@ -3447,12 +3858,12 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "secrets",
       "connectors",
-      "security",
-      "services",
-      "local-stack"
+      "local-stack",
+      "secrets",
+      "security"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],
@@ -3474,13 +3885,12 @@
     "difficulty": "Intermediate",
     "time": "15 min",
     "tags": [
-      "volume",
       "connectors",
-      "storage",
-      "files",
+      "local-stack",
       "security",
-      "local-stack"
+      "volume"
     ],
+    "technologies": [],
     "products": [
       "blazing-flow"
     ],

@@ -153,6 +153,7 @@ def build_example_entry(
         "difficulty": metadata.get("difficulty", "Intermediate"),
         "time": metadata.get("time", "15 min"),
         "tags": metadata.get("tags", []),
+        "technologies": metadata.get("technologies", []),
         "products": metadata.get("products", ["blazing-flow"]),
         "primaryProduct": metadata.get("primaryProduct", "blazing-flow"),
         "files": metadata.get("files", {"flow": True}),
