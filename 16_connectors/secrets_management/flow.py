@@ -34,9 +34,9 @@ class DatabaseService(BaseService):
     Trusted service that retrieves database credentials from a SecretsConnector.
     Sandboxed steps call service methods instead of accessing secrets directly.
     """
-    def __init__(self, connector_instances):
+    def __init__(self, connector_instances=None):
         self.connector_instances = connector_instances
-        self.secrets = connector_instances.get('secrets')
+        self.secrets = connector_instances.get('secrets') if connector_instances else None
 
     async def get_connection_string(self) -> dict:
         """Return DATABASE_URL from secrets."""
@@ -59,9 +59,9 @@ class APIClientService(BaseService):
     """
     Trusted service that retrieves API credentials from a SecretsConnector.
     """
-    def __init__(self, connector_instances):
+    def __init__(self, connector_instances=None):
         self.connector_instances = connector_instances
-        self.secrets = connector_instances.get('api_credentials')
+        self.secrets = connector_instances.get('api_credentials') if connector_instances else None
 
     async def make_authenticated_request(self, endpoint: str) -> dict:
         """Simulate API call — returns whether credentials were present."""

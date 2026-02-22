@@ -33,9 +33,9 @@ class FileProcessorService(BaseService):
     Trusted service that reads and writes files through a VolumeConnector.
     Sandboxed steps call service methods instead of accessing storage directly.
     """
-    def __init__(self, connector_instances):
+    def __init__(self, connector_instances=None):
         self.connector_instances = connector_instances
-        self.volume = connector_instances.get('storage')
+        self.volume = connector_instances.get('storage') if connector_instances else None
 
     async def write_file(self, path: str, content: str) -> dict:
         """Write content to a file in the volume."""
