@@ -1,0 +1,82 @@
+# Morpheus Lumerin Node
+
+
+<!-- markdownlint-disable first-line-h1 -->
+<!-- markdownlint-disable html -->
+<!-- markdownlint-disable no-duplicate-header -->
+
+
+[![Morpheus](https://img.shields.io/badge/Morpheus-Project-0A84FF)](https://mor.org/)
+[![Lumerin](https://img.shields.io/badge/Lumerin-Protocol-32D74B)](https://lumerin.io/)
+
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+
+## 🔗 Related Resources
+
+* <img src="https://morpheusai.gitbook.io/~gitbook/image?url=https%3A%2F%2F382415899-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252F4ZkFBwm0Y9Vw2Hlxkfhw%252Fsites%252Fsite_pK3pL%252Ficon%252FGFGh6tiIUbFV3TLjr65h%252Favatar_one_icon.png%3Falt%3Dmedia%26token%3D25c1d4a3-f574-4338-a0df-339887b6515b&width=32&dpr=1&quality=100&sign=9e535bfe&sv=2" width="20" height="20" alt="Morpheus favicon"> [Morpheus AI Project](https://mor.org/) - Official Morpheus Network Website
+* <img src="https://avatars.githubusercontent.com/u/102425763?v=4" width="20" height="20" alt="Lumerin favicon"> [Morpheus-Lumerin-Node Repository](https://github.com/Lumerin-protocol/Morpheus-Lumerin-Node) - Main development repository
+* 📖 [Documentation](https://github.com/Lumerin-protocol/Morpheus-Lumerin-Node/tree/main/docs) - Detailed setup and configuration guides
+
+## 🚀 Deploying Morpheus Lumerin Node
+
+This guide covers deploying the proxy-router component of the Morpheus AI Network . The deployment provides API access via Swagger interface without GUI or wallet components.
+
+### 📋 Prerequisites
+
+* Running AI model accessible via private endpoint (e.g., `http://model.domain.com:8080`)
+* Funded wallet with MOR and ETH tokens
+* Wallet private key for blockchain interactions
+* Blazing Core account with deployment experience
+* Note: The final endpoint URL will be available after provider selection and deployment
+
+### ⚙️ Configuration
+
+The proxy-router uses environment variables for configuration instead of volume mounts for improved reliability :
+
+* `COOKIE_CONTENT`: API authentication (format: `username:password`)
+* `MODELS_CONFIG_CONTENT`: JSON configuration for model endpoints
+* `WALLET_PRIVATE_KEY`: For blockchain interactions
+* Network-specific variables (chain ID, contract addresses, etc.)
+
+### 🛠️ Deployment Steps
+
+1. **Prepare SDL Template**
+   * Minimum version: `v3.0.0`
+   * Configure:
+     - Wallet private key
+     - API credentials
+     - Model configurations
+   * Save securely (contains sensitive data)
+
+2. **Deploy Container**
+   * Use Blazing Core Dashboard: `DEPLOY` → `Custom Container`
+   * Upload customized SDL
+   * Select provider and deploy
+   * Verify deployment status and logs
+
+3. **Configure Endpoints**
+   * Update `WEB_PUBLIC_URL` with provider URL and port
+   * Note both API port (8082) and proxy-router port (3333)
+   * Format: `http://provider.domain:port`
+
+4. **Register Provider**
+   * Access Swagger UI: `http://provider.domain:port/swagger/index.html`
+   * Authenticate using configured credentials
+   * Update provider endpoint via `POST /blockchain/providers`:
+   ```json
+   {
+     "endpoint": "provider.domain:proxy_port",
+     "stake": "123000000000"
+   }
+   ```
+   * Verify registration via `GET /blockchain/providers`
+
+### 📊 Example Logs
+
+<div align="center" style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+
+![akash_good_start](https://raw.githubusercontent.com/Lumerin-protocol/Morpheus-Lumerin-Node/main/docs/images/akash_good_start.png)
+
+</div>
+
+</div>
