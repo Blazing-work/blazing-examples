@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: iperf3
+providers:
+  akash:
+    status: prefer
+services:
+  iperf:
+    image: networkstatic/iperf3
+    cpu: 1.0
+    memory: 16Mi
+    storage:
+      size: 128Mi
+    network:
+      ingress:
+        port: 5201
+        public: true

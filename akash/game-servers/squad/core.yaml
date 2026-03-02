@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: squad
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  squad:
+    image: cm2network/squad
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    variables:
+      PORT: '7788'
+      QUERYPORT: '27166'
+      RCONPORT: '21115'
+    network:
+      ingress:
+        port: 27016
+        public: true

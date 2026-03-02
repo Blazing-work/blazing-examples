@@ -1,15 +1,14 @@
-<!-- markdownlint-disable first-line-h1 -->
-<!-- markdownlint-disable html -->
-<!-- markdownlint-disable no-duplicate-header -->
+# follow the prompts and provide your huggingface token
 
-    <a href="https://pluralis.ai/" target="_blank">
+<a href="https://pluralis.ai/" target="_blank">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://github.com/PluralisResearch/node0/raw/main/images/node0-logo-white.png">
         <source media="(prefers-color-scheme: light)" srcset="https://github.com/PluralisResearch/node0/raw/main/images/node0-logo-black.png">
         <img alt="PluralisResearch Node0 Logo" src="https://github.com/PluralisResearch/node0/raw/main/images/node0-logo-black.png" width="500px" style="max-width: 100%; margin-bottom: 30px">
     </picture>
     </a>
-    <a href="https://dashboard.pluralis.ai/"><img alt="Dashboard"
+<a href="https://dashboard.pluralis.ai/"><img alt="Dashboard"
+
     src="https://img.shields.io/badge/Dashboard-Online-62BB47"/></a>
     <a href="https://pluralis.ai/"><img alt="Website"
     src="https://img.shields.io/badge/PluralisResearch-Website-6F02B5"/></a>
@@ -19,24 +18,17 @@
 ## ✨ Description
 
 Node0 is a collaborative event powered by Protocol Learning, our decentralized approach to AI development.
-
 This is the first pretraining run open to the public that can use commodity hardware, so anyone can join and help train this model. This training run supports participants with compute resources as small as a 16GB consumer GPU (e.g., an Nvidia 3090). For the first time, small devices are contributing to a global training cluster, demonstrating that the online community can collaboratively train massive models.
-
 Each participant (node) holds a small portion of the model's computation graph. Despite being connected over the internet (which has 100x slower speeds compared to datacenter connections), we are able to achieve training speeds and performances on par with centralized systems, utilizing the same amount of compute. The swarm of nodes is fully dynamic, meaning participants can join and leave at any time. As a result, the system scales horizontally – the more nodes join, the faster training proceeds.
-
 Because decentralized protocols allow us to pool compute resources from many sources, they enable access to more computational power than is typically available in centralized datacenters. This opens up the possibility to train larger models than ever before, giving the community the ability to push the boundaries of AI training.
-
 This is a hands-on demonstration of our vision: to make AI more accessible and less centralized by pooling compute resources from a global community.
-
 Each participant's progress is logged - check their contribution in the dashboard.
-
-  <a href="https://dashboard.pluralis.ai/">
+<a href="https://dashboard.pluralis.ai/">
     <img src="https://github.com/PluralisResearch/node0/raw/main/.github/assets/dashboard-button.svg" alt="Live Dashboard"/>
-  </a>
-
 
 ## 📑 Table of Contents
 
+- [Deploy](#-deploy-on-akash)
 - [Requirements](#-requirements)
 - [Usage](#-usage)
 - [Important](#-important)
@@ -47,19 +39,21 @@ Each participant's progress is logged - check their contribution in the dashboar
 
 ## 📋 Deploy
 
-
+After deploying the deployment SDL file via [Akash Console](https://console.akash.network/new-deployment), you can find the deployment in the [Deployments](https://console.akash.network/deployments) tab.
 After successful deployment, copy the assigned external port in the Forwarded Ports section because we will use it to start the server.
 Then head over to the Shell and run the following commands:
+
 ```bash
 cd node0
 python3 generate_script.py --identity_path /persistent/private.key --announce_port EXTERNAL_49200_PORT # Use the assigned external port
-# follow the prompts and provide your huggingface token
 cp start_server.sh /persistent/
 cd /persistent/
 pm2 start python3.11 --name "pluralis" -- $(grep "python3.11" start_server.sh | sed 's/.*python3.11 //')
 ```
+
 After that, you can see the server running in the Logs tab.
 
+## 📋 Requirements
 
 ### Hardware Requirements
 
@@ -69,11 +63,11 @@ After that, you can see the server running in the Logs tab.
 - Minimum 32GB RAM
 - Minimum 80GB disk space (required for Docker image)
 
-
 ### Authentication
 
 Create HuggingFace access token ([instruction](https://huggingface.co/docs/hub/en/security-tokens)). The token doesn't need any read/write permissions as it will only be used for authorization.
 
+### Option 1: From Source (Preferred on WSL)
 
 #### Prerequisites
 
@@ -83,18 +77,19 @@ Create HuggingFace access token ([instruction](https://huggingface.co/docs/hub/e
 #### Conda ([install](https://www.anaconda.com/docs/getting-started/miniconda/install#linux))
 
 ```bash
-# Clone repository
+## Clone repository
 git clone https://github.com/PluralisResearch/node0
 cd node0
 
-# Create conda environment
+## Create conda environment
 conda create -n node0 python=3.11
 conda activate node0
 
-# Install node0
+## Install node0
 pip install .
 ```
 
+## 🚀 Usage
 
 ### Generate starting script
 
@@ -183,16 +178,16 @@ To stop the server, run:
 #### Using Docker
 
 ```bash
-# Find the container name or ID
+## Find the container name or ID
 docker ps
 
-# Stop the server
+## Stop the server
 docker stop <container_name_or_ID>
 
-# Remove the container
+## Remove the container
 docker rm <container_name_or_ID>
 
-# Update file ownership
+## Update file ownership
 sudo chown -R <linux_user> .
 ```
 
@@ -203,13 +198,14 @@ Press `Ctrl + Z` in the terminal running the server to stop it.
 Remove temporary files and free ports:
 
 ```bash
-# Remove socket files
+## Remove socket files
 rm /tmp/hivemind*
 
-# Install lsof (omit sudo if running on cloud providers without sudo access)
+## Install lsof (omit sudo if running on cloud providers without sudo access)
 sudo apt-get install lsof
 
-# (omit sudo if running on cloud providers without sudo access)
+## Kill all processes using host port (default port number is 49200)
+## (omit sudo if running on cloud providers without sudo access)
 for i in $(sudo lsof -t -i tcp:<host_port>); do kill -9 $i; done
 ```
 
@@ -219,10 +215,10 @@ If the GPU memory is not released, you can run the following command to kill ***
 
 ```bash
 
-# Install lsof (omit sudo if running on cloud providers without sudo access)
+## Install lsof (omit sudo if running on cloud providers without sudo access)
 sudo apt-get install lsof
 
-# Kill processes (omit sudo if running on cloud providers without sudo access)
+## Kill processes (omit sudo if running on cloud providers without sudo access)
 for i in $(sudo lsof /dev/nvidia* | grep python  | awk '{print $2}' | sort -u); do kill -9 $i; done
 ```
 
@@ -264,6 +260,7 @@ INFO:hivemind.moe.server.runtime: <b>body2.0.919_forward: 24 batches (382.51 bat
 
 **Sanity check:** a healthy peer will periodically report `Processed [N] batches in last 60 seconds` and `Averaged gradients/parameters with [N > 1]` peers.
 
+## 🚨 Important
 
 ### private.key
 
@@ -283,6 +280,7 @@ All files created within the Docker container have a different level of ownershi
 sudo chown -R <linux_user> <path/to/project>
 ```
 
+## 🔍 Troubleshooting
 
 ### Network-Related Issues
 
@@ -310,6 +308,7 @@ The following errors in logs are typically related to internet connectivity:
     This error is likely caused by the slow internet connection.
 
 ### Authorization Issues
+
 The following errors may occur during the authorization process:
 
 - **`Invalid token`**
@@ -321,18 +320,16 @@ The following errors may occur during the authorization process:
     If you've made local changes, revert them or use a clean copy of the repository.
     If you recently pulled new commits from the repository:
 
-    * Reinstall the library (if installed from source)
-    * Rebuild the Docker image (if using Docker)
+  - Reinstall the library (if installed from source)
+  - Rebuild the Docker image (if using Docker)
 
 - **`This peer_id is already used by another user`**
 
     This error occurs when attempting to join an experiment with a different Hugging Face account. Delete the private.key file and try again.
 
-
 ## 📚 Citations
 
 If you use this project in your research, please cite:
-
 
 Gil Avraham*, Yan Zuo*, Violetta Shevchenko, Hadi Mohaghegh Dolatabadi, Thalaiyasingam Ajanthan, Sameera Ramasinghe, Chamin Hewa Koneputugodage, and Alexander Long. **Node0: Model Parallel Training over the Internet with Protocol Models**. 2025.
 
@@ -366,6 +363,7 @@ Sameera Ramasinghe, Thalaiyasingam Ajanthan, Gil Avraham, Yan Zuo, and Alexander
  &nbsp;
 
 Thalaiyasingam Ajanthan, Sameera Ramasinghe, Yan Zuo, Gil Avraham, and Alexander Long. [Nesterov Method for Asynchronous Pipeline Parallel Optimization](https://arxiv.org/pdf/2505.01099). ICML. 2025.
+
 ```bibtex
 @article{ajanthan2025asyncpp,
     title={Nesterov Method for Asynchronous Pipeline Parallel Optimization},
@@ -381,6 +379,7 @@ Distributed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) 
 
 Third-party dependencies and their licenses are listed in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 
+## 🙏 Acknowledgements
 
 ### Core Framework
 

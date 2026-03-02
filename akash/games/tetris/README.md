@@ -1,27 +1,4 @@
-# tetris
+# Game Tetris
 
-A classic Tetris game running in the browser.
-
-## Use Cases
-
-- Browser-based gaming
-- Fun team break activity
-
-## Getting Started
-
-1. Navigate to the URL — the game loads instantly
-2. Use arrow keys to move and rotate pieces
-
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:80/` in your browser to play.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `bsord/tetris` |
-| CPU | 1.0 |
-| Memory | 512Mi |
-| Storage | 512Mi |
-| Exposed Ports | 80 |
+Tetris is a tile-matching video game created by software engineer Alexey Pajitnov in 1984.
+It has been published by several companies, most prominently during a dispute over the appropriation of the rights in the late 1980s.

@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: invoke-ai-cpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  invokeai:
+    image: ghcr.io/invoke-ai/invokeai:main-cpu
+    cpu: 24.0
+    memory: 28Gi
+    storage:
+      size: 100Gi
+    variables:
+      INVOKEAI_HOST: 0.0.0.0
+      INVOKEAI_PORT: '9090'
+    network:
+      ingress:
+        port: 9090
+        public: true

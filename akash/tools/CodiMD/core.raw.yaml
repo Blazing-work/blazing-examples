@@ -1,0 +1,40 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: CodiMD
+providers:
+  akash:
+    status: prefer
+services:
+  database:
+    image: postgres:11.6-alpine
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRES_USER: codimd
+      POSTGRES_DB: codimd
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: true
+  codimd:
+    image: hackmdio/hackmd:2.6.1
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      CMD_DB_URL: postgres://codimd:change_password@database/codimd
+      CMD_USECDN: 'false'
+    network:
+      ingress:
+        port: 3000
+        public: true

@@ -1,41 +1,21 @@
-# elasticsearch
+# What is Elasticsearch?
 
 [Elasticsearch](https://github.com/elastic/elasticsearch) is a distributed search and analytics engine, scalable data store, and vector database built on Apache Lucene.
+
+## What is Kibana?
+
 [Kibana](https://github.com/elastic/kibana) is a source-available data visualization dashboard software for Elasticsearch.
+
+## Deploy
+
+Deploy Elasticsearch with SDL file from this repository. Use [deploy.yaml](deploy.yaml) for default deployment or [deploy_with_kibana.yaml](deploy_with_kibana.yaml) for deployment with Kibana.
+
+## REST APIs
+
 Check the status of your deployment using [REST API](https://www.elastic.co/docs/reference/elasticsearch/rest-apis) requests. For example:
 
-## Use Cases
+```
+localhost:9200/_cat/health
+```
 
-- Full-text search
-- Privacy-respecting search
-- Data indexing
-
-## Getting Started
-
-1. Deploy the template and wait for the service to reach "Running" status
-2. Open the web interface at `http://{SERVICE_URI}:9200/`
-3. Follow any on-screen setup instructions
-
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:9200/` in your browser or send HTTP requests to this address.
-
-
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `discovery.type` | `single-node` |
-| `http.host` | `0.0.0.0` |
-| `xpack.security.enabled` | `false` |
-| `ES_JAVA_OPTS` | `-Xms4g -Xmx4g` |
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `elasticsearch:9.2.0` |
-| CPU | 2.0 |
-| Memory | 8gb |
-| Storage | 32gb |
-| Exposed Ports | 9200 |
+Where `localhost:9200` is the URI of your deployment.

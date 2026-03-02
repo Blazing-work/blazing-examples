@@ -1,0 +1,45 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: kawpow-pool-neoxa
+providers:
+  akash:
+    status: prefer
+services:
+  kawpow-pool:
+    image: cryptoandcoffee/akash-kawpow-pool:9
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 32Gi
+    variables:
+      RAVEN_ENABLE: 'false'
+      NEOXA_ENABLE: 'true'
+      MEOWCOIN_ENABLE: 'false'
+      WALLET: ''
+      FEE_WALLET: ''
+      FEE_AMOUNT: '0.1'
+      DAEMON_HOST: neoxa
+      DAEMON_PORT: '9766'
+      DAEMON_USER: user1
+      DAEMON_PASS: pass1
+    network:
+      ingress:
+        port: 8788
+        public: true
+  neoxa:
+    image: cryptoandcoffee/akash-neoxa:8
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 16Gi
+    secrets:
+    - secret_ref: private_key
+      mode: env
+      keys:
+        value: PRIVATE_KEY
+    network:
+      ingress:
+        port: 9766
+        public: false

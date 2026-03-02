@@ -1,18 +1,18 @@
-SRBMiner-MULTI AMD & NVIDIA & INTEL & CPU cryptocurrency miner
------------------------------------------
+# Srbminer Multi C11
+
+## SRBMiner-MULTI AMD & NVIDIA & INTEL & CPU cryptocurrency miner
+
 Cryptocurrency miner
 
 Mine up to 4 different algorithms/coins at the same time!
 
-
 Download :
-https://www.srbminer.com/download.html
-https://github.com/doktor83/SRBMiner-Multi
-
+<https://www.srbminer.com/download.html>
+<https://github.com/doktor83/SRBMiner-Multi>
 
 Support :
-https://discord.gg/zXY23De
-https://bitcointalk.org/index.php?topic=5190081.0
+<https://discord.gg/zXY23De>
+<https://bitcointalk.org/index.php?topic=5190081.0>
 
 ```
 C : CPU
@@ -100,10 +100,8 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   yespowertide
 [0.00%]   [ C  -  -  - ]   yespowerurx
 
-
 ===========================================
-DUAL MINEABLE ALGORITHMS:
-===========================================
+# DUAL MINEABLE ALGORITHMS:
 
 dynex + kaspa
 dynex + blake3_alephium
@@ -140,8 +138,7 @@ progpow_epic + any algo
 SUPPORTED GPU'S
 
 ===========================================
-AMD
-===========================================
+# AMD
 
 + RX 7900
 + RX 6500/6600/6650/6700/6750/6800/6900/6950 s
@@ -150,8 +147,7 @@ AMD
 + RX 460/470/480/550/560/570/580/590
 
 ===========================================
-NVIDIA
-===========================================
+# NVIDIA
 
 + Hopper
 + Ada Lovelace
@@ -161,8 +157,7 @@ NVIDIA
 + [for older try using parameter --disable-ptx-check]
 
 ==================================================================
-INTEL
-==================================================================
+# INTEL
 
 + Alchemist
 
@@ -216,7 +211,6 @@ Generic parameters:
 --shutdown-temperature value    (if this temperature is reached on any GPU, miner will shutdown system)
 --verthash-dat-path value       (verthash.dat location, if not using default)
 
-
 Cpu parameters
 
 --cpu-threads                   (number of cpu threads to use for mining, separate values with ;)
@@ -232,7 +226,6 @@ Cpu parameters
 --force-msr-tweaks              (force usage of MSR tweaks
 --msr-use-preset value          (defines MSR preset to use 0-3)
 --msr-use-tweaks value          (defines MSR tweaks to use 0-4, | 0 - Intel, 0,1,2,3,4 - AMD |)
-
 
 Gpu parameters
 
@@ -255,7 +248,6 @@ Gpu parameters
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 --gpu-disable-auto-buffer       (disable automatic switch to --gpu-buffer-mode 1 in case if not enough vram)
 --gpu-dynex-r value             (performance tuning for Dynex, separate values with ',' [min. 1, max. 16])
-
 
 Gpu OC parameters
 
@@ -283,7 +275,6 @@ Gpu OC parameters
 --zil-oc-script filename        (run script when ZIL mining becomes active - set OC)
 --oc-delay value                (delay in seconds after A0, A1 or ZIL OC was applied. Def. is 3, max is 120)
 
-
 Pool parameters
 
 --pool value                    (pool address:port, separate values with ',')
@@ -301,7 +292,6 @@ Pool parameters
 --send-stales value             (send stale shares to pool, true or false, separate values with ',')
 --algo-min-time value           (time, used with algorithm switching capability, minimum time to mine same algorithm. Def. is 10 min.)
 
-
 ZIL mining parameters
 
 --zil-enable                    (enable ZIL only mining)
@@ -310,7 +300,6 @@ ZIL mining parameters
 --zil-wallet value              (ZIL wallet address, separate values with ',')
 --zil-password value            (ZIL pool password, separate values with ',')
 --zil-esm value                 (ZIL pool ethereum stratum mode, separate values with ',')
-
 
 Parameter aliases
 
@@ -321,41 +310,33 @@ Parameter aliases
 --wallet                        -u
 : Parameters that take a TIME value must be set in SECONDS!
 
-
 ==================================================================================================================
-
 
 --log-file-mode
 0 - clear content of existing log file before writing
 1 - append to existing log file's end
 2 - add datetime stamp to log's name so it creates a new log file on every miner start
 
-
 --esm
 0 - getwork/ETHPROXY
 1 - EthereumStratum/1.0.0
 2 - EthereumStratum/1.0.0 + nicehash mode
 
-
 --msr-use-preset can be used to select from 3 predefined presets (0,1,2) of register values. If not used, preset is auto selected.
 If combined with --msr-use-tweaks parameter, you will use values from the defined preset.
-
 
 --gpu-ethash-mode:
 1 - Create 1 buffer for DAG on GPU if driver allows big enough allocation
 2 - Create 2 buffers for DAG on GPU
 
-
 --gpu-buffer-mode:
 0 - Leave buffers in memory for both algorithms when switching. Use if you have enough VRAM on the GPU to store all data from both algorithms.
 1 - Recreate buffers when switching algorithms. This way you can 'dual mine' algorithms that together wouldn't fit in VRAM.
-
 
 --gpu-progpow-mode:
 1 - Use kernel 1. This kernel uses VRAM for DAG only
 2 - Use kernel 2. This kernel uses VRAM for DAG and ~+150-200mb (depends from used intensity)
 3 - Use kernel 3. This kernel uses VRAM for DAG and ~+300-500mb (depends from used intensity)
-
 
 --gpu-autolykos2-preload
 
@@ -367,7 +348,6 @@ There are 2 types of preloading :
 - If you set preload value to 1 it will constantly keep preloading the next block (preferred for 4-8GB gpu's)
 - If you set preload value to > 1 it will preload X number of datasets, and when a block arrives that isn't yet loaded, it will be created so miner can
 start working on it, and then again X number of datasets will get preloaded.
-
 
 Auto-tune tries to find good settings for your GPU's, and it can be controlled with parameter '--gpu-auto-tune'
 Your final results will probably be different every time, that's because auto tune searches for the best settings live, and it's not a predefined value.
@@ -387,7 +367,6 @@ Every GPU thread can be put into auto-tune mode, so you can combine stuff here, 
 After getting the result/s (--gpu-intensity), you should set the parameters manually in the batch file and run the miner, even if it will continue mining after the auto tune process is finished.
 It's better to use it only for getting the values and then running the miner in normal mode (not auto tune mode)
 
-
 There are 4 job handling modes available for you when mining multiple algorithms, and they can be set with parameter '--multi-algorithm-job-mode'
 
 0: no redirect
@@ -397,7 +376,6 @@ There are 4 job handling modes available for you when mining multiple algorithms
 
 Job handling is available both to CPU and GPU mined algorithms.
 It is advised to use parameter '--enable-workers-ramp-up', to avoid a potential system crash when all the workers try to allocate their resources at the same time.
-
 
 ==================================================================================================================
 API
@@ -411,7 +389,6 @@ After you started the miner, you can access the GUI stats in your browser :
 http://127.0.0.1:21550/stats
 
 Or the json : http://127.0.0.1:21550
-
 
 There are also three other parameters that can help you to restart miner, reboot or shutdown your machine remotely :
 

@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ghost
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  ghost:
+    image: ghost:5.12.3
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 5Gi
+    variables:
+      url: http://changeme.com
+      NODE_ENV: production
+      database__client: sqlite3
+      database__connection__filename: content/data/ghost.db
+    network:
+      ingress:
+        port: 2368
+        public: true

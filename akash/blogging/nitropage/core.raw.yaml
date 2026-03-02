@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: nitropage
+providers:
+  akash:
+    status: prefer
+services:
+  nitropage:
+    image: wirelos/nitropage:0.54.1
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 1Gi
+    variables:
+      DATABASE_URL: file:/srv/db/dev.db
+      NITRO_AUTH_SALT: change_this
+      NP_DEMO: '0'
+    secrets:
+    - secret_ref: np_auth_iron_password
+      mode: env
+      keys:
+        value: NP_AUTH_IRON_PASSWORD
+    network:
+      ingress:
+        port: 3000
+        public: true

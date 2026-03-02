@@ -1,0 +1,18 @@
+{
+  "id": "akash-whisper-asr-cpu",
+  "title": "whisper-asr-cpu",
+  "description": "whisper-asr-cpu deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Cpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "cpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

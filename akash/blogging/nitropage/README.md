@@ -1,19 +1,19 @@
 # Nitropage
 
-
 Visit [https://nitropage.com/](https://nitropage.com/) for more information about `Nitropage`.
 
 This repository contains an example deployment for the `Nitropage Starter` project.
 It uses a SQLite database and is intended for demo purpose only.
 
-This Blazing Core template can be deployed as is using the pre-built Docker image or re-built and customized using [this repository](https://github.com/0x1d/nitropage-Blazing Core).
+This Akash template can be deployed as is using the pre-built Docker image or re-built and customized using [this repository](https://github.com/0x1d/nitropage-akash).
 
 ## Getting Started
 
-
-    - change `NITRO_AUTH_SALT` and `NP_AUTH_IRON_PASSWORD`
-- when the deployment is up and running, visit http://your-deployment-url/admin to create an admin account
+- deploy this template with your favorite deployment tool for Akash (e.g. [Akash Console](https://console.akash.network/))
+  - change `NITRO_AUTH_SALT` and `NP_AUTH_IRON_PASSWORD`
+- when the deployment is up and running, visit <http://your-deployment-url/admin> to create an admin account
 - after first login you can now create a Nitropage project
+  - set the domain name to your Akash deployment domain, in case you intend to create multiple projects
 - now you're ready to create your website
 
 ## Build your own Docker image

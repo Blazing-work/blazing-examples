@@ -1,0 +1,168 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Redash
+providers:
+  akash:
+    status: prefer
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 5Gi
+    variables:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    network:
+      ingress:
+        port: 5432
+        public: false
+  scheduler:
+    image: redash/redash:10.0.0.b50363
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      PYTHONUNBUFFERED: '0'
+      REDASH_LOG_LEVEL: INFO
+      REDASH_REDIS_URL: redis://redis:6379/0
+      REDASH_DATABASE_URL: postgresql://postgres:password123@postgres/postgres
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: redash_cookie_secret
+      mode: env
+      keys:
+        value: REDASH_COOKIE_SECRET
+    - secret_ref: redash_secret_key
+      mode: env
+      keys:
+        value: REDASH_SECRET_KEY
+  worker:
+    image: redash/redash:10.0.0.b50363
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      PYTHONUNBUFFERED: '0'
+      REDASH_LOG_LEVEL: INFO
+      REDASH_REDIS_URL: redis://redis:6379/0
+      REDASH_DATABASE_URL: postgresql://postgres:password123@postgres/postgres
+      QUEUES: '"periodic emails default"'
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: redash_cookie_secret
+      mode: env
+      keys:
+        value: REDASH_COOKIE_SECRET
+    - secret_ref: redash_secret_key
+      mode: env
+      keys:
+        value: REDASH_SECRET_KEY
+  redash:
+    image: redash/redash:10.0.0.b50363
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 5Gi
+    variables:
+      PYTHONUNBUFFERED: '0'
+      REDASH_LOG_LEVEL: INFO
+      REDASH_REDIS_URL: redis://redis:6379/0
+      REDASH_DATABASE_URL: postgresql://postgres:password123@postgres/postgres
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: redash_cookie_secret
+      mode: env
+      keys:
+        value: REDASH_COOKIE_SECRET
+    - secret_ref: redash_secret_key
+      mode: env
+      keys:
+        value: REDASH_SECRET_KEY
+    network:
+      ingress:
+        port: 5000
+        public: false
+  scheduled-worker:
+    image: redash/redash:10.0.0.b50363
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      PYTHONUNBUFFERED: '0'
+      REDASH_LOG_LEVEL: INFO
+      REDASH_REDIS_URL: redis://redis:6379/0
+      REDASH_DATABASE_URL: postgresql://postgres:password123@postgres/postgres
+      QUEUES: scheduled_queries,schemas
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: redash_cookie_secret
+      mode: env
+      keys:
+        value: REDASH_COOKIE_SECRET
+    - secret_ref: redash_secret_key
+      mode: env
+      keys:
+        value: REDASH_SECRET_KEY
+  redash-adhoc:
+    image: redash/redash:10.0.0.b50363
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      PYTHONUNBUFFERED: '0'
+      REDASH_LOG_LEVEL: INFO
+      REDASH_REDIS_URL: redis://redis:6379/0
+      REDASH_DATABASE_URL: postgresql://postgres:password123@postgres/postgres
+      QUEUES: queries
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: redash_cookie_secret
+      mode: env
+      keys:
+        value: REDASH_COOKIE_SECRET
+    - secret_ref: redash_secret_key
+      mode: env
+      keys:
+        value: REDASH_SECRET_KEY
+  redis:
+    image: redis:5.0-alpine
+    cpu: 2.0
+    memory: 2Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 6379
+        public: false
+  nginx:
+    image: redash/nginx:latest
+    cpu: 2.0
+    memory: 2Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 80
+        public: true

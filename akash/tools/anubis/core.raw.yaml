@@ -1,0 +1,35 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: anubis
+providers:
+  akash:
+    status: prefer
+services:
+  anubis:
+    image: ghcr.io/techarohq/anubis:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 200Mi
+    variables:
+      BIND: :8080
+      DIFFICULTY: '4'
+      METRICS_BIND: :9090
+      SERVE_ROBOTS_TXT: 'true'
+      TARGET: http://nginx
+      OG_PASSTHROUGH: 'true'
+      OG_EXPIRY_TIME: 24h
+    network:
+      ingress:
+        port: 8080
+        public: true
+  nginx:
+    image: nginx
+    cpu: 0.1
+    memory: 256Mi
+    network:
+      ingress:
+        port: 80
+        public: false

@@ -1,6 +1,5 @@
 # Bminer: When Crypto-mining Made Fast
 
-
 Bminer is a highly optimized cryptocurrency miner that runs on modern AMD / NVIDIA GPUs. Bminer is one of the fastest publicly available miners today -- we use various techniques including tiling and pipelining to realize the full potentials of the hardware.
 
 ## Usage
@@ -34,6 +33,7 @@ Option
 ## Specfying URIs
 
 Bminer uses URIs to identify the mining pool and the account of the pool. The URIs has the format of <scheme>://<username>[:<password>]@<host>:<port>. Following RFC 3986, the scheme specifies both the proof-of-work (PoW) algorithm and the networking protocol. Bminer supports mining coins using the following PoW algorithm and protocols:
+
 ```
 PoW algorithm   Networking protocol     Scheme
 * Equihash  Stratum     stratum://
@@ -56,9 +56,10 @@ Bminer also supports failing over between multiple pools in case of network fail
 ./bminer -uri stratum://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@eu1-zcash.flypool.org:3333,
 stratum://t1ZBtpkUy1y1deYsNJnzdW4tk7HiJEcfUzr.worker@zec-eu1.nanopool.org:6666
 ```
+
 will instruct Bminer to mine Zcash over both Flypool and Nanopool.
 
-## Bminer also comes with REST APIs to facilitate production deployments (e.g., mining farms).
+## Bminer also comes with REST APIs to facilitate production deployments (e.g., mining farms)
 
     Bminer supports mining Equihash-based coins (e.g., BitcoinGold, BitcoinZ) with 2% of devfee.
     Bminer supports mining Ethash-based coins (e.g., Ethereum) with 0.65% of devfee. It is also possible to dual mine Ethash and Blake14r-based / Blake2s-based coins, where the devfee is 1.3%.

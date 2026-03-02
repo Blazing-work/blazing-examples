@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: mattermost
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  mattermost:
+    image: mattermost/mattermost-preview
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8065
+        public: true

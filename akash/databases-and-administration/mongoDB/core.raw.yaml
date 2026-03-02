@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: mongoDB
+providers:
+  akash:
+    status: prefer
+services:
+  mongo:
+    image: mongo:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      MONGO_INITDB_ROOT_USERNAME: root
+    secrets:
+    - secret_ref: mongo_initdb_root_password
+      mode: env
+      keys:
+        value: MONGO_INITDB_ROOT_PASSWORD
+    network:
+      ingress:
+        port: 27017
+        public: true

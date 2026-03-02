@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: vidulum
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  vidulumd:
+    image: andrey01/vidulumd:1.0.0
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 200Gi
+    network:
+      ingress:
+        port: 26656
+        public: true

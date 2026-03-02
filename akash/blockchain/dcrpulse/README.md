@@ -1,11 +1,12 @@
+# dcrpulse GUI Dashboard
+
 <p align="center">
   <img src="assets/decred-logo.jpg" alt="Decred logo" width="220" />
 </p>
 
-# dcrpulse GUI Dashboard
+Decred is an autonomous digital currency with a hybrid PoW/PoS consensus system, built to be a superior store of value. Running a full node strengthens the network's decentralization and security. **dcrpulse** makes it easy to deploy your own full node and web dashboard with just a few clicks—no technical expertise required.
 
-Decred is an autonomous digital currency with a hybrid PoW/PoS consensus system, built to be a superior store of value. Running a full node strengthens the network's decentralization and security. **dcrpulse** makes it easy to deploy your own full node and web dashboard  with just a few clicks—no technical expertise required.
-
+> **dcrpulse** is an open-source project by [karamble](https://github.com/karamble). This Akash deployment uses the official [dcrpulse](https://github.com/karamble/dcrpulse) project.
 
 ## Features
 
@@ -18,7 +19,7 @@ Decred is an autonomous digital currency with a hybrid PoW/PoS consensus system,
 
 ## About This Deployment
 
-This deployment runs **dcrpulse (web dashboard) + a full Decred node (`dcrd`)**  in **one container**, providing:
+This deployment runs **dcrpulse (web dashboard) + a full Decred node (`dcrd`)** in **one container**, providing:
 
 - **Full blockchain sync** and validation
 - **Web dashboard** exposed on port **80**
@@ -27,15 +28,15 @@ This deployment runs **dcrpulse (web dashboard) + a full Decred node (`dcrd`)** 
 
 **Note**: This is not a mining setup. Deploying a full node helps strengthen Decred's network decentralization and security—supporting the network "for the love of the game."
 
-Why one container? Blazing Core provisions per-service PVCs, so "shared volumes across services" don't work the same as docker-compose. Combining the processes avoids that class of issues.
+Why one container? Akash provisions per-service PVCs, so "shared volumes across services" don't work the same as docker-compose. Combining the processes avoids that class of issues.
 
 ## Resources
 
-- **dcrpulse Project**: https://github.com/karamble/dcrpulse
-- **Website**: https://decred.org/
-- **Documentation**: https://docs.decred.org/
-- **Block Explorer**: https://dcrdata.decred.org/
-- **GitHub**: https://github.com/decred/dcrd
+- **dcrpulse Project**: <https://github.com/karamble/dcrpulse>
+- **Website**: <https://decred.org/>
+- **Documentation**: <https://docs.decred.org/>
+- **Block Explorer**: <https://dcrdata.decred.org/>
+- **GitHub**: <https://github.com/decred/dcrd>
 
 ## Configuration
 
@@ -50,7 +51,9 @@ The deployment uses the following default settings:
 
 ## Usage
 
-
+1. Deploy using the provided `deploy.yaml`
+2. Check deployment logs—you'll see a prominent message: **🔗 ACCESS DASHBOARD: AKASH CONSOLE → LEASES → <u>URI(S) LINK</u>**
+3. Click the **<u>URI(s)</u>** link Console (Leases tab) to open the dashboard
 4. View real-time sync progress with percentage status bar (initial sync takes 6-8 hours)
 
 ### Watch-Only Wallet Monitoring
@@ -68,12 +71,17 @@ You can import an Extended Public Key (xpub) to monitor your Decred wallet witho
 
 The deployment logs display sync progress every 5 minutes with clear instructions to access the dashboard. The dashboard shows real-time sync status with percentage progress bar and current block height.
 
+**Access dashboard**: Akash Console → Leases → **<u>URI(s)</u>** link
 
-Compare your node's block height with the network: https://dcrdata.decred.org/
+Compare your node's block height with the network: <https://dcrdata.decred.org/>
 
+## Security Note
+
+⚠️ **Important**: The dashboard itself has no password protection and is publicly accessible via the ingress URL. The RPC password (`decredpass`) is used for internal communication between the dashboard and `dcrd` node. For production deployments, change the RPC password in `deploy.yaml` to secure the internal RPC connection.
 
 ## Need Help?
 
-- **Direct Support**: Email cerebro@cerebro.host
+- **Direct Support**: Email <cerebro@cerebro.host>
 - **Issues?** Open an issue in [this repository](https://github.com/VirgilBB/dcrpulse)
+- **Questions?** Join [Akash Discord](https://discord.com/invite/akash)
 - **Decred Support?** Join [Decred Discord](https://discord.com/invite/dXSmwvYury)

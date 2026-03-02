@@ -1,0 +1,41 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: axolotlai
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  axolotl-trainer:
+    image: axolotlai/axolotl-cloud:main-latest
+    cpu: 24.0
+    memory: 251Gi
+    storage:
+      size: 550Gi
+    variables:
+      HF_DATASETS_CACHE: /workspace/data/huggingface-cache/datasets
+      HUGGINGFACE_HUB_CACHE: /workspace/data/huggingface-cache/hub
+      TRANSFORMERS_CACHE: /workspace/data/huggingface-cache/hub
+      BASE_VOLUME: /workspace/data
+      AXOLOTL_CONFIG_DIR: /src/config
+      JUPYTER_ENABLE_LAB: yes
+    secrets:
+    - secret_ref: wandb_api_key
+      mode: env
+      keys:
+        value: WANDB_API_KEY
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    - secret_ref: jupyter_token
+      mode: env
+      keys:
+        value: JUPYTER_TOKEN
+    network:
+      ingress:
+        port: 8888
+        public: true

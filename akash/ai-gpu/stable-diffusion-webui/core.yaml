@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: stable-diffusion-webui
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gpu-automatic:
+    image: sxk1633/automatic:v1
+    cpu: 1.0
+    memory: 16Gi
+    storage:
+      size: 30Gi
+    network:
+      ingress:
+        port: 9999
+        public: true

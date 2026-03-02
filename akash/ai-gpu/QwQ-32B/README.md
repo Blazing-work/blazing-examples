@@ -1,6 +1,5 @@
 # QwQ-32B
 
-
 <a href="https://chat.qwenlm.ai/" target="_blank" style="margin: 2px;">
     <img alt="Chat" src="https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5" style="display: inline-block; vertical-align: middle;"/>
 </a>
@@ -13,8 +12,8 @@ QwQ is the reasoning model of the Qwen series. Compared with conventional instru
   <img width="100%" src="https://huggingface.co/Qwen/QwQ-32B/resolve/main/figures/benchmark.jpg">
 </p>
 
-
 **This repo contains the QwQ 32B model**, which has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining & Post-training (Supervised Finetuning and Reinforcement Learning)
 - Architecture: transformers with RoPE, SwiGLU, RMSNorm, and Attention QKV bias
@@ -35,6 +34,7 @@ For more details, please refer to our [blog](https://qwenlm.github.io/blog/qwq-3
 QwQ is based on Qwen2.5, whose code has been in the latest Hugging face `transformers`. We advise you to use the latest version of `transformers`.
 
 With `transformers<4.37.0`, you will encounter the following error:
+
 ```
 KeyError: 'qwen2'
 ```
@@ -98,6 +98,7 @@ To achieve optimal performance, we recommend the following settings:
 5. **Handle Long Inputs**: For inputs exceeding 32,768 tokens, enable [YaRN](https://arxiv.org/abs/2309.00071) to improve the model's ability to capture long-sequence information effectively.
 
 For supported frameworks, you could add the following to `config.json` to enable YaRN:
+
 ```json
 {
   ...,
@@ -120,8 +121,9 @@ Detailed evaluation results are reported in this [📑 blog](https://qwenlm.gith
 For requirements on GPU memory and the respective throughput, see results [here](https://qwen.readthedocs.io/en/latest/benchmark/speed_benchmark.html).
 
 ## License
+
 apache-2.0
-https://huggingface.co/Qwen/QWQ-32B/blob/main/LICENSE
+<https://huggingface.co/Qwen/QWQ-32B/blob/main/LICENSE>
 
 ## Citation
 

@@ -1,6 +1,5 @@
 # Whisper ASR Webservice
 
-
 Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multitask model that can perform multilingual speech recognition as well as speech translation and language identification. For more details: [github.com/openai/whisper](https://github.com/openai/whisper/)
 
 ## Use Cases
@@ -10,7 +9,6 @@ Whisper is a general-purpose speech recognition model. It is trained on a large 
 - Accessibility features in software products
 - Research projects in natural language processing
 - Real-time speech-to-text for live events or streaming
-
 
 ## Configuration Options
 
@@ -25,10 +23,11 @@ The template comes pre-configured, but you can adjust the following parameters:
 Once deployed, you can interact with the ASR service using HTTP requests. Here's a basic example using curl:
 
 ```bash
-curl -X POST "http://{SERVICE_URI}/asr" \
+curl -X POST "http://{AKASH_URI}/asr" \
      -H "Content-Type: multipart/form-data" \
      -F "audio_file=@path/to/your/audio/file.mp3"
 ```
+
 ## Features
 
 Current release (v1.5.0) supports following whisper models:

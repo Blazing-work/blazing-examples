@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: semantra
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: ubuntu:22.04
+    cpu: 4.0
+    memory: 20Gi
+    storage:
+      size: 20Gi
+    network:
+      ingress:
+        port: 80
+        public: true

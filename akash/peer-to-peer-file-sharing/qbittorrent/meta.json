@@ -1,0 +1,21 @@
+{
+  "id": "akash-qbittorrent",
+  "title": "qbittorrent",
+  "description": "qbittorrent deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Peer To Peer File Sharing",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "peer",
+    "peer",
+    "file",
+    "sharing"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

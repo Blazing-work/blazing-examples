@@ -16,7 +16,6 @@
 
 <img src="https://user-images.githubusercontent.com/10071388/248040379-8aee1b03-c483-4040-8ee0-741554310e88.png" width="800">
 
-
 ## Important Notes
 
 - Default admin credentials are not set. Create them on first login.
@@ -121,6 +120,7 @@ It is also used internally by the Botress team since the Studio and CLI both use
 
 Coming soon.
 
+## Local Development
 
 ### Prerequisites
 
@@ -133,17 +133,17 @@ The development environment requires the following tools to be installed:
 ### Building from sources
 
 ```sh
-# Clone the repository
+## Clone the repository
 git clone https://github.com/botpress/botpress.git
 cd botpress
 
-# Install dependencies
+## Install dependencies
 pnpm install
 
-# Build all packages
+## Build all packages
 pnpm run build
 
-# Run Checks
+## Run Checks
 pnpm run check
 ```
 

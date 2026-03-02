@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: dart
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  dart:
+    image: google/dart-hello
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 8080
+        public: true

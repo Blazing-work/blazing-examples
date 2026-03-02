@@ -1,3 +1,5 @@
+# Qwen3-235B-A22B-Instruct-2507-FP8
+
 ## Highlights
 
 We introduce the updated version of the **Qwen3-235B-A22B-FP8 non-thinking mode**, named **Qwen3-235B-A22B-Instruct-2507-FP8**, featuring the following key enhancements:
@@ -12,6 +14,7 @@ We introduce the updated version of the **Qwen3-235B-A22B-FP8 non-thinking mode*
 ## Model Overview
 
 This repo contains the FP8 version of **Qwen3-235B-A22B-Instruct-2507**, which has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining & Post-training
 - Number of Parameters: 235B in total and 22B activated
@@ -25,7 +28,6 @@ This repo contains the FP8 version of **Qwen3-235B-A22B-Instruct-2507**, which h
 **NOTE: This model supports only non-thinking mode and does not generate ``<think></think>`` blocks in its output. Meanwhile, specifying `enable_thinking=False` is no longer required.**
 
 For more details, including benchmark evaluation, hardware requirements, and inference performance, please refer to our [blog](https://qwenlm.github.io/blog/qwen3/), [GitHub](https://github.com/QwenLM/Qwen3), and [Documentation](https://qwen.readthedocs.io/en/latest/).
-
 
 ## Performance
 
@@ -67,23 +69,24 @@ For more details, including benchmark evaluation, hardware requirements, and inf
 
 \#: Results were generated using GPT-4o-20241120, as access to the native function calling API of GPT-4o-0327 was unavailable.
 
-
 ## Quickstart
 
 The code of Qwen3-MoE has been in the latest Hugging Face `transformers` and we advise you to use the latest version of `transformers`.
 
 With `transformers<4.51.0`, you will encounter the following error:
+
 ```
 KeyError: 'qwen3_moe'
 ```
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8"
 
-# load the tokenizer and the model
+## load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -91,7 +94,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-# prepare the model input
+## prepare the model input
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "user", "content": prompt}
@@ -103,7 +106,7 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
-# conduct text completion
+## conduct text completion
 generated_ids = model.generate(
     **model_inputs,
     max_new_tokens=16384
@@ -116,11 +119,15 @@ print("content:", content)
 ```
 
 For deployment, you can use `sglang>=0.4.6.post1` or `vllm>=0.8.5` or to create an OpenAI-compatible API endpoint:
+
 - SGLang:
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3-235B-A22B-Instruct-2507-FP8 --tp 4 --context-length 262144
     ```
+
 - vLLM:
+
     ```shell
     vllm serve Qwen/Qwen3-235B-A22B-Instruct-2507-FP8 --tensor-parallel-size 4 --max-model-len 262144
     ```
@@ -135,27 +142,29 @@ For convenience and performance, we have provided `fp8`-quantized model checkpoi
 
 You can use the Qwen3-235B-A22B-Instruct-2507-FP8 model with serveral inference frameworks, including `transformers`, `sglang`, and `vllm`, as the original bfloat16 model.
 However, please pay attention to the following known issues:
+
 - `transformers`:
-    - there are currently issues with the "fine-grained fp8" method in `transformers` for distributed inference. You may need to set the environment variable `CUDA_LAUNCH_BLOCKING=1` if multiple devices are used in inference.
+  - there are currently issues with the "fine-grained fp8" method in `transformers` for distributed inference. You may need to set the environment variable `CUDA_LAUNCH_BLOCKING=1` if multiple devices are used in inference.
 
 ## Agentic Use
 
 Qwen3 excels in tool calling capabilities. We recommend using [Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) to make the best use of agentic ability of Qwen3. Qwen-Agent encapsulates tool-calling templates and tool-calling parsers internally, greatly reducing coding complexity.
 
 To define the available tools, you can use the MCP configuration file, use the integrated tool of Qwen-Agent, or integrate other tools by yourself.
+
 ```python
 from qwen_agent.agents import Assistant
 
-# Define LLM
+## Define LLM
 llm_cfg = {
     'model': 'Qwen3-235B-A22B-Instruct-2507-FP8',
 
-    # Use a custom endpoint compatible with OpenAI API:
+#    # Use a custom endpoint compatible with OpenAI API:
     'model_server': 'http://localhost:8000/v1',  # api_base
     'api_key': 'EMPTY',
 }
 
-# Define Tools
+## Define Tools
 tools = [
     {'mcpServers': {  # You can specify the MCP configuration file
             'time': {
@@ -171,10 +180,10 @@ tools = [
   'code_interpreter',  # Built-in tools
 ]
 
-# Define Agent
+## Define Agent
 bot = Assistant(llm=llm_cfg, function_list=tools)
 
-# Streaming generation
+## Streaming generation
 messages = [{'role': 'user', 'content': 'https://qwenlm.github.io/blog/ Introduce the latest developments of Qwen'}]
 for responses in bot.run(messages=messages):
     pass

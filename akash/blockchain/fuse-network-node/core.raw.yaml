@@ -1,0 +1,17 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: fuse-network-node
+providers:
+  akash:
+    status: prefer
+services:
+  fusenet:
+    image: fusenet/node
+    cpu: 0.1
+    memory: 256Mi
+    network:
+      ingress:
+        port: 30303
+        public: true

@@ -1,9 +1,8 @@
 # Semantra
 
+Deployment video: <https://www.youtube.com/watch?v=LfoPUIn-Eug>
 
-Deployment video: https://www.youtube.com/watch?v=LfoPUIn-Eug
-
-Project page: https://github.com/freedmand/semantra
+Project page: <https://github.com/freedmand/semantra>
 
 Semantra is a multipurpose tool for semantically searching documents. Query by meaning rather than just by matching text.
 
@@ -11,6 +10,9 @@ The tool, made to run on the command line, analyzes specified text and PDF files
 
 Semantra is built for individuals seeking needles in haystacks — journalists sifting through leaked documents on deadline, researchers seeking insights within papers, students engaging with literature by querying themes, historians connecting events across books, and so forth.
 
+## Getting started
+
+Deploy and click the URI Console.
 
 ## Models
 

@@ -1,0 +1,19 @@
+{
+  "id": "akash-kawpow-pool-ravencoin",
+  "title": "kawpow-pool-ravencoin",
+  "description": "kawpow-pool-ravencoin deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Mining Pools",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "mining",
+    "pools"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

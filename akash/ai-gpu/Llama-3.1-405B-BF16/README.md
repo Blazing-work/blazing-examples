@@ -1,6 +1,8 @@
+# Llama 3.1 405B Bf16
+
 Llama 3.1 is the latest iteration of the Llama series, an advanced AI language model developed to understand and generate human-like text. It leverages state-of-the-art machine learning techniques to provide high-quality, context-aware responses.
 
-### Key Features
+## Key Features
 
 - **Enhanced Natural Language Understanding (NLU)**: Llama 3.1 has significantly improved NLU capabilities, enabling it to comprehend and process complex language patterns more effectively.
 - **Contextual Awareness**: It maintains context over extended conversations, ensuring coherent and relevant responses even in lengthy interactions.
@@ -90,6 +92,7 @@ vLLM seamlessly supports many Hugging Face models, including the following archi
 ## Getting Started
 
 Visit our [documentation](https://vllm.readthedocs.io/en/latest/) to get started.
+
 - [Installation](https://vllm.readthedocs.io/en/latest/getting_started/installation.html)
 - [Quickstart](https://vllm.readthedocs.io/en/latest/getting_started/quickstart.html)
 - [Supported Models](https://vllm.readthedocs.io/en/latest/models/supported_models.html)

@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: swagger-ui
+providers:
+  akash:
+    status: prefer
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui:v5.29.3
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      SWAGGER_JSON_URL: https://petstore3.swagger.io/api/v3/openapi.json
+    network:
+      ingress:
+        port: 8080
+        public: true

@@ -1,46 +1,42 @@
-Llama 3.2 11B-Vision-Instruct Model
-===================================
+# Llama 3.2 11B Vision Instruct
+
+## Llama 3.2 11B-Vision-Instruct Model
 
 The Llama 3.2 11B-Vision-Instruct model is a vision-based version of the Llama 3.2 model, designed to be highly capable with visual reasoning and instruction following abilities. This model is ideal for building personalized, on-device agentic applications with strong privacy, where data never leaves the device.
 
-Features
---------
+## Features
 
--   Highly capable with visual reasoning and instruction following abilities
--   Supports image understanding and visual grounding tasks
--   Optimized for edge and mobile devices
--   Supports context length of 128K tokens
--   Available for fine-tuning and deployment on a variety of platforms
--   Part of the Llama 3.2 ecosystem, providing seamless integration with other Llama models
+- Highly capable with visual reasoning and instruction following abilities
+- Supports image understanding and visual grounding tasks
+- Optimized for edge and mobile devices
+- Supports context length of 128K tokens
+- Available for fine-tuning and deployment on a variety of platforms
+- Part of the Llama 3.2 ecosystem, providing seamless integration with other Llama models
 
-Technical Specifications
-------------------------
+## Technical Specifications
 
--   Model size: 11B parameters
--   Context length: 128K tokens
--   Input type: Text and image
--   Output type: Text and image
--   Pre-trained on: Large-scale noisy (text, image) pair data
--   Fine-tuned on: Medium-scale high-quality in-domain and knowledge-enhanced (text, image) pair data
--   Weights: Based on BFloat16 numerics
--   Quantized variants: Currently in development
+- Model size: 11B parameters
+- Context length: 128K tokens
+- Input type: Text and image
+- Output type: Text and image
+- Pre-trained on: Large-scale noisy (text, image) pair data
+- Fine-tuned on: Medium-scale high-quality in-domain and knowledge-enhanced (text, image) pair data
+- Weights: Based on BFloat16 numerics
+- Quantized variants: Currently in development
 
-Performance Metrics
--------------------
+## Performance Metrics
 
--   Competitive with leading foundation models on image recognition and visual understanding tasks
--   Outperforms Gemma 2 2.6B and Phi 3.5-mini models on tasks such as following instructions, visual grounding, and image captioning
--   Competitive with Gemma 2 2.6B model on tasks such as visual reasoning and image captioning
+- Competitive with leading foundation models on image recognition and visual understanding tasks
+- Outperforms Gemma 2 2.6B and Phi 3.5-mini models on tasks such as following instructions, visual grounding, and image captioning
+- Competitive with Gemma 2 2.6B model on tasks such as visual reasoning and image captioning
 
-Use Cases
----------
+## Use Cases
 
--   Personalized on-device agentic applications with strong privacy
--   Visual reasoning and instruction following
--   Image understanding and visual grounding
--   Image captioning and generation
--   Multimodal text and image generation
-
+- Personalized on-device agentic applications with strong privacy
+- Visual reasoning and instruction following
+- Image understanding and visual grounding
+- Image captioning and generation
+- Multimodal text and image generation
 
 ### Serve with vLLM
 
@@ -105,6 +101,7 @@ vLLM seamlessly supports many Hugging Face models, including the following archi
 ## Getting Started
 
 Visit our [documentation](https://vllm.readthedocs.io/en/latest/) to get started.
+
 - [Installation](https://vllm.readthedocs.io/en/latest/getting_started/installation.html)
 - [Quickstart](https://vllm.readthedocs.io/en/latest/getting_started/quickstart.html)
 - [Supported Models](https://vllm.readthedocs.io/en/latest/models/supported_models.html)

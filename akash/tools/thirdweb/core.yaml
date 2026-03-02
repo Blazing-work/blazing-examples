@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: thirdweb
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: thirdweb/starter-kits:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 3000
+        public: true

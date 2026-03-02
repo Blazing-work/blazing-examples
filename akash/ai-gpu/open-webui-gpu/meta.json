@@ -1,0 +1,18 @@
+{
+  "id": "akash-open-webui-gpu",
+  "title": "open-webui-gpu",
+  "description": "open-webui-gpu deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

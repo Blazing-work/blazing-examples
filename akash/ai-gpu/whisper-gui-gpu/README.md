@@ -1,7 +1,6 @@
 # whisper-gui
 
-
-**whisper-gui - A simple GUI made with gradio to use Whisper from https://github.com/Pikurrot/whisper-gui**
+**whisper-gui - A simple GUI made with gradio to use Whisper from <https://github.com/Pikurrot/whisper-gui>**
 
 ![Docker Image Version (latest by date)](https://img.shields.io/docker/v/3x3cut0r/whisper-gui)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/3x3cut0r/whisper-gui)
@@ -19,6 +18,7 @@
 5. [Find Me](#findme)
 6. [License](#license)
 
+## 1 Usage <a name="usage"></a>
 
 ### 1.1 docker run <a name="dockerrun"></a>
 
@@ -35,9 +35,9 @@ docker run -d \
 ```shell
 version: '3.9'
 
-# https://github.com/Pikurrot/whisper-gui
+## https://github.com/Pikurrot/whisper-gui
 services:
-  # https://hub.docker.com/r/3x3cut0r/whisper-gui
+#  # https://hub.docker.com/r/3x3cut0r/whisper-gui
   whisper-gui:
     container_name: whisper-gui
     image: 3x3cut0r/whisper-gui:latest

@@ -1,20 +1,19 @@
 # OneZeroMiner
 
-
 Optimized GPU miner for crypto projects. Currently, the only supported algorithm is DynexSolve.
-### Links
+
+## Links
 
 ![GitHub all releases](https://img.shields.io/github/downloads/OneZeroMiner/onezerominer/total)
 
+Website: <http://onezerominer.com>
 
-Website: http://onezerominer.com
+Discord server : <https://discord.gg/mXnyrHa>
 
-Discord server : https://discord.gg/mXnyrHa
+Releases: <https://github.com/OneZeroMiner/onezerominer/releases>
 
-Releases: https://github.com/OneZeroMiner/onezerominer/releases
+## Options
 
-Options
-------------------------------------------
  ```
 Options:
   -a, --algo <algo>
@@ -65,21 +64,21 @@ Options:
           Print version
 ```
 
-Dev fee
-------------------------------------------
+## Dev fee
 
 Algorithm           |  Fee
 --------------------| ----
 dynex               | 3%
 
+## Requirements
 
-Requirements
-------------------------------------------
 * Minimum Compute Capability of 3.5.
 * Binary file have been built with CUDA 11.8 and minimum supported Nvidia driver version is 450.80.02.
 
-HiveOS
-------------------------------------------
-#### Sample Flight Sheet:
+## HiveOS
+
+### HiveOS package name is onezerominer-x.x.x.tar.gz
+
+#### Sample Flight Sheet
 
 ![HiveOS](https://github.com/OneZeroMiner/onezerominer/raw/main/hiveos.png?raw=true)

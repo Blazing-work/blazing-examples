@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: owncloud
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  owncloud:
+    image: owncloud
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 80
+        public: true

@@ -1,0 +1,38 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: open-webui-cpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  ollama:
+    image: ollama/ollama:0.13.4
+    cpu: 24.0
+    memory: 28Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 11434
+        public: false
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:0.6.40
+    cpu: 1.0
+    memory: 4Gi
+    storage:
+      size: 16Gi
+    variables:
+      OLLAMA_BASE_URL: http://ollama:11434
+    secrets:
+    - secret_ref: webui_secret_key
+      mode: env
+      keys:
+        value: WEBUI_SECRET_KEY
+    network:
+      ingress:
+        port: 8080
+        public: true

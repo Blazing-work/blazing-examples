@@ -1,46 +1,9 @@
-# Llama-3-8B
+# Llama-3 8B
 
-vLLM is a high-throughput, memory-efficient inference engine for large language models with an OpenAI-compatible API.
+Meta developed and publicly released the Llama 3 family of large language models (LLMs), a collection of pretrained and fine-tuned generative text models ranging in scale from 8 billion to 70 billion parameters. Llama 3 is an auto-regressive language model that uses an optimized transformer architecture.
 
-## Use Cases
+In this deployment, the [meta-llama/Llama-3-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) pretrained model is used, which generates a continuation of the incoming text. But to access this model you must have access granted by the Meta that you can request from <https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct>.
 
-- LLM inference serving
-- OpenAI API drop-in replacement
-- Batch text generation
-- Chat completions
+## Deploying
 
-## Getting Started
-
-1. Wait for the model to finish loading (check logs for "Application startup complete")
-2. Send requests to the OpenAI-compatible endpoints
-3. Use `/v1/models` to verify which model is loaded
-
-## Accessing the Service
-
-The service exposes an OpenAI-compatible API:
-```bash
-curl http://{SERVICE_URI}:8000/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{"model": "MODEL_NAME", "messages": [{"role": "user", "content": "Hello!"}]}'
-```
-
-
-### Secrets
-
-The following values are configured as secrets and should be set securely:
-
-- `HF_TOKEN`
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `vllm/vllm-openai:v0.6.2` |
-| CPU | 6.0 |
-| Memory | 16Gi |
-| Storage | 10Gi |
-| Exposed Ports | 8000 |
-
-## Documentation
-
-For full documentation, visit: [https://docs.vllm.ai/](https://docs.vllm.ai/)
+Use [this SDL](deploy.yaml) to deploy the application. You will need to enter your Huggingface Access Key in "HF_TOKEN=" ENV variable and you can adjust the parameters passed into the "vllm serve" argument according to your hardware cluster configuration (refer to vLLM documentation for the various parameters). Lastly you can add additional debug flags through the ENV variables (consult the vLLM and Pytorch documentation for this as well)

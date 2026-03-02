@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: substrate-node
+providers:
+  akash:
+    status: prefer
+services:
+  substrate:
+    image: ubinix5warun/substrate-node:v3-dev
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 9944
+        public: true

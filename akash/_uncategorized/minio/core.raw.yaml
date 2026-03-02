@@ -1,0 +1,35 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: minio
+providers:
+  akash:
+    status: prefer
+services:
+  minio:
+    image: minio/minio:latest
+    cpu: 2.0
+    memory: 20Gi
+    storage:
+      size: 100Gi
+    variables:
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: minio
+    secrets:
+    - secret_ref: minio_access_key
+      mode: env
+      keys:
+        value: MINIO_ACCESS_KEY
+    - secret_ref: minio_secret_key
+      mode: env
+      keys:
+        value: MINIO_SECRET_KEY
+    - secret_ref: aws_secret_access_key
+      mode: env
+      keys:
+        value: AWS_SECRET_ACCESS_KEY
+    network:
+      ingress:
+        port: 9000
+        public: true

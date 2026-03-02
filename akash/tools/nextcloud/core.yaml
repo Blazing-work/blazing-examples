@@ -1,0 +1,52 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: nextcloud
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  nextcloud:
+    image: nextcloud:24.0.5
+    cpu: 2.0
+    memory: 512Mi
+    storage:
+      size: 16Gi
+    variables:
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_HOST: db
+    secrets:
+    - secret_ref: mysql_password
+      mode: env
+      keys:
+        value: MYSQL_PASSWORD
+    network:
+      ingress:
+        port: 80
+        public: true
+  db:
+    image: mariadb:10.5
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 8Gi
+    variables:
+      MARIADB_DATABASE: nextcloud
+      MARIADB_USER: nextcloud
+    secrets:
+    - secret_ref: mariadb_password
+      mode: env
+      keys:
+        value: MARIADB_PASSWORD
+    - secret_ref: mariadb_random_root_password
+      mode: env
+      keys:
+        value: MARIADB_RANDOM_ROOT_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: false

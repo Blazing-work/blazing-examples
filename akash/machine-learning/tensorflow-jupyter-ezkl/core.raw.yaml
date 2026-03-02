@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tensorflow-jupyter-ezkl
+providers:
+  akash:
+    status: prefer
+services:
+  ezkl:
+    image: inferencelabs/ezkl-notebook
+    cpu: 64.0
+    memory: 256GB
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8888
+        public: true

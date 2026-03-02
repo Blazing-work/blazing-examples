@@ -1,0 +1,46 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: redmine
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  db:
+    image: mysql:5.7
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      MYSQL_DATABASE: redmine
+    secrets:
+    - secret_ref: mysql_root_password
+      mode: env
+      keys:
+        value: MYSQL_ROOT_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: false
+  redmine:
+    image: redmine
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_USERNAME: root
+    secrets:
+    - secret_ref: redmine_db_password
+      mode: env
+      keys:
+        value: REDMINE_DB_PASSWORD
+    network:
+      ingress:
+        port: 3000
+        public: true

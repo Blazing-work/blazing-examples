@@ -1,0 +1,78 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: botpress
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  botpress:
+    image: botpress/server:latest
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    variables:
+      BP_PRODUCTION: 'true'
+      DATABASE_URL: postgres://bp_user:PG_PASSWORD@postgres:5432/botpress_db
+      REDIS_URL: redis://redis:6379?password=redisPassword
+      BP_MODULE_NLU_DUCKLINGURL: http://duckling:8000
+      BP_MODULE_NLU_LANGUAGESOURCES: '[{"endpoint":"http://lang:3100"}]'
+      CLUSTER_ENABLED: 'false'
+      BPFS_STORAGE: database
+      BP_MAX_SERVER_REBOOT: '999'
+    network:
+      ingress:
+        port: 3000
+        public: true
+  duckling:
+    image: rasa/duckling:latest
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8000
+        public: false
+  lang:
+    image: botpress/server:latest
+    cpu: 8.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    network:
+      ingress:
+        port: 3100
+        public: false
+  redis:
+    image: redis:5.0.5-alpine
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 6379
+        public: false
+  postgres:
+    image: postgres:13-alpine
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 20Gi
+    variables:
+      POSTGRES_USER: bp_user
+      POSTGRES_DB: botpress_db
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false

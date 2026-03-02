@@ -1,0 +1,18 @@
+{
+  "id": "akash-llama-3.1-405b-awq-int4",
+  "title": "Llama-3.1-405B-AWQ-INT4",
+  "description": "Llama-3.1-405B-AWQ-INT4 deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

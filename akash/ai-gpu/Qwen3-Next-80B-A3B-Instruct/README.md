@@ -1,6 +1,5 @@
 # Qwen3-Next-80B-A3B-Instruct
 
-
 <a href="https://chat.qwen.ai/" target="_blank" style="margin: 2px;">
     <img alt="Chat" src="https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5" style="display: inline-block; vertical-align: middle;"/>
 </a>
@@ -12,12 +11,14 @@ We call this next-generation foundation models **Qwen3-Next**.
 ## Highlights
 
 **Qwen3-Next-80B-A3B** is the first installment in the Qwen3-Next series and features the following key enchancements:
+
 - **Hybrid Attention**: Replaces standard attention with the combination of **Gated DeltaNet** and **Gated Attention**, enabling efficient context modeling for ultra-long context length.
 - **High-Sparsity Mixture-of-Experts (MoE)**: Achieves an extreme low activation ratio in MoE layers, drastically reducing FLOPs per token while preserving model capacity.
 - **Stability Optimizations**: Includes techniques such as **zero-centered and weight-decayed layernorm**, and other stabilizing enhancements for robust pre-training and post-training.
 - **Multi-Token Prediction (MTP)**: Boosts pretraining model performance and accelerates inference.
 
 We are seeing strong performance in terms of both parameter efficiency and inference speed for Qwen3-Next-80B-A3B:
+
 - Qwen3-Next-80B-A3B-Base outperforms Qwen3-32B-Base on downstream tasks with 10% of the total training cost and with 10 times inference throughput for context over 32K tokens.
 - Qwen3-Next-80B-A3B-Instruct performs on par with Qwen3-235B-A22B-Instruct-2507 on certain benchmarks, while demonstrating significant advantages in handling ultra-long-context tasks up to 256K tokens.
 
@@ -31,6 +32,7 @@ For more details, please refer to our blog post [Qwen3-Next](https://qwenlm.gith
 > **Qwen3-Next-80B-A3B-Instruct** supports only instruct (non-thinking) mode and does not generate ``<think></think>`` blocks in its output.
 
 **Qwen3-Next-80B-A3B-Instruct** has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining (15T tokens) & Post-training
 - Number of Parameters: 80B in total and 3B activated
@@ -53,7 +55,6 @@ For more details, please refer to our blog post [Qwen3-Next](https://qwenlm.gith
 - Context Length: 262,144 natively and extensible up to 1,010,000 tokens
 
 <img src="https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3-Next/model_architecture.png" height="384px" title="Qwen3-Next Model Architecture" />
-
 
 ## Performance
 
@@ -101,17 +102,19 @@ pip install git+https://github.com/huggingface/transformers.git@main
 ```
 
 With earlier versions, you will encounter the following error:
+
 ```
 KeyError: 'qwen3_next'
 ```
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-Next-80B-A3B-Instruct"
 
-# load the tokenizer and the model
+## load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -119,7 +122,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto",
 )
 
-# prepare the model input
+## prepare the model input
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "user", "content": prompt},
@@ -131,7 +134,7 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
-# conduct text completion
+## conduct text completion
 generated_ids = model.generate(
     **model_inputs,
     max_new_tokens=16384,
@@ -154,7 +157,6 @@ print("content:", content)
 > Depending on the inference settings, you may observe better efficiency with [`flash-linear-attention`](https://github.com/fla-org/flash-linear-attention#installation) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d).
 > See the above links for detailed instructions and requirements.
 
-
 ## Deployment
 
 For deployment, you can use the latest `sglang` or `vllm` to create an OpenAI-compatible API endpoint.
@@ -165,16 +167,19 @@ For deployment, you can use the latest `sglang` or `vllm` to create an OpenAI-co
 SGLang could be used to launch a server with OpenAI-compatible API service.
 
 SGLang has supported Qwen3-Next in its `main` branch, which can be installed from source:
+
 ```shell
 pip install 'sglang[all] @ git+https://github.com/sgl-project/sglang.git@main#subdirectory=python'
 ```
 
 The following command can be used to create an API endpoint at `http://localhost:30000/v1` with maximum context length 256K tokens using tensor parallel on 4 GPUs.
+
 ```shell
 SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 python -m sglang.launch_server --model-path Qwen/Qwen3-Next-80B-A3B-Instruct --port 30000 --tp-size 4 --context-length 262144 --mem-fraction-static 0.8
 ```
 
 The following command is recommended for MTP with the rest settings the same as above:
+
 ```shell
 SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 python -m sglang.launch_server --model-path Qwen/Qwen3-Next-80B-A3B-Instruct --port 30000 --tp-size 4 --context-length 262144 --mem-fraction-static 0.8 --speculative-algo NEXTN --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
 ```
@@ -191,16 +196,19 @@ SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 python -m sglang.launch_server --mod
 vLLM could be used to launch a server with OpenAI-compatible API service.
 
 vLLM has supported Qwen3-Next in its `main` branch, which can be installed from source:
+
 ```shell
 pip install vllm --pre --extra-index-url https://wheels.vllm.ai/nightly
 ```
 
 The following command can be used to create an API endpoint at `http://localhost:8000/v1` with maximum context length 256K tokens using tensor parallel on 4 GPUs.
+
 ```shell
 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve Qwen/Qwen3-Next-80B-A3B-Instruct --port 8000 --tensor-parallel-size 4 --max-model-len 262144
 ```
 
 The following command is recommended for MTP with the rest settings the same as above:
+
 ```shell
 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve Qwen/Qwen3-Next-80B-A3B-Instruct --port 8000 --tensor-parallel-size 4 --max-model-len 262144 --speculative-config '{"method":"qwen3_next_mtp","num_speculative_tokens":2}'
 ```
@@ -216,19 +224,20 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve Qwen/Qwen3-Next-80B-A3B-Instruct --po
 Qwen3 excels in tool calling capabilities. We recommend using [Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) to make the best use of agentic ability of Qwen3. Qwen-Agent encapsulates tool-calling templates and tool-calling parsers internally, greatly reducing coding complexity.
 
 To define the available tools, you can use the MCP configuration file, use the integrated tool of Qwen-Agent, or integrate other tools by yourself.
+
 ```python
 from qwen_agent.agents import Assistant
 
-# Define LLM
+## Define LLM
 llm_cfg = {
     'model': 'Qwen3-Next-80B-A3B-Instruct',
 
-    # Use a custom endpoint compatible with OpenAI API:
+#    # Use a custom endpoint compatible with OpenAI API:
     'model_server': 'http://localhost:8000/v1',  # api_base
     'api_key': 'EMPTY',
 }
 
-# Define Tools
+## Define Tools
 tools = [
     {'mcpServers': {  # You can specify the MCP configuration file
             'time': {
@@ -244,16 +253,15 @@ tools = [
   'code_interpreter',  # Built-in tools
 ]
 
-# Define Agent
+## Define Agent
 bot = Assistant(llm=llm_cfg, function_list=tools)
 
-# Streaming generation
+## Streaming generation
 messages = [{'role': 'user', 'content': 'https://qwenlm.github.io/blog/ Introduce the latest developments of Qwen'}]
 for responses in bot.run(messages=messages):
     pass
 print(responses)
 ```
-
 
 ## Processing Ultra-Long Texts
 
@@ -266,6 +274,7 @@ In general, there are two approaches to enabling YaRN for supported frameworks:
 
 - Modifying the model files:
   In the `config.json` file, add the `rope_scaling` fields:
+
     ```json
     {
         ...,
@@ -280,11 +289,13 @@ In general, there are two approaches to enabling YaRN for supported frameworks:
 - Passing command line arguments:
 
   For `vllm`, you can use
+
     ```shell
     VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 vllm serve ... --rope-scaling '{"rope_type":"yarn","factor":4.0,"original_max_position_embeddings":262144}' --max-model-len 1010000
     ```
 
   For `sglang`, you can use
+
     ```shell
     SGLANG_ALLOW_OVERWRITE_LONGER_CONTEXT_LEN=1 python -m sglang.launch_server ... --json-model-override-args '{"rope_scaling":{"rope_type":"yarn","factor":4.0,"original_max_position_embeddings":262144}}' --context-length 1010000
     ```
@@ -294,7 +305,7 @@ In general, there are two approaches to enabling YaRN for supported frameworks:
 > We advise adding the `rope_scaling` configuration only when processing long contexts is required.
 > It is also recommended to modify the `factor` as needed. For example, if the typical context length for your application is 524,288 tokens, it would be better to set `factor` as 2.0.
 
-#### Long-Context Performance
+### Long-Context Performance
 
 We test the model on an 1M version of the [RULER](https://arxiv.org/abs/2404.06654) benchmark.
 
@@ -304,8 +315,8 @@ We test the model on an 1M version of the [RULER](https://arxiv.org/abs/2404.066
 | Qwen3-235B-A22B-Instruct-2507               | 92.5    | 98.5 | 97.6 | 96.9 | 97.3 | 95.8 | 94.9 | 93.9 | 94.5 | 91.0 | 92.2 | 90.9 | 87.8 | 84.8 | 86.5 | 84.5  |
 | Qwen3-Next-80B-A3B-Instruct                 | 91.8    | 98.5 | 99.0 | 98.0 | 98.7 | 97.6 | 95.0 | 96.0 | 94.0 | 93.5 | 91.7 | 86.9 | 85.5 | 81.7 | 80.3 | 80.3  |
 
-* Qwen3-Next are evaluated with YaRN enabled. Qwen3-2507 models are evaluated with Dual Chunk Attention enabled.
-* Since the evaluation is time-consuming, we use 260 samples for each length (13 sub-tasks, 20 samples for each).
+- Qwen3-Next are evaluated with YaRN enabled. Qwen3-2507 models are evaluated with Dual Chunk Attention enabled.
+- Since the evaluation is time-consuming, we use 260 samples for each length (13 sub-tasks, 20 samples for each).
 
 ## Best Practices
 

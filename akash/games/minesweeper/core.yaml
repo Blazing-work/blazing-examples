@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: minesweeper
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  minesweeper:
+    image: creepto/minesweeper
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 3000
+        public: true

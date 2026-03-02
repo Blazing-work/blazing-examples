@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Llama-2-70B
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: yuravorobei/llama-2:0.6
+    cpu: 4.0
+    memory: 15Gi
+    storage:
+      size: 150Gi
+    variables:
+      MAX_INPUT_TOKEN_LENGTH: '256'
+      MAX_NEW_TOKENS: '50'
+    network:
+      ingress:
+        port: 7860
+        public: true

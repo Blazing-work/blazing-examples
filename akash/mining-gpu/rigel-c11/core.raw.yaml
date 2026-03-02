@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: rigel-c11
+providers:
+  akash:
+    status: prefer
+services:
+  rigel-c11:
+    image: cryptoandcoffee/akash-gpu-miner-rigel-c11:21
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: etchash
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://us-solo-etc.2miners.com:15050"'
+      PASSWORD: x
+      OPTIONS: '"--api-bind-http 0.0.0.0:4061 --api-read-only --no-nvml"'
+    network:
+      ingress:
+        port: 4061
+        public: true

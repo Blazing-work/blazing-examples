@@ -1,3 +1,5 @@
+# Falcon 7B
+
 ## Use Cases
 
 - AI model inference
@@ -15,6 +17,7 @@
 Send requests to `http://{SERVICE_URI}:8000/`.
 
 Example:
+
 ```bash
 curl http://{SERVICE_URI}:8000/
 ```

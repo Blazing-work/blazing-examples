@@ -1,34 +1,11 @@
-# bitbucket
+# Bitbucket Server
 
-Bitbucket Server (now Bitbucket Data Center) is a self-hosted Git repository management solution with built-in CI/CD.
+From [the official Docker Hub image page](https://hub.docker.com/r/atlassian/bitbucket-server):
 
-## Use Cases
+Bitbucket Server is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
-- Self-hosted Git hosting
-- Code review with pull requests
-- CI/CD pipelines
-- Branch permissions and code quality gates
+Learn more about Bitbucket Server: <https://www.atlassian.com/software/bitbucket/server>
 
-## Getting Started
+You can find the repository for this Dockerfile at <https://hub.docker.com/r/atlassian/bitbucket-server>
 
-1. Complete the setup wizard with your license key
-2. Create your first project and repository
-3. Clone and push code using Git over HTTP or SSH
-
-## Accessing the Service
-
-Open the Bitbucket web interface at `http://{SERVICE_URI}:7990/`
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `atlassian/bitbucket-server:8.2.1` |
-| CPU | 2.0 |
-| Memory | 4gi |
-| Storage | 4Gi |
-| Exposed Ports | 7990 |
-
-## Documentation
-
-For full documentation, visit: [https://support.atlassian.com/bitbucket-data-center/](https://support.atlassian.com/bitbucket-data-center/)
+The `deploy.yaml` uses the official Docker image to deploy a basic configuration of Bitbucket Server.

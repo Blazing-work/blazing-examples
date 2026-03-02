@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: iron-fish
+providers:
+  akash:
+    status: prefer
+services:
+  ironfish-miner:
+    image: ghcr.io/iron-fish/ironfish:latest
+    cpu: 4.0
+    memory: 4.75Gi
+    storage:
+      size: 6Mi
+    network:
+      ingress:
+        port: 80
+        public: true

@@ -1,13 +1,14 @@
 # Morpheus Lumerin Node
 
-
 <!-- markdownlint-disable first-line-h1 -->
 <!-- markdownlint-disable html -->
 <!-- markdownlint-disable no-duplicate-header -->
 
+![Morpheus Lumerin Node](./morpheus-lumerin-node.jpg)
 
 [![Morpheus](https://img.shields.io/badge/Morpheus-Project-0A84FF)](https://mor.org/)
 [![Lumerin](https://img.shields.io/badge/Lumerin-Protocol-32D74B)](https://lumerin.io/)
+[![Akash](https://img.shields.io/badge/Akash-Network-7B61FF)](https://akash.network/)
 
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
 
@@ -19,19 +20,19 @@
 
 ## 🚀 Deploying Morpheus Lumerin Node
 
-This guide covers deploying the proxy-router component of the Morpheus AI Network . The deployment provides API access via Swagger interface without GUI or wallet components.
+This guide covers deploying the proxy-router component of the Morpheus AI Network. The deployment provides API access via Swagger interface without GUI or wallet components.
 
 ### 📋 Prerequisites
 
 * Running AI model accessible via private endpoint (e.g., `http://model.domain.com:8080`)
 * Funded wallet with MOR and ETH tokens
 * Wallet private key for blockchain interactions
-* Blazing Core account with deployment experience
+* Akash account with deployment experience
 * Note: The final endpoint URL will be available after provider selection and deployment
 
 ### ⚙️ Configuration
 
-The proxy-router uses environment variables for configuration instead of volume mounts for improved reliability :
+The proxy-router uses environment variables for configuration instead of volume mounts for improved reliability:
 
 * `COOKIE_CONTENT`: API authentication (format: `username:password`)
 * `MODELS_CONFIG_CONTENT`: JSON configuration for model endpoints
@@ -41,15 +42,16 @@ The proxy-router uses environment variables for configuration instead of volume 
 ### 🛠️ Deployment Steps
 
 1. **Prepare SDL Template**
+   * Download and customize [Akash SDL Template](./deploy.yaml)
    * Minimum version: `v3.0.0`
    * Configure:
-     - Wallet private key
-     - API credentials
-     - Model configurations
+     * Wallet private key
+     * API credentials
+     * Model configurations
    * Save securely (contains sensitive data)
 
 2. **Deploy Container**
-   * Use Blazing Core Dashboard: `DEPLOY` → `Custom Container`
+   * Use Akash Dashboard: `DEPLOY` → `Custom Container`
    * Upload customized SDL
    * Select provider and deploy
    * Verify deployment status and logs
@@ -63,20 +65,16 @@ The proxy-router uses environment variables for configuration instead of volume 
    * Access Swagger UI: `http://provider.domain:port/swagger/index.html`
    * Authenticate using configured credentials
    * Update provider endpoint via `POST /blockchain/providers`:
+
    ```json
    {
      "endpoint": "provider.domain:proxy_port",
      "stake": "123000000000"
    }
    ```
+
    * Verify registration via `GET /blockchain/providers`
 
 ### 📊 Example Logs
 
-<div align="center" style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
-
 ![akash_good_start](https://raw.githubusercontent.com/Lumerin-protocol/Morpheus-Lumerin-Node/main/docs/images/akash_good_start.png)
-
-</div>
-
-</div>

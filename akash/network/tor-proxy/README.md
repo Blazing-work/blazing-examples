@@ -1,16 +1,16 @@
-[![logo](https://raw.githubusercontent.com/dperson/torproxy/master/logo.png)](https://torproject.org/)
-
 # Tor and Privoxy
+
+[![logo](https://raw.githubusercontent.com/dperson/torproxy/master/logo.png)](https://torproject.org/)
 
 Tor and Privoxy (web proxy configured to route through tor) docker container.
 
-# What is Tor?
+## What is Tor?
 
 Tor is free software and an open network that helps you defend against traffic
 analysis, a form of network surveillance that threatens personal freedom and
 privacy, confidential business activities and relationships, and state security.
 
-# What is Privoxy?
+## What is Privoxy?
 
 Privoxy is a non-caching web proxy with advanced filtering capabilities for
 enhancing privacy, modifying web page data and HTTP headers, controlling access,
@@ -18,7 +18,7 @@ and removing ads and other obnoxious Internet junk.
 
 ---
 
-# How to use this image
+## How to use this image
 
 **NOTE 1**: this image is setup by default to be a relay only (not an exit node)
 
@@ -34,7 +34,6 @@ For it to work, you must set `--net=host` when launching the container.
 
 Then you can hit privoxy web proxy at `http://host-ip:8118` with your browser or
 tor via the socks protocol directly at `http://hostname:9050`.
-
 
 ## Complex configuration
 
@@ -59,20 +58,20 @@ tor via the socks protocol directly at `http://hostname:9050`.
 
 ENVIRONMENT VARIABLES
 
- * `TORUSER` - If set use named user instead of 'tor' (for example root)
- * `BW` - As above, set a tor relay bandwidth limit in KB, IE `50`
- * `EXITNODE` - As above, allow tor traffic to access the internet from your IP
- * `LOCATION` - As above, configure the country to use for exit node selection
- * `PASSWORD` - As above, configure HashedControlPassword for control port
- * `SERVICE - As above, configure hidden service, IE '80;hostname:80'
- * `TZ` - Configure the zoneinfo timezone, IE `EST5EDT`
- * `USERID` - Set the UID for the app user
- * `GROUPID` - Set the GID for the app user
+* `TORUSER` - If set use named user instead of 'tor' (for example root)
+* `BW` - As above, set a tor relay bandwidth limit in KB, IE `50`
+* `EXITNODE` - As above, allow tor traffic to access the internet from your IP
+* `LOCATION` - As above, configure the country to use for exit node selection
+* `PASSWORD` - As above, configure HashedControlPassword for control port
+* `SERVICE - As above, configure hidden service, IE '80;hostname:80'
+* `TZ` - Configure the zoneinfo timezone, IE `EST5EDT`
+* `USERID` - Set the UID for the app user
+* `GROUPID` - Set the GID for the app user
 
 Other environment variables beginning with `TOR_` will edit the configuration
 file accordingly:
 
- * `TOR_NewCircuitPeriod=400` will translate to `NewCircuitPeriod 400`
+* `TOR_NewCircuitPeriod=400` will translate to `NewCircuitPeriod 400`
 
 ## Examples
 
@@ -84,7 +83,7 @@ Any of the commands can be run at creation with `docker run` or later with
     sudo docker run -it -p 8118:8118 -p 9050:9050 -e TZ=EST5EDT \
                 -d dperson/torproxy
 
-### Start torproxy setting the allowed bandwidth:
+### Start torproxy setting the allowed bandwidth
 
     sudo docker run -it -p 8118:8118 -p 9050:9050 -d dperson/torproxy -b 100
 
@@ -92,7 +91,7 @@ OR
 
     sudo docker run -it -p 8118:8118 -p 9050:9050 -e BW=100 -d dperson/torproxy
 
-### Start torproxy configuring it to be an exit node:
+### Start torproxy configuring it to be an exit node
 
     sudo docker run -it -p 8118:8118 -p 9050:9050 -d dperson/torproxy -e
 
@@ -101,7 +100,7 @@ OR
     sudo docker run -it -p 8118:8118 -p 9050:9050 -e EXITNODE=1 \
                 -d dperson/torproxy
 
-## Test the proxy:
+## Test the proxy
 
     curl -Lx http://<ipv4_address>:8118 http://jsonip.com/
 
@@ -117,6 +116,9 @@ Then mount it to a new container like:
     sudo docker run -it -p 8118:8118 -p 9050:9050 \
                 -v /some/torrc:/etc/tor/torrc:ro -d dperson/torproxy
 
+## User Feedback
+
+## Issues
 
 ### tor failures (exits or won't connect)
 

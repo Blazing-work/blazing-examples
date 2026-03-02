@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: defradb
+providers:
+  akash:
+    status: prefer
+services:
+  defradb:
+    image: sourcenetwork/defradb:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 9161
+        public: true

@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Kimi-K2-Thinking
+providers:
+  akash:
+    status: prefer
+services:
+  sglang:
+    image: lmsysorg/sglang:v0.5.5
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

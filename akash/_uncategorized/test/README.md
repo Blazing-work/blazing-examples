@@ -1,27 +1,17 @@
-# test
+# Test
 
-A classic Tetris game running in the browser.
+Repo structure
+Base Repo Root (akash-console-templates)
 
-## Use Cases
+- Specific Template Directory (juno)
+- deploy.yml (SDL)
+- README.md (readme for github repo)
+- metadata.json (metadata for template details)
 
-- Browser-based gaming
-- Fun team break activity
+## Assets (assets)
 
-## Getting Started
-
-1. Navigate to the URL — the game loads instantly
-2. Use arrow keys to move and rotate pieces
-
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:80/` in your browser to play.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `bsord/tetris` |
-| CPU | 1.0 |
-| Memory | 512Mi |
-| Storage | 512Mi |
-| Exposed Ports | 80 |
+- banner_image.png
+- main_logo.png
+- main_video.jpeg
+- main_video.gif
+- promo_image.png

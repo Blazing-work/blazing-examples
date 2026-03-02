@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ChatGLM-6B
+providers:
+  akash:
+    status: prefer
+services:
+  gpu-app:
+    image: sxk1633/gpu-chat-thudm:6b
+    cpu: 1.0
+    memory: 20Gi
+    storage:
+      size: 30Gi
+    network:
+      ingress:
+        port: 7860
+        public: true

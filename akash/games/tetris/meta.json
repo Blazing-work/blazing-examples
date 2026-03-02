@@ -1,0 +1,18 @@
+{
+  "id": "akash-tetris",
+  "title": "tetris",
+  "description": "tetris deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Games",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "games"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

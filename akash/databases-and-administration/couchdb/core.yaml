@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: couchdb
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  couchdb:
+    image: couchdb
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      COUCHDB_USER: admin
+    secrets:
+    - secret_ref: couchdb_password
+      mode: env
+      keys:
+        value: COUCHDB_PASSWORD
+    network:
+      ingress:
+        port: 5984
+        public: true

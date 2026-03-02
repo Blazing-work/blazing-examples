@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: monkeytest
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  monkeytest:
+    image: cryptoandcoffee/akash-monkeytest:1
+    cpu: 4.0
+    memory: 2Gi
+    storage:
+      size: 4Gi
+    network:
+      ingress:
+        port: 80
+        public: true

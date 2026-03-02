@@ -1,0 +1,41 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: nanominer-c11
+providers:
+  akash:
+    status: prefer
+services:
+  nanominer-c11:
+    image: cryptoandcoffee/akash-gpu-miner-nanominer-c11:22
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 512Mi
+    variables:
+      ALGO1: '"Etchash"'
+      WALLET_ADDRESS_ALGO1: '""'
+      POOL_ALGO1: '"etchash.mine.zergpool.com:19997"'
+      WORKER_ALGO1: '""'
+      PASSWORD_ALGO1: '"c=ETC,m=solo,ID=akash"'
+      ALGO2: '"Zilliqa"'
+      WALLET_ADDRESS_ALGO2: '""'
+      POOL_ALGO2: '"us-east.ezil.me:4444"'
+      WORKER_ALGO2: '"akash"'
+      PASSWORD_ALGO2: '""'
+      ALGO3: '"heavyhash"'
+      WALLET_ADDRESS_ALGO3: '""'
+      POOL_ALGO3: '"us-solo-kas.2miners.com:13030"'
+      WORKER_ALGO3: '"akash"'
+      PASSWORD_ALGO3: '""'
+      CUSTOM_COMMAND: '""'
+      CHECK_FOR_UPDATES: 'true'
+      MPORT: '0'
+      NO_LOG: 'true'
+      NO_COLOR: 'true'
+      WEB_PORT: '9090'
+    network:
+      ingress:
+        port: 9090
+        public: true

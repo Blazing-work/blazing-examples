@@ -1,0 +1,18 @@
+{
+  "id": "akash-grok",
+  "title": "grok",
+  "description": "grok deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

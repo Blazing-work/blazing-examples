@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: react
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: nginx:alpine
+    cpu: 0.1
+    memory: 128Mi
+    storage:
+      size: 128Mi
+    network:
+      ingress:
+        port: 80
+        public: true

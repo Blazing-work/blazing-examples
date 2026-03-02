@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: elasticsearch
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  elasticsearch:
+    image: elasticsearch:9.2.0
+    cpu: 2.0
+    memory: 8gb
+    storage:
+      size: 32gb
+    variables:
+      discovery.type: single-node
+      http.host: 0.0.0.0
+      xpack.security.enabled: 'false'
+      ES_JAVA_OPTS: -Xms4g -Xmx4g
+    network:
+      ingress:
+        port: 9200
+        public: true

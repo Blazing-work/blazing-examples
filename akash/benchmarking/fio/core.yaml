@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: fio
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  fio:
+    image: cryptoandcoffee/akash-fio:4
+    cpu: 4.0
+    memory: 2Gi
+    storage:
+      size: 32Gi
+    variables:
+      TEST: standard
+    network:
+      ingress:
+        port: 80
+        public: true

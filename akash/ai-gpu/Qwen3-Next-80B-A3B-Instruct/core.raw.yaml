@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Qwen3-Next-80B-A3B-Instruct
+providers:
+  akash:
+    status: prefer
+services:
+  sglang:
+    image: lmsysorg/sglang:v0.5.2-cu126
+    cpu: 64.0
+    memory: 128Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

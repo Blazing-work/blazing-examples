@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tensorflow-serving-mnist
+providers:
+  akash:
+    status: prefer
+services:
+  web:
+    image: wlouie1/mnist-tf-serve:1.0
+    cpu: 0.2
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 8501
+        public: true

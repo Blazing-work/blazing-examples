@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: authsteem
+providers:
+  akash:
+    status: prefer
+services:
+  authsteem:
+    image: steemfans/authsteem
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 8080
+        public: true

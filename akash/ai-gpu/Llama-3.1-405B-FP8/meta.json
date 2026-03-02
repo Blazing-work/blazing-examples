@@ -1,0 +1,18 @@
+{
+  "id": "akash-llama-3.1-405b-fp8",
+  "title": "Llama-3.1-405B-FP8",
+  "description": "Llama-3.1-405B-FP8 deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

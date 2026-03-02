@@ -1,19 +1,19 @@
 # Run a Private Monero Mining Pool
 
-
 Step 1 : Setup your Monero wallet - you will need the seed phrase and another wallet for the fee recipient.
 
 Step 2 : Update the env: variables with your information, be sure NOT to use quotes for the seed phrase.
 
+Step 3 : Deploy and wait.  Be patient - deploying a pool takes at least 24 hours to be ready.  Be sure to fund your deployment with enough AKT!
 
 Step 4 : Click the URI link.  You should now see the web interface.
 
-# Security of your private keys
+## Security of your private keys
 
 You should assume this deployment is the equivalent of a hot wallet.  Do not use this wallet for long term storage of coins.
 Do not remove the signing attribute from this deployment.
 
-# A Monero mining pool server written in C.
+## A Monero mining pool server written in C
 
 Design decisions are focused on performance and efficiency, hence the use of
 libevent and LMDB.  Currently it uses only *two* threads under normal operation

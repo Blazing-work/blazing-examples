@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Mistral-7B
+providers:
+  akash:
+    status: prefer
+services:
+  vllm:
+    image: lmsysorg/sglang:v0.4.5.post3-cu125-srt
+    cpu: 12.0
+    memory: 32Gi
+    storage:
+      size: 30Gi
+    secrets:
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    network:
+      ingress:
+        port: 8000
+        public: true

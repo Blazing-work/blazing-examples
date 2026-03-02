@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: jenkins
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 5Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

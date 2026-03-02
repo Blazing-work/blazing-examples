@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tor-proxy
+providers:
+  akash:
+    status: prefer
+services:
+  web:
+    image: dperson/torproxy
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 9050
+        public: true

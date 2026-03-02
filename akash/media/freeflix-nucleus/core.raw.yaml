@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: freeflix-nucleus
+providers:
+  akash:
+    status: prefer
+services:
+  ffnucleus:
+    image: harish1551/ff_nucleus:latest
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 80
+        public: true

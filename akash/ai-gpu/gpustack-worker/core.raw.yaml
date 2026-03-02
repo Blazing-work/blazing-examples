@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gpustack-worker
+providers:
+  akash:
+    status: prefer
+services:
+  gpustack-worker:
+    image: gpustack/gpustack:main
+    cpu: 4.0
+    memory: 24Gi
+    storage:
+      size: 100Gi
+    variables:
+      GPUSTACK_SERVER_URL: 
+        http://bt9262j9u9adn6be5rf5g1on50.ingress.sfo.computer
+      GPUSTACK_WORKER_PORT: '80'
+    secrets:
+    - secret_ref: gpustack_token
+      mode: env
+      keys:
+        value: GPUSTACK_TOKEN
+    network:
+      ingress:
+        port: 80
+        public: true

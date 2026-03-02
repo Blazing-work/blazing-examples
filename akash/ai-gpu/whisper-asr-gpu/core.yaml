@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: whisper-asr-gpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  whisper-asr:
+    image: onerahmet/openai-whisper-asr-webservice:latest-gpu
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 100Gi
+    variables:
+      ASR_MODEL: base
+      ASR_ENGINE: openai_whisper
+    network:
+      ingress:
+        port: 9000
+        public: true

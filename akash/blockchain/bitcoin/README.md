@@ -1,15 +1,19 @@
-## Bitcoin node
+# Bitcoin Node
 
+## Environment Variables
 
-|Variable|Description|
-| :-------: | :-------: |
-|`"LINK_BINARY="`|  The download address of the binary file.|
-|`"SNAPSHOT="`|  Link to `lz4` node snapshot (disable if you want to sync the full node).|
-|`"ARGS="`|  `bitcoind` startup flags.|
+| Variable | Description |
+|:--------:|:-----------:|
+| `LINK_BINARY` | Download URL for the Bitcoin binary archive |
+| `SNAPSHOT` | URL to an `lz4` node snapshot (leave empty to sync the full blockchain) |
+| `ARGS` | Startup flags for `bitcoind` |
 
-### Resources
+## Resources
 
-- If you want use **ephimeral** storage  (*WARNING! Data will be lost when the container is restarted!*):
+### Ephemeral Storage
+
+> **Warning:** Data will be lost when the container restarts.
+
 ```yaml
 profiles:
   compute:
@@ -23,68 +27,19 @@ profiles:
           size: 600Gi
 ```
 
-- If you want use **persistens** storage:
+### Persistent Storage
 
-1. Uncomment in `app` section:
+1. Uncomment in the `app` section:
+
 ```yaml
     params:
       storage:
         data:
           mount: /root/
 ```
-2. Uncomment in `profiles` section:
-```yaml
-profiles:
-  compute:
-    app:
-      resources:
-        cpu:
-          units: 2.0
-        memory:
-          size: 2Gi
-        storage:
-          size: 10Gi
-          - name: data
-            size: 600Gi
-            attributes:
-              persistent: true
-              class: beta3
-```
 
-## Развертка Bitcoin ноды на Blazing Core
+1. Uncomment in the `profiles` section:
 
-|Переменная|Описание|
-| :-------: | :-------: |
-|`"LINK_BINARY="`|  Ссылка на скачивание архива бинарного файла.|
-|`"SNAPSHOT="`|  Сслыка на `lz4` снепшот ноды (отключите, если хотите загрузить полную историю блокчейна).|
-|`"ARGS="`|  Флаги запуска `bitcoind`. |
-
-### Resources
-
-- Если вы хотите использовать **эфимерное** хранилище  (*ПРЕДУПРЕЖДЕНИЕ! При перезагрузке контейнера данные будут сброщшены!*):
-```yaml
-profiles:
-  compute:
-    app:
-      resources:
-        cpu:
-          units: 2.0
-        memory:
-          size: 2Gi
-        storage:
-          size: 600Gi
-```
-
-- Если вы хотите использовать **постоянное** хранилище:
-
-1. Раскомментируйте в секции `app`:
-```yaml
-    params:
-      storage:
-        data:
-          mount: /root/
-```
-2. Раскомментируйте в секции `profiles`:
 ```yaml
 profiles:
   compute:

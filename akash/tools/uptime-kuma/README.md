@@ -1,6 +1,5 @@
 # Uptime Kuma
 
-
 From [Uptime-Kuma](https://github.com/louislam/uptime-kuma)
 
 It is a self-hosted monitoring tool like "Uptime Robot".
@@ -20,6 +19,7 @@ It is a self-hosted monitoring tool like "Uptime Robot".
 * Certificate Info
 * Proxy Support
 * 2FA available
+
 ## 🖼 More Screenshots
 
 Light Mode:
@@ -49,6 +49,7 @@ Telegram Notification Sample:
 
 If you love this project, please consider giving me a ⭐.
 
+## 🗣️ Discussion
 
 ### Issues Page
 

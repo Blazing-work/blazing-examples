@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: qdrant
+providers:
+  akash:
+    status: prefer
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.12.1
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 10Gi
+    variables:
+      QDRANT__SERVICE__HTTP_PORT: '6333'
+      QDRANT__SERVICE__GRPC_PORT: '6334'
+    network:
+      ingress:
+        port: 6333
+        public: true

@@ -1,0 +1,51 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: codex
+providers:
+  akash:
+    status: prefer
+services:
+  codex:
+    image: codexstorage/nim-codex:0.2.0
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      DATA_DIR: /codex/data
+      PUBLIC_IP: ''
+    secrets:
+    - secret_ref: eth_private_key
+      mode: env
+      keys:
+        value: ETH_PRIVATE_KEY
+    network:
+      ingress:
+        port: 8070
+        public: true
+  codexapp:
+    image: codexstorage/codex-marketplace-ui:sha-4b2e179
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 200Mi
+    network:
+      ingress:
+        port: 80
+        public: false
+  nginx:
+    image: nginx:1.27
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 200Mi
+    variables:
+      BASIC_AUTH_USER: codex
+      BASIC_AUTH_PASS: passsecret
+      DOMAIN: ''
+    network:
+      ingress:
+        port: 80
+        public: true

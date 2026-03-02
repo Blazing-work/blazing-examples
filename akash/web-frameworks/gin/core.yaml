@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gin
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gin:
+    image: hxrh/gin-on-akash:1.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

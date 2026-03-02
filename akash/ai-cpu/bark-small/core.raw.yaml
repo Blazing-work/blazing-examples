@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bark-small
+providers:
+  akash:
+    status: prefer
+services:
+  bark-small:
+    image: alexpedersen/audio-akash:0.1.5
+    cpu: 6.0
+    memory: 16Gi
+    storage:
+      size: 4GB
+    variables:
+      OUTPUT_DIR: /mnt/output
+      HF_HOME: /mnt/huggingface
+    network:
+      ingress:
+        port: 7860
+        public: true

@@ -1,0 +1,18 @@
+{
+  "id": "akash-qwen3-235b-a22b-thinking-2507-fp8",
+  "title": "Qwen3-235B-A22B-Thinking-2507-FP8",
+  "description": "Qwen3-235B-A22B-Thinking-2507-FP8 deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

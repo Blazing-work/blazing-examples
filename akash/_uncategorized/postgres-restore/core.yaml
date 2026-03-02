@@ -1,0 +1,49 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: postgres-restore
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  cron:
+    image: ghcr.io/ovrclk/akash-postgres-restore:v0.0.4
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRES_DATABASE: akash_postgres
+      BACKUP_PATH: mybucket/backups
+      BACKUP_PASSPHRASE: passphrase
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: backup_key
+      mode: env
+      keys:
+        value: BACKUP_KEY
+    - secret_ref: backup_secret
+      mode: env
+      keys:
+        value: BACKUP_SECRET
+  postgres-restore:
+    image: postgres:12.6
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: true

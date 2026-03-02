@@ -18,11 +18,11 @@ HashiCorp Vault is a tool for securely managing secrets, encryption keys, and ac
 ## Accessing the Service
 
 Access the Vault web UI at `http://{SERVICE_URI}:80/ui/` or use the CLI:
+
 ```bash
 export VAULT_ADDR="http://{SERVICE_URI}:80"
 vault status
 ```
-
 
 ### Secrets
 

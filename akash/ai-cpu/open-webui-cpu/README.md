@@ -1,6 +1,5 @@
 # Open WebUI (Formerly Ollama WebUI) 👋
 
-
 Open WebUI is an [extensible](https://github.com/open-webui/pipelines), feature-rich, and user-friendly self-hosted WebUI designed to operate entirely offline. It supports various LLM runners, including Ollama and OpenAI-compatible APIs. For more information, be sure to check out our [Open WebUI Documentation](https://docs.openwebui.com/).
 
 ![Open WebUI Demo](https://github.com/open-webui/open-webui/blob/13b0e7d64a708f69c5ce58cf0897d9951d0d16ad/demo.gif)
@@ -43,7 +42,7 @@ Open WebUI is an [extensible](https://github.com/open-webui/pipelines), feature-
 
 Want to learn more about Open WebUI's features? Check out our [Open WebUI documentation](https://docs.openwebui.com/features) for a comprehensive overview!
 
-## 🔗 Also Check Out Open WebUI Community!
+## 🔗 Also Check Out Open WebUI Community
 
 Don't forget to explore our sibling project, [Open WebUI Community](https://openwebui.com/), where you can discover, download, and explore customized Modelfiles. Open WebUI Community offers a wide range of exciting possibilities for enhancing your chat interactions with Open WebUI! 🚀
 

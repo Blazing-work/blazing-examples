@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: faster-whisper-cpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  faster-whisper:
+    image: lscr.io/linuxserver/faster-whisper:latest
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 128Gi
+    variables:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Etc/UTC
+      WHISPER_MODEL: tiny-int8
+      WHISPER_BEAM: '1'
+      WHISPER_LANG: en
+    network:
+      ingress:
+        port: 10300
+        public: true

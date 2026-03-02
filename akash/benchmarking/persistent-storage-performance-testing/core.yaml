@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: persistent-storage-performance-testing
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: ubuntu:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 10Gi
+    variables:
+      my_root_password: '{{my_root_password}}'
+    network:
+      ingress:
+        port: 80
+        public: true

@@ -1,6 +1,5 @@
 # Speedtest Tracker
 
-
 ![](https://user-images.githubusercontent.com/36062479/78822484-a82b8300-79ca-11ea-8525-fdeae496a0bd.gif)
 
 This program runs a speedtest check every hour and graphs the results. The back-end is written in [Laravel](https://laravel.com/) and the front-end uses [React](https://reactjs.org/). It uses the [Ookla's speedtest cli](https://www.speedtest.net/apps/cli) package to get the data and uses [Chart.js](https://www.chartjs.org/) to plot the results.
@@ -17,7 +16,7 @@ This program runs a speedtest check every hour and graphs the results. The back-
 
 A demo can be found [here](https://speedtest.henrywhitaker.com)
 
-#### Parameters
+### Parameters
 
 Container images are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container.
 
@@ -39,7 +38,7 @@ The default credentials are:
 
 |   Field       |   Function        |
 |   ---         |   ---             |
-|   username    |   admin@admin.com |
+|   username    |   <admin@admin.com> |
 |   password    |   password        |
 
 After enabling, you should change the password through the web UI.

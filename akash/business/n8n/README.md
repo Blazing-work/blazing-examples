@@ -1,13 +1,13 @@
 # n8n - Workflow Automation
 
-
-This guide explains how to deploy n8n, a powerful workflow automation tool, . n8n enables you to connect different services and automate workflows with a beautiful, user-friendly interface.
+This guide explains how to deploy n8n, a powerful workflow automation tool, on the Akash Network. n8n enables you to connect different services and automate workflows with a beautiful, user-friendly interface.
 
 ## About n8n
 
 n8n is a free and open-source workflow automation tool that allows you to connect various services and automate repetitive tasks. With its node-based approach, you can create complex workflows by connecting different services like databases, APIs, cloud services, and more.
 
 **Key Features:**
+
 - 🔗 Connect 400+ different services
 - 🎨 Visual workflow editor
 - 🔓 Self-hosted and open-source
@@ -15,26 +15,30 @@ n8n is a free and open-source workflow automation tool that allows you to connec
 - 🔒 Secure execution environment
 - 📈 Scalable architecture
 
-Learn more: https://n8n.io/
+Learn more: <https://n8n.io/>
 
 ---
 
 ## Deployment Options
 
-There are two SDL files provided for deploying n8n :
+There are two SDL files provided for deploying n8n:
 
 ### 1. Basic (Ephemeral) Deployment
+
+- Use [`deploy.yml`](./deploy.yml)
 - All n8n data is stored in the container (ephemeral)
 - Good for testing, demos, or workflows where you do not need to persist data after redeploy/restart
 - **No persistent storage** is used
 
 ### 2. Production Deployment with PostgreSQL
+
 - Use [`deploy-with-postgres.yml`](./deploy-with-postgres.yml)
 - n8n uses a dedicated PostgreSQL database for all workflow, credential, and execution data
 - **Persistent storage** is enabled for PostgreSQL, so your data is safe across restarts and redeployments
 - Recommended for all real-world and production use
 
 #### Persistent Storage Notes
+
 - **PostgreSQL persistent storage is required** to avoid data loss (all workflows, credentials, and history are stored here)
 - **n8n persistent storage is optional**. With Postgres, you do not need persistent storage for n8n unless you use custom nodes or need to store files on disk
 - If you do not use persistent storage for n8n, you will not lose workflows or credentials, but you will lose any custom files or local-only changes if the container restarts
@@ -54,15 +58,17 @@ Some environment variables are unique and should be customized for your deployme
 - **DB_POSTGRESDB_* variables**: Set your own database name, user, and password for security.
 
 **Tip:**
+
 - After your first deployment, check the n8n logs for the generated `N8N_ENCRYPTION_KEY` if you did not set one. Update your SDL with this value and redeploy to ensure you can always decrypt credentials.
 
 ---
 
 ## How to Deploy
 
+1. Choose the SDL file that matches your needs (`deploy.yml` for ephemeral, `deploy-with-postgres.yml` for production/persistent)
 2. Edit environment variables as needed (see above)
-
-4. After deployment, access your n8n instance via the provided Blazing Core URL
+3. Deploy using the Akash Console or CLI
+4. After deployment, access your n8n instance via the provided Akash URL
 5. (Optional) Update your SDL with the generated `N8N_ENCRYPTION_KEY` from the logs and redeploy
 
 ---

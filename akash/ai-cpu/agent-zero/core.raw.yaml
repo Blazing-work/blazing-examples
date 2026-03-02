@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: agent-zero
+providers:
+  akash:
+    status: prefer
+services:
+  agentzero:
+    image: agent0ai/agent-zero:v0.9.8
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 10Gi
+    network:
+      ingress:
+        port: 80
+        public: true

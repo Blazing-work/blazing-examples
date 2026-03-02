@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: grok
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: cvpfus/grok-akash:0.20
+    cpu: 64.0
+    memory: 1280Gi
+    storage:
+      size: 2048Gi
+    variables:
+      MAX_NEW_TOKENS: '256'
+    network:
+      ingress:
+        port: 8080
+        public: true

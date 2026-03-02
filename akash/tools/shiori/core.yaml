@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: shiori
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  shiori:
+    image: ghcr.io/go-shiori/shiori:v1.8.0-2-g585ea34
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    secrets:
+    - secret_ref: shiori_http_secret_key
+      mode: env
+      keys:
+        value: SHIORI_HTTP_SECRET_KEY
+    network:
+      ingress:
+        port: 8080
+        public: true

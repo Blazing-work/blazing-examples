@@ -1,6 +1,5 @@
 # BabyAGI UI 👶🤖🖥️
 
-
 BabyAGI UI is designed to make it easier to run and develop with [babyagi](https://github.com/yoheinakajima/babyagi) in a web app, like a ChatGPT.
 This is a port of [babyagi](https://github.com/yoheinakajima/babyagi) with [Langchain.js](https://github.com/hwchase17/langchainjs) and build a user interface.
 
@@ -33,8 +32,9 @@ This script is designed to be run continuously as part of a task management syst
 
 [original](https://github.com/yoheinakajima/babyagi#warning)
 
+## Credit
 
 ### BabyAGI
 
-- Github: https://github.com/yoheinakajima/babyagi
+- Github: <https://github.com/yoheinakajima/babyagi>
 - Author: [@yoheinakajima](https://github.com/yoheinakajima)

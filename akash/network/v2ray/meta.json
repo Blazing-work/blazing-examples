@@ -1,0 +1,18 @@
+{
+  "id": "akash-v2ray",
+  "title": "v2ray",
+  "description": "v2ray deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Network",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "network"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

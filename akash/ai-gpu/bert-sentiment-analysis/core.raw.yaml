@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bert-sentiment-analysis
+providers:
+  akash:
+    status: prefer
+services:
+  bert-sentiment-analysis:
+    image: clydedevv/bert-sentiment-analysis:0.0.2
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 10Gi
+    network:
+      ingress:
+        port: 80
+        public: true

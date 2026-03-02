@@ -1,0 +1,96 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: discourse
+providers:
+  akash:
+    status: prefer
+services:
+  postgresql:
+    image: docker.io/bitnami/postgresql:11
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRESQL_USERNAME: akt_discourse
+      POSTGRESQL_DATABASE: akash_discourse
+    secrets:
+    - secret_ref: allow_empty_password
+      mode: env
+      keys:
+        value: ALLOW_EMPTY_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false
+  redis:
+    image: docker.io/bitnami/redis:6.0
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    secrets:
+    - secret_ref: allow_empty_password
+      mode: env
+      keys:
+        value: ALLOW_EMPTY_PASSWORD
+    network:
+      ingress:
+        port: 6379
+        public: false
+  discourse:
+    image: docker.io/bitnami/discourse:2
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      DISCOURSE_HOST: localhost
+      DISCOURSE_DATABASE_HOST: postgresql
+      DISCOURSE_DATABASE_PORT_NUMBER: '5432'
+      DISCOURSE_DATABASE_USER: akt_discourse
+      DISCOURSE_DATABASE_NAME: akash_discourse
+      DISCOURSE_REDIS_HOST: redis
+      DISCOURSE_REDIS_PORT_NUMBER: '6379'
+      POSTGRESQL_CLIENT_POSTGRES_USER: postgres
+      POSTGRESQL_CLIENT_CREATE_DATABASE_NAME: akash_discourse
+      POSTGRESQL_CLIENT_CREATE_DATABASE_USER: akt_discourse
+      POSTGRESQL_CLIENT_CREATE_DATABASE_EXTENSIONS: hstore,pg_trgm
+    secrets:
+    - secret_ref: allow_empty_password
+      mode: env
+      keys:
+        value: ALLOW_EMPTY_PASSWORD
+    - secret_ref: discourse_database_password
+      mode: env
+      keys:
+        value: DISCOURSE_DATABASE_PASSWORD
+    network:
+      ingress:
+        port: 3000
+        public: true
+  sidekiq:
+    image: docker.io/bitnami/discourse:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      DISCOURSE_HOST: localhost
+      DISCOURSE_DATABASE_HOST: postgresql
+      DISCOURSE_DATABASE_PORT_NUMBER: '5432'
+      DISCOURSE_DATABASE_USER: akt_discourse
+      DISCOURSE_DATABASE_NAME: akash_discourse
+      DISCOURSE_REDIS_HOST: redis
+      DISCOURSE_REDIS_PORT_NUMBER: '6379'
+    secrets:
+    - secret_ref: allow_empty_password
+      mode: env
+      keys:
+        value: ALLOW_EMPTY_PASSWORD
+    - secret_ref: discourse_database_password
+      mode: env
+      keys:
+        value: DISCOURSE_DATABASE_PASSWORD

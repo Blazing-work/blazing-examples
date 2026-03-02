@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: keycloak-iam
+providers:
+  akash:
+    status: prefer
+services:
+  keycloak-iam:
+    image: quay.io/keycloak/keycloak:20.0.0
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 512Mi
+    variables:
+      KEYCLOAK_ADMIN: admin
+    secrets:
+    - secret_ref: keycloak_admin_password
+      mode: env
+      keys:
+        value: KEYCLOAK_ADMIN_PASSWORD
+    network:
+      ingress:
+        port: 8080
+        public: true

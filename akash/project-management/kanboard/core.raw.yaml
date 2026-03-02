@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: kanboard
+providers:
+  akash:
+    status: prefer
+services:
+  kanboard:
+    image: kanboard/kanboard:v1.2.8
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 80
+        public: true

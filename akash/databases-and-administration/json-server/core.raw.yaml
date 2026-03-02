@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: json-server
+providers:
+  akash:
+    status: prefer
+services:
+  json-server:
+    image: clue/json-server
+    cpu: 0.5
+    memory: 64Mi
+    storage:
+      size: 96Mi
+    network:
+      ingress:
+        port: 80
+        public: true

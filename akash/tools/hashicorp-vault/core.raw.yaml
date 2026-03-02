@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: hashicorp-vault
+providers:
+  akash:
+    status: prefer
+services:
+  hashicorp-vault:
+    image: vault
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      VAULT_DEV_ROOT_TOKEN_ID: mysecrettoken
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    network:
+      ingress:
+        port: 8200
+        public: true

@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: satisfactory-server
+providers:
+  akash:
+    status: prefer
+services:
+  satisfactory-server:
+    image: wolveix/satisfactory-server
+    cpu: 4.0
+    memory: 16GB
+    storage:
+      size: 10GB
+    network:
+      ingress:
+        port: 15000
+        public: true

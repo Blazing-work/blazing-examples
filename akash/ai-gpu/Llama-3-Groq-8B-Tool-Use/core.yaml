@@ -1,0 +1,27 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Llama-3-Groq-8B-Tool-Use
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  vllm:
+    image: 
+      vllm/vllm-openai:v0.6.2@sha256:55a88146a4da0b6e193431b5b1d3492dfd7bebdc16919df4d031273e85a6157c
+    cpu: 6.0
+    memory: 16Gi
+    storage:
+      size: 10Gi
+    secrets:
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    network:
+      ingress:
+        port: 8000
+        public: true

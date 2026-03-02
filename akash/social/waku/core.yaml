@@ -1,0 +1,55 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: waku
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  node:
+    image: harbor.status.im/wakuorg/nwaku:v0.29.0
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 100Mi
+    variables:
+      IP_ADDR: ''
+      ETH_CLIENT_ADDRESS: ''
+      POSTGRES_USER: waku
+      DOMAIN: ''
+      NODEKEY: ''
+      RLN_RELAY_CRED_BASE64: ''
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: rln_relay_cred_password
+      mode: env
+      keys:
+        value: RLN_RELAY_CRED_PASSWORD
+    network:
+      ingress:
+        port: 60000
+        public: true
+  postgres:
+    image: postgres
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 4Gi
+    variables:
+      POSTGRES_USER: waku
+      POSTGRES_DB: waku
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false

@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: code-server
+providers:
+  akash:
+    status: prefer
+services:
+  codeserver:
+    image: ghcr.io/linuxserver/code-server
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      PUID: '1000'
+      PGID: '1000'
+      PASSWORD: password
+    secrets:
+    - secret_ref: sudo_password
+      mode: env
+      keys:
+        value: SUDO_PASSWORD
+    network:
+      ingress:
+        port: 8443
+        public: true

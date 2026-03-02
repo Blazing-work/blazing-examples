@@ -1,34 +1,11 @@
-# confluence
+# Confluence Server
 
-Confluence is a team workspace and wiki for creating, organizing, and collaborating on documentation.
+From [the official Docker Hub image page](https://hub.docker.com/r/atlassian/confluence-server):
 
-## Use Cases
+Confluence Server is where you create, organise and discuss work with your team. Capture the knowledge that's too often lost in email inboxes and shared network drives in Confluence - where it's easy to find, use, and update. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
 
-- Team documentation and knowledge bases
-- Project documentation
-- Meeting notes and decision records
-- Technical specifications
+Learn more about Confluence Server: <https://www.atlassian.com/software/confluence>
 
-## Getting Started
+You can find the repository for this Dockerfile at <https://hub.docker.com/r/atlassian/confluence-server>
 
-1. Run through the setup wizard
-2. Create your first space for team documentation
-3. Add pages, templates, and organize your knowledge base
-
-## Accessing the Service
-
-Open the Confluence web interface at `http://{SERVICE_URI}:8090/`
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `atlassian/confluence-server:latest` |
-| CPU | 0.1 |
-| Memory | 512Mi |
-| Storage | 2Gi |
-| Exposed Ports | 8090 |
-
-## Documentation
-
-For full documentation, visit: [https://support.atlassian.com/confluence-cloud/](https://support.atlassian.com/confluence-cloud/)
+The `deploy.yaml` uses the official Docker image to deploy a basic configuration of Confluence Server.

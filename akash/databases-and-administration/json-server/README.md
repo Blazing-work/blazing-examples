@@ -1,17 +1,17 @@
 # JSON Server
 
-
 Get a full fake REST API with __zero coding__ in __less than 30 seconds__ (seriously)
 
 Created with <3 for front-end developers who need a quick back-end for prototyping and mocking.
 
-https://github.com/typicode/json-server
+<https://github.com/typicode/json-server>
 
 * [Egghead.io free video tutorial - Creating demo APIs with json-server](https://egghead.io/lessons/nodejs-creating-demo-apis-with-json-server)
 * [JSONPlaceholder - Live running version](https://jsonplaceholder.typicode.com)
 * [__My JSON Server__ - no installation required, use your own data](https://my-json-server.typicode.com)
 
 See also:
+
 * :dog: [husky - Git hooks made easy](https://github.com/typicode/husky)
 * :owl: [lowdb - local JSON database](https://github.com/typicode/lowdb)
 * ✅ [xv - a beautifully simple and capable test runner](https://github.com/typicode/xv)

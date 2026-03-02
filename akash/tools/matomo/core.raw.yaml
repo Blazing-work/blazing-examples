@@ -1,0 +1,41 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: matomo
+providers:
+  akash:
+    status: prefer
+services:
+  db:
+    image: mysql:8.0.25
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      MYSQL_DATABASE: matomo
+      MYSQL_USER: matomo
+    secrets:
+    - secret_ref: mysql_root_password
+      mode: env
+      keys:
+        value: MYSQL_ROOT_PASSWORD
+    - secret_ref: mysql_password
+      mode: env
+      keys:
+        value: MYSQL_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: false
+  matomo:
+    image: matomo:apache
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 80
+        public: true

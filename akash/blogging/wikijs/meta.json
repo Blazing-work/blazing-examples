@@ -1,0 +1,18 @@
+{
+  "id": "akash-wikijs",
+  "title": "wikijs",
+  "description": "wikijs deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Blogging",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "blogging"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

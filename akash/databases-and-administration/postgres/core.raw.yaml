@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: postgres
+providers:
+  akash:
+    status: prefer
+services:
+  postgres:
+    image: postgres
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_USER: admin
+      POSTGRES_DB: mydb
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: true

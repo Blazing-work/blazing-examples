@@ -1,33 +1,24 @@
-# redpajama-incite-7b-instruct
+# RedPajama-INCITE-7B-Instruct
 
 RedPajama-INCITE-7B-Instruct is a text generation application. It was developed by Together and leaders from the open-source AI community including Ontocord.ai, ETH DS3Lab, AAI CERC, Université de Montréal, MILA - Québec AI Institute, Stanford Center for Research on Foundation Models (CRFM), Stanford Hazy Research research group and LAION.
 The model was fine-tuned for few-shot applications on the data of GPT-JT, with exclusion of tasks that overlap with the HELM core scenarios.
-For more information -> https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct
 
-## Use Cases
+For more information -> <https://huggingface.co/togethercomputer/RedPajama-INCITE-7B-Instruct>
 
-- AI model inference
-- GPU-accelerated computation
-- Machine learning workloads
+## Notes
 
-## Getting Started
+This application requires a GPU with 16GB memory. It is recommended to use a video card NVIDIA H100.
 
-1. Deploy the template and wait for the service to reach "Running" status
-2. Open the web interface at `http://{SERVICE_URI}:7860/`
-3. Follow any on-screen setup instructions
+After launch container, the application should download the trained model from the project repository, these are two files with a total weight of 13.8Gb and it may take some time depending on the internet speed of GPU provider.
 
-## Accessing the Service
+## Logs
 
-Open `http://{SERVICE_URI}:7860/` in your browser.
+This file contains all logs that should be on normal application startup:
+[212912-1-1-logs-2023-07-01.txt](https://github.com/yuravorobei/awesome-akash/files/11927219/212912-1-1-logs-2023-07-01.txt)
 
-This port is commonly used by Gradio and Streamlit applications.
+Screenshot:
+![Screenshot_20230702_011025](https://github.com/yuravorobei/awesome-akash/assets/19820490/21a48177-c276-4ee4-b500-8e1a203b9d4c)
 
-## Deployment Specs
+## Demo Video
 
-| Resource | Value |
-|----------|-------|
-| Image | `yuravorobei/redpajama_incite_7b_instruct:0.3` |
-| CPU | 4.0 |
-| Memory | 30Gi |
-| Storage | 35Gi |
-| Exposed Ports | 7860 |
+<https://github.com/yuravorobei/awesome-akash/assets/19820490/c14f70b6-6eb1-496a-97f5-b686274a781a>

@@ -1,0 +1,19 @@
+{
+  "id": "akash-doccano",
+  "title": "doccano",
+  "description": "doccano deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Machine Learning",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "machine",
+    "learning"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

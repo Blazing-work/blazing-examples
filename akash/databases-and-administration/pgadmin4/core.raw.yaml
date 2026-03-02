@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: pgadmin4
+providers:
+  akash:
+    status: prefer
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+    secrets:
+    - secret_ref: pgadmin_default_password
+      mode: env
+      keys:
+        value: PGADMIN_DEFAULT_PASSWORD
+    network:
+      ingress:
+        port: 80
+        public: true

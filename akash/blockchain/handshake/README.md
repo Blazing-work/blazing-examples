@@ -1,9 +1,16 @@
-# handshake-full-listening-node-Blazing Core
+# handshake-full-listening-node-akash
 
+This is an SDL file that will deploy a full listening handshake node onto akash.
 
-Deploy to Blazing Core:
+[Link to Akash SDL File](https://github.com/akash-network/awesome-akash/blob/master/handshake/deploy.yaml)
 
+Deploy to Akash:
 
+1. <https://console.akash.network/new-deployment>
+
+2. <https://console.akash.network/new-deployment>
+
+Open Akash Console and click "Deploy"
 <br>
 
 Step 0: Choose the "Empty" option and paste the SDL file.
@@ -21,10 +28,12 @@ Step 4: Click "shell" and type in ```hsd-cli info``` to see how many inbound con
 
 <br>
 
-More information related to handshake node configuration types: https://hsd-dev.org/guides/config.html
+More information related to handshake node configuration types: <https://hsd-dev.org/guides/config.html>
 
-# Full Node that allows inbound connections from other full and light clients like hnsd
+## Full Node that allows inbound connections from other full and light clients like hnsd
+
 `<IP address>` MUST be your external IP address, publicly accessible by the internet.
+
 ```
 hsd \
 --bip37=true   \

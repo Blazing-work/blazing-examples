@@ -1,6 +1,5 @@
 # Profitable Multipool Mining
 
-
 ![](https://raw.githubusercontent.com/RainbowMiner/miner-binaries/master/rainbowminerhome.png "RainbowMiner Web GUI")
 
 GPU/CPU Mining script with intelligent auto-switching between different miningpools, algorithm, miner programs using all possible combinations of devices (NVIDIA, AMD, INTEL and CPU), optionally including cost of electricity into profit calculations and  stop mining, if no longer profitable.
@@ -33,8 +32,7 @@ Features: easy setup wizard with ad-hoc working default (no editing of files nee
 - **Very small minimum developer fee of 0.7% (10 minutes per day) to support my work**
 - **Live monitoring web-interface at [localhost:4000](http://localhost:4000)**
 - **Central monitoring of all your rigs at [https://rbminer.net](https://rbminer.net)**
-- **Offline notifications via email and/or https://pushover.net**
-
+- **Offline notifications via email and/or <https://pushover.net>**
 
 RainbowMiner supports more than 60 pools and 80 different mining programs.
 

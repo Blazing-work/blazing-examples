@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Qwen3-235B-A22B-Thinking-2507
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  sglang:
+    image: lmsysorg/sglang:v0.4.6.post1-cu125-srt
+    cpu: 64.0
+    memory: 128Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

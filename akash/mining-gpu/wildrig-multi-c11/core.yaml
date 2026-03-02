@@ -1,0 +1,27 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: wildrig-multi-c11
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  wildrig-multi-c11:
+    image: cryptoandcoffee/akash-gpu-miner-wildrig-multi-c11:5
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: '"kawpow"'
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://kawpow.mine.zergpool.com:13638"'
+      PASSWORD: '"c=ETC,m=solo"'
+      OPTIONS: '""'
+    network:
+      ingress:
+        port: 21550
+        public: true

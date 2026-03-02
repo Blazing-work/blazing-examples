@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: flan-t5-xxl
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: cryptopasser/flan-t5:0.5
+    cpu: 4.0
+    memory: 20Gi
+    storage:
+      size: 60Gi
+    network:
+      ingress:
+        port: 7575
+        public: true

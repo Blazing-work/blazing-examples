@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: unsloth-ai
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  unsloth:
+    image: ghcr.io/unsloth/unsloth:REPLACE_WITH_TAG
+    cpu: 8.0
+    memory: 32Gi
+    storage:
+      size: 50Gi
+    variables:
+      PORT: '8080'
+      UNSLOTH_MODEL: auto
+      UNSLOTH_WORKERS: '1'
+      MODEL_CACHE_PATH: /mnt/models
+    network:
+      ingress:
+        port: 8080
+        public: true

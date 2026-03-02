@@ -1,0 +1,43 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: langflow
+providers:
+  akash:
+    status: prefer
+services:
+  langflow:
+    image: langflowai/langflow:latest
+    cpu: 8.0
+    memory: 16Gi
+    storage:
+      size: 100Gi
+    variables:
+      LANGFLOW_DATABASE_URL: 
+        postgresql://langflow:langflow@postgres:5432/langflow
+      LANGFLOW_CONFIG_DIR: /app/config
+      LANGFLOW_HOST: 0.0.0.0
+      LANGFLOW_PORT: '7860'
+    network:
+      ingress:
+        port: 7860
+        public: true
+  postgres:
+    image: postgres:16
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 50Gi
+    variables:
+      POSTGRES_USER: langflow
+      POSTGRES_DB: langflow
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false

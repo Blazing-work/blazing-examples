@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: valheim
+providers:
+  akash:
+    status: prefer
+services:
+  valheim:
+    image: cm2network/valheim
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    variables:
+      SERVER_PORT: '2458'
+    network:
+      ingress:
+        port: 27016
+        public: true

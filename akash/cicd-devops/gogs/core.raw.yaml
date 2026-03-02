@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gogs
+providers:
+  akash:
+    status: prefer
+services:
+  gogs:
+    image: gogs/gogs:0.13
+    cpu: 2.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 22
+        public: true

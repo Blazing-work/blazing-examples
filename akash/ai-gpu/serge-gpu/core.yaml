@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: serge-gpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  serge:
+    image: ghcr.io/serge-chat/serge:latest
+    cpu: 4.0
+    memory: 28Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8008
+        public: true

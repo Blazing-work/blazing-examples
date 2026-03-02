@@ -1,0 +1,32 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Elizaos-ai_Agents
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  eiza:
+    image: kylecohen01/elizatest
+    cpu: 4.0
+    memory: 15Gb
+    storage:
+      size: 32Gb
+    variables:
+      DEEPSEEK_API_URL: https://chatapi.akash.network/api/v1
+      SMALL_DEEPSEEK_MODEL: DeepSeek-R1
+      MEDIUM_DEEPSEEK_MODEL: DeepSeek-R1-Distill-Llama-70B
+      LARGE_DEEPSEEK_MODEL: DeepSeek-R1-Distill-Llama-8B
+      SERVER_PORT: '3000'
+    secrets:
+    - secret_ref: deepseek_api_key
+      mode: env
+      keys:
+        value: DEEPSEEK_API_KEY
+    network:
+      ingress:
+        port: 80
+        public: true

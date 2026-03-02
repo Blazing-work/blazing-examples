@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: cjdns-pkt
+providers:
+  akash:
+    status: prefer
+services:
+  cjdns:
+    image: 
+      declab/cjdns:0.1@sha256:252a1886c3b293fe5dd59fa32cb2b3320d612e3c8c7f7b150602880ec2a29ddb
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      CJDNS_PEERID: PUB_Node_Name
+      CJDNS_PORT: '3479'
+      CJDNS_SETUSER: '0'
+      CJDNS_IPV6: 'false'
+      CJDNS_IPV4: ''
+    network:
+      ingress:
+        port: 3479
+        public: true

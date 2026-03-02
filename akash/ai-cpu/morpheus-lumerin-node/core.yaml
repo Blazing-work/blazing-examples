@@ -1,0 +1,40 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: morpheus-lumerin-node
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  morpheus-lumerin-node:
+    image: ghcr.io/lumerin-protocol/morpheus-lumerin-node:v3.0.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      COOKIE_CONTENT: admin:superpassword
+      WEB_PUBLIC_URL: http://localhost:8082
+      WEB_ADDRESS: 0.0.0.0:8082
+      PROXY_ADDRESS: 0.0.0.0:3333
+      MODELS_CONFIG_CONTENT: "{\n  \"$schema\": \"https://raw.githubusercontent.com/Lumerin-protocol/Morpheus-Lumerin-Node/v3.0.0/proxy-router/internal/config/models-config-schema.json\"\
+        ,\n  \"models\": [\n    {\n      \"modelId\": \"<MODEL_ID>\",\n      \"modelName\"\
+        : \"<MODEL_NAME\",\n      \"apiType\": \"openai\",\n      \"apiUrl\": \"<http://llmprovider.dns_or_ip:port>\"\
+        ,\n      \"concurrentSlots\": 8,\n      \"capacityPolicy\": \"simple\"\n \
+        \   }\n  ]\n}"
+      ETH_NODE_CHAIN_ID: '42161'
+      DIAMOND_CONTRACT_ADDRESS: '0xDE819AaEE474626E3f34Ef0263373357e5a6C71b'
+      MOR_TOKEN_ADDRESS: '0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86'
+      BLOCKSCOUT_API_URL: https://arbitrum.blockscout.com/api/v2
+    secrets:
+    - secret_ref: wallet_private_key
+      mode: env
+      keys:
+        value: WALLET_PRIVATE_KEY
+    network:
+      ingress:
+        port: 8082
+        public: true

@@ -1,14 +1,12 @@
 # DeepSeek-V3.1
 
-
 <!-- markdownlint-disable first-line-h1 -->
 <!-- markdownlint-disable html -->
 <!-- markdownlint-disable no-duplicate-header -->
 
-  <img src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/logo.svg?raw=true" width="60%" alt="DeepSeek-V3" />
+<img src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/logo.svg?raw=true" width="60%" alt="DeepSeek-V3" />
 <hr>
-<div align="center" style="line-height: 1;">
-  <a href="https://www.deepseek.com/" target="_blank" style="margin: 2px;">
+<a href="https://www.deepseek.com/" target="_blank" style="margin: 2px;">
     <img alt="Homepage" src="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/badge.svg?raw=true" style="display: inline-block; vertical-align: middle;"/>
   </a>
   <a href="https://chat.deepseek.com/" target="_blank" style="margin: 2px;">
@@ -17,10 +15,7 @@
   <a href="https://huggingface.co/deepseek-ai" target="_blank" style="margin: 2px;">
     <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-DeepSeek%20AI-ffc107?color=ffc107&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
-</div>
-
-<div align="center" style="line-height: 1;">
-  <a href="https://discord.gg/Tc7c45Zzu5" target="_blank" style="margin: 2px;">
+<a href="https://discord.gg/Tc7c45Zzu5" target="_blank" style="margin: 2px;">
     <img alt="Discord" src="https://img.shields.io/badge/Discord-DeepSeek%20AI-7289da?logo=discord&logoColor=white&color=7289da" style="display: inline-block; vertical-align: middle;"/>
   </a>
   <a href="https://github.com/deepseek-ai/DeepSeek-V2/blob/main/figures/qr.jpeg?raw=true" target="_blank" style="margin: 2px;">
@@ -29,14 +24,9 @@
   <a href="https://twitter.com/deepseek_ai" target="_blank" style="margin: 2px;">
     <img alt="Twitter Follow" src="https://img.shields.io/badge/Twitter-deepseek_ai-white?logo=x&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
   </a>
-</div>
-
-<div align="center" style="line-height: 1;">
-  <a href="LICENSE" style="margin: 2px;">
+<a href="LICENSE" style="margin: 2px;">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53" style="display: inline-block; vertical-align: middle;"/>
   </a>
-</div>
-
 ## Introduction
 
 DeepSeek-V3.1 is a hybrid model that supports both thinking mode and non-thinking mode. Compared to the previous version, this upgrade brings improvements in multiple aspects:
@@ -60,6 +50,7 @@ DeepSeek-V3.1 is post-trained on the top of DeepSeek-V3.1-Base, which is built u
 
 The details of our chat template is described in `tokenizer_config.json` and `assets/chat_template.jinja`. Here is a brief description.
 
+### Non-Thinking
 
 #### First-Turn
 
@@ -69,6 +60,7 @@ Prefix:
 With the given prefix, DeepSeek V3.1 generates responses to queries in non-thinking mode. Unlike DeepSeek V3,  it introduces an additional token `</think>`.
 
 #### Multi-Turn
+
 Context:
 `<｜begin▁of▁sentence｜>{system prompt}<｜User｜>{query}<｜Assistant｜></think>{response}<｜end▁of▁sentence｜>...<｜User｜>{query}<｜Assistant｜></think>{response}<｜end▁of▁sentence｜>`
 
@@ -77,15 +69,17 @@ Prefix:
 
 By concatenating the context and the prefix, we obtain the correct prompt for the query.
 
+### Thinking
 
 #### First-Turn
+
 Prefix:
 `<｜begin▁of▁sentence｜>{system prompt}<｜User｜>{query}<｜Assistant｜><think>`
 
 The prefix of thinking mode is similar to DeepSeek-R1.
 
-
 #### Multi-Turn
+
 Context:
 `<｜begin▁of▁sentence｜>{system prompt}<｜User｜>{query}<｜Assistant｜></think>{response}<｜end▁of▁sentence｜>...<｜User｜>{query}<｜Assistant｜></think>{response}<｜end▁of▁sentence｜>`
 
@@ -95,6 +89,7 @@ Prefix:
 The multi-turn template is the same with non-thinking multi-turn chat template. It means the thinking token in the last turn will be dropped but the `</think>` is retained in every turn of context.
 
 ### ToolCall
+
 Toolcall is supported in non-thinking mode. The format is:
 
 `<｜begin▁of▁sentence｜>{system prompt}{tool_description}<｜User｜>{query}<｜Assistant｜></think>` where the tool_description is
@@ -118,9 +113,11 @@ Where:
 ```
 
 ### Code-Agent
+
 We support various code agent frameworks. Please refer to the above toolcall format to create your own code agents. An example is shown in `assets/code_agent_trajectory.html`.
 
 ### Search-Agent
+
 We design a specific format for searching toolcall in thinking mode, to support search agent.
 
 For complex questions that require accessing external or up-to-date information, DeepSeek-V3.1 can leverage a user-provided search tool through a multi-turn tool-calling process.
@@ -128,6 +125,7 @@ For complex questions that require accessing external or up-to-date information,
 Please refer to the `assets/search_tool_trajectory.html` and `assets/search_python_tool_trajectory.html` for the detailed template.
 
 ## Evaluation
+
 | Category | Benchmark (Metric)              | DeepSeek V3.1-NonThinking | DeepSeek V3 0324 | DeepSeek V3.1-Thinking     | DeepSeek R1 0528
 |----------|----------------------------------|-----------------|---|---|---|
 | General  |
@@ -154,6 +152,7 @@ Please refer to the `assets/search_tool_trajectory.html` and `assets/search_pyth
 |          | HMMT 2025 (Pass@1)        | 33.5    | 29.2   | 84.2 | 79.4 |
 
 Note:
+
 - Search agents are evaluated with our internal search framework, which uses a commercial search API + webpage filter + 128K context window. Seach agent results of R1-0528 are evaluated with a pre-defined workflow.
 
 - SWE-bench is evaluated with our internal code agent framework.
@@ -175,10 +174,10 @@ messages = [
 ]
 
 tokenizer.apply_chat_template(messages, tokenize=False, thinking=True, add_generation_prompt=True)
-# '<｜begin▁of▁sentence｜>You are a helpful assistant<｜User｜>Who are you?<｜Assistant｜></think>I am DeepSeek<｜end▁of▁sentence｜><｜User｜>1+1=?<｜Assistant｜><think>'
+## '<｜begin▁of▁sentence｜>You are a helpful assistant<｜User｜>Who are you?<｜Assistant｜></think>I am DeepSeek<｜end▁of▁sentence｜><｜User｜>1+1=?<｜Assistant｜><think>'
 
 tokenizer.apply_chat_template(messages, tokenize=False, thinking=False, add_generation_prompt=True)
-# '<｜begin▁of▁sentence｜>You are a helpful assistant<｜User｜>Who are you?<｜Assistant｜></think>I am DeepSeek<｜end▁of▁sentence｜><｜User｜>1+1=?<｜Assistant｜></think>'
+## '<｜begin▁of▁sentence｜>You are a helpful assistant<｜User｜>Who are you?<｜Assistant｜></think>I am DeepSeek<｜end▁of▁sentence｜><｜User｜>1+1=?<｜Assistant｜></think>'
 ```
 
 ## How to Run Locally

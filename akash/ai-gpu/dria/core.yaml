@@ -1,0 +1,51 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: dria
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  dkn:
+    image: firstbatch/dkn-compute-node:v0.6.1
+    cpu: 2.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    variables:
+      DKN_MODELS: gemma3:4b
+      OLLAMA_AUTO_PULL: 'true'
+      OLLAMA_HOST: http://ollama
+      OLLAMA_PORT: '11434'
+      DKN_EXEC_PLATFORM: akash/v0.6.1
+    secrets:
+    - secret_ref: dkn_wallet_secret_key
+      mode: env
+      keys:
+        value: DKN_WALLET_SECRET_KEY
+    - secret_ref: openai_api_key
+      mode: env
+      keys:
+        value: OPENAI_API_KEY
+    - secret_ref: openrouter_api_key
+      mode: env
+      keys:
+        value: OPENROUTER_API_KEY
+    network:
+      ingress:
+        port: 80
+        public: true
+  ollama:
+    image: 
+      ollama/ollama@sha256:2ea3b768a8f2dcd4d910f838d79702bb952089414dd578146619c0a939647ac6
+    cpu: 4.0
+    memory: 10Gi
+    storage:
+      size: 24Gi
+    network:
+      ingress:
+        port: 11434
+        public: false

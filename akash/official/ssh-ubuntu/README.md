@@ -1,8 +1,8 @@
-# Blazing Core Plain Linux SSH Deployments
+# Akash Plain Linux SSH Deployments
 
+This repository contains Docker images configured for plain Linux deployments via SSH on the Akash console. These images are based on official distribution images and are configured with OpenSSH for secure SSH access.
 
-This repository contains Docker images configured for plain Linux deployments via SSH  console. These images are based on official distribution images and are configured with OpenSSH for secure SSH access.
-
+## Available Images
 
 ### Ubuntu 24.04
 
@@ -17,6 +17,7 @@ This repository contains Docker images configured for plain Linux deployments vi
 - Custom entrypoint script to handle SSH public key setup.
 - Ports exposed for SSH access.
 
+## Usage
 
 ### Pull the Image
 
@@ -25,17 +26,21 @@ docker pull <repository>:<tag>
 ```
 
 Example:
+
 ```bash
 docker pull ghcr.io/akash-network/ubuntu-2404-ssh:latest
 ```
 
 ### Run the Container
+
 To run the container, specify your SSH public key using the SSH_PUBKEY environment variable.
+
 ```bash
 docker run -d -p 3022:22 -e "SSH_PUBKEY=$(cat ~/.ssh/id_rsa.pub)" --name my-container <repository>:<tag>
 ```
 
 Example:
+
 ```bash
 docker run -d -p 3022:22 -e "SSH_PUBKEY=$(cat ~/.ssh/id_rsa.pub)" --name my-ubuntu-container ghcr.io/akash-network/ubuntu-2404-ssh:latest
 ```
@@ -47,6 +52,7 @@ ssh -i ~/.ssh/id_rsa -p 3022 root@localhost
 ```
 
 ### Building the Images
+
 To build the images yourself, use the provided Dockerfiles:
 
 ```bash

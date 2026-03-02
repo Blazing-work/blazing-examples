@@ -1,0 +1,18 @@
+{
+  "id": "akash-n8n",
+  "title": "n8n",
+  "description": "n8n deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Business",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "business"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

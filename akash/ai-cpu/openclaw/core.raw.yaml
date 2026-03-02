@@ -1,0 +1,27 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: openclaw
+providers:
+  akash:
+    status: prefer
+services:
+  openclaw:
+    image: 
+      ghcr.io/zjuuu/openclaw-docker:openclaw-v2026.2.12@sha256:54078e1fc41c781a94f48846cf286f18d0632a4e49c69d78aee799ba938fffa0
+    cpu: 3.0
+    memory: 6Gi
+    storage:
+      size: 5Gi
+    variables:
+      OPENCLAW_CONFIG_PATH: /data/.openclaw/openclaw.json
+    secrets:
+    - secret_ref: setup_password
+      mode: env
+      keys:
+        value: SETUP_PASSWORD
+    network:
+      ingress:
+        port: 8080
+        public: true

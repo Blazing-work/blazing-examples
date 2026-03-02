@@ -14,7 +14,7 @@ Agent Zero is a next-generation autonomous AI assistant framework that runs in i
 
 ## Deployment Instructions
 
-
+1. Deploy the SDL file using Akash Console or CLI
 2. Wait for deployment to complete
 3. Access the web UI through the provided URI on port 80
 4. Configure your AI model provider in Settings
@@ -23,6 +23,7 @@ Agent Zero is a next-generation autonomous AI assistant framework that runs in i
    - Local models via Ollama
 5. Set authentication credentials in Settings for security
 
+## Configuration
 
 ### Required Configuration
 
@@ -56,10 +57,10 @@ You must configure an AI model provider before Agent Zero will function:
 
 ## Links
 
-- Official Website: https://agent-zero.ai
-- GitHub Repository: https://github.com/agent0ai/agent-zero
-- Docker Hub: https://hub.docker.com/r/agent0ai/agent-zero
-- Documentation: https://agent-zero.ai/p/docs/get-started/
+- Official Website: <https://agent-zero.ai>
+- GitHub Repository: <https://github.com/agent0ai/agent-zero>
+- Docker Hub: <https://hub.docker.com/r/agent0ai/agent-zero>
+- Documentation: <https://agent-zero.ai/p/docs/get-started/>
 
 ## Version
 
@@ -68,3 +69,4 @@ Current deployment version: v0.9.8
 ## Support
 
 For Agent Zero specific issues, visit the GitHub repository or official Discord.
+For Akash deployment issues, visit Akash Network Discord.

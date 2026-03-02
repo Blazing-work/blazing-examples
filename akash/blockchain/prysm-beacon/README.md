@@ -1,11 +1,10 @@
 # Prysm's beacon node
 
-
 The beacon-chain node shipped with Prysm is the keystone component of the Ethereum proof-of-stake protocol. It is responsible for running a full Proof-of-Stake blockchain, known as a beacon chain, which uses distributed consensus to agree on blocks both proposed and attested on by validators in the network. Beacon nodes communicate their processed blocks to their peers via a P2P (peer-to-peer) network, which also manages the lifecycle process of active validator clients.
 
-https://docs.prylabs.network/docs/getting-started
+<https://docs.prylabs.network/docs/getting-started>
 
-# Beacon node functionality
+## Beacon node functionality
 
 At runtime, the beacon node initialises and maintains a number of services that are all vital to providing all the features of Ethereum proof-of-stake. In no particular order, these services include:
 

@@ -1,24 +1,9 @@
-## Use Cases
+# Tronwallet
 
-- Cryptocurrency wallet
-- Digital asset management
+## Tronwallet
 
-## Getting Started
+A tronwallet make with streamlit -- Deploy on akash decloud
 
-1. Deploy the template and wait for the service to reach "Running" status
-2. Open the web interface at `http://{SERVICE_URI}:8501/`
-3. Follow any on-screen setup instructions
+see more:<https://steemit.com/hive-180932/@maiyude/akash-streamlit-tron>
 
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:8501/` in your browser or send HTTP requests to this address.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `maiyude/tronmoney:v1` |
-| CPU | 1.0 |
-| Memory | 512Mi |
-| Storage | 1500Mi |
-| Exposed Ports | 8501 |
+<http://69psvqo6npcjt8c056d44omnlo.provider2.akashdev.net/>

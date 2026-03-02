@@ -1,0 +1,43 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: rainbowminer
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  rainbowminer:
+    image: cryptoandcoffee/akash-rainbowminer:73
+    cpu: 4.0
+    memory: 4.75Gi
+    storage:
+      size: 3Gi
+    variables:
+      BTC_WALLET: ''
+      XMR_WALLET: ''
+      DOGE_WALLET: ''
+      RVN_WALLET: ''
+      XTZ_WALLET: ''
+      REGION: us
+      PROHASHING: ''
+      MINING_DUTCH: ''
+      AECurrency: DOGE
+      DONATE: '10'
+      SSL: '0'
+      MINER_NAME: ''
+      ALGORITHM: ''
+      EXCLUDE_COIN_SYMBOL: VTC
+      EXCLUDE_ALGORITHM: Verthash
+      EXCLUDE_POOL_NAME: Nicehash
+      EXCLUDE_COIN: Vertcoin
+      EXCLUDE_MINER_NAME: CcminerMTP,CcminerMTP10,Nsgminer
+      BENCHMARK_INTERVAL: '120'
+      POOLS: 
+        ProHashing,ProHashingCoins,MiningDutch,MiningDutchCoins,Hashcryptos,C3pool,MoneroOcean,unMineable,ZergPool,ZergPoolCoins,Zpool,ZpoolCoins
+    network:
+      ingress:
+        port: 4000
+        public: true

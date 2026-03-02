@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: xmrig-c11
+providers:
+  akash:
+    status: prefer
+services:
+  xmrig-c11:
+    image: cryptoandcoffee/akash-gpu-miner-xmrig-c11:12
+    cpu: 0.5
+    memory: 3Gi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: '"rx/0"'
+      POOL: '"gulf.moneroocean.stream:20128"'
+      WALLET: '""'
+      WORKER: '"akash"'
+      PASS: '"x"'
+      TLS: 'true'
+      TLS_FINGERPRINT: ''
+      CUSTOM_OPTIONS: ''
+    network:
+      ingress:
+        port: 8080
+        public: true

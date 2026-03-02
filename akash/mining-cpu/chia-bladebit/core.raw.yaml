@@ -1,0 +1,30 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: chia-bladebit
+providers:
+  akash:
+    status: prefer
+services:
+  chia:
+    image: cryptoandcoffee/akash-chia:316
+    cpu: 32.0
+    memory: 420Gi
+    storage:
+      size: 1200Gi
+    variables:
+      VERSION: 1.6.0
+      CONTRACT: ''
+      FARMERKEY: ''
+      PLOTTER: bladebit
+      BUCKETS: '256'
+      PLOT_SIZE: '32'
+      FINAL_LOCATION: local
+      CPU_UNITS: '32'
+      MEMORY_UNITS: 420Gi
+      STORAGE_UNITS: 1200Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

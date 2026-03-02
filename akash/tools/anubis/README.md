@@ -1,55 +1,15 @@
-# anubis
+# Anubis
 
 Anubis weighs the soul of your connection using a proof-of-work challenge in order to protect upstream resources from scraper bots.
+
 TL;DR: If you don't want to use (centralized) solution like Cloudflare to protect your system from bots, use Anubis.
+
 **From the docs:**
 
-## Use Cases
+This program is designed to help protect the small internet from the endless storm of requests that flood in from AI companies. Anubis is as lightweight as possible to ensure that everyone can afford to protect the communities closest to them.
 
-- Self-hosted utility
-- Productivity tool
-- System administration
+Anubis is a bit of a nuclear response. This will result in your website being blocked from smaller scrapers and may inhibit "good bots" like the Internet Archive. You can configure bot policy definitions to explicitly allowlist them and we are working on a curated set of "known good" bots to allow for a compromise between discoverability and uptime.
 
-## Getting Started
+In most cases, you should not need this and can probably get by using Cloudflare to protect a given origin. However, for circumstances where you can't or won't use Cloudflare, Anubis is there for you.
 
-1. Deploy the template and wait for the service to reach "Running" status
-2. Open the web interface at `http://{SERVICE_URI}:8080/`
-3. Follow any on-screen setup instructions
-
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:8080/` in your browser.
-
-
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `BIND` | `:8080` |
-| `DIFFICULTY` | `4` |
-| `METRICS_BIND` | `:9090` |
-| `SERVE_ROBOTS_TXT` | `true` |
-| `TARGET` | `http://nginx` |
-| `OG_PASSTHROUGH` | `true` |
-| `OG_EXPIRY_TIME` | `24h` |
-
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `ghcr.io/techarohq/anubis:latest` |
-| CPU | 1.0 |
-| Memory | 1Gi |
-| Storage | 200Mi |
-| Exposed Ports | 8080 |
-
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `nginx` |
-| CPU | 0.1 |
-| Memory | 256Mi |
-| Exposed Ports | 80 |
+Visit [Anubis Docs](https://anubis.techaro.lol/docs/) for more configuration details.

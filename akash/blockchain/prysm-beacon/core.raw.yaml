@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: prysm-beacon
+providers:
+  akash:
+    status: prefer
+services:
+  prysm-beacon:
+    image: gcr.io/prysmaticlabs/prysm/beacon-chain
+    cpu: 16.0
+    memory: 32Gi
+    storage:
+      size: 1Ti
+    network:
+      ingress:
+        port: 4000
+        public: true

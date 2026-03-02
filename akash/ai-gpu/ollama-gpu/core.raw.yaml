@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ollama-gpu
+providers:
+  akash:
+    status: prefer
+services:
+  ollama:
+    image: ollama/ollama:0.13.4
+    cpu: 8.0
+    memory: 28Gi
+    storage:
+      size: 100Gi
+    variables:
+      MODEL: llama3.1:8b
+    network:
+      ingress:
+        port: 11434
+        public: true

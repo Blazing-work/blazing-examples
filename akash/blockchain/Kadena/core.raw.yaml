@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Kadena
+providers:
+  akash:
+    status: prefer
+services:
+  node:
+    image: ghcr.io/kadena-io/chainweb-node/ubuntu:2.18
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 443
+        public: true

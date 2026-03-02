@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Falcon-7B
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  falcon7b:
+    image: andrey01/falcon7b:0.4
+    cpu: 8.0
+    memory: 100Gi
+    storage:
+      size: 200Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

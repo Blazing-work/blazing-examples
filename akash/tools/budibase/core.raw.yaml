@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: budibase
+providers:
+  akash:
+    status: prefer
+services:
+  budibase:
+    image: budibase/budibase:v2.0.31
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 80
+        public: true

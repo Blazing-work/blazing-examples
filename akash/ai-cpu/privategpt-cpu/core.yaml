@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: privategpt-cpu
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  privategpt:
+    image: 3x3cut0r/privategpt:latest
+    cpu: 24.0
+    memory: 16Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

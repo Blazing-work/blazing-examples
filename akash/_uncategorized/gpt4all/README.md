@@ -1,6 +1,5 @@
 # GPT4All
 
-
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
 
 [Technical Report](https://s3.amazonaws.com/static.nomic.ai/gpt4all/2023_GPT4All_Technical_Report.pdf)
@@ -10,7 +9,7 @@ Demo, data and code to train an assistant-style large language model with ~800k 
 
 Run on M1 Mac (not sped up!)
 
-# Try it yourself
+## Try it yourself
 
 Here's how to get started with the CPU quantized gpt4all model checkpoint:
 
@@ -29,14 +28,19 @@ For custom hardware compilation, see our [Alpaca C++](https://github.com/zanussb
 [Secret Unfiltered Checkpoint](https://the-eye.eu/public/AI/models/nomic-ai/gpt4all/gpt4all-lora-unfiltered-quantized.bin) - [[Torrent]](https://the-eye.eu/public/AI/models/nomic-ai/gpt4all/gpt4all-lora-unfiltered-quantized.bin.torrent)
 
 This model had all refusal to answer responses removed from training. Try it with:
+
 - `cd chat;./gpt4all-lora-quantized-OSX-m1 -m gpt4all-lora-unfiltered-quantized.bin`
 
 -----------
 Note: the full model on GPU (16GB of RAM required) performs much better in our qualitative evaluations.
 
+## Python Client
+
 ## CPU Interface
+
 To get running using the python client with the CPU interface, first install the [nomic client](https://github.com/nomic-ai/nomic) using `pip install nomic`
 Then, you can use the following script to interact with GPT4All:
+
 ```
 from nomic.gpt4all import GPT4All
 m = GPT4All()
@@ -45,12 +49,15 @@ m.prompt('write me a story about a lonely computer')
 ```
 
 ## GPU Interface
+
 There are two ways to get up and running with this model on GPU.
 The setup here is slightly more involved than the CPU model.
+
 1. clone the nomic client [repo](https://github.com/nomic-ai/nomic) and run `pip install .[GPT4All]` in the home dir.
 2. run `pip install nomic` and install the additional deps from the wheels built [here](https://github.com/nomic-ai/nomic/tree/main/bin)
 
 Once this is done, you can run the model on GPU with a script like the following:
+
 ```
 from nomic.gpt4all import GPT4AllGPU
 m = GPT4AllGPU(LLAMA_PATH)
@@ -61,23 +68,26 @@ config = {'num_beams': 2,
 out = m.generate('write me a story about a lonely computer', config)
 print(out)
 ```
+
 Where LLAMA_PATH is the path to a Huggingface Automodel compliant LLAMA model.
 Nomic is unable to distribute this file at this time.
 We are working on a GPT4All that does not have this limitation right now.
 
 You can pass any of the [huggingface generation config params](https://huggingface.co/docs/transformers/main_classes/text_generation#transformers.GenerationConfig) in the config.
 
-# Reproducibility
+## Reproducibility
 
 Trained LoRa Weights:
-- gpt4all-lora (four full epochs of training):  https://huggingface.co/nomic-ai/gpt4all-lora
-- gpt4all-lora-epoch-2 (three full epochs of training) https://huggingface.co/nomic-ai/gpt4all-lora-epoch-2
+
+- gpt4all-lora (four full epochs of training):  <https://huggingface.co/nomic-ai/gpt4all-lora>
+- gpt4all-lora-epoch-2 (three full epochs of training) <https://huggingface.co/nomic-ai/gpt4all-lora-epoch-2>
 
 Raw Data:
+
 - [Training Data Without P3](https://huggingface.co/datasets/nomic-ai/gpt4all_prompt_generations)
-  - Explorer: https://atlas.nomic.ai/map/gpt4all_data_clean_without_p3
+  - Explorer: <https://atlas.nomic.ai/map/gpt4all_data_clean_without_p3>
 - [Full Dataset with P3](https://huggingface.co/datasets/nomic-ai/gpt4all_prompt_generations_with_p3)
-  - Explorer: https://atlas.nomic.ai/map/gpt4all_data_clean
+  - Explorer: <https://atlas.nomic.ai/map/gpt4all_data_clean>
 
 We are not distributing a LLaMa 7B checkpoint.
 
@@ -119,9 +129,12 @@ python generate.py --config configs/generate/generate.yaml --prompt "Write a scr
 
 Join the [Discord](https://discord.gg/kvmy6dQB) and ask for help in `#gpt4all-help`
 
+## Sample Generations
 
 ### Provide instructions for the given exercise. Leg Raises
+>
 >Leg Raises
+>
 >1. Stand with your feet shoulder-width apart and your knees slightly bent.
 >2. Raise your arms straight out in front of you.
 >3. Slowly bend your knees and raise your heels off the ground.
@@ -136,24 +149,25 @@ Join the [Discord](https://discord.gg/kvmy6dQB) and ask for help in `#gpt4all-he
 >12. Rest for 30 seconds before repeating the exercise.
 >13. Gradually increase the number of repetitions as you become stronger.
 
-
 ### A color description has been provided. Find the CSS code associated with that color. A light red color with a medium light shade of pink
 
 >The CSS code associated with the color provided is: #FF6347
 
-
-### Come up with an interesting idea for a new movie plot. Your plot should be described with a title and a summary.
+### Come up with an interesting idea for a new movie plot. Your plot should be described with a title and a summary
 
 >1. The title of your movie plot should be "The Last Stand". 2. The summary of your movie plot should be: A group of mercenaries are hired to protect a small town from a dangerous criminal who is on the run. However, the town's sheriff is not willing to let them take over and decides to take matters into his own hands.
 
-### Reverse a string in python.
+### Reverse a string in python
+>
 > In Python, you can reverse a list or tuple by using the reversed() function on it. Here's an example of how to use this method with strings:
->    ```python
->   my_string = "Hello World" # Define your original string here
->   reversed_str = my_string[::-1]   # Use a slice and negative index for reverse order
->   print(reversed_str)     # Output will be reversed version of the inputted string.
+>
+> ```python
+> my_string = "Hello World" # Define your original string here
+> reversed_str = my_string[::-1]   # Use a slice and negative index for reverse order
+> print(reversed_str)     # Output will be reversed version of the inputted string.
 
-### List 10 dogs.
+### List 10 dogs
+>
 >1. Labrador Retriever
 >2. Golden Retriever
 >3. Beagle
@@ -165,7 +179,8 @@ Join the [Discord](https://discord.gg/kvmy6dQB) and ask for help in `#gpt4all-he
 >9. Shih Tzu
 >10. Pug
 
-### Write me a poem about the fall of Julius Ceasar into a ceasar salad in iambic pentameter.
+### Write me a poem about the fall of Julius Ceasar into a ceasar salad in iambic pentameter
+>
 >The fall of Julius Ceasar into a ceasar salad
 >In iambic pentameter,
 >The mighty Roman emperor
@@ -184,12 +199,14 @@ Join the [Discord](https://discord.gg/kvmy6dQB) and ask for help in `#gpt4all-he
 >His legacy reduced to a mere garnish,
 >As he was consumed by the masses.
 
-### What is a three word topic describing the following keywords: baseball, football, soccer:
+### What is a three word topic describing the following keywords: baseball, football, soccer
+>
 >Sports, athletics, games
 
 ## Citation
 
 If you utilize this reposistory, models or data in a downstream project, please consider citing it with:
+
 ```
 @misc{gpt4all,
   author = {Yuvanesh Anand and Zach Nussbaum and Brandon Duderstadt and Benjamin Schmidt and Andriy Mulyar},

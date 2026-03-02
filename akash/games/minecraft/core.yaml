@@ -1,0 +1,27 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: minecraft
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: itzg/minecraft-server
+    cpu: 2.0
+    memory: 5Gi
+    storage:
+      size: 5Gi
+    variables:
+      FORCE_REDOWNLOAD: 'true'
+      EULA: 'TRUE'
+      SERVER_NAME: Yourservername
+      MEMORY: 4G
+      MAX_PLAYERS: '10'
+    network:
+      ingress:
+        port: 25565
+        public: true

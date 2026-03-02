@@ -1,0 +1,61 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Venice-ElizaOS
+providers:
+  akash:
+    status: prefer
+services:
+  service-1:
+    image: kylecohen01/venice_eliza:1.1
+    cpu: 16.0
+    memory: 32gb
+    storage:
+      size: 64Gi
+    variables:
+      TWITTER_USERNAME: ''
+      TWITTER_EMAIL: ''
+      TWITTER_POLL_INTERVAL: '120'
+      TWITTER_SEARCH_ENABLE: 'FALSE'
+      TWITTER_TARGET_USERS: ''
+      POST_INTERVAL_MIN: '60'
+      POST_INTERVAL_MAX: '120'
+      POST_IMMEDIATELY: 'true'
+      TWITTER_DRY_RUN: 'false'
+      TWITTER_SPACES_ENABLE: 'false'
+      ENABLE_TWITTER_POST_GENERATION: 'true'
+      ENABLE_ACTION_PROCESSING: 'false'
+      MAX_ACTIONS_PROCESSING: '1'
+      ACTION_TIMELINE_TYPE: foryou
+      SMALL_VENICE_MODEL: llama-3.3-70b
+      MEDIUM_VENICE_MODEL: llama-3.3-70b
+      LARGE_VENICE_MODEL: llama-3.3-70b
+      IMAGE_VENICE_MODEL: flux-dev
+      DEFAULT_LOG_LEVEL: debug
+      CHAR_CLIENTS: twitter
+      CHAR_NAME: ''
+      CHAR_BIO: ''
+      CHAR_LORE: ''
+      PROMPT_1_INPUT: ''
+      PROMPT_1_RESPONSE: ''
+      PROMPT_2_INPUT: ''
+      PROMPT_2_RESPONSE: ''
+      POST_EXAMPLES: ''
+      CHAR_OVERALL_STYLE: ''
+      CHAR_CHAT_STYLE: ''
+      CHAR_POST_STYLE: ''
+      CHAR_ADJECTIVES: ''
+    secrets:
+    - secret_ref: twitter_password
+      mode: env
+      keys:
+        value: TWITTER_PASSWORD
+    - secret_ref: venice_api_key
+      mode: env
+      keys:
+        value: VENICE_API_KEY
+    network:
+      ingress:
+        port: 3000
+        public: true

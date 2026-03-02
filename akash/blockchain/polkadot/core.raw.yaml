@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: polkadot
+providers:
+  akash:
+    status: prefer
+services:
+  polkadot:
+    image: parity/polkadot:stable2509-2
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 128Gi
+    network:
+      ingress:
+        port: 9933
+        public: true

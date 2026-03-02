@@ -1,8 +1,12 @@
 # Sovryn Node
 
-
 Check out the [Project site](https://github.com/DistributedCollective/Sovryn-Node):
 
+The `deploy.yaml` uses an [unofficial Docker image](https://hub.docker.com/r/nrm55/sovryn-node) at-the-moment. Please read below for tips on deploying to Akash. There is a video of me running through this process [here](https://youtu.be/Iinsjgolmu8).
+
+## First: Setup environment variables first, edit deploy.yaml's env block
+
+Your `env:` block in `deploy.yaml` should look much like this. Addresses need to be properly checksummed, and wallets are web3keyfiles.
 
 ```
       - WHICHNET=test
@@ -16,19 +20,48 @@ Check out the [Project site](https://github.com/DistributedCollective/Sovryn-Nod
       - TELEGRAM_BOT_KEY=
 ```
 
-### Second: Deploy to Blazing Core:
+### Second: Deploy to Akash
+
+Please watch the video if any of these steps are confusing. Refer to Akash for missing stuff, you'll need to create your cert, get some environment variables setup (AKASH_NODE, AKASH_CHAIN_ID, KEY_NAME, KEY_BACKEND, ...)
+
 1. create deployment, get DSEQ into $DSEQ
 
-2. check bids
-
-3. accept a bid by creating lease, get provider into $PROVIDER
-
-4. check lease status
-
-5. upload our manifest, wait for spinup
-
-6. check the lease status
-
-7. Optional but super helpful: Check logs
 ```
+akash tx deployment create akash-deploy.yaml --from $KEY_NAME --keyring-backend $KEYRING_BACKEND --node $AKASH_NODE --chain-id $AKASH_CHAIN_ID -y --fees 5000uakt
+```
+
+1. check bids
+
+```
+akash query market bid list --owner=$ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $DSEQ
+```
+
+1. accept a bid by creating lease, get provider into $PROVIDER
+
+```
+akash tx market lease create --chain-id $AKASH_CHAIN_ID --node $AKASH_NODE --owner $ACCOUNT_ADDRESS --dseq $DSEQ --gseq $GSEQ --oseq $OSEQ --provider $PROVIDER --from $KEY_NAME --fees 5000uakt --keyring-backend $KEYRING_BACKEND
+```
+
+1. check lease status
+
+```
+akash query market lease list --owner $ACCOUNT_ADDRESS --node $AKASH_NODE --dseq $DSEQ
+```
+
+1. upload our manifest, wait for spinup
+
+```
+akash provider send-manifest akash-deploy.yaml --keyring-backend $KEYRING_BACKEND --node $AKASH_NODE --from=$KEY_NAME --provider=$PROVIDER --dseq $DSEQ --log_level=info --home ~/.akash
+```
+
+1. check the lease status
+
+```
+akash provider lease-status --node $AKASH_NODE --home ~/.akash --dseq $DSEQ --from $KEY_NAME --provider $PROVIDER --keyring-backend $KEYRING_BACKEND
+```
+
+1. Optional but super helpful: Check logs
+
+```
+akash provider lease-logs --dseq=$DSEQ --from=$ACCOUNT_ADDRESS --provider=$PROVIDER
 ```

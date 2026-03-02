@@ -1,0 +1,18 @@
+{
+  "id": "akash-freeflix-nucleus",
+  "title": "freeflix-nucleus",
+  "description": "freeflix-nucleus deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Media",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "media"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

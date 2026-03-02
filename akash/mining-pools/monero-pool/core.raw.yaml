@@ -1,0 +1,29 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: monero-pool
+providers:
+  akash:
+    status: prefer
+services:
+  monero-pool:
+    image: cryptoandcoffee/akash-monero-pool:17
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 384Gi
+    variables:
+      POOL_WALLET: ''
+      POOL_WALLET_SEED: ''
+      FEE_WALLET: ''
+      MONERO_ARGS: ''
+      MONERO_WALLET_ARGS: ''
+      POOL_FEE: '0.01'
+      PAYMENT_THRESHOLD: '0.001'
+      FAST_SYNC: 'true'
+      VERIFY: 'true'
+    network:
+      ingress:
+        port: 4242
+        public: true

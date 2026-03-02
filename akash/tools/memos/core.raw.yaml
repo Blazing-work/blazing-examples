@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: memos
+providers:
+  akash:
+    status: prefer
+services:
+  memos:
+    image: neosmemo/memos:0.25.2
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 5230
+        public: true

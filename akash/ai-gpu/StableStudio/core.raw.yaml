@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: StableStudio
+providers:
+  akash:
+    status: prefer
+services:
+  sss:
+    image: nomorelies/sss:v1.2
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 16Gi
+    network:
+      ingress:
+        port: 3000
+        public: true

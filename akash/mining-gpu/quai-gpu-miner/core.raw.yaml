@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: quai-gpu-miner
+providers:
+  akash:
+    status: prefer
+services:
+  quai-miner:
+    image: quainetwork/quai-gpu-miner-run:v0.5.0
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      STRATUM_IP: ''
+      STRATUM_PORT: ''
+      PLATFORM: U
+    network:
+      ingress:
+        port: 80
+        public: true

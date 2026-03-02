@@ -1,9 +1,9 @@
 # Model Card for Mistral-7B-Instruct-v0.3
 
-
 The Mistral-7B-Instruct-v0.3 Large Language Model (LLM) is an instruct fine-tuned version of the Mistral-7B-v0.3.
 
 Mistral-7B-v0.3 has the following changes compared to [Mistral-7B-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2/edit/main/README.md)
+
 - Extended vocabulary to 32768
 - Supports v3 Tokenizer
 - Supports function calling
@@ -110,7 +110,6 @@ chatbot = pipeline("text-generation", model="mistralai/Mistral-7B-Instruct-v0.3"
 chatbot(messages)
 ```
 
-
 ## Function calling with `transformers`
 
 To use this example, you'll need `transformers` version 4.42.0 or higher. Please see the
@@ -132,7 +131,7 @@ def get_current_weather(location: str, format: str):
     pass
 conversation = [{"role": "user", "content": "What's the weather like in Paris?"}]
 tools = [get_current_weather]
-# format and tokenize the tool use prompt
+## format and tokenize the tool use prompt
 inputs = tokenizer.apply_chat_template(
             conversation,
             tools=tools,
@@ -151,7 +150,6 @@ results to the chat history so that the model can use them in its next generatio
 see the [function calling guide](https://huggingface.co/docs/transformers/main/chat_templating#advanced-tool-use--function-calling),
 and note that Mistral **does** use tool call IDs, so these must be included in your tool calls and tool results. They should be
 exactly 9 alphanumeric characters.
-
 
 ## Limitations
 

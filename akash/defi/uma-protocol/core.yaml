@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: uma-protocol
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  umaprotocol:
+    image: yuravorobei/uma-protocol
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 2.5Gi
+    network:
+      ingress:
+        port: 3000
+        public: true

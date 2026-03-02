@@ -1,44 +1,19 @@
-# ghost
+# Ghost 5
 
-Ghost is a modern, open-source publishing platform built for professional content creators and publishers.
+Ghost is a free and open source blogging platform written in JavaScript. Ghost 5 includes membership features, including premium subscriptions and newsletters.
 
-## Use Cases
+Go to <http://yourhost/ghost/> to set up your account.
 
-- Professional blogs
-- Newsletter publishing
-- Membership and subscription sites
-- Content marketing
+## Production
 
-## Getting Started
+It is not recommended to use the `sqlite3` database if you plan more than 1000 members in your blog.
 
-1. Navigate to `/ghost/` to set up your admin account
-2. Choose a theme and configure your publication settings
-3. Create and publish your first post
+The MySQL & persistent storage enabled version is available here:
 
-## Accessing the Service
+- [deploy-mysql.yaml](deploy-mysql.yaml)
 
-Open the Ghost admin panel at `http://{SERVICE_URI}:2368/ghost/`
+## IPFS
 
+A sql lite version, that backsup images and the sql database to ifps is available here:
 
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `url` | `http://changeme.com` |
-| `NODE_ENV` | `production` |
-| `database__client` | `sqlite3` |
-| `database__connection__filename` | `content/data/ghost.db` |
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `ghost:5.12.3` |
-| CPU | 1.0 |
-| Memory | 1Gi |
-| Storage | 5Gi |
-| Exposed Ports | 2368 |
-
-## Documentation
-
-For full documentation, visit: [https://ghost.org/docs/](https://ghost.org/docs/)
+- [deploy-ipfs.yaml](deploy-ipfs.yaml)

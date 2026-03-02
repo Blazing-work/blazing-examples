@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: zcash-zcashd
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  zcashd:
+    image: 
+      electriccoinco/zcashd@sha256:f8972b3638c2eafe74f501511168d64000870cc9502872b58c31ebf060e9d557
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 350Gi
+    variables:
+      ZCASHD_NETWORK: mainnet
+      ZCASHD_SHOWMETRICS: '1'
+    network:
+      ingress:
+        port: 8233
+        public: true

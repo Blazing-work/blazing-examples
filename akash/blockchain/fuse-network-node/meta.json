@@ -1,0 +1,18 @@
+{
+  "id": "akash-fuse-network-node",
+  "title": "fuse-network-node",
+  "description": "fuse-network-node deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Blockchain",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "blockchain"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

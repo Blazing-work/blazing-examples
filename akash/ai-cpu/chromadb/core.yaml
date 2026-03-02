@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: chromadb
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  chroma:
+    image: chromadb/chroma
+    cpu: 4.0
+    memory: 4Gb
+    storage:
+      size: 1Gi
+    variables:
+      IS_PERSISTENT: 'TRUE'
+      PERSIST_DIRECTORY: /mnt/data/chromadb/chroma
+      ANONYMIZED_TELEMETRY: 'FALSE'
+    network:
+      ingress:
+        port: 8000
+        public: true

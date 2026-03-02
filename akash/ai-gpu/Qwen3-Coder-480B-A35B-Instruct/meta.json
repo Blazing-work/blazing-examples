@@ -1,0 +1,18 @@
+{
+  "id": "akash-qwen3-coder-480b-a35b-instruct",
+  "title": "Qwen3-Coder-480B-A35B-Instruct",
+  "description": "Qwen3-Coder-480B-A35B-Instruct deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

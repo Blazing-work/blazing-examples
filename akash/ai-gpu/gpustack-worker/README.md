@@ -1,11 +1,10 @@
 # GPUStack
 
-
 ![demo](https://github.com/gpustack/gpustack/blob/7bd4c5db4fe910ce9bc1a3d7fb6e49f11872ab2c/docs/assets/gpustack-demo.gif)
 
 GPUStack is an open-source GPU cluster manager for running large language models(LLMs).
 
-### Key Features
+## Key Features
 
 - **Supports a Wide Variety of Hardware:** Run with different brands of GPUs in Apple MacBooks, Windows PCs, and Linux servers.
 - **Scales with Your GPU Inventory:** Easily add more GPUs or nodes to scale up your operations.
@@ -23,6 +22,7 @@ GPUStack is an open-source GPU cluster manager for running large language models
 
 ---
 
+## Installation
 
 ### Linux or MacOS
 
@@ -76,7 +76,7 @@ For manual installation or detailed configurations, refer to the [installation](
 gpustack chat llama3 "tell me a joke."
 ```
 
-2. Open `http://myserver` in the browser to access the GPUStack UI. Log in to GPUStack with username `admin` and the default password. You can run the following command to get the password for the default setup:
+1. Open `http://myserver` in the browser to access the GPUStack UI. Log in to GPUStack with username `admin` and the default password. You can run the following command to get the password for the default setup:
 
 **Linux or MacOS**
 
@@ -90,17 +90,17 @@ cat /var/lib/gpustack/initial_admin_password
 Get-Content -Path "$env:APPDATA\gpustack\initial_admin_password" -Raw
 ```
 
-3. Click `Playground` in the navigation menus. Now you can chat with the LLM in the UI playground.
+1. Click `Playground` in the navigation menus. Now you can chat with the LLM in the UI playground.
 
 ![Playground Screenshot](docs/assets/playground-screenshot.png)
 
-4. Click `API Keys` in the navigation menus, then click the `New API Key` button.
+1. Click `API Keys` in the navigation menus, then click the `New API Key` button.
 
-5. Fill in the `Name` and click the `Save` button.
+2. Fill in the `Name` and click the `Save` button.
 
-6. Copy the generated API key and save it somewhere safe. Please note that you can only see it once on creation.
+3. Copy the generated API key and save it somewhere safe. Please note that you can only see it once on creation.
 
-7. Now you can use the API key to access the OpenAI-compatible API. For example, use curl as the following:
+4. Now you can use the API key to access the OpenAI-compatible API. For example, use curl as the following:
 
 ```bash
 export GPUSTACK_API_KEY=myapikey

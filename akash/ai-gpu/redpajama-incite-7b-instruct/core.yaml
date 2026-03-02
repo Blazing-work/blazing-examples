@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: redpajama-incite-7b-instruct
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: yuravorobei/redpajama_incite_7b_instruct:0.3
+    cpu: 4.0
+    memory: 30Gi
+    storage:
+      size: 35Gi
+    network:
+      ingress:
+        port: 7860
+        public: true

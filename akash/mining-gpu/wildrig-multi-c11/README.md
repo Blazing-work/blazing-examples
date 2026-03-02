@@ -1,12 +1,15 @@
 # WildRig Multi
 
-
 multi algo miner for AMD & NVIDIA
 
-# KNOWN ISSUES
+## KNOWN ISSUES
+
 - any report is welcome! :)
 
-## AMD:
+## SUPPORTED GPU's
+
+## AMD
+
 - **GCN 2nd gen**: R7 260, R9 290, R9 295X2, R7 360, R9 390
 - **GCN 3rd gen**: R9 285, R9 380, R9 Fury, R9 Nano
 - **GCN 4th gen**: RX460, RX470, RX480, RX550, RX560, RX570, RX580, RX590
@@ -17,11 +20,13 @@ multi algo miner for AMD & NVIDIA
 
 Pitcairn, Tahiti and other old cards of **GCN 1st gen**(like HD 78x0, HD 79x0, R7 265, R9 270, R9 280, R9 370, etc.) are not supported and won't be, because they are too old and need additional work.
 
-## NVIDIA:
+## NVIDIA
+
 - All gpu's with Compute Capabilities >=5.0 should work
 - also specific gpu can be supported via use of --ptx-version parameter(like --ptx-version 71 for sm_86, more ptx version is [here](https://docs.nvidia.com/cuda/parallel-thread-execution/#release-notes))
 
-# SUPPORTED ALGORITHMS
+## SUPPORTED ALGORITHMS
+
 - aergo, anime
 - bcd, bitcore, blake2b-btcc, blake2b-glt, blake2s, blake3, bmw512
 - c11, curvehash
@@ -41,11 +46,13 @@ Pitcairn, Tahiti and other old cards of **GCN 1st gen**(like HD 78x0, HD 79x0, R
 - vprogpow
 - x11, x11k, x12, x13, x14, x15, x16r, x16rv2, x16rt, x16s, x17, x18, x20r, x21s, x22i, x25x, x33, xevan
 
-# DEV-FEE:
+## DEV-FEE
+
 - by default is 1%
 - lyra2TDC, megabtx, memehashv2, phi5, sha256csm and nexapow algorithms are 2%
 
-# OPTIONS
+## OPTIONS
+
 ```
 Usage: wildrig [OPTIONS]
 

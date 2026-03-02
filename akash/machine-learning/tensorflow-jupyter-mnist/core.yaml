@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tensorflow-jupyter-mnist
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: wlouie1/mnist-train:1.0
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 3Gi
+    network:
+      ingress:
+        port: 8888
+        public: true

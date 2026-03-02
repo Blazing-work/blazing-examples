@@ -1,7 +1,6 @@
 # React
 
-
-Deploy your React applications on the decentralized Blazing Core Network. This template provides a basic setup for serving a production-ready React app using Nginx.
+Deploy your React applications on the decentralized Akash Network. This template provides a basic setup for serving a production-ready React app using Nginx.
 
 ## Prerequisites
 
@@ -10,6 +9,7 @@ Deploy your React applications on the decentralized Blazing Core Network. This t
 ## Deployment Steps
 
 1. **Build your React app:**
+
    ```bash
    npm run build
    ```
@@ -18,6 +18,8 @@ Deploy your React applications on the decentralized Blazing Core Network. This t
    - This template uses Nginx to serve static files.
    - Upload your `build` folder contents to the persistent storage at `/usr/share/nginx/html` during deployment.
 
+3. **Deploy:**
+   - Use the provided `deploy.yaml` to deploy.
    - Access your React app at the exposed endpoint (port 80).
 
 ## Configuration
@@ -28,8 +30,10 @@ Deploy your React applications on the decentralized Blazing Core Network. This t
 
 ## Customization
 
+- For larger apps, increase storage and memory in `deploy.yaml`.
 - To include your build files directly, create a custom Docker image based on `nginx:alpine` and copy your build files to `/usr/share/nginx/html`.
 
 ## Resources
 
 - [React Official Documentation](https://react.dev/)
+- [Akash Deployment Guide](https://akash.network/docs/deployments/overview/)

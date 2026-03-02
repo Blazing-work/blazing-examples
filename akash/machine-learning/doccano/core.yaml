@@ -1,0 +1,29 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: doccano
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  doccano:
+    image: doccano/doccano
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 2048Mi
+    variables:
+      ADMIN_USERNAME: admin
+      ADMIN_EMAIL: admin@example.com
+    secrets:
+    - secret_ref: admin_password
+      mode: env
+      keys:
+        value: ADMIN_PASSWORD
+    network:
+      ingress:
+        port: 8000
+        public: true

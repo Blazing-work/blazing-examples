@@ -1,0 +1,29 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tf2
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  tf2:
+    image: cm2network/tf2
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    variables:
+      SRCDS_PORT: '27016'
+      SRCDS_TV_PORT: '27021'
+    secrets:
+    - secret_ref: srcds_token
+      mode: env
+      keys:
+        value: SRCDS_TOKEN
+    network:
+      ingress:
+        port: 27016
+        public: true

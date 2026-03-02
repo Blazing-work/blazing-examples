@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: DeepSeek-R1-0528
+providers:
+  akash:
+    status: prefer
+services:
+  sglang1:
+    image: lmsysorg/sglang:v0.4.6.post5-cu124
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

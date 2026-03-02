@@ -1,36 +1,15 @@
-# curve
+# Curve Finance UI
 
-Curve UI
+## Curve UI
+
 <p align="center">
-<img src="https://raw.githubusercontent.com/curvefi/curve-ui/feature/add-info/assets/curve-image.jpeg" />
+  <img src="https://raw.githubusercontent.com/curvefi/curve-ui/feature/add-info/assets/curve-image.jpeg" />
+</p>
 
-## Use Cases
+## What is Curve?
 
-- Decentralized finance
-- Blockchain node operation
-- Network validation
+Curve is an exchange liquidity pool on Ethereum (like Uniswap) designed for (1) extremely efficient stablecoin trading (2) low risk, supplemental fee income for liquidity providers, without an opportunity cost.
 
-## Getting Started
+Curve allows users (and smart contracts like 1inch) to trade between DAI and USDC with a bespoke low slippage, low fee algorithm designed specifically for stablecoins. Behind the scenes, the liquidity pool is supplied to the Compound protocol, where it generates income for liquidity providers.
 
-1. Deploy the template and wait for the service to reach "Running" status
-2. Send HTTP requests to `http://{SERVICE_URI}:8000/`
-3. Check the service documentation for available API endpoints
-
-## Accessing the Service
-
-Send requests to `http://{SERVICE_URI}:8000/`.
-
-Example:
-```bash
-curl http://{SERVICE_URI}:8000/
-```
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `davaymne/curve-ui:latest` |
-| CPU | 0.1 |
-| Memory | 512Mi |
-| Storage | 2.5Gi |
-| Exposed Ports | 8000 |
+More details [curve-ui](https://github.com/curvefi/curve-ui)

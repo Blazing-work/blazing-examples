@@ -1,0 +1,19 @@
+{
+  "id": "akash-mordhau",
+  "title": "mordhau",
+  "description": "mordhau deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Game Servers",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "game",
+    "servers"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "akash-kawpow-pool-neoxa",
+  "title": "kawpow-pool-neoxa",
+  "description": "kawpow-pool-neoxa deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Mining Pools",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "mining",
+    "pools"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

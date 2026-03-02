@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: centrifuge
+providers:
+  akash:
+    status: prefer
+services:
+  centrifuge:
+    image: centrifugeio/centrifuge-chain:v0.15.6
+    cpu: 4.0
+    memory: 16GB
+    storage:
+      size: 1Ti
+    network:
+      ingress:
+        port: 9933
+        public: true

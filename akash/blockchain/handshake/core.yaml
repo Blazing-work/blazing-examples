@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: handshake
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  hnsnode:
+    image: wirewrex/hsd_with_ip:latest
+    cpu: 2.0
+    memory: 2GB
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 12038
+        public: true

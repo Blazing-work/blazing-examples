@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: FastChat
+providers:
+  akash:
+    status: prefer
+services:
+  gpu-app:
+    image: sxk1633/fastchat:13b-1
+    cpu: 1.0
+    memory: 38Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8888
+        public: true

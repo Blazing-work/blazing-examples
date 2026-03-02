@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: iproyal-pawns
+providers:
+  akash:
+    status: prefer
+services:
+  iproyal-pawns:
+    image: iproyal/pawns-cli
+    cpu: 0.25
+    memory: 64Mi
+    storage:
+      size: 6Mi
+    network:
+      ingress:
+        port: 80
+        public: true

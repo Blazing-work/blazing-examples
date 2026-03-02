@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: synthetix.exchange
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  synthetix:
+    image: selchenkov/synthetix.exchange:latest
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 80
+        public: true

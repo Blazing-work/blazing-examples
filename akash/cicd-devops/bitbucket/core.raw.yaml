@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bitbucket
+providers:
+  akash:
+    status: prefer
+services:
+  bitbucket:
+    image: atlassian/bitbucket-server:8.2.1
+    cpu: 2.0
+    memory: 4gi
+    storage:
+      size: 4Gi
+    network:
+      ingress:
+        port: 7990
+        public: true

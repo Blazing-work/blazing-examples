@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: whisper-gui-gpu
+providers:
+  akash:
+    status: prefer
+services:
+  whisper-gui:
+    image: 3x3cut0r/whisper-gui:latest
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 7860
+        public: true

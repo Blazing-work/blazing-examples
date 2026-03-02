@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bitcoin
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: declab/bitcoin_node:0.1
+    cpu: 2.0
+    memory: 2Gi
+    storage:
+      size: 30Gi
+    variables:
+      LINK_BINARY: 
+        https://bitcoin.org/bin/bitcoin-core-27.0/bitcoin-27.0-x86_64-linux-gnu.tar.gz
+      SNAPSHOT: ''
+      ARGS: --prune=20000
+    network:
+      ingress:
+        port: 8332
+        public: true

@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bzminer-c11
+providers:
+  akash:
+    status: prefer
+services:
+  bzminer-c11:
+    image: cryptoandcoffee/akash-gpu-miner-bzminer-c11:3
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: etchash
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://us-solo-etc.2miners.com:15050"'
+      PASSWORD: x
+      OPTIONS: '"--api-bind-http 0.0.0.0:4067 --api-read-only --no-nvml"'
+    network:
+      ingress:
+        port: 4067
+        public: true

@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: TTS
+providers:
+  akash:
+    status: prefer
+services:
+  tts:
+    image: nomorelies/tts:v1.0
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 16Gi
+    network:
+      ingress:
+        port: 5002
+        public: true

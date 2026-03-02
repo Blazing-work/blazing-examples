@@ -1,3 +1,5 @@
+# Cryptodredge C11
+
 CryptoDredge is a simple in use and highly optimized cryptocurrency mining software. It takes full advantage of modern <span style="color:#76b900">NVIDIA</span> graphics cards through the use of unique optimization techniques. We have also devoted great attention to stable power consumption. These benefits, along with the very small developer fee, make our product one of the best publicly available miners.
 
 ## Features
@@ -108,7 +110,6 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 ```
 
-
 ## System Requirements
 
 - <span style="color:#76b900">NVIDIA</span> GPUs with Compute Capability 5.0 or above
@@ -120,10 +121,12 @@ CryptoDredge -a <ALGO> -o stratum+tcp://<POOL> -u <WALLET_ADDRESS> -p <OPTIONS>
 
 - Ubuntu 18.04+, Debian 10.0+ (64-bit versions)
 
+## Notes
 
 ### Rejected Shares
 
 There are many reasons for rejected shares. The primary reasons are:
+
 - high network latency
 - overloaded mining server
 - aggressive graphics card overclocking
@@ -147,6 +150,7 @@ It seems that you are using an own restart mechanism of CryptoDredge (see the _W
 If the built-in watchdog is enabled then CryptoDredge will generate and send us the report. You can disable error reporting with `--no-crashreport` option. Allowing CryptoDredge to send us automatic reports helps us prioritize what to fix and improve in the future versions.
 
 Crash reports won't include any personal information about you, but they might include:
+
 - Operating System version
 - Driver version
 - Miner configuration
@@ -158,7 +162,7 @@ If you encounter many "invalid share: invalid pow" errors from the pool, set `--
 
 ## Contact
 
-If you have problems, questions, ideas or suggestions, please contact us by posting to cryptodredge@gmail.com
+If you have problems, questions, ideas or suggestions, please contact us by posting to <cryptodredge@gmail.com>
 
 ## Web Site
 
@@ -166,6 +170,6 @@ Visit the CryptoDredge web site for the latest news and downloads: [https://cryp
 
 ## Releases
 
-- https://cryptodredge.org/download/windows/11.4/latest
-- https://cryptodredge.org/download/linux/11.4/latest
-- https://github.com/CryptoDredge/miner/releases
+- <https://cryptodredge.org/download/windows/11.4/latest>
+- <https://cryptodredge.org/download/linux/11.4/latest>
+- <https://github.com/CryptoDredge/miner/releases>

@@ -1,0 +1,37 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ghost-filebase-backup
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  ghost:
+    image: ghcr.io/zhajingwen/ghost-ipfs-bkup:latest
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1.5Gi
+    variables:
+      url: http://changeme.com
+      NODE_ENV: production
+      FILEBASE_BUCKET: test-bucket-name
+      FILEBASE_ENDPOINT: https://s3.filebase.com
+      FILEBASE_ACCESS_KEY_ID: your-filebase-access-key-id
+      FILEBASE_BACKUP_PATH: my-backup
+    secrets:
+    - secret_ref: filebase_secret_access_key
+      mode: env
+      keys:
+        value: FILEBASE_SECRET_ACCESS_KEY
+    - secret_ref: backup_encryption_password
+      mode: env
+      keys:
+        value: BACKUP_ENCRYPTION_PASSWORD
+    network:
+      ingress:
+        port: 2368
+        public: true

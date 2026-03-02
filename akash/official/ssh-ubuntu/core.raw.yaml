@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ssh-ubuntu
+providers:
+  akash:
+    status: prefer
+services:
+  service-1:
+    image: ghcr.io/akash-network/ubuntu-2404-ssh:1
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      SSH_PUBKEY: YOUR_KEY_HERE
+    network:
+      ingress:
+        port: 22
+        public: true

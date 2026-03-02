@@ -1,0 +1,188 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: micro-services-example
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  carts:
+    image: public.ecr.aws/aws-containers/retail-store-sample-cart:1.3.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      SERVER_TOMCAT_ACCESSLOG_ENABLED: 'true'
+      RETAIL_CART_PERSISTENCE_PROVIDER: dynamodb
+      RETAIL_CART_PERSISTENCE_DYNAMODB_ENDPOINT: http://carts-db:8000
+      RETAIL_CART_PERSISTENCE_DYNAMODB_CREATE_TABLE: 'true'
+      AWS_ACCESS_KEY_ID: key
+    secrets:
+    - secret_ref: aws_secret_access_key
+      mode: env
+      keys:
+        value: AWS_SECRET_ACCESS_KEY
+    network:
+      ingress:
+        port: 8080
+        public: false
+  carts-db:
+    image: amazon/dynamodb-local:1.20.0
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8000
+        public: false
+  catalog:
+    image: public.ecr.aws/aws-containers/retail-store-sample-catalog:1.3.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      RETAIL_CATALOG_PERSISTENCE_DB_NAME: catalogdb
+      RETAIL_CATALOG_PERSISTENCE_USER: catalog_user
+      GIN_MODE: release
+      RETAIL_CATALOG_PERSISTENCE_PROVIDER: mysql
+      RETAIL_CATALOG_PERSISTENCE_ENDPOINT: catalog-db:3306
+    secrets:
+    - secret_ref: retail_catalog_persistence_password
+      mode: env
+      keys:
+        value: RETAIL_CATALOG_PERSISTENCE_PASSWORD
+    network:
+      ingress:
+        port: 8080
+        public: false
+  catalog-db:
+    image: mariadb:10.9
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      MYSQL_DATABASE: catalogdb
+      MYSQL_USER: catalog_user
+    secrets:
+    - secret_ref: mysql_root_password
+      mode: env
+      keys:
+        value: MYSQL_ROOT_PASSWORD
+    - secret_ref: mysql_allow_empty_password
+      mode: env
+      keys:
+        value: MYSQL_ALLOW_EMPTY_PASSWORD
+    - secret_ref: mysql_password
+      mode: env
+      keys:
+        value: MYSQL_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: false
+  checkout:
+    image: public.ecr.aws/aws-containers/retail-store-sample-checkout:1.3.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      RETAIL_CHECKOUT_PERSISTENCE_PROVIDER: redis
+      RETAIL_CHECKOUT_PERSISTENCE_REDIS_URL: redis://checkout-redis:6379
+      RETAIL_CHECKOUT_ENDPOINTS_ORDERS: http://orders:8080
+    network:
+      ingress:
+        port: 8080
+        public: false
+  checkout-redis:
+    image: redis:6.0-alpine
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 6379
+        public: false
+  orders:
+    image: public.ecr.aws/aws-containers/retail-store-sample-orders:1.3.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      SERVER_TOMCAT_ACCESSLOG_ENABLED: 'true'
+      RETAIL_ORDERS_PERSISTENCE_PROVIDER: postgres
+      RETAIL_ORDERS_PERSISTENCE_ENDPOINT: orders-db:5432
+      RETAIL_ORDERS_PERSISTENCE_NAME: orders
+      RETAIL_ORDERS_PERSISTENCE_USERNAME: orders_user
+      RETAIL_ORDERS_MESSAGING_PROVIDER: rabbitmq
+      RETAIL_ORDERS_MESSAGING_RABBITMQ_ADDRESSES: rabbitmq:5672
+      RETAIL_ORDERS_MESSAGING_RABBITMQ_USERNAME: rabbitmq
+    secrets:
+    - secret_ref: retail_orders_persistence_password
+      mode: env
+      keys:
+        value: RETAIL_ORDERS_PERSISTENCE_PASSWORD
+    - secret_ref: retail_orders_messaging_rabbitmq_password
+      mode: env
+      keys:
+        value: RETAIL_ORDERS_MESSAGING_RABBITMQ_PASSWORD
+    network:
+      ingress:
+        port: 8080
+        public: false
+  orders-db:
+    image: postgres:16.1
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 2Gi
+    variables:
+      POSTGRES_DB: orders
+      POSTGRES_USER: orders_user
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false
+  rabbitmq:
+    image: rabbitmq:3-management
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 1Gi
+    variables:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: mypassword123
+    network:
+      ingress:
+        port: 5672
+        public: false
+  ui:
+    image: public.ecr.aws/aws-containers/retail-store-sample-ui:1.3.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      SERVER_TOMCAT_ACCESSLOG_ENABLED: 'true'
+      RETAIL_UI_ENDPOINTS_CATALOG: http://catalog:8080
+      RETAIL_UI_ENDPOINTS_CARTS: http://carts:8080
+      RETAIL_UI_ENDPOINTS_ORDERS: http://orders:8080
+      RETAIL_UI_ENDPOINTS_CHECKOUT: http://checkout:8080
+    network:
+      ingress:
+        port: 8080
+        public: true

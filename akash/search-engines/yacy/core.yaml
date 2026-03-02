@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: yacy
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  yacy:
+    image: yacy/yacy_search_server:latest
+    cpu: 0.1
+    memory: 256Mi
+    network:
+      ingress:
+        port: 8090
+        public: true

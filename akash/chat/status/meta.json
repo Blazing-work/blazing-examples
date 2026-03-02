@@ -1,0 +1,18 @@
+{
+  "id": "akash-status",
+  "title": "status",
+  "description": "status deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Chat",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "chat"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

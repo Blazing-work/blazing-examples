@@ -1,6 +1,5 @@
 # Qwen3-Coder-480B-A35B-Instruct
 
-
 <a href="https://chat.qwen.ai/" target="_blank" style="margin: 2px;">
     <img alt="Chat" src="https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5" style="display: inline-block; vertical-align: middle;"/>
 </a>
@@ -18,6 +17,7 @@ Today, we're announcing **Qwen3-Coder**, our most agentic code model to date. **
 ## Model Overview
 
 **Qwen3-480B-A35B-Instruct** has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining & Post-training
 - Number of Parameters: 480B in total and 35B activated
@@ -31,23 +31,24 @@ Today, we're announcing **Qwen3-Coder**, our most agentic code model to date. **
 
 For more details, including benchmark evaluation, hardware requirements, and inference performance, please refer to our [blog](https://qwenlm.github.io/blog/qwen3-coder/), [GitHub](https://github.com/QwenLM/Qwen3-Coder), and [Documentation](https://qwen.readthedocs.io/en/latest/).
 
-
 ## Quickstart
 
 We advise you to use the latest version of `transformers`.
 
 With `transformers<4.51.0`, you will encounter the following error:
+
 ```
 KeyError: 'qwen3_moe'
 ```
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-480B-A35B-Instruct"
 
-# load the tokenizer and the model
+## load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -55,7 +56,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-# prepare the model input
+## prepare the model input
 prompt = "Write a quick sort algorithm."
 messages = [
     {"role": "user", "content": prompt}
@@ -67,7 +68,7 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
-# conduct text completion
+## conduct text completion
 generated_ids = model.generate(
     **model_inputs,
     max_new_tokens=65536
@@ -88,12 +89,13 @@ For local use, applications such as Ollama, LMStudio, MLX-LM, llama.cpp, and KTr
 Qwen3-Coder excels in tool calling capabilities.
 
 You can simply define or use any tools as following example.
+
 ```python
-# Your tool implementation
+## Your tool implementation
 def square_the_number(num: float) -> dict:
     return num ** 2
 
-# Define Tools
+## Define Tools
 tools=[
     {
         "type":"function",
@@ -115,9 +117,9 @@ tools=[
 ]
 
 import OpenAI
-# Define LLM
+## Define LLM
 client = OpenAI(
-    # Use a custom endpoint compatible with OpenAI API
+#    # Use a custom endpoint compatible with OpenAI API
     base_url='http://localhost:8000/v1',  # api_base
     api_key="EMPTY"
 )
@@ -142,7 +144,6 @@ To achieve optimal performance, we recommend the following settings:
    - We suggest using `temperature=0.7`, `top_p=0.8`, `top_k=20`, `repetition_penalty=1.05`.
 
 2. **Adequate Output Length**: We recommend using an output length of 65,536 tokens for most queries, which is adequate for instruct models.
-
 
 ### Citation
 

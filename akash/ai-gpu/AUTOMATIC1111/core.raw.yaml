@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: AUTOMATIC1111
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: declab/automatic1111:0.1
+    cpu: 16.0
+    memory: 35Gi
+    storage:
+      size: 50Gi
+    variables:
+      COMMANDLINE_ARGS: --listen --port=8080 --no-half
+      LINK_MODEL: ''
+    network:
+      ingress:
+        port: 8080
+        public: true

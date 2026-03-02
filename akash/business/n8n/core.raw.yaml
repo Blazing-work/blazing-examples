@@ -1,0 +1,38 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: n8n
+providers:
+  akash:
+    status: prefer
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:1.123.11
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 512Mi
+    variables:
+      GENERIC_TIMEZONE: UTC
+      TZ: UTC
+      N8N_HOST: ${AKASH_HOST}
+      N8N_PORT: ${AKASH_PORT_80_TCP}
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: http://${AKASH_HOST}/
+      N8N_SECURE_COOKIE: 'false'
+      EXECUTIONS_DATA_PRUNE: 'true'
+      EXECUTIONS_DATA_MAX_AGE: '720'
+      NODES_EXCLUDE: '["n8n-nodes-base.executeCommand", "n8n-nodes-base.readFile",
+        "n8n-nodes-base.writeFile", "n8n-nodes-base.ssh"]'
+      N8N_RUNNERS_ENABLED: 'true'
+      N8N_DISABLE_PRODUCTION_MAIN_PROCESS: 'true'
+    secrets:
+    - secret_ref: n8n_encryption_key
+      mode: env
+      keys:
+        value: N8N_ENCRYPTION_KEY
+    network:
+      ingress:
+        port: 5678
+        public: true

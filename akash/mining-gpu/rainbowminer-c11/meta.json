@@ -1,0 +1,19 @@
+{
+  "id": "akash-rainbowminer-c11",
+  "title": "rainbowminer-c11",
+  "description": "rainbowminer-c11 deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Mining Gpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "mining",
+    "gpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

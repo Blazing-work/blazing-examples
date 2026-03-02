@@ -1,0 +1,19 @@
+{
+  "id": "akash-tf2",
+  "title": "tf2",
+  "description": "tf2 deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Game Servers",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "game",
+    "servers"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

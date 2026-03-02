@@ -1,0 +1,43 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: odoo
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  db:
+    image: postgres:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRES_USER: odoo
+      POSTGRES_DB: postgres
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false
+  odoo:
+    image: odoo:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+    network:
+      ingress:
+        port: 8069
+        public: true

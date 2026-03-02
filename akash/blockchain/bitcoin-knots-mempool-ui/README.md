@@ -1,7 +1,6 @@
 # Bitcoin Knots
 
-
-Run a [Bitcoin Knots](https://bitcoinknots.org) full node  with authenticated RPC access, automatic credential setup, and configurable runtime options.
+Run a [Bitcoin Knots](https://bitcoinknots.org) full node on the Akash Network with authenticated RPC access, automatic credential setup, and configurable runtime options.
 
 ## 📦 Image
 
@@ -49,9 +48,9 @@ If `RPCUSER` and `RPCPASSWORD` are set, the image automatically enables **authen
 Expose port `8332` in your SDL and access RPC via:
 
 > **NOTE:** You can query HTTP or HTTPS. Not all providers offer signed HTTPS `*.ingress.<provider>` endpoints, so add `-k` to skip TLS certificate verification (not recommended for production).
-> When you expose a service `as: 80`, Blazing Core’s ingress controller also makes the app available over HTTPS using a **self-signed TLS certificate**. The ingress controller always terminates TLS and forwards **plain HTTP** to the application.
+> When you expose a service `as: 80`, Akash’s ingress controller also makes the app available over HTTPS using a **self-signed TLS certificate**. The ingress controller always terminates TLS and forwards **plain HTTP** to the application.
 
-### Using `curl`:
+### Using `curl`
 
 ```bash
 curl -s -u user:changeme123 -X POST \
@@ -60,7 +59,7 @@ curl -s -u user:changeme123 -X POST \
   http://vk2hrmj9mh92732apu9glbkte4.ingress.europlots.com | jq -r .
 ```
 
-### Using `bitcoin-cli` (HTTP only):
+### Using `bitcoin-cli` (HTTP only)
 
 ```bash
 bitcoin-cli \
@@ -83,26 +82,30 @@ bitcoin-cli \
 | `sendrawtransaction`, `sendtoaddress`, `walletpassphrase` | ❌ No            | These expose sensitive data — only use over HTTPS or a secure channel. |
 | RPC over HTTPS (`bitcoin-cli`)                            | ❌ Not supported | Use `curl` or a TLS proxy.                                             |
 
-### ✔️ Best practices:
+### ✔️ Best practices
 
-* Use a **reverse proxy with TLS** (e.g., NGINX or Caddy) for encrypted access
-* Use **curl over HTTPS** for secure transaction broadcasting
-* Use **Tor** or **VPN** to obscure your IP when making RPC calls
-* Never expose RPC with full access (`-rpcallowip=0.0.0.0/0`) without authentication
+- Use a **reverse proxy with TLS** (e.g., NGINX or Caddy) for encrypted access
+- Use **curl over HTTPS** for secure transaction broadcasting
+- Use **Tor** or **VPN** to obscure your IP when making RPC calls
+- Never expose RPC with full access (`-rpcallowip=0.0.0.0/0`) without authentication
 
 ---
+
 ## 🌍 Enabling Inbound P2P Connectivity with IP Leasing
 
-By default, Blazing Core assigns random **NodePorts** (in the `30000–32767` range) when you expose services like the Bitcoin P2P port `8333`. This means your node:
+By default, Akash assigns random **NodePorts** (in the `30000–32767` range) when you expose services like the Bitcoin P2P port `8333`. This means your node:
+
 - Can make outbound connections (sync, broadcast, etc.)
 - **Cannot accept inbound P2P connections over port 8333 (default)** unless the correct port mapping is manually advertised (which is not currently possible to detect from inside the container)
 
-To support full **peer-to-peer functionality** and help the Bitcoin network, you can request a **leased static public IP** using Blazing Core’s IP leasing feature.
+To support full **peer-to-peer functionality** and help the Bitcoin network, you can request a **leased static public IP** using Akash’s IP leasing feature.
 
 ### How to Lease an IP
 
+> NOTE: Not all Akash providers currently enabled the IP leasing, so this option is kept commented out by default.
 
 1. Define an `endpoints:` block in your SDL:
+
    ```yaml
    endpoints:
      bitcoind:
@@ -136,9 +139,10 @@ To support full **peer-to-peer functionality** and help the Bitcoin network, you
 
 ### ⚠️ Important Notes
 
-* **Fallback behavior**: Without a leased IP, Blazing Core maps exposed ports to random NodePorts, making your node **unreachable for inbound P2P connections over port 8333 (default)**.
-  JSON-RPC (port `8332`) remains reachable via Blazing Core ingress and is unaffected.
-* Always confirm that your chosen provider supports IP leases and that one has been allocated to your deployment before enabling this feature.
+- **Fallback behavior**: Without a leased IP, Akash maps exposed ports to random NodePorts, making your node **unreachable for inbound P2P connections over port 8333 (default)**.
+  JSON-RPC (port `8332`) remains reachable via Akash ingress and is unaffected.
+- **Provider support**: Not all Akash providers currently support IP leasing. For this reason, the IP-related expose rule (`ip: bitcoind`) is often **commented out by default** in the SDL.
+- Always confirm that your chosen provider supports IP leases and that one has been allocated to your deployment before enabling this feature.
 
 ---
 
@@ -146,7 +150,7 @@ To support full **peer-to-peer functionality** and help the Bitcoin network, you
 
 You can optionally deploy this Bitcoin Knots node alongside the full [mempool.space](https://mempool.space) stack — including frontend, backend, and MariaDB — using the `deploy-mempool.yaml` file provided in this repository.
 
-This setup enables a fully integrated block explorer UI, REST API, and WebSocket interface over Blazing Core ingress.
+This setup enables a fully integrated block explorer UI, REST API, and WebSocket interface over Akash ingress.
 
 > **Note:** Persistent backend cache (`/backend/cache`) is currently **not backed by a persistent volume** due to permission issues with `USER 1000` and root-owned persistent storage (Ceph) mounts. The cache functionality itself still works, but it is **ephemeral** and will be lost on Pod restart. You can rebuild the Docker image with `USER root` to enable persistent volume mounting, though this reduces container isolation and is not recommended for production ([ref](https://github.com/mempool/mempool/blob/v3.2.1/docker/backend/Dockerfile#L43)).
 
@@ -171,9 +175,9 @@ To enable full **address lookup support**, we integrate [**mempool/electrs**](ht
 
 This Electrum server enables:
 
-* Rich **transaction history per address**
-* Fast lookup performance (even for addresses with thousands of UTXOs)
-* Better UI support for wallets and explorers
+- Rich **transaction history per address**
+- Fast lookup performance (even for addresses with thousands of UTXOs)
+- Better UI support for wallets and explorers
 
 #### Backend Options for Address Lookups
 
@@ -193,14 +197,14 @@ We recommend `mempool/electrs` for **production deployments** or if you need **a
 
 `mempool/electrs` uses `--jsonrpc-import`, which connects to `bitcoind` via RPC instead of reading `blk*.dat` files directly. This means:
 
-* You do **not** need to mount raw `.dat` files or share storage between Pods.
-* You **must** wait for `bitcoind` to fully sync before Electrum becomes responsive. Fully sync can take a day and ~728GiB disk space (as of May 8, 2025).
+- You do **not** need to mount raw `.dat` files or share storage between Pods.
+- You **must** wait for `bitcoind` to fully sync before Electrum becomes responsive. Fully sync can take a day and ~728GiB disk space (as of May 8, 2025).
 
 Until the sync is complete:
 
-* Address lookups will return errors
-* The Mempool UI may appear unresponsive
-* The mempoolelectrs service backend will log messages like:
+- Address lookups will return errors
+- The Mempool UI may appear unresponsive
+- The mempoolelectrs service backend will log messages like:
 
 ```
 WARN - waiting for bitcoind sync and mempool load to finish: 816535/895785 blocks, verification progress: 76.456%, mempool loaded: true
@@ -232,8 +236,8 @@ When you deploy the full `deploy-mempool.yaml` SDL (Bitcoin Knots + Mempool stac
 
 4. **`api` and `web` services**
 
-   * The **`web` UI** talks to the `api` backend and MariaDB (`db`).
-   * The **`api` service** queries the `mempoolelectrs` Electrum API (`50001`) for transaction/address/block data.
+   - The **`web` UI** talks to the `api` backend and MariaDB (`db`).
+   - The **`api` service** queries the `mempoolelectrs` Electrum API (`50001`) for transaction/address/block data.
      If Electrum is unavailable or still syncing, the `api` service falls back to `bitcoind` (using the `CORE_RPC_*` config).
 
 5. **`db` (MariaDB)**
@@ -245,10 +249,10 @@ When you deploy the full `deploy-mempool.yaml` SDL (Bitcoin Knots + Mempool stac
 
 ### 🧪 Runtime Tips
 
-* ✅ Wait for `bitcoind` to finish syncing before expecting Electrum or Mempool UI to respond
-* ✅ See the logs on `api`, `mempoolelectrs` services to diagnose startup delays / sync progress / issues
-* ✅ You can use `curl http://api:8999/api/v1/blocks/tip/height` inside itself or inside the `web` Pod to verify sync progress
-* ⚠️ If Mempool UI gets stuck on an old block height, the cause is usually DB connection loss or Electrum still syncing / starting up (verify size of /electrs directory is growing)
+- ✅ Wait for `bitcoind` to finish syncing before expecting Electrum or Mempool UI to respond
+- ✅ See the logs on `api`, `mempoolelectrs` services to diagnose startup delays / sync progress / issues
+- ✅ You can use `curl http://api:8999/api/v1/blocks/tip/height` inside itself or inside the `web` Pod to verify sync progress
+- ⚠️ If Mempool UI gets stuck on an old block height, the cause is usually DB connection loss or Electrum still syncing / starting up (verify size of /electrs directory is growing)
 
 ---
 
@@ -280,7 +284,7 @@ To **transfer data between deployments** (e.g., the `/electrs` index from one pr
 
 > 💤 **Important:** Ensure both **source** and **target** containers are running `sleep infinity`. This avoids interference and allows safe, manual control over the backup process.
 
-#### 1. On the **target** (new deployment), serve the destination path:
+#### 1. On the **target** (new deployment), serve the destination path
 
 > 📝 **Note:** For the `app` (bitcoind) service, use `/root/.bitcoin` as the source or destination directory instead of `/electrs`.
 
@@ -293,7 +297,7 @@ nohup rclone serve sftp /electrs \
 
 This starts an SFTP server on port `8080`, exposing `/electrs` for incoming transfers.
 
-#### 2. On the **source** (old deployment), copy data to the new instance:
+#### 2. On the **source** (old deployment), copy data to the new instance
 
 > 📝 **Note:** The `30353` port is the external nodePort mapped to `8080` for the `mempoolelectrs` service in the **target** deployment.
 

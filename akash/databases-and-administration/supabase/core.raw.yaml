@@ -1,0 +1,158 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: supabase
+providers:
+  akash:
+    status: prefer
+services:
+  db:
+    image: supabase/postgres:15.1.0.147
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ${POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false
+  api:
+    image: postgrest/postgrest:v12.2.12
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      PGRST_DB_URI: 
+        postgres://postgres:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      PGRST_DB_SCHEMAS: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_LOG_LEVEL: info
+    secrets:
+    - secret_ref: pgrst_jwt_secret
+      mode: env
+      keys:
+        value: PGRST_JWT_SECRET
+    network:
+      ingress:
+        port: 3000
+        public: false
+  studio:
+    image: supabase/studio:20241029-46e1e40
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      STUDIO_PG_META_URL: http://meta:8080
+      SUPABASE_URL: http://api:3000
+      SUPABASE_PUBLIC_URL: ${PUBLIC_URL}
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    - secret_ref: supabase_anon_key
+      mode: env
+      keys:
+        value: SUPABASE_ANON_KEY
+    - secret_ref: supabase_service_key
+      mode: env
+      keys:
+        value: SUPABASE_SERVICE_KEY
+    network:
+      ingress:
+        port: 3000
+        public: true
+  gotrue:
+    image: supabase/gotrue:v2.180.0
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      API_EXTERNAL_URL: ${PUBLIC_URL}
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: '9999'
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE_URL: 
+        postgres://postgres:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      GOTRUE_SITE_URL: ${PUBLIC_URL}
+      GOTRUE_URI_ALLOW_LIST: ${ALLOWED_REDIRECT_URLS}
+      GOTRUE_DISABLE_SIGNUP: ${DISABLE_SIGNUP}
+      GOTRUE_JWT_EXP: '3600'
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: 'false'
+      GOTRUE_MAILER_AUTOCONFIRM: 'true'
+      GOTRUE_SMS_AUTOCONFIRM: 'true'
+    secrets:
+    - secret_ref: gotrue_jwt_secret
+      mode: env
+      keys:
+        value: GOTRUE_JWT_SECRET
+    network:
+      ingress:
+        port: 9999
+        public: false
+  storage:
+    image: supabase/storage-api:v1.24.7
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGREST_URL: http://api:3000
+      DATABASE_URL: 
+        postgres://postgres:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      FILE_SIZE_LIMIT: '50000000'
+      STORAGE_BACKEND: file
+      FILE_STORAGE_BACKEND_PATH: /var/lib/storage
+      TENANT_ID: stub
+    secrets:
+    - secret_ref: anon_key
+      mode: env
+      keys:
+        value: ANON_KEY
+    - secret_ref: service_key
+      mode: env
+      keys:
+        value: SERVICE_KEY
+    - secret_ref: pgrst_jwt_secret
+      mode: env
+      keys:
+        value: PGRST_JWT_SECRET
+    network:
+      ingress:
+        port: 5000
+        public: false
+  meta:
+    image: supabase/postgres-meta:v0.89.3
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      PG_META_PORT: '8080'
+      PG_META_DB_HOST: db
+      PG_META_DB_PORT: '5432'
+      PG_META_DB_NAME: ${POSTGRES_DB}
+      PG_META_DB_USER: postgres
+    secrets:
+    - secret_ref: pg_meta_db_password
+      mode: env
+      keys:
+        value: PG_META_DB_PASSWORD
+    network:
+      ingress:
+        port: 8080
+        public: false

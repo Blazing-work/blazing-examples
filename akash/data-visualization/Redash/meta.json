@@ -1,0 +1,19 @@
+{
+  "id": "akash-redash",
+  "title": "Redash",
+  "description": "Redash deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Data Visualization",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "data",
+    "visualization"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

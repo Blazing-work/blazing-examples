@@ -1,0 +1,30 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: FLock-validator
+providers:
+  akash:
+    status: prefer
+services:
+  flock-validator:
+    image: ghcr.io/flock-io/llm-loss-validator:v1.1.2
+    cpu: 8.0
+    memory: 24Gi
+    storage:
+      size: 100Gi
+    variables:
+      TASK_ID: ''
+    secrets:
+    - secret_ref: flock_api_key
+      mode: env
+      keys:
+        value: FLOCK_API_KEY
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    network:
+      ingress:
+        port: 3000
+        public: true

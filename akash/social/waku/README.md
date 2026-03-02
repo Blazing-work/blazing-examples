@@ -1,13 +1,12 @@
 # What is Waku?
 
-
 [Waku](https://waku.org/) is a family of robust, censorship-resistant communication protocols designed to enable privacy-focused messaging for web3 apps.
 
 In other words, Waku allows you to build decentralized applications which require any form of message transfer (e.g. chats, push notifications, event broadcasting, weak consensus/coordination, message queues). You can build your own application protocols on top of plug&play Waku protocols, which ensure your node will be well connected with the network and your messages will be broadcasted reliably.
 
 Waku also includes protocols friendly to resource restricted / adaptive devices like smartphones or laptops which may not have a lot of compute power or bandwidth.
 
-# Who is this deployment for?
+## Who is this deployment for?
 
 The deployment manifests in this folder target users who wish to support the Waku Network as a node operator (i.e. making the network more robust, decentralized and private), but also users who would like to build an application on top of waku.
 
@@ -15,10 +14,11 @@ We provide 2 deployment manifests - they both enable `Relay`, `Lightpush`, `Filt
 
 The [deploy.sqlite.yaml](./deploy.sqlite.yaml) is the simpler of two, leverages SQLite for archive, hence results in simpler and slightly cheaper deployment.
 
+The [deploy.yaml](./deploy.yaml) deploys Postgresql database instance in addition to`nwaku` node.
 
-# How to
+## How to
 
-Waku nodes connecting to The Waku Network require access to an Ethereum (Sepolia Testnet) RPC endpoint. You can obtain one from miriad of node providers like Infura, Chainstack, Quicknode, or run one yourself (even :)).
+Waku nodes connecting to The Waku Network require access to an Ethereum (Sepolia Testnet) RPC endpoint. You can obtain one from miriad of node providers like Infura, Chainstack, Quicknode, or run one yourself (even:)).
 
 The RPC node URL needs to be configured in `ETH_CLIENT_ADDRESS` environment variable of the deployment manifest.
 
@@ -34,6 +34,7 @@ In case your goal is to use this node to publish messages, you will need to obta
 
 ## Deploying with Postgres
 
+This deployment not only deploys Waku node, but also a Postgres database serving as an archive for the `store` protocol. The manifest including Postgres instance is available in [deploy.yaml](./deploy.yaml)
 
 You may want to change the `POSTGRES_PASSWORD` in `services.node.env` and `services.postgres.env` (make sure both values match!)
 
@@ -68,9 +69,10 @@ Two important pieces of information about your node are the node's multiaddresse
 
 You can verify that your deployment was successful and your node is reachable by connecting to it using [wakucanary](https://github.com/waku-org/nwaku/releases/latest) tool or, if you used the full deployment, by connecting via WSS using one of the [js-waku-examples](https://examples.waku.org/light-js/).
 
-You can monitor your deployment with Prometheus and use a Grafana dashboard available in https://github.com/waku-org/nwaku-compose/tree/master/monitoring
+You can monitor your deployment with Prometheus and use a Grafana dashboard available in <https://github.com/waku-org/nwaku-compose/tree/master/monitoring>
 
 You should see basic metrics printed in logs as well:
+
 ```
 [node]: INF 2023-08-15 10:39:37.807+00:00 Relay peer connections                     topics="waku node peer_manager" tid=1 file=peer_manager.nim:683 inRelayConns=4/160 outRelayConns=17/80 totalConnections=24/300 notConnectedPeers=137 outsideBackoffPeers=5
 [node]: INF 2023-08-15 10:39:39.460+00:00 Finished dialing multiple peers            topics="waku node peer_manager" tid=1 file=peer_manager.nim:532 successfulConns=0 attempted=3
@@ -89,9 +91,9 @@ Notice the `inRelayConns` and `outRelayConns` - those represent the number of no
 
 Notice the `Total messages` metric - this represents how many messages went through your node.
 
-# Links
+## Links
 
-* [Nwaku Blazing Core repository](https://github.com/vpavlin/nwaku-Blazing Core)
+* [Nwaku Akash repository](https://github.com/vpavlin/nwaku-akash)
 * [nwaku](https://github.com/waku-org/nwaku)
 * [Waku Docs](https://docs.waku.org/)
 * [js-waku](https://github.com/waku-org/js-waku)

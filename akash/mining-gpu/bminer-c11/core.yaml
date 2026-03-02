@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bminer-c11
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  bminer-c11:
+    image: cryptoandcoffee/akash-gpu-miner-bminer-c11:4
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      OPTIONS: '"-api 127.0.0.1:1880 -no-timestamps -uri ethproxy://YOUR_ETC_WALLET.akash@us-solo-etc.2miners.com:5050"'
+    network:
+      ingress:
+        port: 1880
+        public: true

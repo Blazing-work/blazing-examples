@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: wikijs
+providers:
+  akash:
+    status: prefer
+services:
+  wiki:
+    image: requarks/wiki:2
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      DB_TYPE: sqlite
+      DB_FILEPATH: /wiki/app.db
+    network:
+      ingress:
+        port: 3000
+        public: true

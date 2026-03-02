@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gpt-neo
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: yuravorobei/gpt-neo:0.1
+    cpu: 4.0
+    memory: 20Gi
+    storage:
+      size: 20Gi
+    variables:
+      MODEL_NAME: gpt-neo-2.7B
+      MAX_INPUT_TOKEN_LENGTH: '30'
+      MAX_NEW_TOKENS: '50'
+    network:
+      ingress:
+        port: 7860
+        public: true

@@ -1,0 +1,44 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: sovryn-node
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  sovryn:
+    image: nrm55/sovryn-node:latest
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      WHICHNET: ''
+      KEYPW: ''
+      LIQUIDATOR_ADDRESS: ''
+      ROLLOVER_ADDRESS: ''
+      ARBITRAGE_ADDRESS: ''
+    secrets:
+    - secret_ref: liquidator_private_key
+      mode: env
+      keys:
+        value: LIQUIDATOR_PRIVATE_KEY
+    - secret_ref: rollover_private_key
+      mode: env
+      keys:
+        value: ROLLOVER_PRIVATE_KEY
+    - secret_ref: arbitrage_private_key
+      mode: env
+      keys:
+        value: ARBITRAGE_PRIVATE_KEY
+    - secret_ref: telegram_bot_key
+      mode: env
+      keys:
+        value: TELEGRAM_BOT_KEY
+    network:
+      ingress:
+        port: 3000
+        public: true

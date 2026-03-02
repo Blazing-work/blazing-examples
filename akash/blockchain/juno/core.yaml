@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: juno
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  juno:
+    image: nethermind/juno:v0.15.14
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 2Ti
+    network:
+      ingress:
+        port: 6060
+        public: true

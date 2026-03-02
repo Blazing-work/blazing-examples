@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: nextjs
+providers:
+  akash:
+    status: prefer
+services:
+  web:
+    image: sunny0183/nextjs-docker
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 3000
+        public: true

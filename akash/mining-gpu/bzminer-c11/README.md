@@ -1,53 +1,55 @@
-## Config Generator
+# Bzminer C11
 
+## Config Generator
 
 Having troubles figuring out how to configure BzMiner?
 Try the config generator:
-https://www.bzminer.com/config-generator
+<https://www.bzminer.com/config-generator>
 
 ## Why use BzMiner (v16.0.3)?
+
 - Stable 100% LHR Unlock v1! (Tested on windows/linux drivers 465-511, see below)
 - Supported Algos:
-    - Ethw (AMD, Nvidia, 0.5% dev fee)
-    - Etchash (AMD, Nvidia, 0.5% dev fee)
-    - Ergo (AMD, Nvidia, 1% dev fee)
-    - Rvn (AMD, Nvidia, 1% dev fee)
-    - Meowcoin (AMD, Nvidia, 1% dev fee)
-    - Neoxa (AMD, Nvidia, 1% dev fee)
-    - Gamepass (AMD, Nvidia, 1% dev fee)
-    - Clore (AMD, Nvidia, 1% dev fee)
-    - Neurai (xna) (AMD, Nvidia, 1% dev fee)
-    - Olhash (AMD, Nvidia, 1% dev fee)
-    - Alephium (AMD, Nvidia, 0.5% dev fee)
-    - Kaspa (AMD, Nvidia, 1% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
-    - Radiant (AMD, Nvidia, 1% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
-    - Ixian (AMD, Nvidia, 1% dev fee, Not optimized for ubuntu 16.04)
-    - Woodcoin (AMD, Nvidia, 1% dev fee, use config "algo_opt" to move some processing to cpu)
-    - Zil (AMD, Nvidia, 0% dev fee. Dual with ANY other coin)
-    - Nexa (AMD, Nvidia, 2% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
-    - Ironfish (AMD, Nvidia, 1% dev fee)
-    - Kylacoin (AMD, Nvidia, 1% dev fee)
-    - Novo (AMD, Nvidia, 1% dev fee)
-    - Octa (AMD, Nvidia, 0.5% dev fee)
-    - Canxium (AMD, Nvidia, 0.5% dev fee)
-    - Rethereum (AMD, Nvidia, 1% dev fee)
+  - Ethw (AMD, Nvidia, 0.5% dev fee)
+  - Etchash (AMD, Nvidia, 0.5% dev fee)
+  - Ergo (AMD, Nvidia, 1% dev fee)
+  - Rvn (AMD, Nvidia, 1% dev fee)
+  - Meowcoin (AMD, Nvidia, 1% dev fee)
+  - Neoxa (AMD, Nvidia, 1% dev fee)
+  - Gamepass (AMD, Nvidia, 1% dev fee)
+  - Clore (AMD, Nvidia, 1% dev fee)
+  - Neurai (xna) (AMD, Nvidia, 1% dev fee)
+  - Olhash (AMD, Nvidia, 1% dev fee)
+  - Alephium (AMD, Nvidia, 0.5% dev fee)
+  - Kaspa (AMD, Nvidia, 1% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
+  - Radiant (AMD, Nvidia, 1% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
+  - Ixian (AMD, Nvidia, 1% dev fee, Not optimized for ubuntu 16.04)
+  - Woodcoin (AMD, Nvidia, 1% dev fee, use config "algo_opt" to move some processing to cpu)
+  - Zil (AMD, Nvidia, 0% dev fee. Dual with ANY other coin)
+  - Nexa (AMD, Nvidia, 2% dev fee, +1% community fund can be optionally be enabled with community_fund options, disabled by DEFAULT)
+  - Ironfish (AMD, Nvidia, 1% dev fee)
+  - Kylacoin (AMD, Nvidia, 1% dev fee)
+  - Novo (AMD, Nvidia, 1% dev fee)
+  - Octa (AMD, Nvidia, 0.5% dev fee)
+  - Canxium (AMD, Nvidia, 0.5% dev fee)
+  - Rethereum (AMD, Nvidia, 1% dev fee)
 - Optimized dual mining for specific coins:
-    - **Note**: Bz was designed around running multiple algos on a single gpu, so ALL algos can be mined together, these are just "optimized" combos
-    - Octa + Alph (Nvidia only, experimental)
-    - Octa + Kaspa (Nvidia only, experimental)
-    - Octa + Radiant (Nvidia only, experimental)
-    - Octa + Ironfish (Nvidia only, experimental)
-    - Ethw + Alph (Nvidia only, experimental)
-    - Ethw + Kaspa (Nvidia only, experimental)
-    - Ethw + Radiant (Nvidia only, experimental)
-    - Ethw + Ironfish (Nvidia only, experimental)
-    - Etc + Alph (Nvidia only, experimental)
-    - Etc + Kaspa (Nvidia only, experimental)
-    - Etc + Radiant (Nvidia only, experimental)
-    - Etc + Ironfish (Nvidia only, experimental)
-    - Ergo + Kaspa (Nvidia only, experimental)
-    - Ergo + Radiant (Nvidia only, experimental)
-    - Any Algo + Zil (AMD, Nvidia)
+  - **Note**: Bz was designed around running multiple algos on a single gpu, so ALL algos can be mined together, these are just "optimized" combos
+  - Octa + Alph (Nvidia only, experimental)
+  - Octa + Kaspa (Nvidia only, experimental)
+  - Octa + Radiant (Nvidia only, experimental)
+  - Octa + Ironfish (Nvidia only, experimental)
+  - Ethw + Alph (Nvidia only, experimental)
+  - Ethw + Kaspa (Nvidia only, experimental)
+  - Ethw + Radiant (Nvidia only, experimental)
+  - Ethw + Ironfish (Nvidia only, experimental)
+  - Etc + Alph (Nvidia only, experimental)
+  - Etc + Kaspa (Nvidia only, experimental)
+  - Etc + Radiant (Nvidia only, experimental)
+  - Etc + Ironfish (Nvidia only, experimental)
+  - Ergo + Kaspa (Nvidia only, experimental)
+  - Ergo + Radiant (Nvidia only, experimental)
+  - Any Algo + Zil (AMD, Nvidia)
 - Supports Chinese Language (use `--lang cn` option)
 - Realtime console inputs!
 - Core Temp, Memory Temp, and Power Limit throttling (slowdown) notifications
@@ -75,6 +77,7 @@ https://www.bzminer.com/config-generator
 - TBS Watchdog (monitors time since last share and resets gpus/reconnects to pools if too long)
 
 ## 100% LHR Unlock v1
+
 BzMiner v9.1.0 introduced a 100% LHR unlocker, which was only semi-stable. v9.1.3 has much higher stability and hashrate.
 
 If a card becomes unstable (eg. lhr exception), lower overclocks, and lower `--lhr_stability`.
@@ -86,6 +89,7 @@ To disable the LHR unlocker, set `--lhr_stability` to 0. Default is 100.
 The LHR unlock can sometimes trigger an "LHR Exception". If this happens, lower the `--lhr_stability` option. This "exception" will allow the device to continue mining, but at a much slower speed. It requires a hard device reset to recover, which means restarting the pc. BzMiner provides the `--lhr_exception` option, which if set to true and a card experiences the LHR exception, will reboot the pc.
 
 ## Prerequisites
+
 - Windows:
   - Requires Nvidia drivers supporting Cuda 11.2 or greater (Nvidia driver >= 460.27.03)
   - AMD OpenCL drivers 21.50.2 or higher
@@ -94,24 +98,28 @@ The LHR unlock can sometimes trigger an "LHR Exception". If this happens, lower 
   - AMD OpenCL drivers 21.50.2 or higher
 
 ## Mining OS's that include BzMiner
-- MMPOS - https://app.mmpos.eu/
-- HiveOS - https://hiveos.farm/
-- Minerstat - https://minerstat.com/
-- RaveOS - https://raveos.com/
-- OkminerOS - https://okminer.com/
+
+- MMPOS - <https://app.mmpos.eu/>
+- HiveOS - <https://hiveos.farm/>
+- Minerstat - <https://minerstat.com/>
+- RaveOS - <https://raveos.com/>
+- OkminerOS - <https://okminer.com/>
 
 ## Discord Server
-https://discord.gg/83EHruNzrh
+
+<https://discord.gg/83EHruNzrh>
 
 ## Official Website
-http://www.bzminer.com
 
+<http://www.bzminer.com>
 
 ## Requirements
+
 - At least one Nvidia GPU and Nvidia drivers
 - Or at least one AMD GPU and AMD drivers
 
 ## Quick Start
+
 Launch `bzminer` with the wallet and pool address as parameters:
 
 ```
@@ -119,6 +127,7 @@ bzminer -w 0x0000000000000000000000000000000000000000 -p ethstratum+tcp://eth.ge
 ```
 
 You may provide more than one pool address to -p for fallback pools on network errors:
+
 ```
 bzminer -w 0x0000000000000000000000000000000000000000 -p ethstratum+tcp://eth.geodns.flexpool.io:4444 stratum+tcp://usw-eth.hiveon.net:4444 -r worker_name --nc 1
 ```
@@ -174,16 +183,19 @@ bzminer -a xna -w 0x0000000000000000000000000000000000000000 -p stratum+ssl://st
 ### Nexa
 
 woolypooly
+
 ```
 bzminer -a nexa -w 0x0000000000000000000000000000000000000000 -p stratum+tcp://pool.ca.woolypooly.com:3124 -r worker_name --nc 1
 ```
 
 pool137
+
 ```
 bzminer -a nexa -w 0x0000000000000000000000000000000000000000 -p stratum+tcp://eu.nexa.pool137.io:3333 --nc 1
 ```
 
 Nexa solo:
+
 ```
 bzminer -a nexa -w 0x0000000000000000000000000000000000000000 -p solo+tcp://127.0.0.1:7227 -r worker_name --nc 1
 ```
@@ -288,7 +300,7 @@ bzminer -a ironfish -w 0000 -p stratum+tcp://iron.fpmp.net:8888 --nc 1
 
 How to solo mine Ironfish:
 
-- follow guide at https://ironfish.network/docs/onboarding/iron-fish-tutorial to install ironfish
+- follow guide at <https://ironfish.network/docs/onboarding/iron-fish-tutorial> to install ironfish
 - run the ironfish node using the command `ironfish start`
 - run the ironfish pool using the command `ironfish miners:pools:start`
 - if your node is on a separate pc from bz, replace 127.0.0.1 with the ip address of the pc the node is running on (eg. 192.168.1.2)
@@ -328,6 +340,7 @@ bzminer -a ergo -w 0000 -p stratum-ergo.flypool.org:3333 --a2 kaspa --w2 1111 --
 ```
 
 ### OC Change on Algo Switch (eg. +zil)
+
 Bzminer supports changing the overclocks for gpus between algo changes. A common example of this is doing a core algo like kaspa and a memory hard algo like zil, where each algo wants a different oc for best performance. This can be done from the command line or from config.txt.
 
 From the command line, you will set the `oc_` options for the first algo (kaspa), and `oc_...2` options for the second algo. When the second algo starts, it will apply it's oc to the card. when it ends, it will apply the first algos oc. Example:
@@ -339,12 +352,15 @@ bzminer -a kaspa -w 0000 -p stratum+tcp://pool.woolypooly.com:3112 --a2 zil --w2
 Current BzMiner supports overclocking for Nvidia only, but provides an option called `oc_script` which allows you to call a script to use a third party software to set the oc, which is useful for AMD cards.
 
 ### oc_script option
+
 The oc_script option will be called wheneve the oc is set for a particular GPU. If this option is specified, all other oc_ options are ignored.
 
 The script is called with parameters `--gpu_index {gpu index} --gpu_id {gpu id} --algo {algorithm oc is being set for}`. for example:
+
 ```
 ocscript.bat --gpu_index 0 --gpu_id 1:0 --algo zil
 ```
+
 This is also useful when you have many rigs with different gpu's. you can create a profile in your mining os's interface for all your rigs, and give each rig its own script to set oc's for
 
 You can change the multi mining type using the `multi_mine_type` option in the command line. By default its set to 0 for parallel mining, but can be set to 1 for alternate mining or 2 for mine only during DAG generation
@@ -360,20 +376,23 @@ BzMiner has a couple "optimized" combinations. These are below:
     - Ergo + Radiant (Nvidia only, experimental)
 
 ## Console Input
+
 BzMiner supports a couple console input actions:
+
 - `Esc` - Shuts down BzMiner
 - `Space` - Refresh console output
 - `Arrow Keys` - Adjust intensity, up/down first algo, left/right second algo
 
 ## GUI
+
 The GUI desktop app has been discontinued as of v4.3 in favor of the browser gui, which can be accessed by opening `index.html`, or by navigating to `http://your-rigs-ip:port/` in your favorite browser.
 
 The GUI will display (and allow you to navigate to) other rigs running BzMiner. This is done through a UDP broadcast message which can be disabled on instances of BzMiner by setting "disable_udp" to true in the config file.
 
 ![image](https://user-images.githubusercontent.com/83083846/147267304-8357dd99-1638-4d83-a41a-0ebabd01cd4b.png)
 
-
 ## CLI
+
 BzMiner is a command line interface. Simply update `config.txt` and launch `bzminer`.
 
 `bzminer` has an optional parameter, `-c`, which can be called to load a different configuration file. eg. `bzminer -c custom_config.txt`.
@@ -575,11 +594,12 @@ Options:
 
   ![image](https://user-images.githubusercontent.com/83083846/147267767-29a8f092-694f-40f0-acb9-bb01fceba41d.png)
 
-
 ## The Configuration File (config.txt)
+
 The configuration file is in the json file format, and can be manually updated, or updated through `bzminer.exe`'s remote commands.
 
 There are three main sections:
+
 - pool_configs - This contains a list of your pools. You can add as many pools as you want, even if your not currently mining to them
 - global settings/device defaults - this contains global settings and default settings for devices if the devices do not specify those settings
 - device_overrides - this contains a list of the devices on your system. By default they will use the device default settings
@@ -898,6 +918,7 @@ or
 Optionally they can be disabled directly from the `config.txt` file, under the gpu in the config.txt file, set `auto_start` to false
 
 ### Auto fan
+
 Bz has an autofan ability to keep gpu at a target temperature.
 Set the target fan speed (as percentage) for devices, separated by a space. 0 = auto, -1 = ignore, 100 = max.
 Optionally use target temperature format, eg. --oc_fan_speed t:N[fMin-fMax]
@@ -922,6 +943,7 @@ Power Limit - Power usage will be white when not causing GPU to throttle. Power 
 ### Dual Mining
 
 To employ this strategy:
+
 - Add the two coins to the pool_config section you wish to mine to, or use the command line
 - Set either the global "pool" setting, or device override "pool" setting to use both pool_configs. eg. "pool": [0, 1]
 - Run bzminer using that config. eg. `bzminer -c config.txt`
@@ -934,6 +956,7 @@ To employ this strategy:
 - The second intensity value controls the "ratio" between the two algos. A higher second intensity, the more hashrate the second algo gets. It's a multiple of the first algo's hashrate. So a value of 10 would mean the second algo gets the same hashrate as the first algo. A value of 20 would mean the second algo gets double the hashrate as the first algo. When in parallel mining mode (dual mining), the second algo intensity has no maximum value.
 
 v9.2.1 introduced optimized dual mining for specific algorithms. these combinations are supported:
+
 - Ethw + Kaspa (Nvidia only, experimental)
 - Etc + Kaspa (Nvidia only, experimental)
 - Erg + Kaspa (Nvidia only, experimental)
@@ -948,6 +971,7 @@ Use the `max_dual_autotune_drop` option to change behavior of dual autotune. by 
 BzMiner allows alternate/split mining by using the `multi_mine_type` option. Default is 0, parallel. By setting it to 1, the algorithms will take turns mining on the gpu. The duration they mine can be specified in the `multi_mine_ms` option, which takes an array [firstalgoms, secondalgoms]
 
 ## Overclock per Dual Mine Algo
+
 BzMiner allows you to set an overclock for each algo you are dual mining. Be aware that extreme oc's can much easier cause a GPU to hang (crash) in this scenario, and for that reason the config option `oc_delay_ms` is used, to give the oc time to kick in before switching to next algo.
 
 Here's a sample dual mine config with oc's per algo:
@@ -1006,6 +1030,7 @@ default device column configuration: `"#,name:nw,cfg,free,total,core,mem,fan,pwr
 default pool column configuration: `"#,uptime,a/r/i,avg,eff,pool mh,miner mh,status:nw"`
 
 ### Supported Device table columns
+
 - `#` - The device id in the format of `pci_bus_id:pci_device_id`
 - `name` - The display name of the device
 - `free` - Free device memory
@@ -1019,6 +1044,7 @@ default pool column configuration: `"#,uptime,a/r/i,avg,eff,pool mh,miner mh,sta
 - `status` - Device status for all pools
 
 ### Supported Pool table columns (In addition to all device table supported columns)
+
 - `%` - Percentage of Accepted shares (relative to all shares including rejected, invalid and stale)
 - `uptime` - The time the device has been mining without stopping or resetting
 - `cfg` - The device configuration. eg. i6 = intensity 6
@@ -1038,6 +1064,7 @@ To update the column in config.txt (hiveos):
 `"pool_columns": "#,a/r/i,cfg,tbs,tsls,eff,pool_hr,miner_hr,status"`
 
 ### Customizing the display
+
 - Colors are integers and correspond to normal terminal color codes. Default BzMiner logging color is 7.
 - Columns are a comma separated string. do not include spaces unless the column name includes spaces (eg. "pool mh"). Columns can have options (currently just one), which is specified by adding a colon (:) after the column name, and specifying the option, eg `name:nw`. Two supported options; `nw`, which prevents that particular column from wrapping to the next line if the column cannot get wide enough to support the entire value on one line, and `nc`, which disables coloring of the column values
 
@@ -1050,6 +1077,7 @@ eg. `stratum+tcp://us1.ethermine.org:4444`
 If username and password are required, eg. `{protocol}+{tcp/ssl}:<{username}:{password}@>{url}:{port}`, they can be set per device in the config file, or through the command line. If device pool_username is blank, it will use the rig name from the config file. if pool_password is blank, it will use the default pool_password for the rig in the config file. Leave both pool_password blank if no password is required for the pool. Do not put the username and password in the url (If there are enough requests for this, this can be added in a future release)
 
 BzMiner supports 4 network protocols
+
 - Node - use `node` or `solo`
 - Stratum - use `stratum`
 - Eth Proxy - use `ethproxy`
@@ -1059,7 +1087,6 @@ BzMiner supports 4 network protocols
 - HTTP or HTTPS GetWork - use `http` or `https`
 
 BzMiner will attempt to auto select a protocol the pool supports if the provided protocol does not succeed in establishing a connection with the pool.
-
 
 ## HTTP API
 

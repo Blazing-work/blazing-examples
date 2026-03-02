@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: curve
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  curve:
+    image: davaymne/curve-ui:latest
+    cpu: 0.1
+    memory: 512Mi
+    storage:
+      size: 2.5Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

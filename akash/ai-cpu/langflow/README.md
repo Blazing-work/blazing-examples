@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD030 -->
-
 # [![Langflow](https://github.com/langflow-ai/langflow/raw/main/docs/static/img/hero.png)](https://www.langflow.org)
 
 <p align="center" style="font-size: 12px;">
@@ -13,13 +11,8 @@
 
 </p>
 
-  <a href="./README.md"><img alt="README in English" src="https://img.shields.io/badge/English-d9d9d9"></a>
-  <a href="./README.PT.md"><img alt="README in Portuguese" src="https://img.shields.io/badge/Portuguese-d9d9d9"></a>
-  <a href="./README.zh_CN.md"><img alt="README in Simplified Chinese" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
-  <a href="./README.ja.md"><img alt="README in Japanese" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
-  <a href="./README.KR.md"><img alt="README in KOREAN" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
-
 ## ✨ Core features
+
 1. **Python-based** and agnostic to models, APIs, data sources, or databases.
 2. **Visual IDE** for drag-and-drop building and testing of workflows.
 3. **Playground** to immediately test and iterate workflows with step-by-step control.
@@ -30,7 +23,6 @@
 8. **Enterprise-grade** security and scalability with free DataStax Langflow cloud service.
 9. **Customize workflows** or create flows entirely just using Python.
 10. **Ecosystem integrations** as reusable components for any model, API or database.
-
 
 ![Integrations](https://github.com/user-attachments/assets/df4a6714-60de-4a8b-aff0-982c5aa467e3)
 
@@ -43,6 +35,7 @@ Star Langflow on GitHub to be instantly notified of new releases.
 ## 📦 Quickstart
 
 - **Install with pip** (Python 3.10 or greater):
+
 ```shell
 pip install langflow
 ```

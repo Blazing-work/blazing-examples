@@ -1,5 +1,6 @@
-## faster-whisper
+# Faster Whisper CPU
 
+## faster-whisper
 
 [Faster-whisper](https://github.com/SYSTRAN/faster-whisper) is a reimplementation of OpenAI's Whisper model using CTranslate2, which is a fast inference engine for Transformer models. This container provides a Wyoming protocol server for faster-whisper.
 
@@ -38,15 +39,14 @@ For more information see the [faster-whisper docs](https://github.com/SYSTRAN/fa
 
 This image can be run with a read-only container filesystem. For details please [read the docs](https://docs.linuxserver.io/misc/read-only/).
 
-
 ## Usage
 
 To help you get started creating a container from this image you can either use docker-compose or the docker cli.
 
 ### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
 
-```yaml
----
+## ```yaml
+
 services:
   faster-whisper:
     image: lscr.io/linuxserver/faster-whisper:latest
@@ -63,6 +63,7 @@ services:
     ports:
       - 10300:10300
     restart: unless-stopped
+
 ```
 
 ### docker cli ([click here for more info](https://docs.docker.com/engine/reference/commandline/cli/))
@@ -174,26 +175,26 @@ Below are the instructions for updating containers:
 ### Via Docker Compose
 
 * Update images:
-    * All images:
+  * All images:
 
         ```bash
         docker-compose pull
         ```
 
-    * Single image:
+  * Single image:
 
         ```bash
         docker-compose pull faster-whisper
         ```
 
 * Update containers:
-    * All containers:
+  * All containers:
 
         ```bash
         docker-compose up -d
         ```
 
-    * Single container:
+  * Single container:
 
         ```bash
         docker-compose up -d faster-whisper

@@ -1,12 +1,13 @@
 # ElizaOS AI Agents 🤖
 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Akash Network](https://img.shields.io/badge/Powered%20by-Akash%20Network-blue)](https://akash.network)
 [![DeepSeek Models](https://img.shields.io/badge/Models-DeepSeek-important)](https://deepseek.com)
 
 **Next-Gen AI Agent Deployment Framework**
 *Scalable • Decentralized • Cost-Efficient*
 
+![ElizaOS Demo](https://raw.githubusercontent.com/fenilmodi00/awesome-akash/refs/heads/master/Elizaos-ai_Agents/image.png)
 
 ## 🌟 Features
 
@@ -17,10 +18,10 @@
 | **Integration**       | 🤖 Discord/X/TG Bots • 💰 Crypto Trading • 🎮 Game NPC Framework            |
 | **Optimization**      | ⚡ Low Latency • 💸 Cost Monitoring • 🔒 Secure Sandboxing                  |
 
-
 ## 📚 Documentation
 
 Explore our comprehensive guides:
+
 - [Agent Development Kit](https://docs.elizaos.ai/sdk)
 - [Deployment Strategies](https://docs.elizaos.ai/deployment)
 - [Security Framework](https://docs.elizaos.ai/security)
@@ -33,10 +34,12 @@ Explore our comprehensive guides:
 ## 📜 License
 
 This project is licensed under the **ElizaOS Shared Ecosystem License**
+
 - see [LICENSE.md](LICENSE) for details.
 
 > *"Empowering decentralized intelligence through community-driven
 innovation"* 🌍
+
 ```
 
 This enhanced README features:

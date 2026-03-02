@@ -1,3 +1,5 @@
+# Axolotlai
+
 ## Use Cases
 
 - AI model inference
@@ -13,7 +15,6 @@
 ## Accessing the Service
 
 Open `http://{SERVICE_URI}:8888/` in your browser.
-
 
 ### Environment Variables
 

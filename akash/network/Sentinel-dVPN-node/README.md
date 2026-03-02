@@ -1,93 +1,41 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/219872517-2adc32b1-5f64-4d48-9a81-1e2ef6b01a53.png" width=90% </p>
+# Sentinel dVPN Node
 
-# Sentinel dVPN node
-
-___
-
-| [Twitter Decloud Nodes Lab](https://twitter.com/NodesLab) | [Discord Decloud Nodes Lab](https://discord.gg/rPENzerwZ8) |
-|:--:|:--:|
-
-| [Sentinel](https://sentinel.co/) |
-|:--:|
-___
-
-Our news channels and technical support:
-
-
+| [Sentinel](https://sentinel.co/) | [Discord](https://discord.gg/HPW52yQuQJ) | [Telegram](https://t.me/SentinelNodeNetwork) |
 |:--:|:--:|:--:|
 
+## About
 
-| [Discord Sentinel](https://discord.gg/HPW52yQuQJ) | [Telegram Sentinel dVPN](https://t.me/SentinelNodeNetwork) | [Twitter Sentinel](https://twitter.com/Sentinel_co)
-|:--:|:--:|:--:|
+Sentinel dVPN allows users to deploy decentralized VPN servers worldwide. Node owners earn DVPN tokens for every gigabyte of traffic routed through their node. Users choose nodes based on speed, geographic location, and price.
 
-| [Инструкция на русском](/Sentinel-dVPN-node/README_RU.md) |
-|:--:|
-
-___
-
-
-### About Node and Sentinel dVPN
-
-> Universal Declaration of Human Rights, Article 19: "Everyone has the right ... to seek, receive and
-> impart information and ideas through any media and regardless of frontiers."
-
-*Today, many states are trying to hide from users "objectionable" information in their opinion. Unfortunately,
-from such a policy, people are deprived of the most important part
-of their rights and freedoms. The right to seek, consume and disseminate information today is not only a
-matter of entertainment content, but also a matter of education, freedom of thought and, of course, security.*
-
-*Sentinel dVPN offers users to deploy dVPN servers around the world, united in a decentralized network.
-dVPN node owners are rewarded in dvpn tokens for every gigabyte passed through their node. Users of the Sentinel dVPN client side
-can choose among the nodes - which one they can connect to, which suits them in terms of information transfer speed, geographic location and, of course, price.
-This instruction covers the launch of the server part - Sentinel dVPN nodes.*
-
-___
+This guide covers deploying the server-side Sentinel dVPN node.
 
 ## Preparation
 
+1. Create a separate `Keplr` account for the dVPN node
+2. Encode the mnemonic phrase using Base64 (use [Notepad++](https://notepad-plus-plus.org/downloads/) or a secure online encoder)
+3. Fund the account with at least `1500 DVPN` for gas fees (available on OSMOSIS or KUCOIN)
 
-How to work with it is [described in this document](https://github.com/DecloudNodesLab/Guides/blob/main/English/Cloudmos.md).
-1. Create a separate account in `Keplr` for the dVPN node.
-2. Encrypt the mnemonic phrase of the new account using `BASE64`, this can be done using the application [Notepad++](https://notepad-plus-plus.org/downloads/) (*Plugins-MIME Tools-Base64 Encode* ) or any **secure** online Base64 encoder.
-3. Top up your created dVPN account with at least `1500dvpn` to pay for gas. You can buy dvpn on exchanges like `OSMOSIS` or `KUCOIN`.
+## Deployment
 
-## Node deployment
+Replace `your_endpoint_name` in the `endpoints` and `expose` sections with a unique name (**lowercase Latin characters only**).
 
+### Required Variables
 
-___
+| Variable | Description |
+|----------|-------------|
+| `MNEMONIC_BASE64` | Base64-encoded mnemonic from your Sentinel account |
+| `MONIKER` | Unique name for your node |
+| `IPV4_ADDRESS` | Leave blank initially; fill in after provider assigns an IP |
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/221607947-cdc2b2e6-cc96-4709-9278-e15369bb62bf.gif" width=70% </p>
+> If you change `LISTEN_PORT` or `REMOTE_PORT`, update the corresponding `EXPOSE` section entries as well.
 
-___
-namely, replace `your_endpoint_name` in the `endpoints` and `expose` sections with a unique name (**Latin lowercase characters only!**)
+Variables must be inside quotes, e.g.: `"MONIKER=dVPN v2RAY"`
 
-Also, fill in the variables with your data:
-* `MNEMONIC_BASE64` - Mnemonic phrase from a previously created sentinel account, encrypted with BASE64
-* `MONIKER` - The name of your node, make it unique.
-* `IPV4_ADDRESS` - leave blank for now.
-> If you want to change `LISTEN_PORT` or `REMOTE_PORT` - don't forget to make the changes in the corresponding paragraphs of the `EXPOSE` section as well.
-Also, for advanced users, [created a list of available variables](/Sentinel-dVPN-node/VARIABLES.md) with a short description.
+## Post-Deployment
 
-Pay attention to the correct filling of the variables, they must be INSIDE the quotes, for example: <br/> `"MONIKER=dVPN  v2RAY"`
+1. Deploy with an empty `IPV4_ADDRESS`
+2. After the provider assigns an IPv4 address (visible in the **LEASES** tab), update your deployment with the assigned IP
+3. Deployment takes about 2 minutes before the node starts working
+4. Verify by checking your Sentinel address in [Mintscan Explorer](https://www.mintscan.io/sentinel) for status update transactions
 
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/221614307-09813671-ed36-4db3-86d8-5836245f05f1.gif" width=70%</p>
-
-We don't know what **IPv4** address we'll be assigned before we start the deployment, so we'll start the deployment with an empty `IPV4_ADDRESS`. We will fill it in as soon as we get the **IPv4** address from the provider and update our deployment. <br/>
-
-<br/>
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/221620076-7829428a-5832-4ff9-ab91-215875651d5a.gif" width=70% </p>
-
-<br/>
-
-As you can see, there were **3 providers** available in total, ready to provide computing power **with the static IP function**. I chose the cheapest one and continued deploy.<br/>
-In the logs, we can see the **IPv4** address assigned to us. It also appears on the `LEASES` tab of our deployment.
-Here's what it looks like:
-
-<p align="center"><img src="https://user-images.githubusercontent.com/23629420/221625686-4efca4c2-a3a0-4ebf-9933-09637b16d575.gif" width=70% </p>
-
-**Deployment takes about 2 minutes.** Then the dVPN node will start working.<br/> <br/>
-Example of correct working logs:<br/>
-![image](https://user-images.githubusercontent.com/23629420/221644766-0b182d4b-813e-41ef-ab31-22cd55059583.png)<br/>
-Also, if you open your sentinel address in [Explorer](https://www.mintscan.io/sentinel), you can see that there are transactions to update the status of your dVPN node.<br/>
-This completes the installation!<br/> <br/>
+For advanced configuration options, see the [variables reference](/Sentinel-dVPN-node/VARIABLES.md).

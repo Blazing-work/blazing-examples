@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: neo4j
+providers:
+  akash:
+    status: prefer
+services:
+  neo4j:
+    image: neo4j:5.15.0-community
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 2Gi
+    variables:
+      NEO4J_AUTH: neo4j/admin
+      NEO4J_server_config_strict__validation_enabled: 'false'
+    network:
+      ingress:
+        port: 7474
+        public: true

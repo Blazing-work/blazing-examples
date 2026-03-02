@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bert
+providers:
+  akash:
+    status: prefer
+services:
+  bert:
+    image: clydedevv/bert-base-uncased:0.0.8
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 10Gi
+    network:
+      ingress:
+        port: 80
+        public: true

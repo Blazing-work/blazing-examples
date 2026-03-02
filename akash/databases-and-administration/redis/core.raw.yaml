@@ -1,0 +1,30 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: redis
+providers:
+  akash:
+    status: prefer
+services:
+  redis:
+    image: redis:8.2.2
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      REDIS_AOF_ENABLED: no
+    secrets:
+    - secret_ref: allow_empty_password
+      mode: env
+      keys:
+        value: ALLOW_EMPTY_PASSWORD
+    - secret_ref: redis_password
+      mode: env
+      keys:
+        value: REDIS_PASSWORD
+    network:
+      ingress:
+        port: 6379
+        public: true

@@ -1,31 +1,20 @@
-# stable-diffusion-ui
+# Stable Diffusion UI (Easydiffusion)
 
 The easiest way to install and use Stable Diffusion on your computer.
 Does not require technical knowledge, does not require pre-installed software. 1-click install, powerful features, friendly community.
+
 **Hardware requirements**
 
-## Use Cases
+- Windows: NVIDIA graphics card (minimum 2 GB RAM), or run on your CPU.
+- Linux: NVIDIA or AMD graphics card (minimum 2 GB RAM), or run on your CPU.
+- Mac: M1 or M2, or run on your CPU.
+- Minimum 8 GB of system RAM.
+- Atleast 25 GB of space on the hard disk.
 
-- AI model inference
-- GPU-accelerated computation
-- Machine learning workloads
+## Showcase Video
 
-## Getting Started
+<https://youtu.be/KOymutNPdIE>
 
-1. Deploy the template and wait for the service to reach "Running" status
-2. Send HTTP requests to `http://{SERVICE_URI}:9000/`
-3. Check the service documentation for available API endpoints
+## Reference
 
-## Accessing the Service
-
-Send requests to `http://{SERVICE_URI}:9000/`.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `s20081428/stable-diffusion-ui:v2.3` |
-| CPU | 16.0 |
-| Memory | 32Gi |
-| Storage | 32Gi |
-| Exposed Ports | 9000 |
+Easydiffusion - <https://github.com/easydiffusion/easydiffusion>

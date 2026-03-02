@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Thorchain-BEPSwap
+providers:
+  akash:
+    status: prefer
+services:
+  thorchain:
+    image: edouardl/thorchain-bepswap-thorchain-ui
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 5000
+        public: true

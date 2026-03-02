@@ -1,28 +1,15 @@
-# openspeedtest
+# OpenSpeedTest
 
-OpenSpeedTest is a free and open-source network speed test tool that runs entirely in the browser.
+![](./openspeedtest-logo.jpg)
 
-## Use Cases
+Test connection speed to a provider. Lightweight and High Performance, OpenSpeedTest contains Only "STATIC" Files like HTML,CSS & JS. So you don't need to worry about Security Updates or Hidden Exploits that may compromise your secure environments.
 
-- Network speed testing
-- Bandwidth measurement
-- Latency testing
+OpenSpeedTest is written in Pure JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 7kB gzip. The unexpected side effect of using Pure JavaScript is High Performance.
 
-## Getting Started
+## Run a speed test from Any Device
 
-1. Navigate to the URL
-2. Click the Start button to measure upload and download speeds
+OpenSpeedTest will run on Any Web Browser that is IE10 or new.
 
-## Accessing the Service
+## Ready for Any Display Size and Resolution
 
-Open `http://{SERVICE_URI}:3000/` and click "Start" to begin the speed test.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `openspeedtest/latest` |
-| CPU | 1.0 |
-| Memory | 512Mi |
-| Storage | 512Mi |
-| Exposed Ports | 3000 |
+OpenSpeedTest User interface is written in SVG.

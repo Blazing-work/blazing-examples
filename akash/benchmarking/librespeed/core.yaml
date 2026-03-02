@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: librespeed
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  librespeed:
+    image: adolfintel/speedtest
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      MODE: standalone
+      TITLE: Akash Librespeed Test
+      WEBPORT: '80'
+    network:
+      ingress:
+        port: 80
+        public: true

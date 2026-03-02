@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: jupyter
+providers:
+  akash:
+    status: prefer
+services:
+  jupyter-app:
+    image: jupyter/tensorflow-notebook
+    cpu: 2.0
+    memory: 2Gi
+    storage:
+      size: 10Gi
+    network:
+      ingress:
+        port: 8888
+        public: true

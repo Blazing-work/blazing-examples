@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Llama-4-Maverick-17B-128E-Instruct-FP8
+providers:
+  akash:
+    status: prefer
+services:
+  vllm:
+    image: vllm/vllm-openai:v0.8.3
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 100Gi
+    variables:
+      VLLM_DISABLE_COMPILE_CACHE: '1'
+    secrets:
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    network:
+      ingress:
+        port: 8000
+        public: true

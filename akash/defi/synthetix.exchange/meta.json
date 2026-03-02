@@ -1,0 +1,18 @@
+{
+  "id": "akash-synthetix.exchange",
+  "title": "synthetix.exchange",
+  "description": "synthetix.exchange deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Defi",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "defi"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

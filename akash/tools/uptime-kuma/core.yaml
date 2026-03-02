@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: uptime-kuma
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  uptime-kuma-persistent:
+    image: louislam/uptime-kuma:1.23.1
+    cpu: 0.5
+    memory: 512Mb
+    storage:
+      size: 128Mb
+    network:
+      ingress:
+        port: 3001
+        public: true

@@ -1,0 +1,20 @@
+{
+  "id": "akash-defradb",
+  "title": "defradb",
+  "description": "defradb deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Databases And Administration",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "databases",
+    "and",
+    "administration"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

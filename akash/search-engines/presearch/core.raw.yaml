@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: presearch
+providers:
+  akash:
+    status: prefer
+services:
+  presearch:
+    image: presearch/node:1.2.32
+    cpu: 1.0
+    memory: 768Mi
+    storage:
+      size: 10Gi
+    variables:
+      REGISTRATION_CODE: insert your registration code here
+    network:
+      ingress:
+        port: 8080
+        public: true

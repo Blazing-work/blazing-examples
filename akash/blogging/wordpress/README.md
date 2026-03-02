@@ -1,8 +1,8 @@
 # WordPress
 
-
 WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL.  This SDL includes MariaDB (MySQL fork).
 
+## Troubleshooting
 
 ### 413 Request Entity Too Large
 
@@ -12,11 +12,15 @@ To fix this, make sure to set `expose.http_options.max_body_size` to a large eno
 Prepare the env:
 
 ```
+AKASH_DSEQ=<your dseq>
+AKASH_PROVIDER=<provider address your deployment is running at>
+AKASH_NODE=<set to one of the nodes from https://raw.githubusercontent.com/ovrclk/net/master/mainnet/rpc-nodes.txt list>
 ```
 
 Drop into your wordpress deployment:
 
 ```
+akash provider lease-shell --tty --stdin -- wordpress bash
 ```
 
 And fix the `.htaccess` file there:

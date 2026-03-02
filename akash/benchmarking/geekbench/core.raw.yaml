@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: geekbench
+providers:
+  akash:
+    status: prefer
+services:
+  geekbench:
+    image: cryptoandcoffee/akash-geekbench:1
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    variables:
+      GEEKBENCH_VERSION: 5.4.4
+    network:
+      ingress:
+        port: 80
+        public: true

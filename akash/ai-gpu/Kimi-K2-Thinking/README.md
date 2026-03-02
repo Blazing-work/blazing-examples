@@ -1,34 +1,28 @@
-  <picture>
+# Kimi K2 Thinking
+
+<picture>
       <img src="https://huggingface.co/moonshotai/Kimi-K2-Thinking/resolve/main/figures/kimi-logo.png" width="30%" alt="Kimi K2: Open Agentic Intellignece">
   </picture>
 <hr>
-<div align="center" style="line-height:1">
-  <a href="https://www.kimi.com" target="_blank"><img alt="Chat" src="https://img.shields.io/badge/🤖%20Chat-Kimi%20K2-ff6b6b?color=1783ff&logoColor=white"/></a>
+<a href="https://www.kimi.com" target="_blank"><img alt="Chat" src="https://img.shields.io/badge/🤖%20Chat-Kimi%20K2-ff6b6b?color=1783ff&logoColor=white"/></a>
   <a href="https://www.moonshot.ai" target="_blank"><img alt="Homepage" src="https://img.shields.io/badge/Homepage-Moonshot%20AI-white?logo=Kimi&logoColor=white"/></a>
-</div>
-
-<div align="center" style="line-height: 1;">
-  <a href="https://huggingface.co/moonshotai" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Moonshot%20AI-ffc107?color=ffc107&logoColor=white"/></a>
+<a href="https://huggingface.co/moonshotai" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Moonshot%20AI-ffc107?color=ffc107&logoColor=white"/></a>
   <a href="https://twitter.com/kimi_moonshot" target="_blank"><img alt="Twitter Follow" src="https://img.shields.io/badge/Twitter-Kimi.ai-white?logo=x&logoColor=white"/></a>
     <a href="https://discord.gg/TYU2fdJykW" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/Discord-Kimi.ai-white?logo=discord&logoColor=white"/></a>
-</div>
-<div align="center" style="line-height: 1;">
-  <a href="https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Modified_MIT-f5de53?&color=f5de53"/></a>
-</div>
+<a href="https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Modified_MIT-f5de53?&color=f5de53"/></a>
 <p align="center">
 <b>📰&nbsp;&nbsp;<a href="https://moonshotai.github.io/Kimi-K2/thinking.html">Tech Blog</a></b>
 </p>
-
 
 ## 1. Model Introduction
 
 Kimi K2 Thinking is the latest, most capable version of open-source thinking model. Starting with Kimi K2, we built it as a thinking agent that reasons step-by-step while dynamically invoking tools. It sets a new state-of-the-art on Humanity's Last Exam (HLE), BrowseComp, and other benchmarks by dramatically scaling multi-step reasoning depth and maintaining stable tool-use across 200–300 sequential calls. At the same time, K2 Thinking is a native INT4 quantization model with 256k context window, achieving lossless reductions in inference latency and GPU memory usage.
 
 ### Key Features
+
 - **Deep Thinking & Tool Orchestration**: End-to-end trained to interleave chain-of-thought reasoning with function calls, enabling autonomous research, coding, and writing workflows that last hundreds of steps without drift.
 - **Native INT4 Quantization**: Quantization-Aware Training (QAT) is employed in post-training stage to achieve lossless 2x speed-up in low-latency mode.
 - **Stable Long-Horizon Agency**: Maintains coherent goal-directed behavior across up to 200–300 consecutive tool invocations, surpassing prior models that degrade after 30–50 steps.
-
 
 ## 2. Model Summary
 
@@ -53,6 +47,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
 ## 3. Evaluation Results
 
 **Reasoning Tasks**
+
 | Benchmark | Setting | K2 Thinking | GPT-5 | Claude Sonnet 4.5<br> (Thinking) | K2 0905 | DeepSeek-V3.2 | Grok-4 |
 |:----------:|:--------:|:------------:|:------:|:----------------------------:|:--------:|:--------------:|:-------:|
 | **HLE (Text-only)** | no tools | 23.9 | 26.3 | 19.8* | 7.9 | 19.8 | 25.4 |
@@ -68,6 +63,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
 | **GPQA** | no tools | 84.5 | 85.7 | 83.4 | 74.2 | 79.9 | 87.5 |
 
 **General Tasks**
+
 | Benchmark | Setting | K2 Thinking | GPT-5 | Claude Sonnet 4.5<br> (Thinking) | K2 0905 | DeepSeek-V3.2 |
 |:----------:|:--------:|:------------:|:------:|:----------------------------:|:--------:|:--------------:|
 | **MMLU-Pro** | no tools | 84.6 | 87.1 | 87.5 | 81.9 | 85.0 |
@@ -76,6 +72,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
 | **HealthBench** | no tools | 58.0 | 67.2 | 44.2 | 43.8 | 46.9 |
 
 **Agentic Search Tasks**
+
 | Benchmark | Setting | K2 Thinking | GPT-5 | Claude Sonnet 4.5<br> (Thinking) | K2 0905 | DeepSeek-V3.2 |
 |:----------:|:--------:|:------------:|:------:|:----------------------------:|:--------:|:--------------:|
 | **BrowseComp** | w/ tools | 60.2 | 54.9 | 24.1 | 7.4 | 40.1 |
@@ -85,6 +82,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
 | **Frames** | w/ tools | 87.0 | 86.0* | 85.0* | 58.1 | 80.2* |
 
 **Coding Tasks**
+
 | Benchmark | Setting | K2 Thinking | GPT-5 | Claude Sonnet 4.5<br> (Thinking) | K2 0905 | DeepSeek-V3.2 |
 |:----------:|:--------:|:------------:|:------:|:----------------------------:|:--------:|:--------------:|
 | **SWE-bench Verified** | w/ tools | 71.3 | 74.9 | 77.2 | 69.2 | 67.8 |
@@ -94,6 +92,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
 | **LiveCodeBenchV6** | no tools | 83.1 | 87.0* | 64.0* | 56.1* | 74.1 |
 | **OJ-Bench (cpp)** | no tools | 48.7 | 56.2* | 30.4* | 25.5* | 38.2* |
 | **Terminal-Bench** | w/ simulated tools (JSON) | 47.1 | 43.8 | 51.0 | 44.5 | 37.7 |
+
 <details>
 <summary><b>Footnotes</b></summary>
 
@@ -120,6 +119,7 @@ Kimi K2 Thinking is the latest, most capable version of open-source thinking mod
  5.2. For other coding tasks, the result was produced with our in-house evaluation harness. The harness is derived from SWE-agent, but we clamp the context windows of the Bash and Edit tools and rewrite the system prompt to match the task semantics.
  5.3. All reported scores of coding tasks are averaged over 5 independent runs.
 6. **Heavy Mode**: K2 Thinking Heavy Mode employs an efficient parallel strategy: it first rolls out eight trajectories simultaneously, then reflectively aggregates all outputs to generate the final result. Heavy mode for GPT-5 denotes the official GPT-5 Pro score.
+
 </details>
 ## 4. Native INT4 Quantization
 Low-bit quantization is an effective way to reduce inference latency and GPU memory usage on large-scale inference servers. However, thinking models use excessive decoding lengths, and thus quantization often results in substantial performance drops.

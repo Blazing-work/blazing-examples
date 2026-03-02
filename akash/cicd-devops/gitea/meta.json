@@ -1,0 +1,19 @@
+{
+  "id": "akash-gitea",
+  "title": "gitea",
+  "description": "gitea deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Cicd Devops",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "cicd",
+    "devops"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

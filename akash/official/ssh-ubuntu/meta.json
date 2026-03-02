@@ -1,0 +1,18 @@
+{
+  "id": "akash-ssh-ubuntu",
+  "title": "ssh-ubuntu",
+  "description": "ssh-ubuntu deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Official",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "official"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

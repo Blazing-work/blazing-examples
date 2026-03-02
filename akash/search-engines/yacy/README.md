@@ -1,30 +1,13 @@
-# yacy
+# Yacy
 
-YaCy Search Engine Software
-===========================
+## YaCy Search Engine Software
+
 YaCy is a distributed Web Search Engine, based on a peer-to-peer network.
 
-## Use Cases
+Homepage: [YaCy.net](https://yacy.net)
 
-- Full-text search
-- Privacy-respecting search
-- Data indexing
+## Using This SDL
 
-## Getting Started
-
-1. Deploy the template and wait for the service to reach "Running" status
-2. Open the web interface at `http://{SERVICE_URI}:8090/`
-3. Follow any on-screen setup instructions
-
-## Accessing the Service
-
-Open `http://{SERVICE_URI}:8090/` in your browser or send HTTP requests to this address.
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `yacy/yacy_search_server:latest` |
-| CPU | 0.1 |
-| Memory | 256Mi |
-| Exposed Ports | 8090 |
+- HTTP port 8090 must be exposed globally as port 80 (or YaCy will refuse to crawl without any error). Exposing HTTPS port 8443 is not required.
+- Enabling persistent storage feature in SDL is highly recommended. Some settings in YaCy requires a server restart and it will reset all of your data.
+- Default username and password to access administrative features is `admin` and `yacy`.

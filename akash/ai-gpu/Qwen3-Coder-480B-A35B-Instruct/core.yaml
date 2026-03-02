@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Qwen3-Coder-480B-A35B-Instruct
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  sglang:
+    image: lmsysorg/sglang:v0.4.9.post3-cu126
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

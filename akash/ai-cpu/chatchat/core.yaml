@@ -1,0 +1,55 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: chatchat
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  chatchat:
+    image: cryptoandcoffee/akash-chatchat:2
+    cpu: 8.0
+    memory: 4.75Gi
+    storage:
+      size: 16Gi
+    variables:
+      BASE_URL: http://localhost:3000
+      DATABASE_URL: 
+        postgresql://akash:squarekingzebrahello@postgres:5432/chatchat
+      NEXTAUTH_URL: localhost:3000
+      OPENAI_API_ENDPOINT: https://api.openai.com
+      POSTGRES_USER: admin
+    secrets:
+    - secret_ref: nextauth_secret
+      mode: env
+      keys:
+        value: NEXTAUTH_SECRET
+    - secret_ref: openai_api_key
+      mode: env
+      keys:
+        value: OPENAI_API_KEY
+    network:
+      ingress:
+        port: 3000
+        public: true
+  postgres:
+    image: postgres
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 1Gi
+    variables:
+      POSTGRES_USER: admin
+      POSTGRES_DB: chatchat
+    secrets:
+    - secret_ref: postgres_password
+      mode: env
+      keys:
+        value: POSTGRES_PASSWORD
+    network:
+      ingress:
+        port: 5432
+        public: false

@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: phoronix
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  phoronix:
+    image: cryptoandcoffee/akash-phoronix:2
+    cpu: 4.0
+    memory: 6Gi
+    storage:
+      size: 32Gi
+    network:
+      ingress:
+        port: 80
+        public: true

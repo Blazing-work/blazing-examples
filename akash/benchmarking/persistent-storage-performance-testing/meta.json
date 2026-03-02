@@ -1,0 +1,18 @@
+{
+  "id": "akash-persistent-storage-performance-testing",
+  "title": "persistent-storage-performance-testing",
+  "description": "persistent-storage-performance-testing deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Benchmarking",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "benchmarking"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

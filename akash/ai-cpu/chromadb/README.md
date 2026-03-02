@@ -1,48 +1,27 @@
-# chromadb
+# Chromadb
 
-Chroma is an open-source embedding database designed for AI applications with native support for storing and querying embeddings.
+<p align="center">
+  <a href="https://trychroma.com"><img src="https://user-images.githubusercontent.com/891664/227103090-6624bf7d-9524-4e05-9d2c-c28d5d451481.png" alt="Chroma logo"></a>
+</p>
+<p align="center">
+    <b>Chroma - the open-source embedding database</b>. <br />
 
-## Use Cases
+    The fastest way to build Python or JavaScript LLM apps with memory!
+</p>
 
-- Semantic search
-- Retrieval-augmented generation (RAG)
-- Recommendation systems
-- AI/ML feature stores
+## Features
 
-## Getting Started
+- __Simple__: Fully-typed, fully-tested, fully-documented == happiness
+- __Integrations__: [`🦜️🔗 LangChain`](https://blog.langchain.dev/langchain-chroma/) (python and js), [`🦙 LlamaIndex`](https://twitter.com/atroyn/status/1628557389762007040) and more soon
+- __Dev, Test, Prod__: the same API that runs in your python notebook, scales to your cluster
+- __Feature-rich__: Queries, filtering, regex and more
+- __Free & Open Source__: Apache 2.0 Licensed
 
-1. Install the client: `pip install chromadb-client`
-2. Create a collection and add embeddings
-3. Query with natural language or embedding vectors
+## Access the database
 
-## Accessing the Service
+After deployment, access the chromadb vector store at the provided endpoint on port 8000.
 
-Use the Chroma Python client:
-```python
-import chromadb
-client = chromadb.HttpClient(host="{SERVICE_URI}", port=8000)
-```
-Or call the REST API at `http://{SERVICE_URI}:8000/api/v1`.
+For more info, refer
 
-
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `IS_PERSISTENT` | `TRUE` |
-| `PERSIST_DIRECTORY` | `/mnt/data/chromadb/chroma` |
-| `ANONYMIZED_TELEMETRY` | `FALSE` |
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `chromadb/chroma` |
-| CPU | 4.0 |
-| Memory | 4Gb |
-| Storage | 1Gi |
-| Exposed Ports | 8000 |
-
-## Documentation
-
-For full documentation, visit: [https://docs.trychroma.com/](https://docs.trychroma.com/)
+- [chromadb](https://www.trychroma.com)
+- [chromadb github](https://github.com/chroma-core/chroma)

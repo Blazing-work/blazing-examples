@@ -1,0 +1,18 @@
+{
+  "id": "akash-vaultwarden",
+  "title": "vaultwarden",
+  "description": "vaultwarden deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Tools",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "tools"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

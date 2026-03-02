@@ -1,6 +1,5 @@
 # Nginx Let's Encrypt Proxy
 
-
 This repository contains the necessary configuration files and instructions to set up an Nginx reverse proxy with Let's Encrypt SSL certificate.
 
 ## Prerequisites
@@ -15,6 +14,7 @@ Before getting started, make sure you have the following:
 
 2. Upload the `nginx.conf` to Gist or any other file hosting service. Make sure the file is publicly accessible.
 
+3. Go to console.akash.network and create a new deployment with the SDL in deploy.yml.
 
 4. Replace the `NGINX_CONF_URL` in the SDL with the URL of the `nginx.conf` file you uploaded in step 2.
 
@@ -24,7 +24,7 @@ Before getting started, make sure you have the following:
 
 7. Deploy the application and select a Provider.
 
-
+8. Once the deployment starts, you can see the leased IP address in the Leases tab of the Akash Console.
 Copy the IP address and create an A record in your domain's DNS settings pointing to this IP address.
 
 9. Wait for the DNS changes to propagate. You can check the status of the DNS propagation using online tools like [DNS Checker](https://dnschecker.org/).
@@ -34,6 +34,7 @@ Copy the IP address and create an A record in your domain's DNS settings pointin
 11. You should now be able to access your application using your domain name over HTTPS.
 
 A successful deployment should look similar to this:
+
 ```bash
 [nginx]: Saving to: '/etc/nginx/nginx.conf'
 [nginx]: 2024-08-09 13:22:03 (50.3 MB/s) - '/etc/nginx/nginx.conf' saved [956/956]
@@ -54,6 +55,7 @@ A successful deployment should look similar to this:
 [nginx]: Congratulations! You have successfully enabled HTTPS on https://YOURDOMAIN.COM
 ```
 
+## FAQ
 
 ### How do I renew the SSL certificate?
 

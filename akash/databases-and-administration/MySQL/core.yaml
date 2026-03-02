@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: MySQL
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  mysql:
+    image: mysql
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      MYSQL_DATABASE: mydb
+    secrets:
+    - secret_ref: mysql_root_password
+      mode: env
+      keys:
+        value: MYSQL_ROOT_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: true

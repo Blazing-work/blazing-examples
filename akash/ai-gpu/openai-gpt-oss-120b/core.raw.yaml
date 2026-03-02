@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: openai-gpt-oss-120b
+providers:
+  akash:
+    status: prefer
+services:
+  vllm:
+    image: vllm/vllm-openai:gptoss
+    cpu: 16.0
+    memory: 128Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

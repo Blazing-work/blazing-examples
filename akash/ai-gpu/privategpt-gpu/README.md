@@ -1,17 +1,16 @@
 # PrivateGPT
 
-
 **PrivateGPT is a production-ready AI project that allows you to ask questions about your documents using the power of Large Language Models (LLMs), even in scenarios without an Internet connection. 100% private, no data leaves your execution environment at any point.**
 
-`GitHub` - 3x3cut0r/privategpt - https://github.com/3x3cut0r/docker/tree/main/privategpt
-`DockerHub` - 3x3cut0r/privategpt - https://hub.docker.com/r/3x3cut0r/privategpt
+`GitHub` - 3x3cut0r/privategpt - <https://github.com/3x3cut0r/docker/tree/main/privategpt>
+`DockerHub` - 3x3cut0r/privategpt - <https://hub.docker.com/r/3x3cut0r/privategpt>
 
 ![privategpt](https://github.com/3x3cut0r/docker/assets/1408580/39d4e5ed-4a5c-4ea5-8b78-83a8c4c2df9b)
 
 ## Documentation
 
-`GitHub` - zylon-ai/private-gpt - https://github.com/zylon-ai/private-gpt
-`Docs` - docs.privategpt.dev - https://docs.privategpt.dev/
+`GitHub` - zylon-ai/private-gpt - <https://github.com/zylon-ai/private-gpt>
+`Docs` - docs.privategpt.dev - <https://docs.privategpt.dev/>
 
 ## Index
 
@@ -25,6 +24,7 @@
 5. [Find Me](#findme)
 6. [License](#license)
 
+## 1 Usage <a name="usage"></a>
 
 ### 1.1 docker run <a name="dockerrun"></a>
 
@@ -41,7 +41,7 @@ docker run -d \
 version: '3.9'
 
 services:
-  # https://hub.docker.com/r/3x3cut0r/privategpt
+#  # https://hub.docker.com/r/3x3cut0r/privategpt
   privategpt:
     image: 3x3cut0r/privategpt:latest
     container_name: privategpt
@@ -55,7 +55,7 @@ services:
 version: '3.9'
 
 services:
-  # https://hub.docker.com/r/3x3cut0r/privategpt
+#  # https://hub.docker.com/r/3x3cut0r/privategpt
   privategpt:
     image: 3x3cut0r/privategpt:latest
     container_name: privategpt
@@ -75,19 +75,19 @@ services:
 
 **you can adjust all values inside the [settings.yaml](https://github.com/3x3cut0r/docker/blob/main/privategpt/settings.yaml) with environment variables**
 
-###### Server
+#### Server
 
 - `ENV_NAME` - Name of the environment (prod, staging, local...) - **Default: prod**
 - `PORT` - Port of PrivateGPT FastAPI server - **Default: 8080**
 - `KEEP_FILES` - Specifies if the server should keep uploaded files after restarting the container (lowercase true or false)- **Default: true**
 - `RUN_SETUP` - Set to true, to run poetry setup again. Do it only once to download models and set it to false afterwards - **Default: false**
 
-###### Cors
+##### Cors
 
 - `CORS_ENABLED` - Flag indicating if CORS headers are set or not. If set to True, the CORS headers will be set to allow all origins, methods and headers - **Default: false**
 - `CORS_ALLOW_CREDENTIALS` - Indicate that cookies should be supported for cross-origin requests - **Default: false**
 - `CORS_ALLOW_ORIGINS` - A list of origins that should be permitted to make cross-origin requests - **Default: \***
-- `CORS_ALLOW_ORIGIN_REGEX` - A regex string to match against origins that should be permitted to make cross-origin requests - **Default: **
+- `CORS_ALLOW_ORIGIN_REGEX` - A regex string to match against origins that should be permitted to make cross-origin requests - **Default:**
 - `CORS_ALLOW_METHODS` - A list of HTTP methods that should be allowed for cross-origin request - **Default: \***
 - `CORS_ALLOW_HEADERS` - A list of HTTP request headers that should be supported for cross-origin requests - **Default: \***
 
@@ -98,7 +98,9 @@ services:
 - `AUTH_SECRET` - The secret to be used for authentication. It can be any non-blank string. For HTTP basic authentication, this value should be the whole 'Authorization' header that is expected. - **Default: Basic c2VjcmV0OmtleQ==**
 
 ```
-# If the auth is enabled, this value must be set in the "Authorization" header of the request.
+## python -c 'import base64; print("Basic " + base64.b64encode("secret:key".encode()).decode())'
+## 'secret' is the username and 'key' is the password for basic auth by default
+## If the auth is enabled, this value must be set in the "Authorization" header of the request.
 secret: "Basic c2VjcmV0OmtleQ=="
 ```
 
@@ -244,11 +246,11 @@ secret: "Basic c2VjcmV0OmtleQ=="
 
 ###### OpenAI
 
-- `OPENAI_API_BASE` - Base URL of OpenAI API. Example: https://api.openai.com/v1 - **Default: https://api.openai.com/v1**
+- `OPENAI_API_BASE` - Base URL of OpenAI API. Example: <https://api.openai.com/v1> - **Default: <https://api.openai.com/v1>**
 - `OPENAI_API_KEY` - Your API Key for the OpenAI API. Example: sk-1234 - **Default: sk-1234**
 - `OPENAI_MODEL` - OpenAI Model to use. (see [OpenAI Models Overview](https://platform.openai.com/docs/models/overview)). Example: gpt-4 - **Default: gpt-3.5-turbo**
 - `OPENAI_REQUEST_TIMEOUT` - Time elapsed until openailike server times out the request. Default is 120s. Format is float. - **Default: 120.0**
-- `OPENAI_EMBEDDING_API_BASE` - Base URL of OpenAI API. Example: https://api.openai.com/v1 - **Default: same as OPENAI_API_BASE**
+- `OPENAI_EMBEDDING_API_BASE` - Base URL of OpenAI API. Example: <https://api.openai.com/v1> - **Default: same as OPENAI_API_BASE**
 - `OPENAI_EMBEDDING_API_KEY` - Your API Key for the OpenAI Embedding API. Example: sk-1234. - **Default: same as OPENAI_API_KEY**
 - `OPENAI_EMBEDDING_MODEL` - OpenAI embedding Model to use. Example: text-embedding-3-large - **Default: text-embedding-3-small**
 
@@ -260,8 +262,8 @@ secret: "Basic c2VjcmV0OmtleQ=="
 
 ###### Ollama
 
-- `OLLAMA_API_BASE` - Base URL of Ollama API. Example: http://192.168.1.100:11434 - **Default: http://localhost:11434**
-- `OLLAMA_EMBEDDING_API_BASE` - Base URL of Ollama Embedding API. Example: http://192.168.1.100:11434 - **Default: same as OLLAMA_API_BASE**
+- `OLLAMA_API_BASE` - Base URL of Ollama API. Example: <http://192.168.1.100:11434> - **Default: <http://localhost:11434>**
+- `OLLAMA_EMBEDDING_API_BASE` - Base URL of Ollama Embedding API. Example: <http://192.168.1.100:11434> - **Default: same as OLLAMA_API_BASE**
 - `OLLAMA_LLM_MODEL` - Ollama model to use. (see [Ollama Library](https://ollama.com/library)). Example: 'llama2-uncensored' - **Default: llama3.1:latest**
 - `OLLAMA_EMBEDDING_MODEL` - Model to use. Example: 'nomic-embed-text'. - **Default: nomic-embed-text**
 - `OLLAMA_KEEP_ALIVE` - Time the model will stay loaded in memory after a request. examples: 5m, 5h, '-1' - **Default: 5m**
@@ -276,7 +278,7 @@ secret: "Basic c2VjcmV0OmtleQ=="
 ###### Azure OpenAI
 
 - `AZOPENAI_API_KEY` - Your API Key for the OpenAI API. Example: sk-1234 - **Default: sk-1234**
-- `AZOPENAI_ENDPOINT` - Base URL of Azure OpenAI Endpoint. Example: https://api.myazure.com/v1 - **Default: https://api.myazure.com/v1**
+- `AZOPENAI_ENDPOINT` - Base URL of Azure OpenAI Endpoint. Example: <https://api.myazure.com/v1> - **Default: <https://api.myazure.com/v1>**
 - `AZOPENAI_API_VERSION` - The API version to use for this operation. This follows the YYYY-MM-DD format. - **Default: 2023_05_15**
 - `AZOPENAI_EMBEDDING_DEPLOYMENT_NAME` - embedding deployment name in str format - **Default: None**
 - `AZOPENAI_EMBEDDING_MODEL` - OpenAI Model to use. Example: 'text-embedding-ada-002'. - **Default: text-embedding-3-small**

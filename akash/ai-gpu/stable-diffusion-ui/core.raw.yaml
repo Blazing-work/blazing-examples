@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: stable-diffusion-ui
+providers:
+  akash:
+    status: prefer
+services:
+  stable-diffusion-ui:
+    image: s20081428/stable-diffusion-ui:v2.3
+    cpu: 16.0
+    memory: 32Gi
+    storage:
+      size: 32Gi
+    network:
+      ingress:
+        port: 9000
+        public: true

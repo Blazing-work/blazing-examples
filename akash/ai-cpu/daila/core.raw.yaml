@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: daila
+providers:
+  akash:
+    status: prefer
+services:
+  daila:
+    image: cryptoandcoffee/akash-daila:6
+    cpu: 32.0
+    memory: 16Gi
+    storage:
+      size: 8Gi
+    variables:
+      MODEL_SIZE: 7B
+      ALPACA: 'true'
+      LLAMA: 'false'
+    network:
+      ingress:
+        port: 3000
+        public: true

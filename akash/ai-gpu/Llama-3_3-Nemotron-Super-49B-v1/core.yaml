@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Llama-3_3-Nemotron-Super-49B-v1
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  vllm:
+    image: vllm/vllm-openai:v0.8.4
+    cpu: 64.0
+    memory: 64Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

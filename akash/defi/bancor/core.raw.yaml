@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bancor
+providers:
+  akash:
+    status: prefer
+services:
+  bancor:
+    image: nomorelies/bancor-webapp-v3:0.0.2
+    cpu: 1.0
+    memory: 2gi
+    storage:
+      size: 2gi
+    variables:
+      REACT_APP_ALCHEMY_MAINNET: ''
+    network:
+      ingress:
+        port: 3000
+        public: true

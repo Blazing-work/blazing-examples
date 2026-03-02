@@ -1,0 +1,109 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: RAIR-Dapp
+providers:
+  akash:
+    status: prefer
+services:
+  mongo:
+    image: mongo:latest
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_DATABASE: rair-db
+    secrets:
+    - secret_ref: mongo_initdb_root_password
+      mode: env
+      keys:
+        value: MONGO_INITDB_ROOT_PASSWORD
+    network:
+      ingress:
+        port: 27017
+        public: false
+  rair-front:
+    image: rairprotocol/rair-front:4d031fe33f37417ba454543eccf6b20e05daed07
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      Environment: Variables
+    network:
+      ingress:
+        port: 80
+        public: true
+  rair-node:
+    image: rairprotocol/rair-node:4d031fe33f37417ba454543eccf6b20e05daed07
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      MONGO_URI_LOCAL: 
+        mongodb://admin:admin@mongo:27017/rair-db?authSource=admin
+      ADMIN_NETWORK: '0x2105'
+      ADMIN_CONTRACT: '0xfc3666266d129504dd6c713f9bce107747ae4aee'
+      APP_NAME: Test_Deployment
+      REDIS_HOST: redis
+      REDIS_PORT: '6379'
+      BASE_BCN_URL: http://rair-sync:5001
+    secrets:
+    - secret_ref: session_secret
+      mode: env
+      keys:
+        value: SESSION_SECRET
+    network:
+      ingress:
+        port: 3000
+        public: false
+  rair-stream:
+    image: rairprotocol/rair-stream:4d031fe33f37417ba454543eccf6b20e05daed07
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      REDIS_HOST: redis
+      REDIS_PORT: '6379'
+      BASE_RAIRNODE_URL: http://rair-node:5000
+    network:
+      ingress:
+        port: 5002
+        public: false
+  rair-sync:
+    image: rairprotocol/rair-sync:4d031fe33f37417ba454543eccf6b20e05daed07
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      MONGO_URI_LOCAL: 
+        mongodb://admin:admin@mongo:27017/rair-db?authSource=admin
+      BASE_RAIRNODE_URL: http://rair-node:5000
+      REDIS_HOST: redis
+      REDIS_PORT: '6379'
+      SYNC_CONTRACT_REPEAT_EVERY: '30'
+      SYNC_CONTRACT_TASK_INTERVAL: '5'
+      DEFAULT_PRODUCT_COVER: 
+        https://rair.myfilebase.com/ipfs/QmcV94NurwfWVGpXTST1we8uDbYiVQamKe87WEHK6DRzqa
+    network:
+      ingress:
+        port: 5001
+        public: false
+  redis:
+    image: redis:6.2.3-alpine
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      Environment: Variables
+    network:
+      ingress:
+        port: 6379
+        public: false

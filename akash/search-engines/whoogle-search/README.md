@@ -1,41 +1,21 @@
-# whoogle-search
+# Whoogle Search
 
-Whoogle Search is a self-hosted, ad-free, privacy-respecting metasearch engine that proxies Google results.
+Whoogle Search is a self-hosted, ad-free/AMP-free/tracking-free, privacy respecting alternative to Google Search. It works by sitting between the user and Google, and filtering whatever Google returns back, to remove things like ads/sponsored content, cookies, JavaScript, tags on urls related to ad campaigns and site referrals, etc. Since all queries are forwarded through the Akash provider, the query made to Google only contains the IP address and information of the provider rather than the user's. And because it's easy to redeploy to a different provider, users can rotate providers once in a while to further obfuscate. To learn more about the project, see the original project page on [Github](https://github.com/benbusby/whoogle-search) and this [reddit post](https://www.reddit.com/r/selfhosted/comments/ggronz/whoogle_search_a_selfhosted/) from the author.
 
-## Use Cases
+![Whoogle](whoogle.png)
 
-- Private web searches without tracking
-- Ad-free search results
-- Self-hosted search for organizations
+## Deployment Configuration
 
-## Getting Started
+The provided [`deploy.yaml`](deploy.yaml) (and [`deploy-ssh-tunnel.yaml`](deploy-ssh-tunnel.yaml)) is a sample SDL configuration that directly uses the official [benbusby/whoogle-search](https://hub.docker.com/r/benbusby/whoogle-search) DockerHub image. As such, the enviornment variables that the original image supports can also be specified in the SDL; the provided one shows how one can enable basic HTTP authentication by specifying the `WHOOGLE_USER` and `WHOOGLE_PASS` variables. Consult the project's [Github](https://github.com/benbusby/whoogle-search) for the full list of supported environment variables.
 
-1. Navigate to the search page — no account needed
-2. Configure preferences (theme, language, region) in settings
-3. Optionally set it as your browser's default search engine
+## `deploy-ssh-tunnel.yaml`?
 
-## Accessing the Service
+By default, the Akash deployment is accessible through HTTP only, so traffic between the user and the hosted Whoogle is unencrypted. Thus, it's recommended to enabled HTTPS. One way to do so is to use a custom domain with CloudFlare SSL as described in this [guide](https://teeyeeyang.medium.com/how-to-use-a-custom-domain-with-your-akash-deployment-5916585734a2) written by a community member.
 
-Open `http://{SERVICE_URI}:5000/` and start searching.
+However, if this is for personal use only, it's also possible to utilize a SSH tunnel in lieu of HTTPS to establish an encyrpted connection between the user and the hosted Whoogle. The [`deploy-ssh-tunnel.yaml`](deploy-ssh-tunnel.yaml) is configured to enable SSH tunneling, with the option to use password based or key based (generally safer) authentication through setting environment variables. Once deployed, you can establish the SSH tunnel with:
 
+```
+ssh -p <THE FORWARDED EXTERNAL PORT OF 2222> -N -L 5000:web:5000 <USER_NAME>@<PROVIDER HOST>
+```
 
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `WHOOGLE_USER` | `user` |
-| `WHOOGLE_PASS` | `password` |
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `benbusby/whoogle-search:latest` |
-| CPU | 1.0 |
-| Memory | 1Gi |
-| Storage | 1Gi |
-| Exposed Ports | 5000 |
-
-## Documentation
-
-For full documentation, visit: [https://github.com/benbusby/whoogle-search](https://github.com/benbusby/whoogle-search)
+And visit Whoogle by going to `http://localhost:5000` in your browser!

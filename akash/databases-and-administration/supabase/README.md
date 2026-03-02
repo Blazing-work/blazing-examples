@@ -1,6 +1,5 @@
 # Supabase
 
-
 This template deploys [Supabase](https://supabase.com/), an open source Firebase alternative offering all the backend features developers need to build a product: PostgreSQL database, authentication, instant APIs, realtime subscriptions, and storage.
 
 ## Features
@@ -12,14 +11,16 @@ This template deploys [Supabase](https://supabase.com/), an open source Firebase
 - File storage
 - Supabase Studio (Web UI)
 
+## Deployment
 
 ### Prerequisites
 
-- Blazing Core account with funds
-- Blazing Core CLI installed and configured
+- Akash account with funds
+- Akash CLI installed and configured
 
 ### Security Configuration (Important)
 
+⚠️ **Before deploying:** You must edit the `deploy.yaml` file to replace the placeholder values with your own secure keys and secrets:
 
 1. Generate a JWT secret (at least 32 characters) for these fields:
    - `PGRST_JWT_SECRET`
@@ -27,6 +28,7 @@ This template deploys [Supabase](https://supabase.com/), an open source Firebase
    - `JWT_SECRET`
 
    You can generate a secure random string with:
+
    ```bash
    openssl rand -base64 32
    ```
@@ -46,25 +48,28 @@ This template deploys [Supabase](https://supabase.com/), an open source Firebase
 1. Create a deployment with the provided SDL:
 
 ```bash
+provider-services tx deployment create deploy.yaml --from <YOUR_KEY_NAME>
 ```
 
-2. List deployments and find your deployment ID:
+1. List deployments and find your deployment ID:
 
 ```bash
+provider-services query deployment list --owner <YOUR_AKASH_ADDRESS>
 ```
 
-3. Create a lease:
+1. Create a lease:
 
 ```bash
 provider-services tx market lease create --dseq <DEPLOYMENT_ID> --provider <PROVIDER_ADDRESS> --from <YOUR_KEY_NAME>
 ```
 
-4. Send manifest:
+1. Send manifest:
 
 ```bash
+provider-services send-manifest deploy.yaml --dseq <DEPLOYMENT_ID> --provider <PROVIDER_ADDRESS> --from <YOUR_KEY_NAME>
 ```
 
-5. Get lease status (includes your Supabase Studio URL):
+1. Get lease status (includes your Supabase Studio URL):
 
 ```bash
 provider-services lease-status --dseq <DEPLOYMENT_ID> --provider <PROVIDER_ADDRESS> --from <YOUR_KEY_NAME>
@@ -72,6 +77,12 @@ provider-services lease-status --dseq <DEPLOYMENT_ID> --provider <PROVIDER_ADDRE
 
 ### Post-Deployment Configuration (Important)
 
+After deployment, you must update the following environment variables in your `deploy.yaml` file with your actual Akash ingress URL, then redeploy:
+
+- `PUBLIC_URL`: Set to `https://<deployment-id>.ingress.akash.network`
+- `SUPABASE_PUBLIC_URL`: Set to `https://<deployment-id>.ingress.akash.network`
+- `API_EXTERNAL_URL`: Set to `https://<deployment-id>.ingress.akash.network`
+- `GOTRUE_SITE_URL`: Set to `https://<deployment-id>.ingress.akash.network`
 
 Without this step, authentication and other features may not work properly.
 
@@ -80,10 +91,13 @@ Without this step, authentication and other features may not work properly.
 Once deployed, you can access the Supabase Studio at:
 
 ```
+https://<deployment-id>.ingress.akash.network
 ```
 
 For example, if your deployment ID is `123456`, the URL would be:
+
 ```
+https://123456.ingress.akash.network
 ```
 
 You'll need to use the keys you configured in the deployment YAML for authentication.
@@ -113,3 +127,4 @@ For client applications, use the public URL and anon key to connect using the [S
 
 - [Supabase Documentation](https://supabase.com/docs)
 - [Supabase GitHub](https://github.com/supabase/supabase)
+- [Akash Network Documentation](https://akash.network/docs/)

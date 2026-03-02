@@ -1,0 +1,18 @@
+{
+  "id": "akash-grafana",
+  "title": "grafana",
+  "description": "grafana deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Hosting",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "hosting"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: x-ui
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: declab/x-ui:0.1
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    variables:
+      DB: ''
+      ARG: -port 1111 -username Admin -password admin
+      XUI_LOG_LEVEL: error
+    network:
+      ingress:
+        port: 1111
+        public: true

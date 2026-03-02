@@ -1,0 +1,33 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: snake-game
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  mongo:
+    image: library/mongo:latest
+    cpu: 0.25
+    memory: 512Mi
+    storage:
+      size: 128Mi
+    network:
+      ingress:
+        port: 27017
+        public: false
+  snake:
+    image: harish1551/snake-game:latest
+    cpu: 0.25
+    memory: 512Mi
+    storage:
+      size: 1G
+    variables:
+      DB_HOST: mongo
+    network:
+      ingress:
+        port: 8000
+        public: true

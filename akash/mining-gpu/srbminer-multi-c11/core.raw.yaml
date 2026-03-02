@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: srbminer-multi-c11
+providers:
+  akash:
+    status: prefer
+services:
+  srbminer-multi-c11:
+    image: cryptoandcoffee/akash-gpu-miner-srbminer-multi-c11:35
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: etchash
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://us-solo-etc.2miners.com:15050"'
+      PASSWORD: x
+      OPTIONS: '"--disable-cpu"'
+    network:
+      ingress:
+        port: 21550
+        public: true

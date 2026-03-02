@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: flame
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: pawelmalak/flame:multiarch2.3.0
+    cpu: 0.5
+    memory: 128Mi
+    storage:
+      size: 64Mi
+    network:
+      ingress:
+        port: 5005
+        public: true

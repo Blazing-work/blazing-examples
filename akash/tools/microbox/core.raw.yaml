@@ -1,0 +1,32 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: microbox
+providers:
+  akash:
+    status: prefer
+services:
+  redis:
+    image: microbox/redis
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 128Mi
+    network:
+      ingress:
+        port: 6379
+        public: false
+  web:
+    image: ety001/online_clipboard:akash
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 128Mi
+    variables:
+      DB_PORT_6379_TCP_ADDR: redis
+      DB_PORT_6379_TCP_PORT: '6379'
+    network:
+      ingress:
+        port: 80
+        public: true

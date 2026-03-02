@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: avalanche
+providers:
+  akash:
+    status: prefer
+services:
+  avalanchego:
+    image: avaplatform/avalanchego:v1.14.0
+    cpu: 8.0
+    memory: 16gi
+    storage:
+      size: 1ti
+    network:
+      ingress:
+        port: 9650
+        public: true

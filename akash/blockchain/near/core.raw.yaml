@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: near
+providers:
+  akash:
+    status: prefer
+services:
+  nearup:
+    image: nearprotocol/nearup
+    cpu: 8.0
+    memory: 8Gi
+    storage:
+      size: 256Gi
+    network:
+      ingress:
+        port: 3030
+        public: true

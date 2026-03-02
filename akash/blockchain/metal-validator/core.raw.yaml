@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: metal-validator
+providers:
+  akash:
+    status: prefer
+services:
+  metal-blockchain:
+    image: ubuntu:22.04
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 120Gi
+    variables:
+      METAL_PUBLIC_IP: ''
+    network:
+      ingress:
+        port: 9650
+        public: true

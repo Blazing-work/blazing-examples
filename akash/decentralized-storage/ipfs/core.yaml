@@ -1,0 +1,37 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ipfs
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  ipfs:
+    image: ipfs/kubo:v0.30.0
+    cpu: 2.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    variables:
+      IPFS_EXTERNAL_ADDR: ''
+      IPFS_LOGGING: info
+    network:
+      ingress:
+        port: 5001
+        public: false
+  nginx:
+    image: nginx:1.27
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 200Mi
+    variables:
+      BASIC_AUTH_USER: ipfs
+      BASIC_AUTH_PASS: secretpass
+    network:
+      ingress:
+        port: 80
+        public: true

@@ -1,0 +1,33 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: chia-madmax
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  chia:
+    image: cryptoandcoffee/akash-chia:316
+    cpu: 8.0
+    memory: 6Gi
+    storage:
+      size: 815Gi
+    variables:
+      VERSION: 1.6.0
+      CONTRACT: ''
+      FARMERKEY: ''
+      PLOTTER: madmax
+      BUCKETS: '256'
+      PLOT_SIZE: '32'
+      PORT: '8444'
+      FINAL_LOCATION: local
+      CPU_UNITS: '8'
+      MEMORY_UNITS: 6Gi
+      STORAGE_UNITS: 815Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

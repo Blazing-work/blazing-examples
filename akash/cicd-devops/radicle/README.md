@@ -1,6 +1,5 @@
 # What is Radicle?
 
-
 [Radicle](https://radicle.xyz/) is an open source, peer-to-peer code collaboration stack built on Git. Unlike centralized code hosting platforms, there is no single entity controlling the network. Repositories are replicated across peers in a decentralized manner, and users are in full control of their data and workflow.
 
 This manifest deploys Radicle Seed node. Seeds host the repositories and hence are the backbone of the network.
@@ -8,9 +7,10 @@ This manifest deploys Radicle Seed node. Seeds host the repositories and hence a
 The container images deployed is based on [radicle-docker](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:zNd4qti1Jc69mCBQAdBeK3Avzy4R/tree/Dockerfile) and hosted on [Quay.io](https://quay.io/repository/vpavlin0/radicle-seed?tab=tags)
 
 ## Setup
+
 The deployment does not seed any repositories by default - you can explicitly enable them via `$RAD_SEEDS` environment variable which accepts a semicolon (`;`) separated list of Radicle repository IDs.
 
-Blazing Core exposes your service on a random port which is then forwarded to the port selected in the manifest (i.e. `8776`). For your node to be disoverable you will need to
+Akash Network exposes your service on a random port which is then forwarded to the port selected in the manifest (i.e. `8776`). For your node to be disoverable you will need to
 
 1. Find the random port assigned to your deployment
 2. Update the `RAD_EXTERNAL_ADDR` variable with the public address and port (e.g. `RAD_EXTERNAL_ADDR=provider.url:65432`).

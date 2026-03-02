@@ -1,3 +1,5 @@
+# Code Server
+
 ## Use Cases
 
 - Self-hosted utility
@@ -13,7 +15,6 @@
 ## Accessing the Service
 
 Open `http://{SERVICE_URI}:8443/` in your browser or send HTTP requests to this address.
-
 
 ### Environment Variables
 

@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: onezerominer-c11
+providers:
+  akash:
+    status: prefer
+services:
+  onezerominer-c11:
+    image: cryptoandcoffee/akash-gpu-miner-onezerominer-c11:5
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 128Mi
+    variables:
+      ALGO: dynex
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://us2.dynex.herominers.com"'
+      PASSWORD: x
+      OPTIONS: '"--api-host 0.0.0.0 --api-port 21550 --mallob-endpoint us2.dynex.herominers.com:1119"'
+    network:
+      ingress:
+        port: 21550
+        public: true

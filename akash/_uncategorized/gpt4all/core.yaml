@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gpt4all
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gpt4all:
+    image: cryptoandcoffee/akash-gpt4all:2
+    cpu: 16.0
+    memory: 16Gi
+    storage:
+      size: 8Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

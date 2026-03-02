@@ -1,0 +1,29 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: azure-devops-agent
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  web:
+    image: odiovock/akash-azure-devops-agent:0.1.1
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 5Gi
+    variables:
+      AZP_URL: <Your_Azure_URL>
+      AZP_AGENT_NAME: <Agent_Name>
+    secrets:
+    - secret_ref: azp_token
+      mode: env
+      keys:
+        value: AZP_TOKEN
+    network:
+      ingress:
+        port: 3000
+        public: true

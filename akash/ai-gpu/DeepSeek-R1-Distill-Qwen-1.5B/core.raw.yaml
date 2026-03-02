@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: DeepSeek-R1-Distill-Qwen-1.5B
+providers:
+  akash:
+    status: prefer
+services:
+  sglang1:
+    image: lmsysorg/sglang:v0.4.1.post4-cu124-srt
+    cpu: 32.0
+    memory: 128Gi
+    storage:
+      size: 50Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

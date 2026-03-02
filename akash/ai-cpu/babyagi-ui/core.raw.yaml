@@ -1,0 +1,39 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: babyagi-ui
+providers:
+  akash:
+    status: prefer
+services:
+  babyagi-ui:
+    image: cryptoandcoffee/akash-babyagi-ui:2
+    cpu: 8.0
+    memory: 4.75Gi
+    storage:
+      size: 16Gi
+    variables:
+      PINECONE_ENVIRONMENT: ''
+      NEXT_PUBLIC_TABLE_NAME: baby-agi-test-table
+    secrets:
+    - secret_ref: openai_api_key
+      mode: env
+      keys:
+        value: OPENAI_API_KEY
+    - secret_ref: pinecone_api_key
+      mode: env
+      keys:
+        value: PINECONE_API_KEY
+    - secret_ref: next_public_use_user_api_key
+      mode: env
+      keys:
+        value: NEXT_PUBLIC_USE_USER_API_KEY
+    - secret_ref: searp_api_key
+      mode: env
+      keys:
+        value: SEARP_API_KEY
+    network:
+      ingress:
+        port: 3000
+        public: true

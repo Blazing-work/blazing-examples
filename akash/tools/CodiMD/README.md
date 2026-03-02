@@ -18,6 +18,7 @@ PostgreSQL is a powerful, open-source object-relational database system with ove
 ## Accessing the Service
 
 Connect using any PostgreSQL client:
+
 ```bash
 psql -h {SERVICE_URI} -p 5432 -U admin -d mydb
 ```
@@ -48,7 +49,6 @@ The following values are configured as secrets and should be set securely:
 
 - `POSTGRES_PASSWORD`
 
-
 ## Deployment Specs
 
 | Resource | Value |
@@ -58,7 +58,6 @@ The following values are configured as secrets and should be set securely:
 | Memory | 512Mi |
 | Storage | 1Gi |
 | Exposed Ports | 5432 |
-
 
 ## Deployment Specs
 

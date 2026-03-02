@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gpustack
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gpustack:
+    image: gpustack/gpustack:main
+    cpu: 1.0
+    memory: 8Gi
+    storage:
+      size: 100Gi
+    variables:
+      GPUSTACK_DISABLE_WORKER: 'True'
+      GPUSTACK_HOST: 0.0.0.0
+      GPUSTACK_PORT: '80'
+      GPUSTACK_METRICS_PORT: '10151'
+    network:
+      ingress:
+        port: 80
+        public: true

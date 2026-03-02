@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: openspeedtest
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  openspeedtest:
+    image: openspeedtest/latest
+    cpu: 1.0
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    network:
+      ingress:
+        port: 3000
+        public: true

@@ -1,5 +1,6 @@
-## Getting Started
+# Thirdweb
 
+## Getting Started
 
 Create a project using this example:
 
@@ -24,6 +25,6 @@ To learn more about thirdweb and Next.js, take a look at the following resources
 
 You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
 
-## Join our Discord!
+## Join our Discord
 
 For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).

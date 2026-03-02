@@ -1,34 +1,12 @@
-# gitea
+# What is Gitea?
 
-Gitea is a lightweight, self-hosted Git service providing repository hosting, code review, and CI/CD.
+Gitea is a painless, self-hosted, all-in-one software development service. It includes Git hosting, code review, team collaboration, package registry, and CI/CD. It is similar to GitHub, Bitbucket and GitLab.
 
-## Use Cases
+## Deploy
 
-- Self-hosted Git repository management
-- Code review and pull requests
-- CI/CD pipelines with Gitea Actions
-- Team collaboration and project management
+1. Go to [Akash Console](https://console.akash.network/).
+2. Deploy SDL from this repository: [deploy.yaml](deploy.yaml) for standart deployment with SQLite3 database or [deploy_postgres.yaml](deploy_postgres.yaml) for deployment with Postgres database as second service.
+3. Open URI from Leases tab with forwarded port 3000 to access Gitea.
 
-## Getting Started
-
-1. Navigate to the web UI to complete the installation wizard
-2. Create your first repository
-3. Push code using Git over HTTP or SSH
-
-## Accessing the Service
-
-Open the Gitea web interface at `http://{SERVICE_URI}:3000/`
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `gitea/gitea:1.25.0-rc0-rootless` |
-| CPU | 0.5 |
-| Memory | 1gi |
-| Storage | 1Gi |
-| Exposed Ports | 3000 |
-
-## Documentation
-
-For full documentation, visit: [https://docs.gitea.io/](https://docs.gitea.io/)
+---
+For more information, please see the [Gitea documentation](https://docs.gitea.com/installation/install-with-docker-rootless).

@@ -1,3 +1,5 @@
+# T-Rex NVIDIA GPU miner (Ethash / Etchash / Autolykos2 / Kawpow / Blake3 / Octopus / Firopow)
+
 ## Overview
 
 T-Rex is a versatile cryptocurrency mining software. It supports a variety of algorithms and we, as developers, are trying to do our best to make it as fast and as convenient to use as possible.
@@ -6,11 +8,12 @@ Developer fee is 1% (2% for Octopus, Autolykos2, and their dual mining modes).
 
 ## FAQ
 
-See https://github.com/trexminer/T-Rex/wiki/FAQ
+See <https://github.com/trexminer/T-Rex/wiki/FAQ>
 
 ## Usage
 
 Full list of command line options:
+
 ```
     -a, --algo                     Specify the hash algorithm to use.
                                    autolykos2
@@ -286,140 +289,165 @@ Full list of command line options:
         --version                  Display version information and exit.
     -h, --help                     Display this help text and exit.
 
-
 ```
 
 ### Examples
+
 * **ETHW+ALPH**</br>
+
 ```
 t-rex -a ethash --dual-algo blake3 -o stratum+tcp://ethw.2miners.com:2020 -u 0x4121c43205D4244cb6395B2318d711a73fc1a6DE -p x -w rig0 --url2 stratum+tcp://de.alephium.herominers.com:1199 --user2 1qUuxVuXN2Pk4nnYTbL4qihjLWyRkVMQVYQDAajCcuPq --pass2 x
 ```
 
 * **ETC+ALPH**</br>
+
 ```
 t-rex -a etchash --dual-algo blake3 -o stratum+tcp://etc.2miners.com:1010 -u 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2 -p x -w rig0 --url2 stratum+tcp://de.alephium.herominers.com:1199 --user2 1qUuxVuXN2Pk4nnYTbL4qihjLWyRkVMQVYQDAajCcuPq --pass2 x
 ```
 
 * **ERGO-nanopool**</br>
+
 ```
 t-rex -a autolykos2 -o stratum+tcp://ergo-eu1.nanopool.org:11111 -u 9gpNWA3LVic14cMmWHmKGZyiGqrxPaSEvGsdyt7jt2DDAWDQyc9.rig0/your@email.org -p x
 ```
 
 * **ERGO-herominers**</br>
+
 ```
 t-rex -a autolykos2 -o stratum+tcp://de.ergo.herominers.com:1180 -u 9gpNWA3LVic14cMmWHmKGZyiGqrxPaSEvGsdyt7jt2DDAWDQyc9.rig0 -p x
 ```
 
 * **ERGO-woolypooly**</br>
+
 ```
 t-rex -a autolykos2 -o stratum+tcp://pool.woolypooly.com:3100 -u 9gpNWA3LVic14cMmWHmKGZyiGqrxPaSEvGsdyt7jt2DDAWDQyc9.rig0 -p x
 ```
 
 * **ERGO-2miners**</br>
+
 ```
 t-rex -a autolykos2 -o stratum+tcp://erg.2miners.com:8888 -u 9gpNWA3LVic14cMmWHmKGZyiGqrxPaSEvGsdyt7jt2DDAWDQyc9.rig0 -p x
 ```
 
 * **ETHW+ZIL-ezil**</br>
+
 ```
 t-rex -a ethash --coin eth+zil -o stratum+tcp://ethw.2miners.com:2020 -u 0x4121c43205D4244cb6395B2318d711a73fc1a6DE --url2 stratum+tcp://eu.ezil.me:4444 --user2 0x4121c43205D4244cb6395B2318d711a73fc1a6DE.zil1yn92lnkkfsn0s2hlvfdmz6y2yhpqm98vng38s9.WORKER --extra-dag-epoch 0
 ```
 
 * **ETC+ZIL-ezil**</br>
+
 ```
 t-rex -a etchash --coin etc+zil -o stratum+tcp://eu1-etc.ethermine.org:4444 -u 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2 --url2 stratum+tcp://eu.ezil.me:4444 --user2 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2.zil1yn92lnkkfsn0s2hlvfdmz6y2yhpqm98vng38s9.WORKER --extra-dag-epoch 0
 ```
 
 * **ETC-2miners**</br>
+
 ```
 t-rex -a etchash -o stratum+tcp://etc.2miners.com:1010 -u 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2 -p x -w rig0
 ```
 
 * **ETC-woolypooly**</br>
+
 ```
 t-rex -a etchash -o stratum+tcp://pool.woolypooly.com:35000 -u 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2 -p x -w rig0
 ```
 
 * **ETC-ISP-hidden-mode**</br>
+
 ```
 t-rex -a etchash -o stratum+tcp://eu1-etc.ethermine.org:4444 -u 0x0924EF9ecBcC1287047cAFd2EAD3A133313eE6A2 -p x -w rig0 --no-sni --dns-https-server 1.1.1.1
 ```
 
 * **ETHW-ethproxy**</br>
+
 ```
 t-rex -a ethash -o stratum+http://127.0.0.1:8080
 ```
 
 * **CFX-woolypooly**</br>
+
 ```
 t-rex -a octopus -o stratum+tcp://pool.woolypooly.com:3094 -u cfx:aajauymfc0cpd4aj91wmfyd150avfg3fmym9j2xrh8.rig0 -p x
 ```
 
 * **CFX-nanopool**</br>
+
 ```
 t-rex -a octopus -o stratum+tcp://cfx-eu1.nanopool.org:17777 -u cfx:aajauymfc0cpd4aj91wmfyd150avfg3fmym9j2xrh8.rig0/your@email.org -p x
 ```
 
 * **ALPH-woolypooly**</br>
+
 ```
 t-rex -a blake3 -o stratum+tcp://pool.woolypooly.com:3106 -u 1qUuxVuXN2Pk4nnYTbL4qihjLWyRkVMQVYQDAajCcuPq -p x -w rig0
 ```
 
 * **ALPH-herominers**</br>
+
 ```
 t-rex -a blake3 -o stratum+tcp://de.alephium.herominers.com:1199 -u 1qUuxVuXN2Pk4nnYTbL4qihjLWyRkVMQVYQDAajCcuPq -p x -w rig0
 ```
 
 * **RVN-2miners**</br>
+
 ```
 t-rex -a kawpow -o stratum+tcp://rvn.2miners.com:6060 -u RNm4LMBGyfH8ddCGvncQKrMtxEydxwhUJL.rig -p x
 ```
 
 * **RVN-ravenminer**</br>
+
 ```
 t-rex -a kawpow -o stratum+tcp://stratum.ravenminer.com:3838 -u RNm4LMBGyfH8ddCGvncQKrMtxEydxwhUJL.rig -p x
 ```
 
 * **RVN-woolypooly**</br>
+
 ```
 t-rex -a kawpow -o stratum+tcp://pool.woolypooly.com:55555 -u RNm4LMBGyfH8ddCGvncQKrMtxEydxwhUJL.rig -p x
 ```
 
 * **SERO-serocash**</br>
+
 ```
 t-rex -a progpow --coin sero -o stratum+tcp://pool2.sero.cash:8808 -u JCbZnEb8XtWV814QWRpDcDxpQpXZXw4ARneAtwXNYdd3reuo4xQDcuZivopA761QnQyfMermHR9Mpi156F5n7ez9tv75Wt7vWbHXtuyZsQVWLbKNHnZgwcXbR2yZmbw89WT -p x -w rig0
 ```
 
 * **VBK-reb0rn**</br>
+
 ```
 t-rex -a progpow-veriblock -o stratum+tcp://vbk-reb0rn.ddns.net:8502 -u V5h6udgGe6eL4M9cYGi776WCP75URm -p x -w rig0
 ```
 
 * **VEIL-woolypooly**</br>
+
 ```
 t-rex -a progpow-veil -o stratum+tcp://pool.woolypooly.com:3098 -u bv1qzftz0vuqa82zy29avylv8sclskweqsrwysgrkg -p x -w rig0
 ```
 
 * **ZANO-luckypool**</br>
+
 ```
 t-rex -a progpowz -o stratum+tcp://zano.luckypool.io:8877 -u iZ2bZfXdeN626rkyy9YsnfeT1Qq1K6XamE4brWm3tzP5hDUAig4dHmKSqe4yyq5dgbSPjmpLbfidqPyDXAuFY2J9544F95vagSF1Xqq3eCUp -p x -w rig0
 ```
 
 * **FIRO-2miners**</br>
+
 ```
 t-rex -a firopow -o stratum+tcp://firo.2miners.com:8181 -u aBR3GY8eBKvEwjrVgNgSWZsteJPpFDqm6U.rig0 -p x
 ```
 
 * **FIRO-mintpond**</br>
+
 ```
 t-rex -a firopow -o stratum+ssl://firo.mintpond.com:3005 -u aBR3GY8eBKvEwjrVgNgSWZsteJPpFDqm6U.rig0 -p x
 ```
 
 * **FIRO-woolypooly**</br>
+
 ```
 t-rex -a firopow -o stratum+tcp://pool.woolypooly.com:3104 -u aBR3GY8eBKvEwjrVgNgSWZsteJPpFDqm6U.rig0 -p x
 ```
-
 
 ## JSON config file
 
@@ -438,7 +466,7 @@ If you do need to disable the watchdog, you can do so using `--no-watchdog` para
 
 ## HTTP API
 
-See https://github.com/trexminer/T-Rex/wiki/API
+See <https://github.com/trexminer/T-Rex/wiki/API>
 
 ## Antivirus alerts
 
@@ -446,7 +474,7 @@ In order to protect the miner from reverse engineering attacks, the binaries are
 
 ## Useful links
 
-Mining calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
+Mining calculator: <https://woolypooly.com/en/calc/what-to-mine-gpu>
 
 ## Tips
 
@@ -455,9 +483,9 @@ In order to maximise the hashrate our software utilises all available GPU resour
 ## Support
 
 Discord server:
-https://discord.gg/gj7jcYf
+<https://discord.gg/gj7jcYf>
 
 Bitcoin Talk Forum:
-https://bitcointalk.org/index.php?topic=4432704.0
+<https://bitcointalk.org/index.php?topic=4432704.0>
 
-Official website: https://trex-miner.com
+Official website: <https://trex-miner.com>

@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: tgpt
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  tgpt:
+    image: cryptoandcoffee/akash-tgpt:2
+    cpu: 8.0
+    memory: 4.75Gi
+    storage:
+      size: 16Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

@@ -1,0 +1,36 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: witnesschain-watchtower
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  witnesschain-watchtower:
+    image: witnesschain/infinity-watch:1.0.0
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 5Gi
+    variables:
+      latitude: ''
+      longitude: ''
+      radius: '1000'
+      privateKey: ''
+      walletPublicKey: ''
+      keyType: ethereum
+      havePublicIPv4Address: 'false'
+      havePublicIPv6Address: 'false'
+      havePrivateIPv4Address: 'false'
+      havePrivateIPv6Address: 'false'
+      saveResultsInDatabase: 'false'
+      submitResultsToContract: 'false'
+      projectName: akash
+      rpcUrl: https://rpc.witnesschain.com
+    network:
+      ingress:
+        port: 80
+        public: true

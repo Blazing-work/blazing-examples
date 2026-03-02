@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: status
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  node:
+    image: harbor.status.im/wakuorg/nwaku:v0.31.0
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    variables:
+      IP_ADDR: ''
+      NODEKEY: ''
+    network:
+      ingress:
+        port: 60000
+        public: true

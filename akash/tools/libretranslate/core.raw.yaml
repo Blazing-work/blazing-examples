@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: libretranslate
+providers:
+  akash:
+    status: prefer
+services:
+  libretranslate:
+    image: libretranslate/libretranslate:v1.7.3
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 2Gi
+    variables:
+      LT_FRONTEND: 'true'
+    secrets:
+    - secret_ref: lt_api_key
+      mode: env
+      keys:
+        value: LT_API_KEY
+    network:
+      ingress:
+        port: 5000
+        public: true

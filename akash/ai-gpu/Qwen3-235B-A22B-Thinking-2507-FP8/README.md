@@ -1,6 +1,5 @@
 # Qwen3-235B-A22B-Thinking-2507-FP8
 
-
 <a href="https://chat.qwen.ai/" target="_blank" style="margin: 2px;">
     <img alt="Chat" src="https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5" style="display: inline-block; vertical-align: middle;"/>
 </a>
@@ -8,6 +7,7 @@
 ## Highlights
 
 Over the past three months, we have continued to scale the **thinking capability** of Qwen3-235B-A22B, improving both the **quality and depth** of reasoning. We are pleased to introduce **Qwen3-235B-A22B-Thinking-2507-FP8**, featuring the following key enhancements:
+
 - **Significantly improved performance** on reasoning tasks, including logical reasoning, mathematics, science, coding, and academic benchmarks that typically require human expertise — achieving **state-of-the-art results among open-source thinking models**.
 - **Markedly better general capabilities**, such as instruction following, tool usage, text generation, and alignment with human preferences.
 - **Enhanced 256K long-context understanding** capabilities.
@@ -19,6 +19,7 @@ Over the past three months, we have continued to scale the **thinking capability
 ## Model Overview
 
 This repo contains the FP8 version of **Qwen3-235B-A22B-Thinking-2507**, which has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining & Post-training
 - Number of Parameters: 235B in total and 22B activated
@@ -36,7 +37,6 @@ Additionally, to enforce model thinking, the default chat template automatically
 For more details, including benchmark evaluation, hardware requirements, and inference performance, please refer to our [blog](https://qwenlm.github.io/blog/qwen3/), [GitHub](https://github.com/QwenLM/Qwen3), and [Documentation](https://qwen.readthedocs.io/en/latest/).
 
 ## Performance
-
 
 |  | Deepseek-R1-0528 | OpenAI O4-mini | OpenAI O3 | Gemini-2.5 Pro | Claude4 Opus Thinking | Qwen3-235B-A22B Thinking | Qwen3-235B-A22B-Thinking-2507 |
 |--- | --- | --- | --- | --- | --- | --- | --- |
@@ -78,23 +78,24 @@ $ For reproducibility, we report the win rates evaluated by GPT-4.1.
 
 \& For highly challenging tasks (including PolyMATH and all reasoning and coding tasks), we use an output length of 81,920 tokens. For all other tasks, we set the output length to 32,768.
 
-
 ## Quickstart
 
 The code of Qwen3-MoE has been in the latest Hugging Face `transformers` and we advise you to use the latest version of `transformers`.
 
 With `transformers<4.51.0`, you will encounter the following error:
+
 ```
 KeyError: 'qwen3_moe'
 ```
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "Qwen/Qwen3-235B-A22B-Thinking-2507-FP8"
 
-# load the tokenizer and the model
+## load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
@@ -102,7 +103,7 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-# prepare the model input
+## prepare the model input
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "user", "content": prompt}
@@ -114,16 +115,16 @@ text = tokenizer.apply_chat_template(
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
-# conduct text completion
+## conduct text completion
 generated_ids = model.generate(
     **model_inputs,
     max_new_tokens=32768
 )
 output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
 
-# parsing thinking content
+## parsing thinking content
 try:
-    # rindex finding 151668 (</think>)
+#    # rindex finding 151668 (</think>)
     index = len(output_ids) - output_ids[::-1].index(151668)
 except ValueError:
     index = 0
@@ -137,11 +138,15 @@ print("content:", content)
 ```
 
 For deployment, you can use `sglang>=0.4.6.post1` or `vllm>=0.8.5` or to create an OpenAI-compatible API endpoint:
+
 - SGLang:
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3-235B-A22B-Thinking-2507-FP8 --tp 4 --context-length 262144  --reasoning-parser deepseek-r1
     ```
+
 - vLLM:
+
     ```shell
     vllm serve Qwen/Qwen3-235B-A22B-Thinking-2507-FP8 --tensor-parallel-size 4 --max-model-len 262144 --enable-reasoning --reasoning-parser deepseek_r1
     ```
@@ -161,19 +166,33 @@ You can use the Qwen3-235B-A22B-Thinking-2507-FP8 model with serveral inference 
 Qwen3 excels in tool calling capabilities. We recommend using [Qwen-Agent](https://github.com/QwenLM/Qwen-Agent) to make the best use of agentic ability of Qwen3. Qwen-Agent encapsulates tool-calling templates and tool-calling parsers internally, greatly reducing coding complexity.
 
 To define the available tools, you can use the MCP configuration file, use the integrated tool of Qwen-Agent, or integrate other tools by yourself.
+
 ```python
 from qwen_agent.agents import Assistant
 
-# Using Alibaba Cloud Model Studio
+## Define LLM
+## Using Alibaba Cloud Model Studio
 llm_cfg = {
     'model': 'qwen3-235b-a22b-thinking-2507',
     'model_type': 'qwen_dashscope',
 }
 
+## Using OpenAI-compatible API endpoint. It is recommended to disable the reasoning and the tool call parsing
+## functionality of the deployment frameworks and let Qwen-Agent automate the related operations. For example,
+## `VLLM_USE_MODELSCOPE=true vllm serve Qwen/Qwen3-235B-A22B-Thinking-2507-FP8 --served-model-name Qwen3-235B-A22B-Thinking-2507 --tensor-parallel-size 4 --max-model-len 262144`.
 #
+## llm_cfg = {
+##     'model': 'Qwen3-235B-A22B-Thinking-2507',
 #
+##     # Use a custom endpoint compatible with OpenAI API:
+##     'model_server': 'http://localhost:8000/v1',  # api_base without reasoning and tool call parsing
+##     'api_key': 'EMPTY',
+##     'generate_cfg': {
+##         'thought_in_content': True,
+##     },
+## }
 
-# Define Tools
+## Define Tools
 tools = [
     {'mcpServers': {  # You can specify the MCP configuration file
             'time': {
@@ -189,10 +208,10 @@ tools = [
   'code_interpreter',  # Built-in tools
 ]
 
-# Define Agent
+## Define Agent
 bot = Assistant(llm=llm_cfg, function_list=tools)
 
-# Streaming generation
+## Streaming generation
 messages = [{'role': 'user', 'content': 'https://qwenlm.github.io/blog/ Introduce the latest developments of Qwen'}]
 for responses in bot.run(messages=messages):
     pass
@@ -214,7 +233,6 @@ To achieve optimal performance, we recommend the following settings:
    - **Multiple-Choice Questions**: Add the following JSON structure to the prompt to standardize responses: "Please show your choice in the `answer` field with only the choice letter, e.g., `"answer": "C"`."
 
 4. **No Thinking Content in History**: In multi-turn conversations, the historical model output should only include the final output part and does not need to include the thinking content. It is implemented in the provided chat template in Jinja2. However, for frameworks that do not directly use the Jinja2 chat template, it is up to the developers to ensure that the best practice is followed.
-
 
 ### Citation
 

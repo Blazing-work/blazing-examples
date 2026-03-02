@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gensyn-rl-swarm
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  rl-swarm:
+    image: ghcr.io/cosyndev/rl-swarm-akash:0.0.9
+    cpu: 3.0
+    memory: 16Gi
+    storage:
+      size: 15Gi
+    variables:
+      IDENTITY_PATH: /home/gensyn/rl_swarm/keys/swarm.pem
+      CONNECT_TO_TESTNET: 'true'
+      HF_HUB_DOWNLOAD_TIMEOUT: '120'
+    network:
+      ingress:
+        port: 3000
+        public: true

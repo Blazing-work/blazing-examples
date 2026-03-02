@@ -1,27 +1,31 @@
 # Discourse
 
+This guide is intended to describe the process to run Discourse Multi-Tiered application.
 
-This guide is intended to describe the process to run Discourse Multi-Tiered application .
+## About Akash
 
-## About Blazing Core
+Akash Network, the world’s first decentralized and open-source cloud, accelerates deployment, scale, efficiency and price performance for high-growth industries like blockchain and machine learning/AI.
 
-Blazing Core, the world’s first decentralized and open-source cloud, accelerates deployment, scale, efficiency and price performance for high-growth industries like blockchain and machine learning/AI.
+Akash means "open space" or "sky" in ancient Sanskrit.
 
-Blazing Core means "open space" or "sky" in ancient Sanskrit.
-
+<https://akash.network/>
 
 ## Firsts steps
 
+Read the docs: <https://akash.network/docs>
 
-Step by step guides to Blazing Core:
+Setup your wallet: <https://akash.network/docs/getting-started/token-and-wallets/>
 
+Step by step guides to Akash:
+
+- Web App: <https://console.akash.network>
+- CLI: <https://akash.network/docs/deployments/akash-cli/overview>
 
 ## About Discourse
 
 Discourse is the 100% open source discussion platform built for the next decade of the Internet. Use it as a mailing list, discussion forum, long-form chat room, and more!
 
-https://www.discourse.org/
-
+<https://www.discourse.org/>
 
 ## Discourse in a Nutshell
 
@@ -37,13 +41,19 @@ The provided SDL deploy a Multi-Tiered application with 4 services/containers:
 
 - Discourse
 
+All you need to run your own Discourse services is deploy the SDL: [``deploy.yml``](./deploy.yml) script on Mainnet using your preferred "Step by step guides to Akash" mentioned above.
 
-[![Discourse ](https://img.youtube.com/vi/XFweRMMZ10s/0.jpg)](https://youtu.be/XFweRMMZ10s)
+Additionally this guide show how to using [Akash Console](https://akash.network/docs/guides/):
 
+[![Discourse](https://img.youtube.com/vi/XFweRMMZ10s/0.jpg)](https://youtu.be/XFweRMMZ10s)
+
+**Note:** the process is the same if you use <https://akashdeploy.hns.siasky.net/> to deploy your SDL.
+
+### Security issues
 
 #### Content Security Policy
 
-Discourse need deploy over HTTPS otherwise could get a browser block for Content Security Policy issues [this guide](https://teeyeeyang.medium.com/how-to-use-a-custom-domain-with-your-Blazing Core-deployment-5916585734a2) written by Tee Yee Yang show how to do that.
+Discourse need deploy over HTTPS otherwise could get a browser block for Content Security Policy issues [this guide](https://teeyeeyang.medium.com/how-to-use-a-custom-domain-with-your-akash-deployment-5916585734a2) written by Tee Yee Yang show how to do that.
 
 To get past this and test your deployment, change your browser settings and temporarily disable CSP, in Firefox based browsers the steps are:
 
@@ -66,9 +76,16 @@ Follow the comments in SDL file to enable passwords
       #- POSTGRESQL_POSTGRES_PASSWORD=changeme
 ```
 
+## Costs
+
+The costs depends on capacity described in section `profiles.compute` in [deploy.yml](deploy.yml) file.
+
+With the default setting this deployment aprox. cost 6 AKT per month (someting like $14).
 
 ## Disclaimer
 
+Taken from [Akash Console](https://console.akash.network/new-deployment):
 
+- We strongly suggest you start with a new wallet and a small amount of AKT until we further stabilize the product.
 - We're not responsible for any loss or damages related to using the app.
 - The app has a high chance of containing bugs since it's in BETA, use at your own risk.

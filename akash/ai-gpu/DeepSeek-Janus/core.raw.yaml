@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: DeepSeek-Janus
+providers:
+  akash:
+    status: prefer
+services:
+  janus-gradio:
+    image: 
+      decai0/janus-gradio:latest@sha256:71c5ea07030d530fe41f9d6dc8b0feeb32b2e11add9f8c304b43e6c33f652add
+    cpu: 32.0
+    memory: 64Gi
+    storage:
+      size: 25Gi
+    variables:
+      GRADIO_SERVER_NAME: 0.0.0.0
+    network:
+      ingress:
+        port: 7860
+        public: true

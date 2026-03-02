@@ -1,0 +1,18 @@
+{
+  "id": "akash-babyagi-ui",
+  "title": "babyagi-ui",
+  "description": "babyagi-ui deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Cpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "cpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

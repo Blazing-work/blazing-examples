@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: nginx-letsencrypt-proxy
+providers:
+  akash:
+    status: prefer
+services:
+  nginx-ssl:
+    image: nginx:1.27
+    cpu: 1.0
+    memory: 4Gi
+    storage:
+      size: 5Gi
+    variables:
+      DOMAIN: YOURDOMAIN.COM
+      NGINX_CONF_URL: ''
+      FIRST_START: 'true'
+    network:
+      ingress:
+        port: 80
+        public: true

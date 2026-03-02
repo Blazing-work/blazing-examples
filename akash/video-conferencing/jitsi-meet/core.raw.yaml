@@ -1,0 +1,88 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: jitsi-meet
+providers:
+  akash:
+    status: prefer
+services:
+  web:
+    image: jitsi/web:stable
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 5Gi
+    variables:
+      PUBLIC_URL: https://your-domain.com
+      ENABLE_LETSENCRYPT: '1'
+      LETSENCRYPT_DOMAIN: your-domain.com
+      LETSENCRYPT_EMAIL: your-email@example.com
+      TZ: UTC
+      DOCKER_HOST_ADDRESS: your-public-ip
+      ENABLE_XMPP_WEBSOCKET: '1'
+      XMPP_SERVER: prosody
+      XMPP_DOMAIN: meet.jitsi
+      XMPP_AUTH_DOMAIN: auth.meet.jitsi
+      XMPP_MUC_DOMAIN: muc.meet.jitsi
+    network:
+      ingress:
+        port: 80
+        public: true
+  prosody:
+    image: jitsi/prosody:stable
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    variables:
+      TZ: UTC
+      XMPP_DOMAIN: meet.jitsi
+    network:
+      ingress:
+        port: 5222
+        public: false
+  jicofo:
+    image: jitsi/jicofo:stable
+    cpu: 0.5
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      TZ: UTC
+      XMPP_SERVER: prosody
+      XMPP_DOMAIN: meet.jitsi
+      XMPP_AUTH_DOMAIN: auth.meet.jitsi
+      XMPP_MUC_DOMAIN: muc.meet.jitsi
+      JICOFO_AUTH_USER: focus
+    secrets:
+    - secret_ref: jicofo_auth_password
+      mode: env
+      keys:
+        value: JICOFO_AUTH_PASSWORD
+    network:
+      ingress:
+        port: 8888
+        public: false
+  jvb:
+    image: jitsi/jvb:stable
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    variables:
+      TZ: UTC
+      XMPP_SERVER: prosody
+      XMPP_AUTH_DOMAIN: auth.meet.jitsi
+      JVB_AUTH_USER: jvb
+      JVB_BREWERY_MUC: jvbbrewery
+      JVB_STUN_SERVERS: stun.l.google.com:19302
+    secrets:
+    - secret_ref: jvb_auth_password
+      mode: env
+      keys:
+        value: JVB_AUTH_PASSWORD
+    network:
+      ingress:
+        port: 10000
+        public: true

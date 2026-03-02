@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: llama-factory
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: hiyouga/llamafactory:latest
+    cpu: 16.0
+    memory: 128Gi
+    storage:
+      size: 500Gi
+    network:
+      ingress:
+        port: 7860
+        public: true

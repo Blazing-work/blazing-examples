@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: xmrig-moneroocean-c11
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  xmrig-moneroocean-c11:
+    image: cryptoandcoffee/akash-gpu-miner-xmrig-moneroocean-c11:17
+    cpu: 1.0
+    memory: 3Gi
+    storage:
+      size: 128Mi
+    variables:
+      WALLET_ADDRESS: '""'
+    network:
+      ingress:
+        port: 8080
+        public: true

@@ -1,7 +1,8 @@
+# Invoke - Professional Creative AI Tools for Visual Media
+
 ![project hero](https://github.com/invoke-ai/InvokeAI/assets/31807370/6e3728c7-e90e-4711-905c-3b55844ff5be)
 
-
-#### To learn more about Invoke, or implement our Business solutions, visit [invoke.com]
+## To learn more about Invoke, or implement our Business solutions, visit [invoke.com]
 
 [![discord badge]][discord link] [![latest release badge]][latest release link] [![github stars badge]][github stars link] [![github forks badge]][github forks link] [![CI checks on main badge]][CI checks on main link] [![latest commit to main badge]][latest commit to main link] [![github open issues badge]][github open issues link] [![github open prs badge]][github open prs link] [![translation status badge]][translation status link]
 
@@ -17,31 +18,29 @@ Invoke is available in two editions:
 | - Includes all core studio features: generate, refine, iterate on images, and build workflows                               | - Hosted in the cloud for easy, secure model access and scalability                                               |
 | Quick Start -> [Installation and Updates][installation docs]                                                                     | More Information -> [www.invoke.com/pricing](https://www.invoke.com/pricing)                        |
 
-
 ![Highlighted Features - Canvas and Workflows](https://github.com/invoke-ai/InvokeAI/assets/31807370/708f7a82-084f-4860-bfbe-e2588c53548d)
 
-# Documentation
+## Documentation
+
 | **Quick Links**                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------|
 |  [Installation and Updates][installation docs] - [Documentation and Tutorials][docs home] - [Bug Reports][github issues] - [Contributing][contributing docs]  |
 
-</div>
-
 ## Quick Start
 
-1. Once it starts up, open your browser and go to <http://{SERVICE_URI}>.
+1. Once it starts up, open your browser and go to <http://{AKASH_URI}>.
 2. Open the model manager tab to install a starter model and then you'll be ready to generate.
 
 More detail, including hardware requirements and manual install instructions, are available in the [installation documentation][installation docs].
 
 ## Docker Container
 
-We publish official container images in Github Container Registry: https://github.com/invoke-ai/InvokeAI/pkgs/container/invokeai. Both CUDA and ROCm images are available. Check the above link for relevant tags.
+We publish official container images in Github Container Registry: <https://github.com/invoke-ai/InvokeAI/pkgs/container/invokeai>. Both CUDA and ROCm images are available. Check the above link for relevant tags.
 
 > [!IMPORTANT]
 > Ensure that Docker is set up to use the GPU. Refer to [NVIDIA][nvidia docker docs] or [AMD][amd docker docs] documentation.
 
-### Generate!
+### Generate
 
 Run the container, modifying the command as necessary:
 

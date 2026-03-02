@@ -1,0 +1,19 @@
+{
+  "id": "akash-whoogle-search",
+  "title": "whoogle-search",
+  "description": "whoogle-search deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Search Engines",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "search",
+    "engines"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

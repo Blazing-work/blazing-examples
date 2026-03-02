@@ -1,0 +1,18 @@
+{
+  "id": "akash-substrate-node",
+  "title": "substrate-node",
+  "description": "substrate-node deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Blockchain",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "blockchain"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

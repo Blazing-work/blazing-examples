@@ -1,0 +1,51 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: open-gpt
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  opengpt:
+    image: arc10/opengpt:v0.0.1
+    cpu: 4.0
+    memory: 15Gi
+    storage:
+      size: 20Gi
+    variables:
+      PORT: '5173'
+      REDIS_URL: redis://redis:6379
+    secrets:
+    - secret_ref: openai_api_key
+      mode: env
+      keys:
+        value: OPENAI_API_KEY
+    - secret_ref: ydc_api_key
+      mode: env
+      keys:
+        value: YDC_API_KEY
+    - secret_ref: tavily_api_key
+      mode: env
+      keys:
+        value: TAVILY_API_KEY
+    - secret_ref: kay_api_key
+      mode: env
+      keys:
+        value: KAY_API_KEY
+    network:
+      ingress:
+        port: 5173
+        public: true
+  redis:
+    image: redislabs/redisearch:latest
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 6379
+        public: false

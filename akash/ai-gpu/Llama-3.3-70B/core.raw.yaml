@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Llama-3.3-70B
+providers:
+  akash:
+    status: prefer
+services:
+  vllm:
+    image: vllm/vllm-openai:v0.8.4
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 100Gi
+    secrets:
+    - secret_ref: hf_token
+      mode: env
+      keys:
+        value: HF_TOKEN
+    network:
+      ingress:
+        port: 8000
+        public: true

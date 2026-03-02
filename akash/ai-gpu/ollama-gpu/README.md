@@ -1,10 +1,10 @@
- <img alt="ollama" height="200px" src="https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7">
-
 # Ollama
+
+<img alt="ollama" height="200px" src="https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7">
 
 Get up and running with large language models.
 
-### macOS
+## macOS
 
 [Download](https://ollama.com/download/Ollama-darwin.zip)
 
@@ -65,6 +65,7 @@ Here are some example models that can be downloaded:
 > [!NOTE]
 > You should have at least 8 GB of RAM available to run the 7B models, 16 GB to run the 13B models, and 32 GB to run the 33B models.
 
+## Customize a model
 
 ### Import from GGUF
 
@@ -105,10 +106,10 @@ Create a `Modelfile`:
 ```
 FROM llama3.1
 
-# set the temperature to 1 [higher is more creative, lower is more coherent]
+## set the temperature to 1 [higher is more creative, lower is more coherent]
 PARAMETER temperature 1
 
-# set the system message
+## set the system message
 SYSTEM """
 You are Mario from Super Mario Bros. Answer as Mario, the assistant, only.
 """
@@ -125,6 +126,7 @@ Hello! It's your friend Mario.
 
 For more examples, see the [examples](examples) directory. For more information on working with a Modelfile, see the [Modelfile](docs/modelfile.md) documentation.
 
+## CLI Reference
 
 ### Create a model
 
@@ -239,6 +241,7 @@ curl http://localhost:11434/api/chat -d '{
 
 See the [API documentation](./docs/api.md) for all endpoints.
 
+## Community Integrations
 
 ### Web & Desktop
 

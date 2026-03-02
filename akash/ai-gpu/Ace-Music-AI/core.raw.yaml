@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Ace-Music-AI
+providers:
+  akash:
+    status: prefer
+services:
+  acestep:
+    image: rodrirr/acw:latest
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 7860
+        public: true

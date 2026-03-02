@@ -1,13 +1,13 @@
 # Passive Income Online
 
-
 Pawns.app enables you to make money instantly. All you need to do to start generating income is to create a free account and install our app.
 
+![](./pawns.png)
 
-# How to?
+## How to?
 
-1.  Sign up on https://dashboard.pawns.app/register
-2.  Click Deploy and change all the `REPLACE_ME` values with your Pawns account info.
+1. Sign up on <https://dashboard.pawns.app/register>
+2. Click Deploy and change all the `REPLACE_ME` values with your Pawns account info.
 
 ```
 - "-email"
@@ -16,23 +16,21 @@ Pawns.app enables you to make money instantly. All you need to do to start gener
 - "REPLACE_ME"
 ```
 
-4.  After a successful deployment check Pawns app dashboard to verify the connection.
+1. Deploy and choose an Akash provider.  Try not to repeat using the same provider or you may get an IP error.
+2. After a successful deployment check Pawns app dashboard to verify the connection.
+3. Share your referral code and recommend Akash to friends!
 
-
-# Limitations
+## Limitations
 
 You will get an error if you try to deploy on a provider that does not have a residential IP address.  Try another provider and check the attributes for any IP information.
 
-
 iproyal: {"happened_at":"2022-09-13T22:57:43Z","name":"not_running","parameters":{"error":"non_residential_ip","message":"ip is non residential"}}
 
-
-# Payment Rates : September 2022
+## Payment Rates : September 2022
 
 Right now we pay 0.20 USD per 1GB shared.
 
-
-# A Few More Things That Impact Your Earnings
+## A Few More Things That Impact Your Earnings
 
 Location of your IP address
 
@@ -44,8 +42,7 @@ Your internet speed
 
 It’s essential for our clients to have a good ping from the Pawns.app network. The faster your internet connection is, you’ll be able to share and earn more.
 
-
-# Pawns.app Is Built on Three Core Pillars
+## Pawns.app Is Built on Three Core Pillars
 
 Security
 
@@ -60,7 +57,6 @@ Level Up
 
 Join the Pawns.app Discord for news and updates on everything Pawns.app, and meet the community.
 
+## More info
 
-# More info
-
-https://pawns.app/
+<https://pawns.app/>

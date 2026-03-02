@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: zcash-zebra
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  zebra:
+    image: zfnd/zebra:4.0.0
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 350Gi
+    variables:
+      ZEBRA_NETWORK__NETWORK: Mainnet
+      ZEBRA_NETWORK__LISTEN_ADDR: '[::]:8233'
+      ZEBRA_STATE__CACHE_DIR: /home/zebra/.cache/zebra
+      ZEBRA_TRACING__USE_COLOR: 'true'
+    network:
+      ingress:
+        port: 8233
+        public: true

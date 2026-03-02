@@ -1,0 +1,28 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: influxdb
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  influxdb:
+    image: influxdb
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      INFLUXDB_ADMIN_USER: admin
+    secrets:
+    - secret_ref: influxdb_admin_password
+      mode: env
+      keys:
+        value: INFLUXDB_ADMIN_PASSWORD
+    network:
+      ingress:
+        port: 8086
+        public: true

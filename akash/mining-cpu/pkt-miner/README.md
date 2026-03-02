@@ -1,3 +1,7 @@
+# pkt.cash miner
+
+Deploy a <https://pkt.cash> miner on <https://akash.network>
+
 ## Version
 
 packetcrypt-v0.5.2
@@ -30,4 +34,12 @@ If you continue to have issues with the pools, please contact pkt.cash support c
 
 ## Track earnings
 
-Track your earnings at https://explorer.pkt.cash
+Track your earnings at <https://explorer.pkt.cash>
+
+## Configuration
+
+Edit `deploy.yaml` so that it uses your wallet address and desired pool.
+
+## Running
+
+Follow the steps at <https://akash.network/docs> to deploy to the <https://akash.network> cloud.

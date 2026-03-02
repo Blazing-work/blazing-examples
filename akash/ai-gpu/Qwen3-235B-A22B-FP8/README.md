@@ -1,3 +1,5 @@
+# Qwen3-235B-A22B-FP8
+
 ## Qwen3 Highlights
 
 Qwen3 is the latest generation of large language models in Qwen series, offering a comprehensive suite of dense and mixture-of-experts (MoE) models. Built upon extensive training, Qwen3 delivers groundbreaking advancements in reasoning, instruction-following, agent capabilities, and multilingual support, with the following key features:
@@ -11,6 +13,7 @@ Qwen3 is the latest generation of large language models in Qwen series, offering
 ## Model Overview
 
 This repo contains the FP8 version of **Qwen3-235B-A22B**, which has the following features:
+
 - Type: Causal Language Models
 - Training Stage: Pretraining & Post-training
 - Number of Parameters: 235B in total and 22B activated
@@ -28,22 +31,24 @@ For more details, including benchmark evaluation, hardware requirements, and inf
 The code of Qwen3-MoE has been in the latest Hugging Face `transformers` and we advise you to use the latest version of `transformers`.
 
 With `transformers<4.51.0`, you will encounter the following error:
+
 ```
 KeyError: 'qwen3_moe'
 ```
 
 The following contains a code snippet illustrating how to use the model generate content based on given inputs.
+
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 model_name = "Qwen/Qwen3-235B-A22B-FP8"
-# load the tokenizer and the model
+## load the tokenizer and the model
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype="auto",
     device_map="auto"
 )
-# prepare the model input
+## prepare the model input
 prompt = "Give me a short introduction to large language model."
 messages = [
     {"role": "user", "content": prompt}
@@ -55,15 +60,15 @@ text = tokenizer.apply_chat_template(
     enable_thinking=True # Switches between thinking and non-thinking modes. Default is True.
 )
 model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
-# conduct text completion
+## conduct text completion
 generated_ids = model.generate(
     **model_inputs,
     max_new_tokens=32768
 )
 output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
-# parsing thinking content
+## parsing thinking content
 try:
-    # rindex finding 151668 (</think>)
+#    # rindex finding 151668 (</think>)
     index = len(output_ids) - output_ids[::-1].index(151668)
 except ValueError:
     index = 0
@@ -74,14 +79,19 @@ print("content:", content)
 ```
 
 For deployment, you can use `sglang>=0.4.6.post1` or `vllm>=0.8.5` or to create an OpenAI-compatible API endpoint:
+
 - SGLang:
+
     ```shell
     python -m sglang.launch_server --model-path Qwen/Qwen3-235B-A22B-FP8 --reasoning-parser qwen3
     ```
+
 - vLLM:
+
     ```shell
     vllm serve Qwen/Qwen3-235B-A22B-FP8 --enable-reasoning --reasoning-parser deepseek_r1
     ```
+
 For local use, applications such as Ollama, LMStudio, MLX-LM, llama.cpp, and KTransformers have also supported Qwen3.
 
 ## Note on FP8
@@ -90,14 +100,16 @@ For convenience and performance, we have provided `fp8`-quantized model checkpoi
 
 You can use the Qwen3-235B-A22B-FP8 model with serveral inference frameworks, including `transformers`, `sglang`, and `vllm`, as the original bfloat16 model.
 However, please pay attention to the following known issues:
+
 - `transformers`:
-    - there are currently issues with the "fine-grained fp8" method in `transformers` for distributed inference. You may need to set the environment variable `CUDA_LAUNCH_BLOCKING=1` if multiple devices are used in inference.
+  - there are currently issues with the "fine-grained fp8" method in `transformers` for distributed inference. You may need to set the environment variable `CUDA_LAUNCH_BLOCKING=1` if multiple devices are used in inference.
 
 ## Switching Between Thinking and Non-Thinking Mode
 
 > [!TIP]
 > The `enable_thinking` switch is also available in APIs created by SGLang and vLLM.
 > Please refer to our documentation for [SGLang](https://qwen.readthedocs.io/en/latest/deployment/sglang.html#thinking-non-thinking-modes) and [vLLM](https://qwen.readthedocs.io/en/latest/deployment/vllm.html#thinking-non-thinking-modes) users.
+>
 ### `enable_thinking=True`
 
 By default, Qwen3 has thinking capabilities enabled, similar to QwQ-32B. This means the model will use its reasoning abilities to enhance the quality of generated responses. For example, when explicitly setting `enable_thinking=True` or leaving it as the default value in `tokenizer.apply_chat_template`, the model will engage its thinking mode.
@@ -115,6 +127,7 @@ In this mode, the model will generate think content wrapped in a `<think>...</th
 
 > [!NOTE]
 > For thinking mode, use `Temperature=0.6`, `TopP=0.95`, `TopK=20`, and `MinP=0` (the default setting in `generation_config.json`). **DO NOT use greedy decoding**, as it can lead to performance degradation and endless repetitions. For more detailed guidance, please refer to the [Best Practices](#best-practices) section.
+>
 ### `enable_thinking=False`
 
 We provide a hard switch to strictly disable the model's thinking behavior, aligning its functionality with the previous Qwen2.5-Instruct models. This mode is particularly useful in scenarios where disabling thinking is essential for enhancing efficiency.
@@ -141,6 +154,7 @@ YaRN is currently supported by several inference frameworks, e.g., `transformers
 
 - Modifying the model files:
   In the `config.json` file, add the `rope_scaling` fields:
+
     ```json
     {
         ...,
@@ -151,26 +165,35 @@ YaRN is currently supported by several inference frameworks, e.g., `transformers
         }
     }
     ```
+
   For `llama.cpp`, you need to regenerate the GGUF file after the modification.
 - Passing command line arguments:
 
   For `vllm`, you can use
+
     ```shell
     vllm serve ... --rope-scaling '{"rope_type":"yarn","factor":4.0,"original_max_position_embeddings":32768}' --max-model-len 131072
     ```
+
   For `sglang`, you can use
+
     ```shell
     python -m sglang.launch_server ... --json-model-override-args '{"rope_scaling":{"rope_type":"yarn","factor":4.0,"original_max_position_embeddings":32768}}'
     ```
+
   For `llama-server` from `llama.cpp`, you can use
+
     ```shell
     llama-server ... --rope-scaling yarn --rope-scale 4 --yarn-orig-ctx 32768
     ```
+
 > [!IMPORTANT]
 > If you encounter the following warning
+>
 > ```
 > Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'original_max_position_embeddings'}
 > ```
+>
 > please upgrade `transformers>=4.51.0`.
 > [!NOTE]
 > All the notable open-source frameworks implement static YaRN, which means the scaling factor remains constant regardless of input length, **potentially impacting performance on shorter texts.**

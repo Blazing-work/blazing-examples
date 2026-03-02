@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: jira
+providers:
+  akash:
+    status: prefer
+services:
+  jira:
+    image: atlassian/jira-software:10.0.0
+    cpu: 1.0
+    memory: 2Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8080
+        public: true

@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: honeygain
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  honeygain:
+    image: honeygain/honeygain:0.8.0
+    cpu: 0.1
+    memory: 96Mi
+    storage:
+      size: 6Mi
+    network:
+      ingress:
+        port: 80
+        public: true

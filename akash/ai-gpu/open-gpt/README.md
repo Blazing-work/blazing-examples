@@ -1,5 +1,8 @@
+# Open GPT
+
 ## OPENGPT
 
+---
 
 OpenGPT is an open source effort to create a similar experience to OpenAI's GPTs. It builds upon LangChain, LangServe and LangSmith. OpenGPTs gives you more control, allowing you to configure:
 
@@ -10,7 +13,7 @@ The vector database you use (choose from LangChain's 60+ vector database integra
 The retrieval algorithm you use
 The chat history database you use
 
-for more details on OpenGPT - https://github.com/langchain-ai/opengpts/tree/main
+for more details on OpenGPT - <https://github.com/langchain-ai/opengpts/tree/main>
 
 Set up language models
 

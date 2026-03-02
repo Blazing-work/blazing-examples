@@ -1,17 +1,18 @@
 # Kadena node
 
-
+The Kadena node needs a dedicated IP address. In `deploy.yml`, the standard settings for launch are already prepared.
 Replace all values of `your_endpoint_name` with your own, for example `my_kadena_endpoint_name` . It is important that the value is **unique, and also does not contain spaces and consists only of lowercase letters**.
 
 Once the deployment is running, you will be assigned an IP address. Go to `UPDATE` and replace `YOUR_STATIC_IP_ADDRESS` with the IP given to you by your provider. Next, click `UPDATE DEPLOYMENT`.
 
-### Available launch flags in `args:` section:
+## Available launch flags in `args:` section
+
 |Flag|Description|
 | :-------: | :-------: |
 |`--info`                                    | Print program info message and exit.|
 |`--long-info`                               | Print detailed program info message and exit.|
 |`-v,--version`                              | Print version string and exit.|
-|` --license`                                | Print license of the program and exit.|
+|`--license`                                | Print license of the program and exit.|
 |`-?,-h,--help`                              | Show this help message.|
 |`--print-config-as`                         | `full/minimal/diff` Print the parsed configuration to standard out and exit.|
 |`--print-config`                            | Print the parsed configuration to standard out and exit. This is an alias for `--print-config-as=full`.|
@@ -47,7 +48,7 @@ Once the deployment is running, you will be assigned an IP address. Go to `UPDAT
 |`--no-log-gas`                              | Unset flag `log-gas`.|
 |`--min-gas-price ARG`                       | The gas price of an individual transaction in a block must not be beneath this number.|
 |`--pact-queue-size ARG`                     | Max size of pact internal queue.|
-|`--reorg-limit ARG`                         | Max allowed reorg depth. Consult https://github.com/kadena-io/chainweb-node/blob/master/docs/RecoveringFromDeepForks.md for more information.|
+|`--reorg-limit ARG`                         | Max allowed reorg depth. Consult <https://github.com/kadena-io/chainweb-node/blob/master/docs/RecoveringFromDeepForks.md> for more information.|
 |`--validateHashesOnReplay`                  | Re-validate payload hashes during transaction replay.|
 |`--no-validateHashesOnReplay`               | Unset flag `validateHashesOnReplay`.|
 |`--allowReadsInLocal`                       | Enable direct database reads of smart contract tables in local queries.|

@@ -1,0 +1,18 @@
+{
+  "id": "akash-tronwallet",
+  "title": "tronwallet",
+  "description": "tronwallet deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Wallet",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "wallet"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

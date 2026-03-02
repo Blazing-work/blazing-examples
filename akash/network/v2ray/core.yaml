@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: v2ray
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: declab/v2ray:0.2
+    cpu: 0.5
+    memory: 256Mi
+    storage:
+      size: 256Mi
+    variables:
+      ID: 7142a3f6-5788-4c91-839a-25b06fe58f4b
+    network:
+      ingress:
+        port: 1010
+        public: true

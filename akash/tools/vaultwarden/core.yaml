@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: vaultwarden
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  vaultwarden:
+    image: vaultwarden/server:alpine
+    cpu: 0.3
+    memory: 256Mi
+    storage:
+      size: 8Mi
+    secrets:
+    - secret_ref: admin_token
+      mode: env
+      keys:
+        value: ADMIN_TOKEN
+    network:
+      ingress:
+        port: 80
+        public: true

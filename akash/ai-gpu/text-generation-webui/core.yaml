@@ -1,0 +1,23 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: text-generation-webui
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  text-generation-webui:
+    image: zjuuu/text-generation-webui:v1.7.3
+    cpu: 6.0
+    memory: 16Gi
+    storage:
+      size: 30Gi
+    variables:
+      CLI_ARGS: --listen --auto-devices --api
+    network:
+      ingress:
+        port: 7860
+        public: true

@@ -1,0 +1,30 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: Sentinel-dVPN-node
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  app:
+    image: ghcr.io/decloudnodeslab/sentinel_dvpn:sha-1d51d67
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 3Gi
+    variables:
+      MNEMONIC_BASE64: ''
+      MONIKER: dVPN on Akash Network v2RAY
+      REMOTE_PORT: '8585'
+      LISTEN_PORT: '3333'
+      IPV4_ADDRESS: ''
+      RPC_ADDRESS: https://rpc.sentinel.co:443
+      GIGABYTE_PRICES: udvpn:0.0025,12_500_000
+      HOURLY_PRICES: udvpn:0.005,25_000_000
+    network:
+      ingress:
+        port: 8585
+        public: true

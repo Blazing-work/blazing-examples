@@ -1,60 +1,23 @@
-# minio
+# minio deployment
 
-MinIO is a high-performance, S3-compatible object storage system designed for large-scale data infrastructure.
+minio is an open source s3 compatible object store. [https://github.com/minio/minio].  For many applications today services for logging and uploading files will assume an s3 compatible storage service.  IFPS is too slow for many machine learning applications where the files be synced are over 2Gb in size and not effective for anything other than archival storage.
 
-## Use Cases
+## Env Vars
 
-- S3-compatible object storage
-- Data lake storage
-- Backup and archival
-- AI/ML training data storage
-- Container-native storage
+all s3 clients usually expect the following env vars
 
-## Getting Started
+- S3_ENDPOINT_URL=http://...
+- AWS_DEFAULT_REGION=us-east-1
+- AWS_ACCESS_KEY_ID=minio123456789
+- AWS_SECRET_ACCESS_KEY=minio123456789
 
-1. Access the MinIO Console at port 9001
-2. Create your first bucket
-3. Use `mc` CLI or any S3-compatible SDK to upload objects
+these much match the minio env vars
 
-## Accessing the Service
+- MINIO_ACCESS_KEY=minio123456789
+- MINIO_SECRET_KEY=minio123456789
 
-Access the MinIO Console (web UI) at `http://{SERVICE_URI}:9001/` or use the S3 API at `http://{SERVICE_URI}:9000/`
+the mino service is exposed on port 9000 and the console is on 9090
 
-### Default Credentials
+## Sharing with other Services
 
-- **Username**: `Set via `MINIO_ROOT_USER``
-- **Password**: Set via `MINIO_ROOT_PASSWORD`
-
-## Configuration
-
-- `MINIO_ROOT_USER` sets the admin access key
-- `MINIO_ROOT_PASSWORD` sets the admin secret key
-
-### Environment Variables
-
-| Variable | Default Value |
-|----------|--------------|
-| `AWS_DEFAULT_REGION` | `us-east-1` |
-| `AWS_ACCESS_KEY_ID` | `minio` |
-
-### Secrets
-
-The following values are configured as secrets and should be set securely:
-
-- `MINIO_ACCESS_KEY`
-- `MINIO_SECRET_KEY`
-- `AWS_SECRET_ACCESS_KEY`
-
-## Deployment Specs
-
-| Resource | Value |
-|----------|-------|
-| Image | `minio/minio:latest` |
-| CPU | 2.0 |
-| Memory | 20Gi |
-| Storage | 100Gi |
-| Exposed Ports | 9000 |
-
-## Documentation
-
-For full documentation, visit: [https://min.io/docs/minio/linux/index.html](https://min.io/docs/minio/linux/index.html)
+We have had some issues sharing the S3_ENDPOINT_URL endpoint correctly.  Your options are to use 2 deployments and update the 2nd deployment with the S3_ENDPOINT_URL env variable or to try to add the port the to service url before starting the service.

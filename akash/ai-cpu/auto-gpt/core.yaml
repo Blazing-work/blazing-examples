@@ -1,0 +1,107 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: auto-gpt
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  auto-gpt:
+    image: cryptoandcoffee/akash-auto-gpt:3
+    cpu: 4.0
+    memory: 4.75Gi
+    storage:
+      size: 16Gi
+    variables:
+      EXECUTE_LOCAL_COMMANDS: 'True'
+      RESTRICT_TO_WORKSPACE: 'False'
+      USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) 
+        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
+      PLAIN_OUTPUT: 'True'
+      TEMPERATURE: '0'
+      USE_AZURE: 'False'
+      SMART_LLM_MODEL: gpt-4
+      FAST_LLM_MODEL: gpt-3.5-turbo
+      FAST_TOKEN_LIMIT: '4000'
+      SMART_TOKEN_LIMIT: '8000'
+      EMBEDDING_MODEL: text-embedding-ada-002
+      MEMORY_BACKEND: json_file
+      MEMORY_INDEX: auto-gpt-memory
+      REDIS_HOST: localhost
+      REDIS_PORT: '6379'
+      WIPE_REDIS_ON_START: 'True'
+      IMAGE_PROVIDER: dalle
+      IMAGE_SIZE: '256'
+      HUGGINGFACE_IMAGE_MODEL: CompVis/stable-diffusion-v1-4
+      SD_WEBUI_AUTH: ''
+      SD_WEBUI_URL: http://127.0.0.1:7860
+      HUGGINGFACE_AUDIO_TO_TEXT_MODEL: facebook/wav2vec2-base-960h
+      GITHUB_USERNAME: your-github-username
+      HEADLESS_BROWSER: 'True'
+      USE_WEB_BROWSER: chrome
+      BROWSE_CHUNK_MAX_LENGTH: '3000'
+      BROWSE_SPACY_LANGUAGE_MODEL: en_core_web_sm
+      CUSTOM_SEARCH_ENGINE_ID: your-custom-search-engine-id
+      USE_MAC_OS_TTS: 'False'
+      USE_BRIAN_TTS: 'False'
+      ELEVENLABS_VOICE_1_ID: your-voice-id-1
+      ELEVENLABS_VOICE_2_ID: your-voice-id-2
+      ALLOWLISTED_PLUGINS: ''
+      DENYLISTED_PLUGINS: ''
+      CHAT_MESSAGES_ENABLED: 'False'
+    secrets:
+    - secret_ref: authorise_command_key
+      mode: env
+      keys:
+        value: AUTHORISE_COMMAND_KEY
+    - secret_ref: exit_key
+      mode: env
+      keys:
+        value: EXIT_KEY
+    - secret_ref: openai_api_key
+      mode: env
+      keys:
+        value: OPENAI_API_KEY
+    - secret_ref: redis_password
+      mode: env
+      keys:
+        value: REDIS_PASSWORD
+    - secret_ref: huggingface_api_token
+      mode: env
+      keys:
+        value: HUGGINGFACE_API_TOKEN
+    - secret_ref: github_api_key
+      mode: env
+      keys:
+        value: GITHUB_API_KEY
+    - secret_ref: google_api_key
+      mode: env
+      keys:
+        value: GOOGLE_API_KEY
+    - secret_ref: elevenlabs_api_key
+      mode: env
+      keys:
+        value: ELEVENLABS_API_KEY
+    - secret_ref: tw_consumer_key
+      mode: env
+      keys:
+        value: TW_CONSUMER_KEY
+    - secret_ref: tw_consumer_secret
+      mode: env
+      keys:
+        value: TW_CONSUMER_SECRET
+    - secret_ref: tw_access_token
+      mode: env
+      keys:
+        value: TW_ACCESS_TOKEN
+    - secret_ref: tw_access_token_secret
+      mode: env
+      keys:
+        value: TW_ACCESS_TOKEN_SECRET
+    network:
+      ingress:
+        port: 8080
+        public: true

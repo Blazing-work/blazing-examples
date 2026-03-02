@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: QwQ-32B
+providers:
+  akash:
+    status: prefer
+services:
+  vllm:
+    image: vllm/vllm-openai:v0.7.3
+    cpu: 64.0
+    memory: 256Gi
+    storage:
+      size: 100Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

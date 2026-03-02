@@ -1,0 +1,18 @@
+{
+  "id": "akash-whisper-gui-cpu",
+  "title": "whisper-gui-cpu",
+  "description": "whisper-gui-cpu deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Ai Cpu",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "cpu"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

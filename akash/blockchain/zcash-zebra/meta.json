@@ -1,0 +1,18 @@
+{
+  "id": "akash-zcash-zebra",
+  "title": "zcash-zebra",
+  "description": "zcash-zebra deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Blockchain",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "blockchain"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

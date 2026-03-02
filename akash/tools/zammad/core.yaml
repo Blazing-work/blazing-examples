@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: zammad
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  zammad:
+    image: zammad/zammad:5.0.0-147
+    cpu: 1.0
+    memory: 4Gi
+    storage:
+      size: 2Gi
+    network:
+      ingress:
+        port: 80
+        public: true

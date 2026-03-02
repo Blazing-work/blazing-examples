@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: dcrpulse
+providers:
+  akash:
+    status: prefer
+services:
+  dcrpulse:
+    image: virgilbb/dcrpulse-combined-akash:v1.9.1
+    cpu: 2.5
+    memory: 5Gi
+    storage:
+      size: 30Gi
+    variables:
+      PORT: '8080'
+      DCRD_RPC_USER: decred
+      DCRD_RPC_PASS: decredpass
+      DCRD_EXTRA_ARGS: --txindex
+    network:
+      ingress:
+        port: 8080
+        public: true

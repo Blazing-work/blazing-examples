@@ -1,0 +1,52 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: wordpress
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  wordpress:
+    image: wordpress
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 4Gi
+    variables:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    secrets:
+    - secret_ref: wordpress_db_password
+      mode: env
+      keys:
+        value: WORDPRESS_DB_PASSWORD
+    network:
+      ingress:
+        port: 80
+        public: true
+  db:
+    image: mariadb:10.6.4
+    cpu: 1.0
+    memory: 1Gi
+    storage:
+      size: 1Gi
+    variables:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+    secrets:
+    - secret_ref: mysql_random_root_password
+      mode: env
+      keys:
+        value: MYSQL_RANDOM_ROOT_PASSWORD
+    - secret_ref: mysql_password
+      mode: env
+      keys:
+        value: MYSQL_PASSWORD
+    network:
+      ingress:
+        port: 3306
+        public: false

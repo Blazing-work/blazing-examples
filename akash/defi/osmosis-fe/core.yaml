@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: osmosis-fe
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  osmosis-fe:
+    image: osmolabs/osmosis-frontend:370966c
+    cpu: 4.0
+    memory: 4Gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 3000
+        public: true

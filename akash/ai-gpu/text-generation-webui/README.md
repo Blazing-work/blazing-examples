@@ -1,4 +1,4 @@
-# text-generation-webui by oobabooga
+# text-generation-webui by oobabooga on akash network
 
 A gradio web UI for running Large Language Models like LLaMA, llama.cpp, GPT-J, Pythia, OPT, and GALACTICA.
 
@@ -26,12 +26,12 @@ The Tags of the Docker Image is the same as the release on the official reposito
 * Markdown output with LaTeX rendering, to use for instance with [GALACTICA](https://github.com/paperswithcode/galai)
 * OpenAI-compatible API server
 
-To learn how to use the various features, check out the Documentation: https://github.com/oobabooga/text-generation-webui/wiki
+To learn how to use the various features, check out the Documentation: <https://github.com/oobabooga/text-generation-webui/wiki>
 
 ## Acknowledgements
 
- - [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main)
- - [Prebuild Docker Images by zjuuu](hhttps://hub.docker.com/r/zjuuu/text-generation-webui)
+* [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui/tree/main)
+* [Prebuild Docker Images by zjuuu](hhttps://hub.docker.com/r/zjuuu/text-generation-webui)
 
 ## How to build the Docker image
 

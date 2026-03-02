@@ -1,6 +1,5 @@
 # Hermes 4 — Llama-3.1 405B - FP8
 
-
 ![image/jpeg](https://cdn-uploads.huggingface.co/production/uploads/6317aade83d8d2fd903192d9/roT9o5bMYBtQziRMlaSDf.jpeg)
 
 ## Model Description
@@ -9,7 +8,7 @@ Hermes 4 405B is a frontier, hybrid-mode **reasoning** model based on Llama-3.1-
 
 Read the Hermes 4 technical report here: <a href="https://arxiv.org/abs/2508.18255">Hermes 4 Technical Report</a>
 
-Chat with Hermes in Nous Chat: https://chat.nousresearch.com
+Chat with Hermes in Nous Chat: <https://chat.nousresearch.com>
 
 Training highlights include a newly synthesized post-training corpus emphasizing verified reasoning traces, massive improvements in math, code, STEM, logic, creativity, and format-faithful outputs, while preserving general assistant quality and broadly neutral alignment.
 
@@ -42,6 +41,7 @@ Hermes 4 achieves SOTA on RefusalBench across all popular closed and open models
 Hermes 4 uses Llama-3-Chat format with role headers and special tags.
 
 **Basic chat:**
+
 ```
 <|start_header_id|>system<|end_header_id|>
 
@@ -131,16 +131,17 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 For production serving on multi-GPU nodes, consider tensor parallel inference engines (e.g., SGLang/vLLM backends) with prefix caching.
 
+## Inference Providers
 
-### Nous Portal:
+### Nous Portal
 
 <a href="https://portal.nousresearch.com"><img width=256 alt="chutes logo" src="https://cdn-uploads.huggingface.co/production/uploads/6317aade83d8d2fd903192d9/6YytY7N0mjCnBQvWo3qtv.png"></a>
 
-### Chutes:
+### Chutes
 
 <a href="https://chutes.ai/app"><img width=256 alt="chutes logo" src="https://cdn-uploads.huggingface.co/production/uploads/6317aade83d8d2fd903192d9/l14AWPv6cSvaprpwK_IWY.png"></a>
 
-### Nebius:
+### Nebius
 
 <a href="https://nebius.com/services/studio-inference-service">
 <picture>
@@ -150,27 +151,27 @@ For production serving on multi-GPU nodes, consider tensor parallel inference en
 </picture>
 </a>
 
-### Luminal:
+### Luminal
 
 <a href="https://luminalai.com/">
 <img width=256 alt="luminal logo" src="https://cdn-uploads.huggingface.co/production/uploads/6317aade83d8d2fd903192d9/FIHsRdjMMP0HUjebiuJyH.png">
 </a>
 
-# Quantized / Smaller Variants
+## Quantized / Smaller Variants
 
 Hermes 4 is available as BF16 original weights as well as FP8 variants and GGUF variants by LM Studio.
 
-BF16: https://huggingface.co/NousResearch/Hermes-4-405B
+BF16: <https://huggingface.co/NousResearch/Hermes-4-405B>
 
 GGUF (Courtesy of LM Studio team!):
-https://huggingface.co/lmstudio-community/Hermes-4-405B-GGUF
+<https://huggingface.co/lmstudio-community/Hermes-4-405B-GGUF>
 
 Hermes 4 is also available in smaller sizes (e.g., 70B and 14B) with similar prompt formats.
 
 See the Hermes 4 collection to explore them all:
-https://huggingface.co/collections/NousResearch/hermes-4-collection-68a731bfd452e20816725728
+<https://huggingface.co/collections/NousResearch/hermes-4-collection-68a731bfd452e20816725728>
 
-# How to cite
+## How to cite
 
 ```bibtex
 @misc{teknium2025hermes4technicalreport,

@@ -1,0 +1,32 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: xmrig
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  miner-xmrig:
+    image: cryptoandcoffee/akash-xmrig:41
+    cpu: 4.0
+    memory: 4.75Gi
+    storage:
+      size: 6Mi
+    variables:
+      ALGO: rx/0
+      POOL: gulf.moneroocean.stream:20032
+      WALLET: ''
+      WORKER: akash
+      PASS: x
+      TLS: 'true'
+      TLS_FINGERPRINT: ''
+      RANDOMX_MODE: fast
+      CUSTOM_OPTIONS: ''
+      AKASH_PROVIDER_STARTUP_CHECK: 'true'
+    network:
+      ingress:
+        port: 8080
+        public: true

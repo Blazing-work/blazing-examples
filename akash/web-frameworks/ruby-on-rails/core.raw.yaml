@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ruby-on-rails
+providers:
+  akash:
+    status: prefer
+services:
+  ruby:
+    image: nomorelies/rubyonakash:0.4
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 8000
+        public: true

@@ -1,0 +1,24 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bitcoin-knots-mempool-ui
+providers:
+  akash:
+    status: prefer
+services:
+  app:
+    image: 
+      andrey01/bitcoin-knots:v28.1.0@sha256:f272b90297f89d9fe819548b5928367396359e3eea172d622758b90151ce12a3
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 1Gi
+    variables:
+      RPCUSER: user
+      RPCPASSWORD: changeme123
+      BITCOIN_ARGS: -txindex=1 -dbcache=2048
+    network:
+      ingress:
+        port: 8332
+        public: true

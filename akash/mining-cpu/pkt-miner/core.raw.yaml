@@ -1,0 +1,26 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: pkt-miner
+providers:
+  akash:
+    status: prefer
+services:
+  pkt-miner:
+    image: cryptoandcoffee/akash-pkt-miner:17
+    cpu: 4.0
+    memory: 1Gi
+    storage:
+      size: 32Mi
+    variables:
+      WALLET_ADDR: ''
+      POOL1: http://pool.pkteer.com
+      POOL2: http://pool.pkt.world
+      POOL3: http://pool.pktpool.io
+      POOL4: https://stratum.zetahash.com
+      VERSION: v0.5.2
+    network:
+      ingress:
+        port: 80
+        public: true

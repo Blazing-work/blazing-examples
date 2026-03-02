@@ -1,3 +1,5 @@
+# SoftEther VPN
+
 ## What is SoftEther
 
 SoftEther VPN is one of the world’s most powerful and easy-to-use multi-protocol VPN software, made by the good folks at the University of Tsukuba, Japan. It runs on Windows, Linux, Mac, FreeBSD and Solaris and is freeware and open-source. You can use SoftEther for any personal or commercial use free of charge.
@@ -9,11 +11,12 @@ SoftEther VPN is one of the world’s most powerful and easy-to-use multi-protoc
 
 ### What does not
 
-- L2TP/IPsec is not currently working due to the current Blazing Core direct (1:1) port mapping limitation.
+- L2TP/IPsec is not currently working due to the current Akash direct (1:1) port mapping limitation.
 
 ## Ports
 
-Your best bet would be to use OpenVPN via 443/tcp since this will work out-of-a-box on Blazing Core.
+Since Akash does not support direct (1:1) port mapping yet, you will have to check the mapped ports (`akash provider lease-status`).
+Your best bet would be to use OpenVPN via 443/tcp since this will work out-of-a-box.
 
 ### L2TP/IPSec
 
@@ -24,6 +27,7 @@ Your best bet would be to use OpenVPN via 443/tcp since this will work out-of-a-
 
 ### OpenVPN/SSTP/SoftEther VPN
 
+> Check the mapped port (`akash provider lease-status`) and use that port.
 
 - "443:443/tcp"
 
@@ -38,6 +42,9 @@ Your best bet would be to use OpenVPN via 443/tcp since this will work out-of-a-
 - "5555:5555/tcp"
 - "992:992/tcp"
 
+## Notes
+
+## L2TP/IPSec
 
 ### Android 12
 
@@ -64,6 +71,7 @@ Phase 1 Algorithms: aes128-sha1-modp2048
 Phase 2 Algorithms: aes128-sha1
 ```
 
+## OpenVPN
 
 ### OpenVPN for Android
 
@@ -81,7 +89,7 @@ Feel free to enable it and submit a PR!
 
 ## SoftEther VPN Client
 
-Download SoftEther VPN Client software from https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases
+Download SoftEther VPN Client software from <https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases>
 
 Get VPN credentials from "Username & Password for VPN authentication" after deployment starts.
 
@@ -90,20 +98,23 @@ ACCOUNT=<your vpn username>
 PASSWORD=<your vpn password>
 ```
 
-Connect to your SoftEther instance running on Blazing Core.
+Connect to your SoftEther instance running.
 
+Make sure to change `d3akash.cloud:32505` to yours, mapped to `443/tcp` port.
 
 ```
 cd vpnclient
 sudo ./vpnclient start
 
 ./vpncmd /CLIENT 127.0.0.1 /CMD NicCreate 1
+./vpncmd /CLIENT 127.0.0.1 /CMD AccountCreate $ACCOUNT /SERVER:d3akash.cloud:32505 /HUB:DEFAULT /USERNAME:$ACCOUNT /NICNAME:1
 ./vpncmd /CLIENT 127.0.0.1 /CMD AccountPassword $ACCOUNT /TYPE:standard /PASSWORD:$PASSWORD
 ./vpncmd /CLIENT 127.0.0.1 /CMD AccountConnect $ACCOUNT
 
 ./vpncmd /CLIENT 127.0.0.1 /CMD AccountStatusGet $ACCOUNT
 ```
 
+> `81.6.58.121` is the IP address of `d3akash.cloud` (yours will be different should you chose another Akash provider)
 
 Find default network device and pass the route for your SoftEther deployment over it:
 
@@ -135,8 +146,8 @@ sudo ip route del 81.6.58.121 via default dev wlo1
 
 ## References
 
-- https://www.softether.org
-- https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases
-- https://www.digitalocean.com/community/tutorials/how-to-setup-a-multi-protocol-vpn-server-using-softether
-- https://github.com/SoftEtherVPN/SoftEtherVPN/issues/1373
-- https://github.com/SoftEtherVPN/SoftEtherVPN/issues/13#issuecomment-873617246
+- <https://www.softether.org>
+- <https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases>
+- <https://www.digitalocean.com/community/tutorials/how-to-setup-a-multi-protocol-vpn-server-using-softether>
+- <https://github.com/SoftEtherVPN/SoftEtherVPN/issues/1373>
+- <https://github.com/SoftEtherVPN/SoftEtherVPN/issues/13#issuecomment-873617246>

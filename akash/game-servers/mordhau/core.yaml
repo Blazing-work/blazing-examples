@@ -1,0 +1,25 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: mordhau
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  mordhau:
+    image: cm2network/mordhau
+    cpu: 4.0
+    memory: 8Gi
+    storage:
+      size: 32Gi
+    variables:
+      SERVER_BEACONPORT: '15001'
+      SERVER_PORT: '7778'
+      SERVER_QUERYPORT: '27016'
+    network:
+      ingress:
+        port: 27016
+        public: true

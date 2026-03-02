@@ -1,0 +1,19 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: bitcoincashnode
+providers:
+  akash:
+    status: prefer
+services:
+  bitcoin-cash:
+    image: ghcr.io/ubunteroz/akash-bitcoincashnode:latest
+    cpu: 4.0
+    memory: 16Gi
+    storage:
+      size: 128Gi
+    network:
+      ingress:
+        port: 8332
+        public: true

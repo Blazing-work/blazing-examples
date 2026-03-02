@@ -1,0 +1,27 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gminer-c11
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gminer-c11:
+    image: cryptoandcoffee/akash-gpu-miner-gminer-c11:3
+    cpu: 0.5
+    memory: 768Mi
+    storage:
+      size: 256Mi
+    variables:
+      ALGO: etchash
+      WALLET_ADDRESS: '""'
+      POOL: '"stratum+ssl://us-solo-etc.2miners.com:15050"'
+      PASSWORD: x
+      OPTIONS: '""'
+    network:
+      ingress:
+        port: 4067
+        public: true

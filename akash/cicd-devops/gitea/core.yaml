@@ -1,0 +1,21 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: gitea
+providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+services:
+  gitea:
+    image: gitea/gitea:1.25.0-rc0-rootless
+    cpu: 0.5
+    memory: 1gi
+    storage:
+      size: 1Gi
+    network:
+      ingress:
+        port: 3000
+        public: true

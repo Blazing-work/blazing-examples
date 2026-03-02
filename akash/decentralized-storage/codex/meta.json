@@ -1,0 +1,19 @@
+{
+  "id": "akash-codex",
+  "title": "codex",
+  "description": "codex deployed on Akash Network via Blazing Core.",
+  "category": "Akash — Decentralized Storage",
+  "difficulty": "Intermediate",
+  "time": "5 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "decentralized",
+    "storage"
+  ],
+  "technologies": [],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

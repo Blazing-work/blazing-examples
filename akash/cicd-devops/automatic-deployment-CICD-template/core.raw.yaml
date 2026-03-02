@@ -1,0 +1,22 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: automatic-deployment-CICD-template
+providers:
+  akash:
+    status: prefer
+services:
+  service-1:
+    image: ghcr.io/akash-network/awesome-akash/consolecicd:v1
+    cpu: 2.0
+    memory: 6GB
+    storage:
+      size: 10Gi
+    variables:
+      REPO_URL: https://github.com/onwidget/astrowind
+      BRANCH_NAME: main
+    network:
+      ingress:
+        port: 3000
+        public: true
