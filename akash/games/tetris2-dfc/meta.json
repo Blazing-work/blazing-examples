@@ -1,0 +1,27 @@
+{
+  "id": "dfc-tetris2",
+  "title": "Tetris2 on DFC",
+  "description": "Deploy the classic Tetris2 game on DFC (Digital Frontier Cloud). DFC uses Akash blockchain infrastructure underneath with fixed Spot pricing. Region: dfc-pt-lisbon (Lisbon, Portugal). Cost tab displays BASE/PEAK/SAVINGS columns.",
+  "category": "Akash -- Games",
+  "difficulty": "Beginner",
+  "time": "5 min",
+  "tags": [
+    "dfc",
+    "blazing-core",
+    "games",
+    "decentralized",
+    "akash-infrastructure",
+    "fixed-pricing",
+    "single-region",
+    "public-ingress",
+    "europe"
+  ],
+  "technologies": [
+    "DFC",
+    "Akash Network"
+  ],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

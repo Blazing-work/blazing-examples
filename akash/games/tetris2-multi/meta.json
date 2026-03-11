@@ -1,0 +1,31 @@
+{
+  "id": "multi-tetris2",
+  "title": "Tetris2 Multi-Provider",
+  "description": "Deploy the classic Tetris2 game across 3 providers simultaneously: Akash (global, reverse-auction), GCP (europe-west1, fixed pricing), and DFC (Lisbon, Akash infrastructure). Demonstrates multi-cloud deployment with mixed pricing models in a single cluster.",
+  "category": "Akash -- Games",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "akash",
+    "gcp",
+    "dfc",
+    "blazing-core",
+    "games",
+    "multi-provider",
+    "multi-cloud",
+    "multi-region",
+    "reverse-auction",
+    "fixed-pricing",
+    "public-ingress",
+    "cost-comparison"
+  ],
+  "technologies": [
+    "Akash Network",
+    "Google Cloud Platform",
+    "DFC"
+  ],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

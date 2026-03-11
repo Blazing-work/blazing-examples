@@ -1,27 +1,25 @@
 version: v0.2
+organization_id: '{{ORG_ID}}'
 project_id: '{{PROJECT_ID}}'
 cluster_id: '{{CLUSTER_ID}}'
 
 cluster:
-  name: tetris2
-
-providers:
-  akash:
-    status: prefer
-    max_price: 15.00
+  name: tetris2-gcp
 
 regions:
   mode: explicit
   explicit:
-    - region_id: akash-global
-      provider: akash
+    - region_id: gcp-europe-west1
+      provider: gcp
       is_primary: true
+      network_tier: Standard
+      ip_version: IPV4
 
 services:
   tetris:
     image: uzyexe/tetris
-    cpu: 1.0
-    memory: 512Mi
+    cpu: 0.25
+    memory: 256Mi
     storage:
       size: 512Mi
     mesh:

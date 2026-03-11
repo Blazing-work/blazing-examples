@@ -1,16 +1,22 @@
 {
   "id": "akash-tetris2",
-  "title": "tetris2",
-  "description": "tetris2 deployed on Akash Network via Blazing Core.",
-  "category": "Akash — Games",
-  "difficulty": "Intermediate",
+  "title": "Tetris2 on Akash",
+  "description": "Deploy the classic Tetris2 game on Akash decentralized cloud. Uses reverse-auction pricing with a max bid of $15/month. Single region (akash-global) with public HTTP ingress on port 80.",
+  "category": "Akash -- Games",
+  "difficulty": "Beginner",
   "time": "5 min",
   "tags": [
     "akash",
     "blazing-core",
-    "games"
+    "games",
+    "decentralized",
+    "reverse-auction",
+    "single-region",
+    "public-ingress"
   ],
-  "technologies": [],
+  "technologies": [
+    "Akash Network"
+  ],
   "products": [
     "blazing-core"
   ],

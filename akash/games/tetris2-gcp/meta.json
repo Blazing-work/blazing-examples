@@ -1,0 +1,25 @@
+{
+  "id": "gcp-tetris2",
+  "title": "Tetris2 on GCP",
+  "description": "Deploy the classic Tetris2 game on Google Cloud Platform. Uses GCP Standard network tier with fixed pricing in the europe-west1 region. Cost tab displays BASE/PEAK/SAVINGS columns.",
+  "category": "Akash -- Games",
+  "difficulty": "Beginner",
+  "time": "5 min",
+  "tags": [
+    "gcp",
+    "blazing-core",
+    "games",
+    "cloud",
+    "fixed-pricing",
+    "single-region",
+    "public-ingress",
+    "europe"
+  ],
+  "technologies": [
+    "Google Cloud Platform"
+  ],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

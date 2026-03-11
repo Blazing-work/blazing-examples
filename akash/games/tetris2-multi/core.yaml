@@ -1,14 +1,21 @@
 version: v0.2
+organization_id: '{{ORG_ID}}'
 project_id: '{{PROJECT_ID}}'
 cluster_id: '{{CLUSTER_ID}}'
 
 cluster:
-  name: tetris2
+  name: tetris2-multi
 
 providers:
   akash:
     status: prefer
     max_price: 15.00
+  gcp:
+    status: prefer
+    network_tier: Standard
+    ip_version: IPV4
+  dfc:
+    status: prefer
 
 regions:
   mode: explicit
@@ -16,6 +23,10 @@ regions:
     - region_id: akash-global
       provider: akash
       is_primary: true
+    - region_id: gcp-europe-west1
+      provider: gcp
+    - region_id: dfc-pt-lisbon
+      provider: dfc
 
 services:
   tetris:
