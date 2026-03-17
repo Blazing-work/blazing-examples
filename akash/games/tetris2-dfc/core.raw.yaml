@@ -1,16 +1,13 @@
 version: v0.2
-organization_id: '{{ORG_ID}}'
 project_id: '{{PROJECT_ID}}'
 cluster_id: '{{CLUSTER_ID}}'
 
 cluster:
-  name: tetris2
+  name: tetris2-dfc
 
 providers:
-  dcf:
-    status: prefer
   akash:
-    status: fallback
+    status: prefer
     max_price: 15.00
 
 regions:
@@ -23,7 +20,7 @@ regions:
 services:
   tetris:
     image: uzyexe/tetris
-    cpu: 1.0
+    cpu: 0.5
     memory: 512Mi
     storage:
       size: 512Mi

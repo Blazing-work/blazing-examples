@@ -7,15 +7,15 @@ cluster:
   name: tetris2-multi
 
 providers:
-  akash:
+  dcf:
     status: prefer
+  akash:
+    status: fallback
     max_price: 15.00
   gcp:
     status: prefer
     network_tier: Standard
     ip_version: IPV4
-  dfc:
-    status: prefer
 
 regions:
   mode: explicit
@@ -25,6 +25,8 @@ regions:
       is_primary: true
     - region_id: gcp-europe-west1
       provider: gcp
+      network_tier: Standard
+      ip_version: IPV4
     - region_id: dfc-pt-lisbon
       provider: dfc
 
