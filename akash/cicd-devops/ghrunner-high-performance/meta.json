@@ -1,0 +1,24 @@
+{
+  "id": "akash-ghrunner-high-performance",
+  "title": "GitHub CI Runner — 32-Core / 128 GB on DFC",
+  "description": "High-performance self-hosted GitHub Actions runner on DFC with 32 vCPUs and 128 GB RAM — sized for monorepo builds, parallel test suites, and heavy compilation workloads. Uses Podman for rootless container builds (no privileged mode required). Runs ephemeral (fresh container per job) with 100 GB storage.",
+  "category": "Akash — Cicd Devops",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "tags": [
+    "akash",
+    "blazing-core",
+    "cicd",
+    "devops",
+    "high-performance",
+    "github-actions"
+  ],
+  "technologies": [
+    "GitHub Actions",
+    "Docker"
+  ],
+  "products": [
+    "blazing-core"
+  ],
+  "primaryProduct": "blazing-core"
+}

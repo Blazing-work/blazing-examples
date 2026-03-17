@@ -1,0 +1,32 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+cluster:
+  name: ghrunner-high-performance
+providers:
+  akash:
+    status: prefer
+services:
+  ghrunner:
+    image: ghcr.io/myoung34/docker-github-actions-runner:2.330.0-ubuntu-noble
+    cpu: 32.0
+    memory: 128gb
+    storage:
+      size: 100gb
+    variables:
+      REPO_URL: https://github.com/<org>/<repo>
+      RUNNER_NAME: dfc-32core
+      RUNNER_LABELS: self-hosted,linux,x64,dfc-32core
+      EPHEMERAL: 'true'
+      RUNNER_WORKDIR: /tmp/runner
+      DOCKER_ENABLED: 'false'
+      START_DOCKER_SERVICE: 'false'
+    secrets:
+    - secret_ref: runner_token
+      mode: env
+      keys:
+        value: RUNNER_TOKEN
+    network:
+      ingress:
+        port: 80
+        public: true
