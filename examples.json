@@ -29,7 +29,7 @@
   {
     "id": "basic_workflow",
     "title": "Basic Workflow",
-    "description": "Multi-step orchestration - the foundation of distributed workflows — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Multi-step orchestration - the foundation of distributed workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "10 min",
@@ -56,7 +56,7 @@
   {
     "id": "data_processing_step",
     "title": "Data Processing Step",
-    "description": "Filter rows and transform fields in a single Blazing step — lightweight inline data processing without a pipeline.",
+    "description": "Filter rows and transform fields in a single Blazing step \u2014 lightweight inline data processing without a pipeline.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
@@ -83,7 +83,7 @@
   {
     "id": "data_transformation_workflow",
     "title": "Data Transformation Workflow",
-    "description": "Multi-stage data pipeline with cleaning and normalization — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Multi-stage data pipeline with cleaning and normalization \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "10 min",
@@ -137,7 +137,7 @@
   {
     "id": "ml_inference_pipeline",
     "title": "ML Inference Pipeline",
-    "description": "Deploy ML models with Core infrastructure, orchestrate inference with Flow, and run predictions in Flow Sandbox — uses HTTPX.",
+    "description": "Deploy ML models with Core infrastructure, orchestrate inference with Flow, and run predictions in Flow Sandbox \u2014 uses HTTPX.",
     "category": "Machine Learning",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -168,7 +168,7 @@
   {
     "id": "multi_branch_workflow",
     "title": "Multi-Branch Workflow",
-    "description": "Parallel execution with asyncio.gather for concurrent processing — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Parallel execution with asyncio.gather for concurrent processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -222,7 +222,7 @@
   {
     "id": "simple_step",
     "title": "Simple Step",
-    "description": "The simplest possible Blazing Flow example - a single processing step — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "The simplest possible Blazing Flow example - a single processing step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
@@ -249,7 +249,7 @@
   {
     "id": "step_with_math",
     "title": "Step with Math",
-    "description": "Basic arithmetic operations in a distributed step — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Basic arithmetic operations in a distributed step \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Getting Started",
     "difficulty": "Beginner",
     "time": "5 min",
@@ -276,7 +276,7 @@
   {
     "id": "authenticated_api",
     "title": "API with Authentication",
-    "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth) — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Protect endpoints with custom authentication (JWT, API keys, OAuth) \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Web Endpoints",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -456,7 +456,7 @@
   {
     "id": "websocket_realtime",
     "title": "WebSocket Real-Time Updates",
-    "description": "Enable WebSocket for real-time progress updates from long-running workflows — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Enable WebSocket for real-time progress updates from long-running workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Web Endpoints",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -488,7 +488,7 @@
   {
     "id": "aggregating_results",
     "title": "Aggregating Results",
-    "description": "Fetch data from multiple sources and aggregate into summary statistics — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Fetch data from multiple sources and aggregate into summary statistics \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -515,7 +515,7 @@
   {
     "id": "arrow_dataframes",
     "title": "PyArrow DataFrames",
-    "description": "Pass PyArrow Tables between steps — zero-copy columnar transfers with type-safe Arrow compute operations — uses Apache Arrow.",
+    "description": "Pass PyArrow Tables between steps \u2014 zero-copy columnar transfers with type-safe Arrow compute operations \u2014 uses Apache Arrow.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -544,7 +544,7 @@
   {
     "id": "csv_import",
     "title": "CSV Import Pipeline",
-    "description": "Download, parse, validate, and import CSV files from cloud storage — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Download, parse, validate, and import CSV files from cloud storage \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -571,7 +571,7 @@
   {
     "id": "etl_pipeline",
     "title": "ETL Pipeline",
-    "description": "Complete Extract-Transform-Load pipeline for data warehousing — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Complete Extract-Transform-Load pipeline for data warehousing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -598,7 +598,7 @@
   {
     "id": "event_processing",
     "title": "Event Processing Pipeline",
-    "description": "Validate, enrich, and store incoming events with multi-step processing — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Validate, enrich, and store incoming events with multi-step processing \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "25 min",
@@ -659,7 +659,7 @@
   {
     "id": "map_reduce",
     "title": "Map-Reduce Pattern",
-    "description": "Distributed map-reduce for processing large datasets in chunks — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Distributed map-reduce for processing large datasets in chunks \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -686,7 +686,7 @@
   {
     "id": "pdf_generation",
     "title": "PDF Generation Workflow",
-    "description": "Generate PDF documents from templates with data from multiple sources — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Generate PDF documents from templates with data from multiple sources \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Advanced",
     "time": "35 min",
@@ -713,7 +713,7 @@
   {
     "id": "retry_logic",
     "title": "Retry Logic with Exponential Backoff",
-    "description": "Handle transient failures with automatic retry and exponential backoff — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Handle transient failures with automatic retry and exponential backoff \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -740,7 +740,7 @@
   {
     "id": "timeout_handling",
     "title": "Timeout Handling",
-    "description": "Prevent workflows from hanging with asyncio.wait_for timeouts — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Prevent workflows from hanging with asyncio.wait_for timeouts \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -767,7 +767,7 @@
   {
     "id": "validation_error_handling",
     "title": "Validation & Error Handling",
-    "description": "Validate input data and handle errors gracefully in workflows — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Validate input data and handle errors gracefully in workflows \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Data Processing",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -794,7 +794,7 @@
   {
     "id": "cpu_vs_io_optimization",
     "title": "CPU vs I/O Optimization with Worker Types",
-    "description": "Blazing automatically optimizes execution by using different worker pools. Use `step_type='BLOCKING'` for CPU-intensive work and default (NON_BLOCKING) for I/O-bound operations. This prevents CPU tasks from blocking async I/O operations — uses HTTPX, NumPy.",
+    "description": "Blazing automatically optimizes execution by using different worker pools. Use `step_type='BLOCKING'` for CPU-intensive work and default (NON_BLOCKING) for I/O-bound operations. This prevents CPU tasks from blocking async I/O operations \u2014 uses HTTPX, NumPy.",
     "category": "Async & Parallel",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -824,7 +824,7 @@
   {
     "id": "fan_out_fan_in",
     "title": "Fan-Out / Fan-In Pattern",
-    "description": "Fetch data from multiple sources in parallel, then combine results — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Fetch data from multiple sources in parallel, then combine results \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -851,7 +851,7 @@
   {
     "id": "parallel_processing",
     "title": "Parallel Data Processing",
-    "description": "Process multiple items concurrently with asyncio.gather — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Process multiple items concurrently with asyncio.gather \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -878,7 +878,7 @@
   {
     "id": "rate_limited_api",
     "title": "Rate-Limited API Calls",
-    "description": "Control concurrency with asyncio.Semaphore for rate limiting — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Control concurrency with asyncio.Semaphore for rate limiting \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Async & Parallel",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -905,7 +905,7 @@
   {
     "id": "cache_service",
     "title": "Cache Service",
-    "description": "Implement a cache-aside pattern with Redis — check cache, compute on miss, store result, serve on hit.",
+    "description": "Implement a cache-aside pattern with Redis \u2014 check cache, compute on miss, store result, serve on hit.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -961,7 +961,7 @@
   {
     "id": "database_service",
     "title": "Database Service",
-    "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Connect to PostgreSQL and perform database operations with SQLAlchemy \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -990,7 +990,7 @@
   {
     "id": "email_queue",
     "title": "Email Queue Processor",
-    "description": "Drain an email queue in configurable batches using Redis LIST operations — rate-limited bulk sending.",
+    "description": "Drain an email queue in configurable batches using Redis LIST operations \u2014 rate-limited bulk sending.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "25 min",
@@ -1019,7 +1019,7 @@
   {
     "id": "email_service",
     "title": "Email Service",
-    "description": "Send transactional emails via SMTP using a Blazing service — templating, retries, and delivery confirmation.",
+    "description": "Send transactional emails via SMTP using a Blazing service \u2014 templating, retries, and delivery confirmation.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -1046,7 +1046,7 @@
   {
     "id": "github_webhook",
     "title": "GitHub Webhook Handler",
-    "description": "Process GitHub webhooks with signature validation and event handling — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Process GitHub webhooks with signature validation and event handling \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -1073,7 +1073,7 @@
   {
     "id": "multi_channel_notification",
     "title": "Multi-Channel Notification",
-    "description": "Send notifications across email, SMS, and push channels simultaneously — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Send notifications across email, SMS, and push channels simultaneously \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "25 min",
@@ -1100,7 +1100,7 @@
   {
     "id": "rest_api_service",
     "title": "REST API Service",
-    "description": "Call external REST APIs with httpx and handle responses — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Call external REST APIs with httpx and handle responses \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -1129,7 +1129,7 @@
   {
     "id": "stripe_webhook",
     "title": "Stripe Payment Webhook",
-    "description": "Handle Stripe payment webhooks with signature verification — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Handle Stripe payment webhooks with signature verification \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Integrations",
     "difficulty": "Advanced",
     "time": "30 min",
@@ -1183,7 +1183,7 @@
   {
     "id": "cleanup_expired_records",
     "title": "Cleanup Expired Records",
-    "description": "Batch delete expired database records on a schedule — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Batch delete expired database records on a schedule \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -1210,7 +1210,7 @@
   {
     "id": "daily_reports",
     "title": "Daily Report Generation",
-    "description": "Scheduled job to generate and distribute daily reports via email — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Scheduled job to generate and distribute daily reports via email \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "25 min",
@@ -1237,9 +1237,9 @@
   {
     "id": "event_stream_processor",
     "title": "Event Stream Processor",
-    "description": "Process event streams from Kafka in batches with aggregation — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Process event streams from Kafka in batches with aggregation \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "40 min",
     "tags": [
       "events",
@@ -1266,7 +1266,7 @@
   {
     "id": "health_check_workflow",
     "title": "Health Check Workflow",
-    "description": "Monitor system health across database, cache, and external APIs — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Monitor system health across database, cache, and external APIs \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "20 min",
@@ -1320,9 +1320,9 @@
   {
     "id": "sandbox_async_service_calls",
     "title": "Sandbox: Async Service Calls",
-    "description": "User code making concurrent service calls for performance — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "User code making concurrent service calls for performance \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
       "async",
@@ -1347,7 +1347,7 @@
   {
     "id": "sandbox_basic_transform",
     "title": "Sandbox: Basic User-Provided Transform",
-    "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected — uses WebAssembly.",
+    "description": "The simplest sandbox example: let users write transformation logic while your infrastructure stays protected \u2014 uses WebAssembly.",
     "category": "Advanced",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -1374,7 +1374,7 @@
   {
     "id": "sandbox_database_service",
     "title": "Sandbox: Service Bridge with Database",
-    "description": "Let user code process data while keeping database credentials safe — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Let user code process data while keeping database credentials safe \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -1401,9 +1401,9 @@
   {
     "id": "sandbox_multi_tenant",
     "title": "Sandbox: Multi-Tenant Data Processing",
-    "description": "Safely run different tenants' code in isolated sandboxes — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Safely run different tenants' code in isolated sandboxes \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "35 min",
     "tags": [
       "isolation",
@@ -1428,7 +1428,7 @@
   {
     "id": "sandbox_rest_api_service",
     "title": "Sandbox: Service Bridge with REST APIs",
-    "description": "Let users integrate with external APIs while keeping API keys safe — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Let users integrate with external APIs while keeping API keys safe \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -1455,7 +1455,7 @@
   {
     "id": "sandbox_security_validation",
     "title": "Sandbox: Security Validation",
-    "description": "Examples of malicious code that fails in the sandbox — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Examples of malicious code that fails in the sandbox \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Advanced",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -1565,7 +1565,7 @@
   {
     "id": "batched_steps",
     "title": "Batched Steps",
-    "description": "Use @batched to auto-collect individual step calls into GPU-efficient batches — transparent to callers.",
+    "description": "Use @batched to auto-collect individual step calls into GPU-efficient batches \u2014 transparent to callers.",
     "category": "API Patterns",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -1646,7 +1646,7 @@
   {
     "id": "direct_function_call",
     "title": "Direct Function Call",
-    "description": "Call @app.step and @app.workflow decorated functions as plain Python — no backend, no publish(), no infrastructure required. The recommended pattern for unit testing and local development.",
+    "description": "Call @app.step and @app.workflow decorated functions as plain Python \u2014 no backend, no publish(), no infrastructure required. The recommended pattern for unit testing and local development.",
     "category": "API Patterns",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -1673,7 +1673,7 @@
   {
     "id": "run_sync_by_name",
     "title": "run_sync by Name",
-    "description": "Demonstrates the synchronous API for running workflows by name — app.publish_sync() and app.run_sync('workflow_name', **kwargs) — for use in non-async calling contexts.",
+    "description": "Demonstrates the synchronous API for running workflows by name \u2014 app.publish_sync() and app.run_sync('workflow_name', **kwargs) \u2014 for use in non-async calling contexts.",
     "category": "API Patterns",
     "difficulty": "Intermediate",
     "time": "6 min",
@@ -1700,7 +1700,7 @@
   {
     "id": "syncblazing_quickstart",
     "title": "SyncBlazing Quickstart",
-    "description": "Demonstrates SyncBlazing — the fully synchronous Blazing client — for workflows that must run without any async/await in the calling code, such as scripts and synchronous web frameworks.",
+    "description": "Demonstrates SyncBlazing \u2014 the fully synchronous Blazing client \u2014 for workflows that must run without any async/await in the calling code, such as scripts and synchronous web frameworks.",
     "category": "API Patterns",
     "difficulty": "Beginner",
     "time": "6 min",
@@ -1727,7 +1727,7 @@
   {
     "id": "wait_result_sync",
     "title": "wait_result_sync Helper",
-    "description": "Shows how to use wait_result_sync() on a workflow execution handle for blocking result retrieval in synchronous contexts — useful when mixing sync and async code in the same application.",
+    "description": "Shows how to use wait_result_sync() on a workflow execution handle for blocking result retrieval in synchronous contexts \u2014 useful when mixing sync and async code in the same application.",
     "category": "API Patterns",
     "difficulty": "Intermediate",
     "time": "6 min",
@@ -1808,7 +1808,7 @@
   {
     "id": "depth_cross_boundary",
     "title": "Depth Across Boundaries",
-    "description": "Demonstrates a sandboxed step calling a trusted service in the same workflow — a cross-boundary pattern where Pyodide-isolated code accesses a trusted service via the services= injection mechanism.",
+    "description": "Demonstrates a sandboxed step calling a trusted service in the same workflow \u2014 a cross-boundary pattern where Pyodide-isolated code accesses a trusted service via the services= injection mechanism.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -1837,7 +1837,7 @@
   {
     "id": "depth_metrics_api",
     "title": "Depth Metrics API",
-    "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth — uses HTTPX.",
+    "description": "Shows how to query the GET /v1/metrics/depth HTTP endpoint after running a workflow to retrieve operations_scanned and other depth statistics for monitoring step execution depth \u2014 uses HTTPX.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -1866,7 +1866,7 @@
   {
     "id": "depth_statistics_metrics",
     "title": "Depth Statistics Metrics",
-    "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns — uses HTTPX.",
+    "description": "Demonstrates querying depth statistics (max_depth, avg_depth, depth_distribution) from the Blazing metrics API after running workflows to understand step nesting patterns \u2014 uses HTTPX.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -1895,7 +1895,7 @@
   {
     "id": "depth_tracking_basic",
     "title": "Depth Tracking Basics",
-    "description": "Creates a simple parent workflow calling a single child step to demonstrate Blazing's depth tracking — how the system records parent-child relationships between workflow and step executions.",
+    "description": "Creates a simple parent workflow calling a single child step to demonstrate Blazing's depth tracking \u2014 how the system records parent-child relationships between workflow and step executions.",
     "category": "Runtime & Routing",
     "difficulty": "Beginner",
     "time": "6 min",
@@ -1922,7 +1922,7 @@
   {
     "id": "depth_tracking_chain",
     "title": "Depth Tracking Chain",
-    "description": "Builds a chain of three steps where each calls the previous (step_c → step_b → step_a) to demonstrate how Blazing tracks and records multi-level step depth across a call chain.",
+    "description": "Builds a chain of three steps where each calls the previous (step_c \u2192 step_b \u2192 step_a) to demonstrate how Blazing tracks and records multi-level step depth across a call chain.",
     "category": "Runtime & Routing",
     "difficulty": "Intermediate",
     "time": "8 min",
@@ -1949,7 +1949,7 @@
   {
     "id": "executor_routing_mixed",
     "title": "Mixed Executor Routing",
-    "description": "Routes trusted and sandboxed steps to different executors within one workflow — trusted NON-BLOCKING steps run in the main executor while sandboxed NON-BLOCKING steps run in Pyodide isolation.",
+    "description": "Routes trusted and sandboxed steps to different executors within one workflow \u2014 trusted NON-BLOCKING steps run in the main executor while sandboxed NON-BLOCKING steps run in Pyodide isolation.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -2005,7 +2005,7 @@
   {
     "id": "state_machine_loop",
     "title": "State Machine Loop",
-    "description": "Implements a workflow-driven state machine using a while loop — each iteration calls a step that advances the state until a terminal condition is reached, demonstrating looping patterns in Blazing.",
+    "description": "Implements a workflow-driven state machine using a while loop \u2014 each iteration calls a step that advances the state until a terminal condition is reached, demonstrating looping patterns in Blazing.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -2032,7 +2032,7 @@
   {
     "id": "worker_type_isolation",
     "title": "Worker Type Isolation",
-    "description": "Demonstrates behavior differences between trusted and sandboxed NON-BLOCKING workers by running the same input through both and comparing results — trusted steps run in the main process, sandboxed in Pyodide.",
+    "description": "Demonstrates behavior differences between trusted and sandboxed NON-BLOCKING workers by running the same input through both and comparing results \u2014 trusted steps run in the main process, sandboxed in Pyodide.",
     "category": "Runtime & Routing",
     "difficulty": "Advanced",
     "time": "12 min",
@@ -2061,7 +2061,7 @@
   {
     "id": "worker_types_overview",
     "title": "Worker Types Overview",
-    "description": "Runs all four worker type combinations — trusted BLOCKING, trusted NON-BLOCKING, sandboxed BLOCKING, and sandboxed NON-BLOCKING — in one workflow to demonstrate how step_type and sandboxed flags control executor routing.",
+    "description": "Runs all four worker type combinations \u2014 trusted BLOCKING, trusted NON-BLOCKING, sandboxed BLOCKING, and sandboxed NON-BLOCKING \u2014 in one workflow to demonstrate how step_type and sandboxed flags control executor routing.",
     "category": "Runtime & Routing",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -2088,7 +2088,7 @@
   {
     "id": "worker_types_with_services",
     "title": "Worker Types with Services",
-    "description": "One workflow, four worker types — trusted sync (BLOCKING), trusted async (NON_BLOCKING), and two sandboxed async (NON_BLOCKING_SANDBOXED) steps all calling the same MathOpsService, demonstrating that services['Name'] works identically across all executors.",
+    "description": "One workflow, four worker types \u2014 trusted sync (BLOCKING), trusted async (NON_BLOCKING), and two sandboxed async (NON_BLOCKING_SANDBOXED) steps all calling the same MathOpsService, demonstrating that services['Name'] works identically across all executors.",
     "category": "Runtime & Routing",
     "difficulty": "Intermediate",
     "time": "12 min",
@@ -2171,7 +2171,7 @@
   {
     "id": "egress_policy",
     "title": "Egress Policy",
-    "description": "Declare outbound network rules on services — exact hostnames, wildcard subdomains, CIDR blocks, or deny-all — uses HTTPX.",
+    "description": "Declare outbound network rules on services \u2014 exact hostnames, wildcard subdomains, CIDR blocks, or deny-all \u2014 uses HTTPX.",
     "category": "Sandbox & Isolation",
     "difficulty": "Advanced",
     "time": "15 min",
@@ -2229,7 +2229,7 @@
   {
     "id": "isolated_retry",
     "title": "Isolated Execution with Retry",
-    "description": "Demonstrates retry logic around sandboxed workloads using a try/except loop — if the sandboxed step raises an exception, the workflow waits and retries up to three times before propagating the error.",
+    "description": "Demonstrates retry logic around sandboxed workloads using a try/except loop \u2014 if the sandboxed step raises an exception, the workflow waits and retries up to three times before propagating the error.",
     "category": "Sandbox & Isolation",
     "difficulty": "Advanced",
     "time": "10 min",
@@ -2463,7 +2463,7 @@
   {
     "id": "get_endpoint_query",
     "title": "GET Endpoint with Query Params",
-    "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting — demonstrates query param binding for Blazing HTTP endpoints — uses FastAPI, uvicorn.",
+    "description": "Exposes a GET endpoint using @app.endpoint(path='/greet', method='GET') that reads URL query parameters and returns a greeting \u2014 demonstrates query param binding for Blazing HTTP endpoints \u2014 uses FastAPI, uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Beginner",
     "time": "6 min",
@@ -2523,7 +2523,7 @@
   {
     "id": "multiple_methods",
     "title": "Multiple HTTP Methods",
-    "description": "Exposes both GET and POST endpoints in a single Blazing app — a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration — uses uvicorn.",
+    "description": "Exposes both GET and POST endpoints in a single Blazing app \u2014 a GET /status endpoint for health checks and a POST /echo endpoint for request mirroring, demonstrating multi-method endpoint registration \u2014 uses uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "8 min",
@@ -2552,7 +2552,7 @@
   {
     "id": "real_http_endpoints",
     "title": "Real HTTP Endpoints",
-    "description": "Exposes a Blazing workflow as a real HTTP endpoint using @app.endpoint() and create_asgi_app(), serving live HTTP requests via uvicorn — the foundation for production API deployment.",
+    "description": "Exposes a Blazing workflow as a real HTTP endpoint using @app.endpoint() and create_asgi_app(), serving live HTTP requests via uvicorn \u2014 the foundation for production API deployment.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -2641,7 +2641,7 @@
   {
     "id": "streaming_workflow_progress",
     "title": "Streaming Workflow Progress",
-    "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield — uses uvicorn.",
+    "description": "Stream progress updates from a workflow using SSE response_mode=\"stream\".\n\nSource: greenfield \u2014 uses uvicorn.",
     "category": "Web Endpoints Advanced",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -2697,7 +2697,7 @@
   {
     "id": "distributed_dict_queue",
     "title": "Distributed Dict & Queue",
-    "description": "Share state and pass messages between service instances with DictConnector (key-value store) and QueueConnector (async FIFO queue) — coordinating workers across deployments and tenants.",
+    "description": "Share state and pass messages between service instances with DictConnector (key-value store) and QueueConnector (async FIFO queue) \u2014 coordinating workers across deployments and tenants.",
     "category": "Platform Integrations",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -2753,7 +2753,7 @@
   {
     "id": "local_dict_connector",
     "title": "Local Dict Connector",
-    "description": "Uses LocalDictService to persist workflow state in an in-memory key-value store without external dependencies — ideal for local development and testing patterns that will use Redis in production.",
+    "description": "Uses LocalDictService to persist workflow state in an in-memory key-value store without external dependencies \u2014 ideal for local development and testing patterns that will use Redis in production.",
     "category": "Platform Integrations",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -2836,7 +2836,7 @@
   {
     "id": "publish_with_retry",
     "title": "Publish with Retry",
-    "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes — uses HTTPX.",
+    "description": "Wraps app.publish() with exponential backoff retry logic for HTTP 429 (rate limited) responses, demonstrating a resilience pattern for publishing workflows in environments with rate-limited control planes \u2014 uses HTTPX.",
     "category": "Platform Integrations",
     "difficulty": "Intermediate",
     "time": "8 min",
@@ -2921,7 +2921,7 @@
   {
     "id": "service_composition_pipeline",
     "title": "Service Composition Pipeline",
-    "description": "Composes MathService and StringService in a single step to build a two-stage pipeline: compute a product then format it as a labeled string — demonstrates service chaining for multi-step data transformation.",
+    "description": "Composes MathService and StringService in a single step to build a two-stage pipeline: compute a product then format it as a labeled string \u2014 demonstrates service chaining for multi-step data transformation.",
     "category": "Platform Integrations",
     "difficulty": "Intermediate",
     "time": "12 min",
@@ -3002,9 +3002,9 @@
   {
     "id": "deepagents_with_checkpoint",
     "title": "DeepAgents with BlazeCheckpointer",
-    "description": "Run a deepagents (LangGraph-based) agent inside the Pyodide sandbox with multi-turn state persistence via BlazeCheckpointer — build and upload a custom wheel, then use thread_id to resume sessions across independent invocations.",
+    "description": "Run a deepagents (LangGraph-based) agent inside the Pyodide sandbox with multi-turn state persistence via BlazeCheckpointer \u2014 build and upload a custom wheel, then use thread_id to resume sessions across independent invocations.",
     "category": "GPU & Agents",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "30 min",
     "tags": [
       "checkpoint",
@@ -3068,8 +3068,8 @@
   },
   {
     "id": "gpu_pytorch_steps",
-    "title": "GPU PyTorch Steps — A100 + H100 Pipeline",
-    "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow — Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA — uses PyTorch.",
+    "title": "GPU PyTorch Steps \u2014 A100 + H100 Pipeline",
+    "description": "Chain an A100 matrix multiplication step and an H100 neural network inference step in a single workflow \u2014 Blazing routes each step to the matching GPU worker type; in local dev both fall back to Metal (MPS) on Apple Silicon or CUDA on NVIDIA \u2014 uses PyTorch.",
     "category": "GPU & Agents",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3098,9 +3098,9 @@
   {
     "id": "gsd_deepagents_sandbox",
     "title": "GSD Tool Registry in Pyodide Sandbox",
-    "description": "Pass structured GSD-style tool definitions as plain dicts into a Pyodide sandbox and execute list and filter-by-tag operations — demonstrating data-driven tool management without importing the full GSD framework into the sandboxed environment.",
+    "description": "Pass structured GSD-style tool definitions as plain dicts into a Pyodide sandbox and execute list and filter-by-tag operations \u2014 demonstrating data-driven tool management without importing the full GSD framework into the sandboxed environment.",
     "category": "GPU & Agents",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "25 min",
     "tags": [
       "deepagents",
@@ -3133,7 +3133,7 @@
   {
     "id": "langblaze_llm_service",
     "title": "LangBlaze LLM Service",
-    "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps — LLMService on trusted workers proxies API keys so the sandbox never sees them.",
+    "description": "Run LangChain LCEL chains, multi-turn chat, and tool calling from sandboxed Pyodide steps \u2014 LLMService on trusted workers proxies API keys so the sandbox never sees them.",
     "category": "GPU & Agents",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3165,7 +3165,7 @@
   {
     "id": "react_agent_dynamic_code",
     "title": "ReAct Agent as Dynamic Code",
-    "description": "Run a complete LangGraph-style ReAct agent loop as user-submitted dynamic code in the Pyodide sandbox — LLM and tool calls route through trusted-worker services while the agent loop itself runs as signed sandbox code.",
+    "description": "Run a complete LangGraph-style ReAct agent loop as user-submitted dynamic code in the Pyodide sandbox \u2014 LLM and tool calls route through trusted-worker services while the agent loop itself runs as signed sandbox code.",
     "category": "GPU & Agents",
     "difficulty": "Advanced",
     "time": "25 min",
@@ -3455,7 +3455,7 @@
   {
     "id": "secrets_via_env",
     "title": "Secrets via Environment",
-    "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield — demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
+    "description": "Read secrets from environment variables at runtime.\n\nSource: greenfield \u2014 demonstrates Blazing Flow's distributed step execution model with typed inputs and structured outputs.",
     "category": "Deployment & Packaging",
     "difficulty": "Beginner",
     "time": "6 min",
@@ -3482,7 +3482,7 @@
   {
     "id": "serialize_mode",
     "title": "Serialize Loading Strategy",
-    "description": "Use loading_strategy='serialize' to skip wheel builds — fastest iteration mode for local development.",
+    "description": "Use loading_strategy='serialize' to skip wheel builds \u2014 fastest iteration mode for local development.",
     "category": "Deployment & Packaging",
     "difficulty": "Intermediate",
     "time": "10 min",
@@ -3509,7 +3509,7 @@
   {
     "id": "hackernews_slackbot",
     "title": "Hacker News Slackbot",
-    "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack — demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control — uses HTTPX.",
+    "description": "Fetch top Hacker News stories on a schedule and post filtered results to Slack \u2014 demonstrates scheduled workflows, concurrent HTTP requests with asyncio.Semaphore, and SlackConnector egress control \u2014 uses HTTPX.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3538,7 +3538,7 @@
   {
     "id": "sql_explorer",
     "title": "SQL Explorer",
-    "description": "Ad-hoc SQL analytics over SQLite, CSV, and Parquet via HTTP endpoints backed by DuckDB — read-only mode with SQL injection protection and 30-second query timeouts.",
+    "description": "Ad-hoc SQL analytics over SQLite, CSV, and Parquet via HTTP endpoints backed by DuckDB \u2014 read-only mode with SQL injection protection and 30-second query timeouts.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3567,7 +3567,7 @@
   {
     "id": "rag_pdf_chatbot",
     "title": "RAG PDF Chatbot",
-    "description": "Retrieval-augmented generation over PDF documents — extract text with pdfplumber, chunk with overlap, embed with OpenAI, store in ChromaDB, and answer questions with GPT-4o-mini.",
+    "description": "Retrieval-augmented generation over PDF documents \u2014 extract text with pdfplumber, chunk with overlap, embed with OpenAI, store in ChromaDB, and answer questions with GPT-4o-mini.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3600,7 +3600,7 @@
   {
     "id": "ocr_job_queue",
     "title": "OCR Job Queue",
-    "description": "Asynchronous OCR pipeline with UUID-based job IDs, Redis state persistence, and OpenAI Vision API — demonstrates the submit-poll pattern with a pending/processing/completed state machine.",
+    "description": "Asynchronous OCR pipeline with UUID-based job IDs, Redis state persistence, and OpenAI Vision API \u2014 demonstrates the submit-poll pattern with a pending/processing/completed state machine.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3661,7 +3661,7 @@
   {
     "id": "sheets_mongo_sync",
     "title": "Google Sheets to MongoDB Sync",
-    "description": "Bidirectional sync between Google Sheets and MongoDB with last-write-wins conflict resolution — demonstrates timestamp-based conflict handling and idempotent upserts.",
+    "description": "Bidirectional sync between Google Sheets and MongoDB with last-write-wins conflict resolution \u2014 demonstrates timestamp-based conflict handling and idempotent upserts.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3688,7 +3688,7 @@
   {
     "id": "document_embedding_pipeline",
     "title": "Document Embedding Pipeline",
-    "description": "High-throughput document embedding pipeline — S3 batch download, tiktoken chunking with overlap, sentence-transformers or OpenAI embeddings, MongoDB vector storage, and checkpoint/resume for fault tolerance.",
+    "description": "High-throughput document embedding pipeline \u2014 S3 batch download, tiktoken chunking with overlap, sentence-transformers or OpenAI embeddings, MongoDB vector storage, and checkpoint/resume for fault tolerance.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3724,7 +3724,7 @@
   {
     "id": "satellite_image_vectors",
     "title": "Satellite Image Vectors",
-    "description": "Geospatial ML pipeline — read GeoTIFF with rasterio, extract 256x256 tiles, generate Clay or sentence-transformer embeddings, and index with MongoDB 2dsphere for geospatial search.",
+    "description": "Geospatial ML pipeline \u2014 read GeoTIFF with rasterio, extract 256x256 tiles, generate Clay or sentence-transformer embeddings, and index with MongoDB 2dsphere for geospatial search.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3758,7 +3758,7 @@
   {
     "id": "order_state_machine",
     "title": "Order Processing State Machine",
-    "description": "State machine where each transition runs as a sandboxed step calling a trusted OrderService — PENDING through PAYMENT_CHECK, INVENTORY_CHECK, APPROVED, and COMPLETED with rejection paths.",
+    "description": "State machine where each transition runs as a sandboxed step calling a trusted OrderService \u2014 PENDING through PAYMENT_CHECK, INVENTORY_CHECK, APPROVED, and COMPLETED with rejection paths.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3785,7 +3785,7 @@
   {
     "id": "podcast_transcription",
     "title": "Podcast Transcription",
-    "description": "Parallel audio transcription pipeline using FFmpeg for chunking and OpenAI Whisper API — handles the 25MB file size limit automatically with asyncio.Semaphore throttling.",
+    "description": "Parallel audio transcription pipeline using FFmpeg for chunking and OpenAI Whisper API \u2014 handles the 25MB file size limit automatically with asyncio.Semaphore throttling.",
     "category": "Real World Applications",
     "difficulty": "Advanced",
     "time": "20 min",
@@ -3817,9 +3817,9 @@
   {
     "id": "coding_agent_filesystem",
     "title": "Coding Agent with BlazeFileSystem",
-    "description": "A deepagents coding agent in the Pyodide sandbox performs real file I/O through BlazeFileSystem proxied to a trusted StorageService — init a git repo, write and verify Python files, then persist agent state via BlazeCheckpointer across workflow phases.",
+    "description": "A deepagents coding agent in the Pyodide sandbox performs real file I/O through BlazeFileSystem proxied to a trusted StorageService \u2014 init a git repo, write and verify Python files, then persist agent state via BlazeCheckpointer across workflow phases.",
     "category": "Real World Applications",
-    "difficulty": "Expert",
+    "difficulty": "Advanced",
     "time": "35 min",
     "tags": [
       "checkpoint",
@@ -3853,7 +3853,7 @@
   {
     "id": "secrets_management",
     "title": "Secrets Management with SecretsConnector",
-    "description": "Store and retrieve encrypted secrets through trusted services — DatabaseService fetches DATABASE_URL and credentials; APIClientService fetches API_KEY and API_SECRET. Sandboxed steps cannot access secrets directly, enforcing the same security model as database connectors.",
+    "description": "Store and retrieve encrypted secrets through trusted services \u2014 DatabaseService fetches DATABASE_URL and credentials; APIClientService fetches API_KEY and API_SECRET. Sandboxed steps cannot access secrets directly, enforcing the same security model as database connectors.",
     "category": "Connectors",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -3880,7 +3880,7 @@
   {
     "id": "connectors_volume_file_storage",
     "title": "Volume File Storage with VolumeConnector",
-    "description": "Read and write files through a trusted FileProcessorService injected with VolumeConnector — sandboxed steps call service methods while only the trusted service has direct volume access, enforcing the connector security model.",
+    "description": "Read and write files through a trusted FileProcessorService injected with VolumeConnector \u2014 sandboxed steps call service methods while only the trusted service has direct volume access, enforcing the connector security model.",
     "category": "Connectors",
     "difficulty": "Intermediate",
     "time": "15 min",
@@ -3908,7 +3908,7 @@
     "id": "akash-goosebin",
     "title": "goosebin",
     "description": "goosebin deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -3932,7 +3932,7 @@
     "id": "akash-gpt4all",
     "title": "gpt4all",
     "description": "gpt4all deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -3956,7 +3956,7 @@
     "id": "akash-minio",
     "title": "minio",
     "description": "minio deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -3980,7 +3980,7 @@
     "id": "akash-postgres-restore",
     "title": "postgres-restore",
     "description": "postgres-restore deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4004,7 +4004,7 @@
     "id": "akash-rainbowminer-c12",
     "title": "rainbowminer-c12",
     "description": "rainbowminer-c12 deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4028,7 +4028,7 @@
     "id": "akash-satisfactory-server",
     "title": "satisfactory-server",
     "description": "satisfactory-server deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4052,7 +4052,7 @@
     "id": "akash-sovryn-node",
     "title": "sovryn-node",
     "description": "sovryn-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4076,7 +4076,7 @@
     "id": "akash-test",
     "title": "test",
     "description": "test deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4100,7 +4100,7 @@
     "id": "akash-valheim",
     "title": "valheim",
     "description": "valheim deployed on Akash Network via Blazing Core.",
-    "category": "Akash —  Uncategorized",
+    "category": "Akash \u2014  Uncategorized",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4124,7 +4124,7 @@
     "id": "akash-elizaos-ai_agents",
     "title": "Elizaos-ai_Agents",
     "description": "Elizaos-ai_Agents deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4148,7 +4148,7 @@
     "id": "akash-venice-elizaos",
     "title": "Venice-ElizaOS",
     "description": "Venice-ElizaOS deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4172,7 +4172,7 @@
     "id": "akash-agent-zero",
     "title": "agent-zero",
     "description": "agent-zero deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4196,7 +4196,7 @@
     "id": "akash-alpaca-cpp",
     "title": "alpaca-cpp",
     "description": "alpaca-cpp deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4220,7 +4220,7 @@
     "id": "akash-auto-gpt",
     "title": "auto-gpt",
     "description": "auto-gpt deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4244,7 +4244,7 @@
     "id": "akash-babyagi",
     "title": "babyagi",
     "description": "babyagi deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4268,7 +4268,7 @@
     "id": "akash-babyagi-ui",
     "title": "babyagi-ui",
     "description": "babyagi-ui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4292,7 +4292,7 @@
     "id": "akash-bark-small",
     "title": "bark-small",
     "description": "bark-small deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4316,7 +4316,7 @@
     "id": "akash-botpress",
     "title": "botpress",
     "description": "botpress deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4340,7 +4340,7 @@
     "id": "akash-chatchat",
     "title": "chatchat",
     "description": "chatchat deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4364,7 +4364,7 @@
     "id": "akash-chromadb",
     "title": "chromadb",
     "description": "chromadb deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4388,7 +4388,7 @@
     "id": "akash-daila",
     "title": "daila",
     "description": "daila deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4412,7 +4412,7 @@
     "id": "akash-faster-whisper-cpu",
     "title": "faster-whisper-cpu",
     "description": "faster-whisper-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4436,7 +4436,7 @@
     "id": "akash-invoke-ai-cpu",
     "title": "invoke-ai-cpu",
     "description": "invoke-ai-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4460,7 +4460,7 @@
     "id": "akash-langflow",
     "title": "langflow",
     "description": "langflow deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4484,7 +4484,7 @@
     "id": "akash-morpheus-lumerin-node",
     "title": "morpheus-lumerin-node",
     "description": "morpheus-lumerin-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4508,7 +4508,7 @@
     "id": "akash-ollama-cpu",
     "title": "ollama-cpu",
     "description": "ollama-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4532,7 +4532,7 @@
     "id": "akash-open-webui-cpu",
     "title": "open-webui-cpu",
     "description": "open-webui-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4556,7 +4556,7 @@
     "id": "akash-openclaw",
     "title": "openclaw",
     "description": "openclaw deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4580,7 +4580,7 @@
     "id": "akash-privategpt-cpu",
     "title": "privategpt-cpu",
     "description": "privategpt-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4604,7 +4604,7 @@
     "id": "akash-serge-cpu",
     "title": "serge-cpu",
     "description": "serge-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4628,7 +4628,7 @@
     "id": "akash-tgpt",
     "title": "tgpt",
     "description": "tgpt deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4652,7 +4652,7 @@
     "id": "akash-weaviate",
     "title": "weaviate",
     "description": "weaviate deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4676,7 +4676,7 @@
     "id": "akash-whisper-asr-cpu",
     "title": "whisper-asr-cpu",
     "description": "whisper-asr-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4700,7 +4700,7 @@
     "id": "akash-whisper-gui-cpu",
     "title": "whisper-gui-cpu",
     "description": "whisper-gui-cpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Cpu",
+    "category": "Akash \u2014 Ai Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4724,7 +4724,7 @@
     "id": "akash-ai-image-app",
     "title": "AI-Image-App",
     "description": "AI-Image-App deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4748,7 +4748,7 @@
     "id": "akash-automatic1111",
     "title": "AUTOMATIC1111",
     "description": "AUTOMATIC1111 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4772,7 +4772,7 @@
     "id": "akash-ace-music-ai",
     "title": "Ace-Music-AI",
     "description": "Ace-Music-AI deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4796,7 +4796,7 @@
     "id": "akash-chatglm-6b",
     "title": "ChatGLM-6B",
     "description": "ChatGLM-6B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4820,7 +4820,7 @@
     "id": "akash-deepseek-janus",
     "title": "DeepSeek-Janus",
     "description": "DeepSeek-Janus deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4844,7 +4844,7 @@
     "id": "akash-deepseek-r1",
     "title": "DeepSeek-R1",
     "description": "DeepSeek-R1 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4868,7 +4868,7 @@
     "id": "akash-deepseek-r1-0528",
     "title": "DeepSeek-R1-0528",
     "description": "DeepSeek-R1-0528 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4892,7 +4892,7 @@
     "id": "akash-deepseek-r1-distill-llama-70b",
     "title": "DeepSeek-R1-Distill-Llama-70B",
     "description": "DeepSeek-R1-Distill-Llama-70B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4916,7 +4916,7 @@
     "id": "akash-deepseek-r1-distill-llama-8b",
     "title": "DeepSeek-R1-Distill-Llama-8B",
     "description": "DeepSeek-R1-Distill-Llama-8B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4940,7 +4940,7 @@
     "id": "akash-deepseek-r1-distill-qwen-1.5b",
     "title": "DeepSeek-R1-Distill-Qwen-1.5B",
     "description": "DeepSeek-R1-Distill-Qwen-1.5B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4964,7 +4964,7 @@
     "id": "akash-deepseek-r1-distill-qwen-14b",
     "title": "DeepSeek-R1-Distill-Qwen-14B",
     "description": "DeepSeek-R1-Distill-Qwen-14B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -4988,7 +4988,7 @@
     "id": "akash-deepseek-r1-distill-qwen-32b",
     "title": "DeepSeek-R1-Distill-Qwen-32B",
     "description": "DeepSeek-R1-Distill-Qwen-32B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5012,7 +5012,7 @@
     "id": "akash-deepseek-r1-distill-qwen-7b",
     "title": "DeepSeek-R1-Distill-Qwen-7B",
     "description": "DeepSeek-R1-Distill-Qwen-7B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5036,7 +5036,7 @@
     "id": "akash-deepseek-v3.1",
     "title": "DeepSeek-V3.1",
     "description": "DeepSeek-V3.1 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5060,7 +5060,7 @@
     "id": "akash-flock-training-node",
     "title": "FLock-training-node",
     "description": "FLock-training-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5084,7 +5084,7 @@
     "id": "akash-flock-validator",
     "title": "FLock-validator",
     "description": "FLock-validator deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5108,7 +5108,7 @@
     "id": "akash-falcon-7b",
     "title": "Falcon-7B",
     "description": "Falcon-7B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5132,7 +5132,7 @@
     "id": "akash-fastchat",
     "title": "FastChat",
     "description": "FastChat deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5156,7 +5156,7 @@
     "id": "akash-hermes-4-405b-fp8",
     "title": "Hermes-4-405B-FP8",
     "description": "Hermes-4-405B-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5180,7 +5180,7 @@
     "id": "akash-kimi-k2-thinking",
     "title": "Kimi-K2-Thinking",
     "description": "Kimi-K2-Thinking deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5204,7 +5204,7 @@
     "id": "akash-llama-2-70b",
     "title": "Llama-2-70B",
     "description": "Llama-2-70B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5228,7 +5228,7 @@
     "id": "akash-llama-3-70b",
     "title": "Llama-3-70B",
     "description": "Llama-3-70B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5252,7 +5252,7 @@
     "id": "akash-llama-3-8b",
     "title": "Llama-3-8B",
     "description": "Llama-3-8B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5276,7 +5276,7 @@
     "id": "akash-llama-3-groq-8b-tool-use",
     "title": "Llama-3-Groq-8B-Tool-Use",
     "description": "Llama-3-Groq-8B-Tool-Use deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5300,7 +5300,7 @@
     "id": "akash-llama-3.1-405b-awq-int4",
     "title": "Llama-3.1-405B-AWQ-INT4",
     "description": "Llama-3.1-405B-AWQ-INT4 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5324,7 +5324,7 @@
     "id": "akash-llama-3.1-405b-bf16",
     "title": "Llama-3.1-405B-BF16",
     "description": "Llama-3.1-405B-BF16 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5348,7 +5348,7 @@
     "id": "akash-llama-3.1-405b-fp8",
     "title": "Llama-3.1-405B-FP8",
     "description": "Llama-3.1-405B-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5372,7 +5372,7 @@
     "id": "akash-llama-3.1-8b",
     "title": "Llama-3.1-8B",
     "description": "Llama-3.1-8B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5396,7 +5396,7 @@
     "id": "akash-llama-3.2-11b-vision-instruct",
     "title": "Llama-3.2-11B-Vision-Instruct",
     "description": "Llama-3.2-11B-Vision-Instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5420,7 +5420,7 @@
     "id": "akash-llama-3.2-3b",
     "title": "Llama-3.2-3B",
     "description": "Llama-3.2-3B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5444,7 +5444,7 @@
     "id": "akash-llama-3.2-90b-vision-instruct",
     "title": "Llama-3.2-90B-Vision-Instruct",
     "description": "Llama-3.2-90B-Vision-Instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5468,7 +5468,7 @@
     "id": "akash-llama-3.3-70b",
     "title": "Llama-3.3-70B",
     "description": "Llama-3.3-70B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5492,7 +5492,7 @@
     "id": "akash-llama-3_3-nemotron-super-49b-v1",
     "title": "Llama-3_3-Nemotron-Super-49B-v1",
     "description": "Llama-3_3-Nemotron-Super-49B-v1 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5516,7 +5516,7 @@
     "id": "akash-llama-4-maverick-17b-128e-instruct-fp8",
     "title": "Llama-4-Maverick-17B-128E-Instruct-FP8",
     "description": "Llama-4-Maverick-17B-128E-Instruct-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5540,7 +5540,7 @@
     "id": "akash-llama-4-scout-17b-16e-instruct",
     "title": "Llama-4-Scout-17B-16E-Instruct",
     "description": "Llama-4-Scout-17B-16E-Instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5564,7 +5564,7 @@
     "id": "akash-mistral-7b",
     "title": "Mistral-7B",
     "description": "Mistral-7B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5588,7 +5588,7 @@
     "id": "akash-pluralis-node",
     "title": "Pluralis-Node",
     "description": "Pluralis-Node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5612,7 +5612,7 @@
     "id": "akash-qwq-32b",
     "title": "QwQ-32B",
     "description": "QwQ-32B deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5636,7 +5636,7 @@
     "id": "akash-qwen3-235b-a22b-fp8",
     "title": "Qwen3-235B-A22B-FP8",
     "description": "Qwen3-235B-A22B-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5660,7 +5660,7 @@
     "id": "akash-qwen3-235b-a22b-instruct-2507",
     "title": "Qwen3-235B-A22B-Instruct-2507",
     "description": "Qwen3-235B-A22B-Instruct-2507 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5684,7 +5684,7 @@
     "id": "akash-qwen3-235b-a22b-instruct-2507-fp8",
     "title": "Qwen3-235B-A22B-Instruct-2507-FP8",
     "description": "Qwen3-235B-A22B-Instruct-2507-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5708,7 +5708,7 @@
     "id": "akash-qwen3-235b-a22b-thinking-2507",
     "title": "Qwen3-235B-A22B-Thinking-2507",
     "description": "Qwen3-235B-A22B-Thinking-2507 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5732,7 +5732,7 @@
     "id": "akash-qwen3-235b-a22b-thinking-2507-fp8",
     "title": "Qwen3-235B-A22B-Thinking-2507-FP8",
     "description": "Qwen3-235B-A22B-Thinking-2507-FP8 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5756,7 +5756,7 @@
     "id": "akash-qwen3-coder-480b-a35b-instruct",
     "title": "Qwen3-Coder-480B-A35B-Instruct",
     "description": "Qwen3-Coder-480B-A35B-Instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5780,7 +5780,7 @@
     "id": "akash-qwen3-next-80b-a3b-instruct",
     "title": "Qwen3-Next-80B-A3B-Instruct",
     "description": "Qwen3-Next-80B-A3B-Instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5804,7 +5804,7 @@
     "id": "akash-stablestudio",
     "title": "StableStudio",
     "description": "StableStudio deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5828,7 +5828,7 @@
     "id": "akash-tts",
     "title": "TTS",
     "description": "TTS deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5852,7 +5852,7 @@
     "id": "akash-xlm-roberta",
     "title": "XLM-RoBERTa",
     "description": "XLM-RoBERTa deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5876,7 +5876,7 @@
     "id": "akash-axolotlai",
     "title": "axolotlai",
     "description": "axolotlai deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5900,7 +5900,7 @@
     "id": "akash-bert",
     "title": "bert",
     "description": "bert deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5924,7 +5924,7 @@
     "id": "akash-bert-sentiment-analysis",
     "title": "bert-sentiment-analysis",
     "description": "bert-sentiment-analysis deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5948,7 +5948,7 @@
     "id": "akash-comfyui",
     "title": "comfyui",
     "description": "comfyui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5972,7 +5972,7 @@
     "id": "akash-dolly-v2-12b",
     "title": "dolly-v2-12b",
     "description": "dolly-v2-12b deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -5996,7 +5996,7 @@
     "id": "akash-dria",
     "title": "dria",
     "description": "dria deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6020,7 +6020,7 @@
     "id": "akash-faster-whisper-gpu",
     "title": "faster-whisper-gpu",
     "description": "faster-whisper-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6044,7 +6044,7 @@
     "id": "akash-flan-t5-xxl",
     "title": "flan-t5-xxl",
     "description": "flan-t5-xxl deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6068,7 +6068,7 @@
     "id": "akash-gensyn-rl-swarm",
     "title": "gensyn-rl-swarm",
     "description": "gensyn-rl-swarm deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6092,7 +6092,7 @@
     "id": "akash-gpt-neo",
     "title": "gpt-neo",
     "description": "gpt-neo deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6116,7 +6116,7 @@
     "id": "akash-gpustack",
     "title": "gpustack",
     "description": "gpustack deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6140,7 +6140,7 @@
     "id": "akash-gpustack-worker",
     "title": "gpustack-worker",
     "description": "gpustack-worker deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6164,7 +6164,7 @@
     "id": "akash-grok",
     "title": "grok",
     "description": "grok deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6188,7 +6188,7 @@
     "id": "akash-invoke-ai-gpu",
     "title": "invoke-ai-gpu",
     "description": "invoke-ai-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6212,7 +6212,7 @@
     "id": "akash-llama-factory",
     "title": "llama-factory",
     "description": "llama-factory deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6236,7 +6236,7 @@
     "id": "akash-ollama-gpu",
     "title": "ollama-gpu",
     "description": "ollama-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6260,7 +6260,7 @@
     "id": "akash-open-gpt",
     "title": "open-gpt",
     "description": "open-gpt deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6284,7 +6284,7 @@
     "id": "akash-open-webui-gpu",
     "title": "open-webui-gpu",
     "description": "open-webui-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6308,7 +6308,7 @@
     "id": "akash-openai-gpt-oss-120b",
     "title": "openai-gpt-oss-120b",
     "description": "openai-gpt-oss-120b deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6332,7 +6332,7 @@
     "id": "akash-privategpt-gpu",
     "title": "privategpt-gpu",
     "description": "privategpt-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6356,7 +6356,7 @@
     "id": "akash-redpajama-incite-7b-instruct",
     "title": "redpajama-incite-7b-instruct",
     "description": "redpajama-incite-7b-instruct deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6380,7 +6380,7 @@
     "id": "akash-semantra",
     "title": "semantra",
     "description": "semantra deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6404,7 +6404,7 @@
     "id": "akash-serge-gpu",
     "title": "serge-gpu",
     "description": "serge-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6428,7 +6428,7 @@
     "id": "akash-stable-diffusion-ui",
     "title": "stable-diffusion-ui",
     "description": "stable-diffusion-ui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6452,7 +6452,7 @@
     "id": "akash-stable-diffusion-webui",
     "title": "stable-diffusion-webui",
     "description": "stable-diffusion-webui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6476,7 +6476,7 @@
     "id": "akash-text-generation-webui",
     "title": "text-generation-webui",
     "description": "text-generation-webui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6500,7 +6500,7 @@
     "id": "akash-unsloth-ai",
     "title": "unsloth-ai",
     "description": "unsloth-ai deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6524,7 +6524,7 @@
     "id": "akash-whisper-asr-gpu",
     "title": "whisper-asr-gpu",
     "description": "whisper-asr-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6548,7 +6548,7 @@
     "id": "akash-whisper-gui-gpu",
     "title": "whisper-gui-gpu",
     "description": "whisper-gui-gpu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Ai Gpu",
+    "category": "Akash \u2014 Ai Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6572,7 +6572,7 @@
     "id": "akash-fast",
     "title": "fast",
     "description": "fast deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6596,7 +6596,7 @@
     "id": "akash-fio",
     "title": "fio",
     "description": "fio deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6620,7 +6620,7 @@
     "id": "akash-geekbench",
     "title": "geekbench",
     "description": "geekbench deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6644,7 +6644,7 @@
     "id": "akash-iperf3",
     "title": "iperf3",
     "description": "iperf3 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6668,7 +6668,7 @@
     "id": "akash-librespeed",
     "title": "librespeed",
     "description": "librespeed deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6692,7 +6692,7 @@
     "id": "akash-monkeytest",
     "title": "monkeytest",
     "description": "monkeytest deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6716,7 +6716,7 @@
     "id": "akash-openspeedtest",
     "title": "openspeedtest",
     "description": "openspeedtest deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6740,7 +6740,7 @@
     "id": "akash-persistent-storage-performance-testing",
     "title": "persistent-storage-performance-testing",
     "description": "persistent-storage-performance-testing deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6764,7 +6764,7 @@
     "id": "akash-phoronix",
     "title": "phoronix",
     "description": "phoronix deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6788,7 +6788,7 @@
     "id": "akash-serverbench",
     "title": "serverbench",
     "description": "serverbench deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6812,7 +6812,7 @@
     "id": "akash-speedtest-cli",
     "title": "speedtest-cli",
     "description": "speedtest-cli deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6836,7 +6836,7 @@
     "id": "akash-speedtest-tracker",
     "title": "speedtest-tracker",
     "description": "speedtest-tracker deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Benchmarking",
+    "category": "Akash \u2014 Benchmarking",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6860,7 +6860,7 @@
     "id": "akash-ethereum_2.0",
     "title": "Ethereum_2.0",
     "description": "Ethereum_2.0 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6884,7 +6884,7 @@
     "id": "akash-kadena",
     "title": "Kadena",
     "description": "Kadena deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6908,7 +6908,7 @@
     "id": "akash-avalanche",
     "title": "avalanche",
     "description": "avalanche deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6932,7 +6932,7 @@
     "id": "akash-bitcoin",
     "title": "bitcoin",
     "description": "bitcoin deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6956,7 +6956,7 @@
     "id": "akash-bitcoin-knots-mempool-ui",
     "title": "bitcoin-knots-mempool-ui",
     "description": "bitcoin-knots-mempool-ui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -6980,7 +6980,7 @@
     "id": "akash-bitcoincashnode",
     "title": "bitcoincashnode",
     "description": "bitcoincashnode deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7004,7 +7004,7 @@
     "id": "akash-centrifuge",
     "title": "centrifuge",
     "description": "centrifuge deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7028,7 +7028,7 @@
     "id": "akash-concordium",
     "title": "concordium",
     "description": "concordium deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7052,7 +7052,7 @@
     "id": "akash-dcrpulse",
     "title": "dcrpulse",
     "description": "dcrpulse deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7076,7 +7076,7 @@
     "id": "akash-fuse-network-node",
     "title": "fuse-network-node",
     "description": "fuse-network-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7100,7 +7100,7 @@
     "id": "akash-handshake",
     "title": "handshake",
     "description": "handshake deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7124,7 +7124,7 @@
     "id": "akash-injective",
     "title": "injective",
     "description": "injective deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7148,7 +7148,7 @@
     "id": "akash-juno",
     "title": "juno",
     "description": "juno deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7172,7 +7172,7 @@
     "id": "akash-metal-validator",
     "title": "metal-validator",
     "description": "metal-validator deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7196,7 +7196,7 @@
     "id": "akash-near",
     "title": "near",
     "description": "near deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7220,7 +7220,7 @@
     "id": "akash-polkadot",
     "title": "polkadot",
     "description": "polkadot deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7244,7 +7244,7 @@
     "id": "akash-prysm-beacon",
     "title": "prysm-beacon",
     "description": "prysm-beacon deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7268,7 +7268,7 @@
     "id": "akash-substrate-node",
     "title": "substrate-node",
     "description": "substrate-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7292,7 +7292,7 @@
     "id": "akash-vidulum",
     "title": "vidulum",
     "description": "vidulum deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7316,7 +7316,7 @@
     "id": "akash-witnesschain-watchtower",
     "title": "witnesschain-watchtower",
     "description": "witnesschain-watchtower deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7340,7 +7340,7 @@
     "id": "akash-zcash-zcashd",
     "title": "zcash-zcashd",
     "description": "zcash-zcashd deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7364,7 +7364,7 @@
     "id": "akash-zcash-zebra",
     "title": "zcash-zebra",
     "description": "zcash-zebra deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blockchain",
+    "category": "Akash \u2014 Blockchain",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7388,7 +7388,7 @@
     "id": "akash-grav",
     "title": "Grav",
     "description": "Grav deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7412,7 +7412,7 @@
     "id": "akash-confluence",
     "title": "confluence",
     "description": "confluence deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7436,7 +7436,7 @@
     "id": "akash-drupal",
     "title": "drupal",
     "description": "drupal deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7460,7 +7460,7 @@
     "id": "akash-ghost",
     "title": "ghost",
     "description": "ghost deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7484,7 +7484,7 @@
     "id": "akash-ghost-filebase-backup",
     "title": "ghost-filebase-backup",
     "description": "ghost-filebase-backup deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7508,7 +7508,7 @@
     "id": "akash-nitropage",
     "title": "nitropage",
     "description": "nitropage deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7532,7 +7532,7 @@
     "id": "akash-steemcn",
     "title": "steemcn",
     "description": "steemcn deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7556,7 +7556,7 @@
     "id": "akash-wikijs",
     "title": "wikijs",
     "description": "wikijs deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7580,7 +7580,7 @@
     "id": "akash-wordpress",
     "title": "wordpress",
     "description": "wordpress deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Blogging",
+    "category": "Akash \u2014 Blogging",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7604,7 +7604,7 @@
     "id": "akash-big-dipper",
     "title": "big-dipper",
     "description": "big-dipper deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Built With Cosmos Sdk",
+    "category": "Akash \u2014 Built With Cosmos Sdk",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7631,7 +7631,7 @@
     "id": "akash-rair-dapp",
     "title": "RAIR-Dapp",
     "description": "RAIR-Dapp deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Business",
+    "category": "Akash \u2014 Business",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7655,7 +7655,7 @@
     "id": "akash-n8n",
     "title": "n8n",
     "description": "n8n deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Business",
+    "category": "Akash \u2014 Business",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7679,7 +7679,7 @@
     "id": "akash-odoo",
     "title": "odoo",
     "description": "odoo deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Business",
+    "category": "Akash \u2014 Business",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7703,7 +7703,7 @@
     "id": "akash-mattermost",
     "title": "mattermost",
     "description": "mattermost deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Chat",
+    "category": "Akash \u2014 Chat",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7727,7 +7727,7 @@
     "id": "akash-status",
     "title": "status",
     "description": "status deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Chat",
+    "category": "Akash \u2014 Chat",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7751,7 +7751,7 @@
     "id": "akash-automatic-deployment-cicd-template",
     "title": "automatic-deployment-CICD-template",
     "description": "automatic-deployment-CICD-template deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7776,7 +7776,7 @@
     "id": "akash-azure-devops-agent",
     "title": "azure-devops-agent",
     "description": "azure-devops-agent deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7801,7 +7801,7 @@
     "id": "akash-bitbucket",
     "title": "bitbucket",
     "description": "bitbucket deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7826,7 +7826,7 @@
     "id": "akash-ghrunner",
     "title": "ghrunner",
     "description": "ghrunner deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7848,10 +7848,40 @@
     "href": "/docs/examples/akash-ghrunner"
   },
   {
+    "id": "akash-ghrunner-high-performance",
+    "title": "GitHub CI Runner \u2014 32-Core / 128 GB on DFC",
+    "description": "High-performance self-hosted GitHub Actions runner on DFC with 32 vCPUs and 128 GB RAM \u2014 sized for monorepo builds, parallel test suites, and heavy compilation workloads. Uses Podman for rootless container builds (no privileged mode required). Runs ephemeral (fresh container per job) with 100 GB storage.",
+    "category": "Akash \u2014 Cicd Devops",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "akash",
+      "blazing-core",
+      "cicd",
+      "devops",
+      "high-performance",
+      "github-actions"
+    ],
+    "technologies": [
+      "GitHub Actions",
+      "Docker"
+    ],
+    "products": [
+      "blazing-core"
+    ],
+    "primaryProduct": "blazing-core",
+    "files": {
+      "blazing-core": "core.yaml"
+    },
+    "folder_path": "akash/cicd-devops/ghrunner-high-performance",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/akash/cicd-devops/ghrunner-high-performance",
+    "href": "/docs/examples/akash-ghrunner-high-performance"
+  },
+  {
     "id": "akash-gitea",
     "title": "gitea",
     "description": "gitea deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7876,7 +7906,7 @@
     "id": "akash-gogs",
     "title": "gogs",
     "description": "gogs deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7901,7 +7931,7 @@
     "id": "akash-jenkins",
     "title": "jenkins",
     "description": "jenkins deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7926,7 +7956,7 @@
     "id": "akash-micro-services-example",
     "title": "micro-services-example",
     "description": "micro-services-example deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7951,7 +7981,7 @@
     "id": "akash-radicle",
     "title": "radicle",
     "description": "radicle deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Cicd Devops",
+    "category": "Akash \u2014 Cicd Devops",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -7976,7 +8006,7 @@
     "id": "akash-redash",
     "title": "Redash",
     "description": "Redash deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Data Visualization",
+    "category": "Akash \u2014 Data Visualization",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8001,7 +8031,7 @@
     "id": "akash-metabase",
     "title": "metabase",
     "description": "metabase deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Data Visualization",
+    "category": "Akash \u2014 Data Visualization",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8026,7 +8056,7 @@
     "id": "akash-ufo-data-vis",
     "title": "ufo-data-vis",
     "description": "ufo-data-vis deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Data Visualization",
+    "category": "Akash \u2014 Data Visualization",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8051,7 +8081,7 @@
     "id": "akash-cockroachdb",
     "title": "CockroachDB",
     "description": "CockroachDB deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8077,7 +8107,7 @@
     "id": "akash-mysql",
     "title": "MySQL",
     "description": "MySQL deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8103,7 +8133,7 @@
     "id": "akash-surrealdb",
     "title": "SurrealDB",
     "description": "SurrealDB deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8129,7 +8159,7 @@
     "id": "akash-adminer",
     "title": "adminer",
     "description": "adminer deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8155,7 +8185,7 @@
     "id": "akash-couchdb",
     "title": "couchdb",
     "description": "couchdb deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8181,7 +8211,7 @@
     "id": "akash-defradb",
     "title": "defradb",
     "description": "defradb deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8207,7 +8237,7 @@
     "id": "akash-influxdb",
     "title": "influxdb",
     "description": "influxdb deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8233,7 +8263,7 @@
     "id": "akash-json-server",
     "title": "json-server",
     "description": "json-server deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8259,7 +8289,7 @@
     "id": "akash-mongodb",
     "title": "mongoDB",
     "description": "mongoDB deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8285,7 +8315,7 @@
     "id": "akash-neo4j",
     "title": "neo4j",
     "description": "neo4j deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8311,7 +8341,7 @@
     "id": "akash-pgadmin4",
     "title": "pgadmin4",
     "description": "pgadmin4 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8337,7 +8367,7 @@
     "id": "akash-postgres",
     "title": "postgres",
     "description": "postgres deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8363,7 +8393,7 @@
     "id": "akash-qdrant",
     "title": "qdrant",
     "description": "qdrant deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8389,7 +8419,7 @@
     "id": "akash-redis",
     "title": "redis",
     "description": "redis deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8415,7 +8445,7 @@
     "id": "akash-supabase",
     "title": "supabase",
     "description": "supabase deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Databases And Administration",
+    "category": "Akash \u2014 Databases And Administration",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8441,7 +8471,7 @@
     "id": "akash-codex",
     "title": "codex",
     "description": "codex deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Decentralized Storage",
+    "category": "Akash \u2014 Decentralized Storage",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8466,7 +8496,7 @@
     "id": "akash-ipfs",
     "title": "ipfs",
     "description": "ipfs deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Decentralized Storage",
+    "category": "Akash \u2014 Decentralized Storage",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8491,7 +8521,7 @@
     "id": "akash-thorchain-bepswap",
     "title": "Thorchain-BEPSwap",
     "description": "Thorchain-BEPSwap deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8515,7 +8545,7 @@
     "id": "akash-yearn.finance",
     "title": "Yearn.finance",
     "description": "Yearn.finance deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8539,7 +8569,7 @@
     "id": "akash-balancer",
     "title": "balancer",
     "description": "balancer deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8563,7 +8593,7 @@
     "id": "akash-bancor",
     "title": "bancor",
     "description": "bancor deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8587,7 +8617,7 @@
     "id": "akash-curve",
     "title": "curve",
     "description": "curve deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8611,7 +8641,7 @@
     "id": "akash-osmosis-fe",
     "title": "osmosis-fe",
     "description": "osmosis-fe deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8635,7 +8665,7 @@
     "id": "akash-pancake-swap",
     "title": "pancake-swap",
     "description": "pancake-swap deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8659,7 +8689,7 @@
     "id": "akash-renprotocol",
     "title": "renprotocol",
     "description": "renprotocol deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8683,7 +8713,7 @@
     "id": "akash-sushiswap",
     "title": "sushiswap",
     "description": "sushiswap deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8707,7 +8737,7 @@
     "id": "akash-synthetix.exchange",
     "title": "synthetix.exchange",
     "description": "synthetix.exchange deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8731,7 +8761,7 @@
     "id": "akash-uma-protocol",
     "title": "uma-protocol",
     "description": "uma-protocol deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8755,7 +8785,7 @@
     "id": "akash-uniswap",
     "title": "uniswap",
     "description": "uniswap deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8779,7 +8809,7 @@
     "id": "akash-yfii",
     "title": "yfii",
     "description": "yfii deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Defi",
+    "category": "Akash \u2014 Defi",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8803,7 +8833,7 @@
     "id": "akash-csgo",
     "title": "csgo",
     "description": "csgo deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Game Servers",
+    "category": "Akash \u2014 Game Servers",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8828,7 +8858,7 @@
     "id": "akash-mordhau",
     "title": "mordhau",
     "description": "mordhau deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Game Servers",
+    "category": "Akash \u2014 Game Servers",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8853,7 +8883,7 @@
     "id": "akash-squad",
     "title": "squad",
     "description": "squad deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Game Servers",
+    "category": "Akash \u2014 Game Servers",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8878,7 +8908,7 @@
     "id": "akash-steamcmd",
     "title": "steamcmd",
     "description": "steamcmd deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Game Servers",
+    "category": "Akash \u2014 Game Servers",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8903,7 +8933,7 @@
     "id": "akash-tf2",
     "title": "tf2",
     "description": "tf2 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Game Servers",
+    "category": "Akash \u2014 Game Servers",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8928,7 +8958,7 @@
     "id": "akash-memorygame",
     "title": "MemoryGame",
     "description": "MemoryGame deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8952,7 +8982,7 @@
     "id": "akash-minecraft",
     "title": "minecraft",
     "description": "minecraft deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -8976,7 +9006,7 @@
     "id": "akash-minesweeper",
     "title": "minesweeper",
     "description": "minesweeper deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9000,7 +9030,7 @@
     "id": "akash-pacman",
     "title": "pacman",
     "description": "pacman deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9024,7 +9054,7 @@
     "id": "akash-snake-game",
     "title": "snake-game",
     "description": "snake-game deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9048,7 +9078,7 @@
     "id": "akash-supermario",
     "title": "supermario",
     "description": "supermario deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9072,7 +9102,7 @@
     "id": "akash-tetris",
     "title": "tetris",
     "description": "tetris deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
+    "category": "Akash \u2014 Games",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9094,17 +9124,23 @@
   },
   {
     "id": "akash-tetris2",
-    "title": "tetris2",
-    "description": "tetris2 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Games",
-    "difficulty": "Intermediate",
+    "title": "Tetris2 on Akash",
+    "description": "Deploy the classic Tetris2 game on Akash decentralized cloud. Uses reverse-auction pricing with a max bid of $15/month. Single region (akash-global) with public HTTP ingress on port 80.",
+    "category": "Akash -- Games",
+    "difficulty": "Beginner",
     "time": "5 min",
     "tags": [
       "akash",
       "blazing-core",
-      "games"
+      "games",
+      "decentralized",
+      "reverse-auction",
+      "single-region",
+      "public-ingress"
     ],
-    "technologies": [],
+    "technologies": [
+      "Akash Network"
+    ],
     "products": [
       "blazing-core"
     ],
@@ -9117,10 +9153,111 @@
     "href": "/docs/examples/akash-tetris2"
   },
   {
+    "id": "dfc-tetris2",
+    "title": "Tetris2 on DFC",
+    "description": "Deploy the classic Tetris2 game on DFC (Digital Frontier Cloud). DFC uses Akash blockchain infrastructure underneath with fixed Spot pricing. Region: dfc-pt-lisbon (Lisbon, Portugal). Cost tab displays BASE/PEAK/SAVINGS columns.",
+    "category": "Akash -- Games",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "dfc",
+      "blazing-core",
+      "games",
+      "decentralized",
+      "akash-infrastructure",
+      "fixed-pricing",
+      "single-region",
+      "public-ingress",
+      "europe"
+    ],
+    "technologies": [
+      "DFC",
+      "Akash Network"
+    ],
+    "products": [
+      "blazing-core"
+    ],
+    "primaryProduct": "blazing-core",
+    "files": {
+      "blazing-core": "core.yaml"
+    },
+    "folder_path": "akash/games/tetris2-dfc",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/akash/games/tetris2-dfc",
+    "href": "/docs/examples/dfc-tetris2"
+  },
+  {
+    "id": "gcp-tetris2",
+    "title": "Tetris2 on GCP",
+    "description": "Deploy the classic Tetris2 game on Google Cloud Platform. Uses GCP Standard network tier with fixed pricing in the europe-west1 region. Cost tab displays BASE/PEAK/SAVINGS columns.",
+    "category": "Akash -- Games",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "gcp",
+      "blazing-core",
+      "games",
+      "cloud",
+      "fixed-pricing",
+      "single-region",
+      "public-ingress",
+      "europe"
+    ],
+    "technologies": [
+      "Google Cloud Platform"
+    ],
+    "products": [
+      "blazing-core"
+    ],
+    "primaryProduct": "blazing-core",
+    "files": {
+      "blazing-core": "core.yaml"
+    },
+    "folder_path": "akash/games/tetris2-gcp",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/akash/games/tetris2-gcp",
+    "href": "/docs/examples/gcp-tetris2"
+  },
+  {
+    "id": "multi-tetris2",
+    "title": "Tetris2 Multi-Provider",
+    "description": "Deploy the classic Tetris2 game across 3 providers simultaneously: Akash (global, reverse-auction), GCP (europe-west1, fixed pricing), and DFC (Lisbon, Akash infrastructure). Demonstrates multi-cloud deployment with mixed pricing models in a single cluster.",
+    "category": "Akash -- Games",
+    "difficulty": "Intermediate",
+    "time": "10 min",
+    "tags": [
+      "akash",
+      "gcp",
+      "dfc",
+      "blazing-core",
+      "games",
+      "multi-provider",
+      "multi-cloud",
+      "multi-region",
+      "reverse-auction",
+      "fixed-pricing",
+      "public-ingress",
+      "cost-comparison"
+    ],
+    "technologies": [
+      "Akash Network",
+      "Google Cloud Platform",
+      "DFC"
+    ],
+    "products": [
+      "blazing-core"
+    ],
+    "primaryProduct": "blazing-core",
+    "files": {
+      "blazing-core": "core.yaml"
+    },
+    "folder_path": "akash/games/tetris2-multi",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/akash/games/tetris2-multi",
+    "href": "/docs/examples/multi-tetris2"
+  },
+  {
     "id": "akash-caddy",
     "title": "caddy",
     "description": "caddy deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Hosting",
+    "category": "Akash \u2014 Hosting",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9144,7 +9281,7 @@
     "id": "akash-flame",
     "title": "flame",
     "description": "flame deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Hosting",
+    "category": "Akash \u2014 Hosting",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9168,7 +9305,7 @@
     "id": "akash-grafana",
     "title": "grafana",
     "description": "grafana deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Hosting",
+    "category": "Akash \u2014 Hosting",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9192,7 +9329,7 @@
     "id": "akash-nginx-letsencrypt-proxy",
     "title": "nginx-letsencrypt-proxy",
     "description": "nginx-letsencrypt-proxy deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Hosting",
+    "category": "Akash \u2014 Hosting",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9216,7 +9353,7 @@
     "id": "akash-doccano",
     "title": "doccano",
     "description": "doccano deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9241,7 +9378,7 @@
     "id": "akash-jupyter",
     "title": "jupyter",
     "description": "jupyter deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9266,7 +9403,7 @@
     "id": "akash-ray",
     "title": "ray",
     "description": "ray deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9291,7 +9428,7 @@
     "id": "akash-tensorflow-jupyter-ezkl",
     "title": "tensorflow-jupyter-ezkl",
     "description": "tensorflow-jupyter-ezkl deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9316,7 +9453,7 @@
     "id": "akash-tensorflow-jupyter-mnist",
     "title": "tensorflow-jupyter-mnist",
     "description": "tensorflow-jupyter-mnist deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9341,7 +9478,7 @@
     "id": "akash-tensorflow-serving-mnist",
     "title": "tensorflow-serving-mnist",
     "description": "tensorflow-serving-mnist deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9366,7 +9503,7 @@
     "id": "akash-tensorflow-webapp-mnist",
     "title": "tensorflow-webapp-mnist",
     "description": "tensorflow-webapp-mnist deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Machine Learning",
+    "category": "Akash \u2014 Machine Learning",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9391,7 +9528,7 @@
     "id": "akash-freeflix-nucleus",
     "title": "freeflix-nucleus",
     "description": "freeflix-nucleus deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Media",
+    "category": "Akash \u2014 Media",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9415,7 +9552,7 @@
     "id": "akash-chia-bladebit",
     "title": "chia-bladebit",
     "description": "chia-bladebit deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9440,7 +9577,7 @@
     "id": "akash-chia-bladebit-disk",
     "title": "chia-bladebit-disk",
     "description": "chia-bladebit-disk deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9465,7 +9602,7 @@
     "id": "akash-chia-madmax",
     "title": "chia-madmax",
     "description": "chia-madmax deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9490,7 +9627,7 @@
     "id": "akash-honeygain",
     "title": "honeygain",
     "description": "honeygain deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9515,7 +9652,7 @@
     "id": "akash-iproyal-pawns",
     "title": "iproyal-pawns",
     "description": "iproyal-pawns deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9540,7 +9677,7 @@
     "id": "akash-iron-fish",
     "title": "iron-fish",
     "description": "iron-fish deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9565,7 +9702,7 @@
     "id": "akash-moneroocean",
     "title": "moneroocean",
     "description": "moneroocean deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9590,7 +9727,7 @@
     "id": "akash-packetstream",
     "title": "packetstream",
     "description": "packetstream deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9615,7 +9752,7 @@
     "id": "akash-pkt-miner",
     "title": "pkt-miner",
     "description": "pkt-miner deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9640,7 +9777,7 @@
     "id": "akash-rainbowminer",
     "title": "rainbowminer",
     "description": "rainbowminer deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9665,7 +9802,7 @@
     "id": "akash-raptoreum-miner",
     "title": "raptoreum-miner",
     "description": "raptoreum-miner deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9690,7 +9827,7 @@
     "id": "akash-traffmonetizer",
     "title": "traffmonetizer",
     "description": "traffmonetizer deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9715,7 +9852,7 @@
     "id": "akash-xmrig",
     "title": "xmrig",
     "description": "xmrig deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Cpu",
+    "category": "Akash \u2014 Mining Cpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9740,7 +9877,7 @@
     "id": "akash-bminer-c11",
     "title": "bminer-c11",
     "description": "bminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9765,7 +9902,7 @@
     "id": "akash-bzminer-c11",
     "title": "bzminer-c11",
     "description": "bzminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9790,7 +9927,7 @@
     "id": "akash-cryptodredge-c11",
     "title": "cryptodredge-c11",
     "description": "cryptodredge-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9815,7 +9952,7 @@
     "id": "akash-gminer-c11",
     "title": "gminer-c11",
     "description": "gminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9840,7 +9977,7 @@
     "id": "akash-lolminer-c11",
     "title": "lolminer-c11",
     "description": "lolminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9865,7 +10002,7 @@
     "id": "akash-nanominer-c11",
     "title": "nanominer-c11",
     "description": "nanominer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9890,7 +10027,7 @@
     "id": "akash-nbminer-c11",
     "title": "nbminer-c11",
     "description": "nbminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9915,7 +10052,7 @@
     "id": "akash-onezerominer-c11",
     "title": "onezerominer-c11",
     "description": "onezerominer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9940,7 +10077,7 @@
     "id": "akash-quai-gpu-miner",
     "title": "quai-gpu-miner",
     "description": "quai-gpu-miner deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9965,7 +10102,7 @@
     "id": "akash-rainbowminer-c11",
     "title": "rainbowminer-c11",
     "description": "rainbowminer-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -9990,7 +10127,7 @@
     "id": "akash-rigel-c11",
     "title": "rigel-c11",
     "description": "rigel-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10015,7 +10152,7 @@
     "id": "akash-srbminer-multi-c11",
     "title": "srbminer-multi-c11",
     "description": "srbminer-multi-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10040,7 +10177,7 @@
     "id": "akash-t-rex-c11",
     "title": "t-rex-c11",
     "description": "t-rex-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10065,7 +10202,7 @@
     "id": "akash-wildrig-multi-c11",
     "title": "wildrig-multi-c11",
     "description": "wildrig-multi-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10090,7 +10227,7 @@
     "id": "akash-xmrig-c11",
     "title": "xmrig-c11",
     "description": "xmrig-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10115,7 +10252,7 @@
     "id": "akash-xmrig-moneroocean-c11",
     "title": "xmrig-moneroocean-c11",
     "description": "xmrig-moneroocean-c11 deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Gpu",
+    "category": "Akash \u2014 Mining Gpu",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10140,7 +10277,7 @@
     "id": "akash-kawpow-pool-meowcoin",
     "title": "kawpow-pool-meowcoin",
     "description": "kawpow-pool-meowcoin deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Pools",
+    "category": "Akash \u2014 Mining Pools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10165,7 +10302,7 @@
     "id": "akash-kawpow-pool-neoxa",
     "title": "kawpow-pool-neoxa",
     "description": "kawpow-pool-neoxa deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Pools",
+    "category": "Akash \u2014 Mining Pools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10190,7 +10327,7 @@
     "id": "akash-kawpow-pool-ravencoin",
     "title": "kawpow-pool-ravencoin",
     "description": "kawpow-pool-ravencoin deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Pools",
+    "category": "Akash \u2014 Mining Pools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10215,7 +10352,7 @@
     "id": "akash-monero-pool",
     "title": "monero-pool",
     "description": "monero-pool deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Mining Pools",
+    "category": "Akash \u2014 Mining Pools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10240,7 +10377,7 @@
     "id": "akash-sentinel-dvpn-node",
     "title": "Sentinel-dVPN-node",
     "description": "Sentinel-dVPN-node deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10264,7 +10401,7 @@
     "id": "akash-cjdns-pkt",
     "title": "cjdns-pkt",
     "description": "cjdns-pkt deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10288,7 +10425,7 @@
     "id": "akash-softether-vpn",
     "title": "softether-vpn",
     "description": "softether-vpn deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10312,7 +10449,7 @@
     "id": "akash-tor-proxy",
     "title": "tor-proxy",
     "description": "tor-proxy deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10336,7 +10473,7 @@
     "id": "akash-v2ray",
     "title": "v2ray",
     "description": "v2ray deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10360,7 +10497,7 @@
     "id": "akash-x-ui",
     "title": "x-ui",
     "description": "x-ui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Network",
+    "category": "Akash \u2014 Network",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10384,7 +10521,7 @@
     "id": "akash-lunie-lite",
     "title": "lunie-lite",
     "description": "lunie-lite deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Official",
+    "category": "Akash \u2014 Official",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10408,7 +10545,7 @@
     "id": "akash-ssh-ubuntu",
     "title": "ssh-ubuntu",
     "description": "ssh-ubuntu deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Official",
+    "category": "Akash \u2014 Official",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10432,7 +10569,7 @@
     "id": "akash-qbittorrent",
     "title": "qbittorrent",
     "description": "qbittorrent deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Peer To Peer File Sharing",
+    "category": "Akash \u2014 Peer To Peer File Sharing",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10459,7 +10596,7 @@
     "id": "akash-jira",
     "title": "jira",
     "description": "jira deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Project Management",
+    "category": "Akash \u2014 Project Management",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10484,7 +10621,7 @@
     "id": "akash-kanboard",
     "title": "kanboard",
     "description": "kanboard deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Project Management",
+    "category": "Akash \u2014 Project Management",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10509,7 +10646,7 @@
     "id": "akash-redmine",
     "title": "redmine",
     "description": "redmine deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Project Management",
+    "category": "Akash \u2014 Project Management",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10534,7 +10671,7 @@
     "id": "akash-elasticsearch",
     "title": "elasticsearch",
     "description": "elasticsearch deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Search Engines",
+    "category": "Akash \u2014 Search Engines",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10559,7 +10696,7 @@
     "id": "akash-presearch",
     "title": "presearch",
     "description": "presearch deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Search Engines",
+    "category": "Akash \u2014 Search Engines",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10584,7 +10721,7 @@
     "id": "akash-whoogle-search",
     "title": "whoogle-search",
     "description": "whoogle-search deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Search Engines",
+    "category": "Akash \u2014 Search Engines",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10609,7 +10746,7 @@
     "id": "akash-yacy",
     "title": "yacy",
     "description": "yacy deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Search Engines",
+    "category": "Akash \u2014 Search Engines",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10634,7 +10771,7 @@
     "id": "akash-discourse",
     "title": "discourse",
     "description": "discourse deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Social",
+    "category": "Akash \u2014 Social",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10658,7 +10795,7 @@
     "id": "akash-waku",
     "title": "waku",
     "description": "waku deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Social",
+    "category": "Akash \u2014 Social",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10682,7 +10819,7 @@
     "id": "akash-codimd",
     "title": "CodiMD",
     "description": "CodiMD deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10706,7 +10843,7 @@
     "id": "akash-periodic-table-creator",
     "title": "Periodic-Table-Creator",
     "description": "Periodic-Table-Creator deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10730,7 +10867,7 @@
     "id": "akash-anubis",
     "title": "anubis",
     "description": "anubis deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10754,7 +10891,7 @@
     "id": "akash-authsteem",
     "title": "authsteem",
     "description": "authsteem deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10778,7 +10915,7 @@
     "id": "akash-budibase",
     "title": "budibase",
     "description": "budibase deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10802,7 +10939,7 @@
     "id": "akash-code-server",
     "title": "code-server",
     "description": "code-server deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10826,7 +10963,7 @@
     "id": "akash-dart",
     "title": "dart",
     "description": "dart deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10850,7 +10987,7 @@
     "id": "akash-folding-at-home",
     "title": "folding-at-home",
     "description": "folding-at-home deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10874,7 +11011,7 @@
     "id": "akash-hashicorp-vault",
     "title": "hashicorp-vault",
     "description": "hashicorp-vault deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10898,7 +11035,7 @@
     "id": "akash-keycloak-iam",
     "title": "keycloak-iam",
     "description": "keycloak-iam deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10922,7 +11059,7 @@
     "id": "akash-libretranslate",
     "title": "libretranslate",
     "description": "libretranslate deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10946,7 +11083,7 @@
     "id": "akash-matomo",
     "title": "matomo",
     "description": "matomo deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10970,7 +11107,7 @@
     "id": "akash-memos",
     "title": "memos",
     "description": "memos deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -10994,7 +11131,7 @@
     "id": "akash-microbox",
     "title": "microbox",
     "description": "microbox deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11018,7 +11155,7 @@
     "id": "akash-nextcloud",
     "title": "nextcloud",
     "description": "nextcloud deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11042,7 +11179,7 @@
     "id": "akash-onetimepad",
     "title": "onetimepad",
     "description": "onetimepad deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11066,7 +11203,7 @@
     "id": "akash-owncloud",
     "title": "owncloud",
     "description": "owncloud deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11090,7 +11227,7 @@
     "id": "akash-quill-editor",
     "title": "quill-editor",
     "description": "quill-editor deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11114,7 +11251,7 @@
     "id": "akash-shiori",
     "title": "shiori",
     "description": "shiori deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11138,7 +11275,7 @@
     "id": "akash-swagger-ui",
     "title": "swagger-ui",
     "description": "swagger-ui deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11162,7 +11299,7 @@
     "id": "akash-thirdweb",
     "title": "thirdweb",
     "description": "thirdweb deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11186,7 +11323,7 @@
     "id": "akash-uptime-kuma",
     "title": "uptime-kuma",
     "description": "uptime-kuma deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11210,7 +11347,7 @@
     "id": "akash-vaultwarden",
     "title": "vaultwarden",
     "description": "vaultwarden deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11234,7 +11371,7 @@
     "id": "akash-webtop",
     "title": "webtop",
     "description": "webtop deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11258,7 +11395,7 @@
     "id": "akash-zammad",
     "title": "zammad",
     "description": "zammad deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Tools",
+    "category": "Akash \u2014 Tools",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11282,7 +11419,7 @@
     "id": "akash-jitsi-meet",
     "title": "jitsi-meet",
     "description": "jitsi-meet deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Video Conferencing",
+    "category": "Akash \u2014 Video Conferencing",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11307,7 +11444,7 @@
     "id": "akash-myetherwallet",
     "title": "MyEtherWallet",
     "description": "MyEtherWallet deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Wallet",
+    "category": "Akash \u2014 Wallet",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11331,7 +11468,7 @@
     "id": "akash-tronwallet",
     "title": "tronwallet",
     "description": "tronwallet deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Wallet",
+    "category": "Akash \u2014 Wallet",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11355,7 +11492,7 @@
     "id": "akash-gin",
     "title": "gin",
     "description": "gin deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Web Frameworks",
+    "category": "Akash \u2014 Web Frameworks",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11380,7 +11517,7 @@
     "id": "akash-nextjs",
     "title": "nextjs",
     "description": "nextjs deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Web Frameworks",
+    "category": "Akash \u2014 Web Frameworks",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11405,7 +11542,7 @@
     "id": "akash-react",
     "title": "react",
     "description": "react deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Web Frameworks",
+    "category": "Akash \u2014 Web Frameworks",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [
@@ -11430,7 +11567,7 @@
     "id": "akash-ruby-on-rails",
     "title": "ruby-on-rails",
     "description": "ruby-on-rails deployed on Akash Network via Blazing Core.",
-    "category": "Akash — Web Frameworks",
+    "category": "Akash \u2014 Web Frameworks",
     "difficulty": "Intermediate",
     "time": "5 min",
     "tags": [

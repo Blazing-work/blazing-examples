@@ -84,6 +84,44 @@ def extract_legacy_metadata(content: str) -> dict | None:
     }
 
 
+def scan_akash_examples(repo_path: Path) -> list[dict]:
+    """Scan akash/ directory tree for examples with meta.json files."""
+    examples = []
+    akash_dir = repo_path / "akash"
+
+    if not akash_dir.exists():
+        return examples
+
+    # Walk the akash directory tree
+    for meta_path in sorted(akash_dir.rglob("meta.json")):
+        # Get the directory containing meta.json
+        example_dir = meta_path.parent
+
+        # Extract category and name from path: akash/<category>/<name>/meta.json
+        relative_parts = example_dir.relative_to(akash_dir).parts
+        if len(relative_parts) != 2:
+            # Skip files not in the expected structure
+            continue
+
+        category_name, folder_name = relative_parts
+
+        # Load metadata
+        try:
+            with open(meta_path, "r", encoding="utf-8") as f:
+                metadata = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            print(f"Warning: Could not load {meta_path}")
+            continue
+
+        # Build akash entry
+        example = build_akash_example_entry(
+            metadata, category_name, folder_name, f"akash/{category_name}/{folder_name}"
+        )
+        examples.append(example)
+
+    return examples
+
+
 def generate_manifest(repo_path: Path) -> list[dict]:
     """Generate manifest from all examples (folder-based and legacy)."""
     examples = []
@@ -138,6 +176,12 @@ def generate_manifest(repo_path: Path) -> list[dict]:
             )
             examples.append(example)
 
+    # Scan akash/ directory tree
+    examples.extend(scan_akash_examples(repo_path))
+
+    # Sort by folder_path for deterministic output
+    examples.sort(key=lambda e: e.get("folder_path", ""))
+
     return examples
 
 
@@ -184,6 +228,28 @@ def build_legacy_example_entry(
         "folder_path": f"{category_dir_name}/{file_name}",
         "github_url": f"https://github.com/Blazing-work/blazing-examples/blob/main/{category_dir_name}/{file_name}",
         "href": f"/docs/{file_stem}",
+    }
+
+
+def build_akash_example_entry(
+    metadata: dict, category_name: str, folder_name: str, folder_path: str
+) -> dict:
+    """Build example entry for Akash examples."""
+    return {
+        "id": metadata.get("id", f"akash-{folder_name}"),
+        "title": metadata.get("title", folder_name.replace("_", " ").title()),
+        "description": metadata.get("description", ""),
+        "category": metadata.get("category", f"Akash — {category_name.replace('_', ' ').title()}"),
+        "difficulty": metadata.get("difficulty", "Intermediate"),
+        "time": metadata.get("time", "15 min"),
+        "tags": metadata.get("tags", []),
+        "technologies": metadata.get("technologies", []),
+        "products": metadata.get("products", ["blazing-core"]),
+        "primaryProduct": metadata.get("primaryProduct", "blazing-core"),
+        "files": {"blazing-core": "core.yaml"},
+        "folder_path": folder_path,
+        "github_url": f"https://github.com/Blazing-work/blazing-examples/blob/main/{folder_path}",
+        "href": f"/docs/examples/{metadata.get('id', f'akash-{folder_name}')}",
     }
 
 
