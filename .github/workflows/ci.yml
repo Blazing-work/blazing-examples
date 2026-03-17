@@ -32,6 +32,74 @@ jobs:
       - name: Run Ruff formatter check
         run: uv run ruff format --check .
 
+  manifest-sync:
+    name: Manifest Sync Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv venv --python 3.12
+
+      - name: Generate manifest
+        run: python3 generate_manifest.py
+
+      - name: Check manifest is in sync
+        run: |
+          if ! git diff --exit-code examples.json; then
+            echo "examples.json is out of sync with filesystem."
+            echo "Run 'python3 generate_manifest.py' and commit the changes."
+            exit 1
+          fi
+
+  schema-validation:
+    name: Schema Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv venv --python 3.12
+
+      - name: Install dependencies
+        run: uv pip install jsonschema
+
+      - name: Validate meta.json files against schema
+        run: |
+          python3 << 'VALIDATOR_EOF'
+          import json
+          import pathlib
+          from jsonschema import validate, ValidationError
+
+          schema = json.load(open('meta_schema.json'))
+          errors = 0
+          validated_files = []
+
+          for meta_path in sorted(pathlib.Path('.').rglob('meta.json')):
+              try:
+                  data = json.load(open(meta_path))
+                  validate(data, schema)
+                  validated_files.append(str(meta_path))
+              except ValidationError as e:
+                  print(f'FAIL: {meta_path}: {e.message}')
+                  errors += 1
+              except json.JSONDecodeError as e:
+                  print(f'FAIL: {meta_path}: Invalid JSON - {e}')
+                  errors += 1
+
+          print(f'Validated {len(validated_files)} meta.json files')
+          if errors > 0:
+              print(f'{errors} validation error(s) found')
+              exit(1)
+          print('All meta.json files passed schema validation')
+          VALIDATOR_EOF
+
   validate:
     name: Validate Examples
     runs-on: ubuntu-latest

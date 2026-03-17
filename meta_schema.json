@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Example Metadata Schema",
+  "description": "Schema for validating meta.json files in example directories",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "description",
+    "category",
+    "difficulty",
+    "time",
+    "tags",
+    "products",
+    "primaryProduct"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for the example"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable title of the example"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of what the example demonstrates"
+    },
+    "category": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Category or topic area for the example"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["Beginner", "Intermediate", "Advanced"],
+      "description": "Difficulty level of the example"
+    },
+    "time": {
+      "type": "string",
+      "pattern": "^\\d+\\s+(min|hour)$",
+      "description": "Estimated time to complete (e.g., '15 min' or '2 hour')"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of tags for categorization and search"
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of technologies used in the example"
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "List of Blazing products used"
+    },
+    "primaryProduct": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Primary Blazing product for this example"
+    }
+  },
+  "additionalProperties": true
+}
