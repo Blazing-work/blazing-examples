@@ -9217,6 +9217,40 @@
     "href": "/docs/examples/gcp-tetris2"
   },
   {
+    "id": "gcp-spot-tetris2",
+    "title": "Tetris2 on GCP Spot",
+    "description": "Deploy the classic Tetris2 game on GCP using spot (preemptible) instances for 60-90% cost savings. Baseline replica runs on standard on-demand nodes for reliability; burst replicas scale onto spot nodes. Cost tab displays spot rate pricing ($0.0472/core/hr).",
+    "category": "Akash -- Games",
+    "difficulty": "Beginner",
+    "time": "5 min",
+    "tags": [
+      "gcp",
+      "spot",
+      "preemptible",
+      "blazing-core",
+      "games",
+      "cloud",
+      "cost-optimization",
+      "autoscaling",
+      "single-region",
+      "public-ingress",
+      "europe"
+    ],
+    "technologies": [
+      "Google Cloud Platform"
+    ],
+    "products": [
+      "blazing-core"
+    ],
+    "primaryProduct": "blazing-core",
+    "files": {
+      "blazing-core": "core.yaml"
+    },
+    "folder_path": "akash/games/tetris2-gcp-spot",
+    "github_url": "https://github.com/Blazing-work/blazing-examples/blob/main/akash/games/tetris2-gcp-spot",
+    "href": "/docs/examples/gcp-spot-tetris2"
+  },
+  {
     "id": "multi-tetris2",
     "title": "Tetris2 Multi-Provider",
     "description": "Deploy the classic Tetris2 game across 3 providers simultaneously: Akash (global, reverse-auction), GCP (europe-west1, fixed pricing), and DFC (Lisbon, Akash infrastructure). Demonstrates multi-cloud deployment with mixed pricing models in a single cluster.",

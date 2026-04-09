@@ -1,0 +1,42 @@
+version: v0.2
+organization_id: '{{ORG_ID}}'
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+
+cluster:
+  name: tetris2-gcp-spot
+
+providers:
+  gcp:
+    status: prefer
+    network_tier: Standard
+    ip_version: IPV4
+    node_pools:
+      baseline: standard
+      burst: spot
+
+regions:
+  mode: explicit
+  explicit:
+    - region_id: gcp-europe-west1
+      provider: gcp
+      is_primary: true
+      network_tier: Standard
+      ip_version: IPV4
+
+services:
+  tetris:
+    image: uzyexe/tetris
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    autoscaling:
+      min_replicas: 1
+      max_replicas: 3
+    mesh:
+      enabled: false
+    network:
+      ingress:
+        port: 80
+        public: true

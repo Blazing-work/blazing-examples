@@ -1,0 +1,32 @@
+version: v0.2
+project_id: '{{PROJECT_ID}}'
+cluster_id: '{{CLUSTER_ID}}'
+
+cluster:
+  name: tetris2-gcp-spot
+
+providers:
+  akash:
+    status: prefer
+    max_price: 15.00
+
+regions:
+  mode: explicit
+  explicit:
+    - region_id: akash-global
+      provider: akash
+      is_primary: true
+
+services:
+  tetris:
+    image: uzyexe/tetris
+    cpu: 0.5
+    memory: 512Mi
+    storage:
+      size: 512Mi
+    mesh:
+      enabled: false
+    network:
+      ingress:
+        port: 80
+        public: true
