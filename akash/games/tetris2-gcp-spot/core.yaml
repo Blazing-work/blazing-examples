@@ -7,6 +7,11 @@ cluster:
   name: tetris2-gcp-spot
 
 providers:
+  dcf:
+    status: prefer
+  akash:
+    status: fallback
+    max_price: 15.00
   gcp:
     status: prefer
     network_tier: Standard
