@@ -19,11 +19,28 @@ from blazing.base import BudgetExceededError
 from blazing_service.connectors import SecretsConnector, OpenAIConnector
 
 _FREE_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
+_PAID_FALLBACK = "mistralai/mistral-nemo"  # paid fallback — used when free tier is rate-limited
 
 pytestmark = [
     pytest.mark.asyncio,
     pytest.mark.skipif(not os.getenv("OPENROUTER_API_KEY"), reason="OPENROUTER_API_KEY not set"),
 ]
+
+
+async def chat_with_fallback(connector, messages, **kwargs):
+    """Try the free model first; on 429 rate-limit fall back to the paid tier."""
+    for model in (_FREE_MODEL, _PAID_FALLBACK):
+        try:
+            return await connector.chat(messages=messages, model=model, **kwargs)
+        except Exception as e:
+            is_rate_limit = (
+                "429" in str(e)
+                or "rate_limit" in str(e).lower()
+                or type(e).__name__ == "RateLimitError"
+            )
+            if is_rate_limit and model == _FREE_MODEL:
+                continue  # retry with paid fallback
+            raise
 
 
 @pytest_asyncio.fixture
@@ -45,9 +62,9 @@ async def openrouter_connector():
 @pytest.mark.timeout(60)
 async def test_chat_completion(openrouter_connector):
     """Chat returns a non-empty content string with token tracking."""
-    response = await openrouter_connector.chat(
+    response = await chat_with_fallback(
+        openrouter_connector,
         messages=[{"role": "user", "content": "Reply with exactly: pong"}],
-        model=_FREE_MODEL,
         max_tokens=10,
     )
     assert isinstance(response["content"], str)
@@ -58,12 +75,12 @@ async def test_chat_completion(openrouter_connector):
 @pytest.mark.timeout(60)
 async def test_system_message(openrouter_connector):
     """System + user messages processed correctly."""
-    response = await openrouter_connector.chat(
+    response = await chat_with_fallback(
+        openrouter_connector,
         messages=[
             {"role": "system", "content": "You are a calculator. Reply with only the number."},
             {"role": "user", "content": "What is 2+2?"},
         ],
-        model=_FREE_MODEL,
         max_tokens=20,
     )
     assert "4" in response["content"]
