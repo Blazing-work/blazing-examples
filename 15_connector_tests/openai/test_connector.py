@@ -18,8 +18,11 @@ import pytest_asyncio
 from blazing.base import BudgetExceededError
 from blazing_service.connectors import SecretsConnector, OpenAIConnector
 
-_FREE_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
-_PAID_FALLBACK = "mistralai/mistral-nemo"  # paid fallback — used when free tier is rate-limited
+_FREE_MODELS = [
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "google/gemma-2-9b-it:free",
+    "mistralai/mistral-7b-instruct:free",
+]
 
 pytestmark = [
     pytest.mark.asyncio,
@@ -28,19 +31,25 @@ pytestmark = [
 
 
 async def chat_with_fallback(connector, messages, **kwargs):
-    """Try the free model first; on 429 rate-limit fall back to the paid tier."""
-    for model in (_FREE_MODEL, _PAID_FALLBACK):
+    """Try multiple free models; skip on rate-limit / payment errors."""
+    last_err = None
+    for model in _FREE_MODELS:
         try:
             return await connector.chat(messages=messages, model=model, **kwargs)
         except Exception as e:
-            is_rate_limit = (
+            err_str = str(e).lower()
+            is_retryable = (
                 "429" in str(e)
-                or "rate_limit" in str(e).lower()
+                or "402" in str(e)
+                or "rate_limit" in err_str
+                or "spend limit" in err_str
                 or type(e).__name__ == "RateLimitError"
             )
-            if is_rate_limit and model == _FREE_MODEL:
-                continue  # retry with paid fallback
+            if is_retryable:
+                last_err = e
+                continue
             raise
+    raise last_err
 
 
 @pytest_asyncio.fixture
@@ -100,7 +109,7 @@ async def test_budget_exceeded_error():
         with pytest.raises(BudgetExceededError):
             await connector.chat(
                 messages=[{"role": "user", "content": "This will exceed the 10-token budget"}],
-                model=_FREE_MODEL,
+                model=_FREE_MODELS[0],
                 max_tokens=50,
             )
     finally:
