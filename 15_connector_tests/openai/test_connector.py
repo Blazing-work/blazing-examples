@@ -18,11 +18,7 @@ import pytest_asyncio
 from blazing.base import BudgetExceededError
 from blazing_service.connectors import SecretsConnector, OpenAIConnector
 
-_FREE_MODELS = [
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "google/gemma-2-9b-it:free",
-    "mistralai/mistral-7b-instruct:free",
-]
+_FREE_MODEL = "openrouter/free"
 
 pytestmark = [
     pytest.mark.asyncio,
@@ -31,25 +27,8 @@ pytestmark = [
 
 
 async def chat_with_fallback(connector, messages, **kwargs):
-    """Try multiple free models; skip on rate-limit / payment errors."""
-    last_err = None
-    for model in _FREE_MODELS:
-        try:
-            return await connector.chat(messages=messages, model=model, **kwargs)
-        except Exception as e:
-            err_str = str(e).lower()
-            is_retryable = (
-                "429" in str(e)
-                or "402" in str(e)
-                or "rate_limit" in err_str
-                or "spend limit" in err_str
-                or type(e).__name__ == "RateLimitError"
-            )
-            if is_retryable:
-                last_err = e
-                continue
-            raise
-    raise last_err
+    """Call via OpenRouter free model router (zero cost)."""
+    return await connector.chat(messages=messages, model=_FREE_MODEL, **kwargs)
 
 
 @pytest_asyncio.fixture
@@ -109,7 +88,7 @@ async def test_budget_exceeded_error():
         with pytest.raises(BudgetExceededError):
             await connector.chat(
                 messages=[{"role": "user", "content": "This will exceed the 10-token budget"}],
-                model=_FREE_MODELS[0],
+                model=_FREE_MODEL,
                 max_tokens=50,
             )
     finally:
