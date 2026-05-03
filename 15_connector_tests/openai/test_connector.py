@@ -55,6 +55,7 @@ async def test_chat_completion(openrouter_connector):
         messages=[{"role": "user", "content": "Reply with exactly: pong"}],
         max_tokens=10,
     )
+    assert response["content"] is not None, "model returned null content"
     assert isinstance(response["content"], str)
     assert len(response["content"]) > 0
     assert openrouter_connector.tokens_used > 0
