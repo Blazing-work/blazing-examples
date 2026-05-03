@@ -72,6 +72,7 @@ async def test_system_message(openrouter_connector):
         ],
         max_tokens=20,
     )
+    assert response["content"] is not None, "model returned null content"
     assert "4" in response["content"]
 
 
