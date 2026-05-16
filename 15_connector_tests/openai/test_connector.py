@@ -53,7 +53,10 @@ async def test_chat_completion(openrouter_connector):
     response = await chat_with_fallback(
         openrouter_connector,
         messages=[{"role": "user", "content": "Reply with exactly: pong"}],
-        max_tokens=10,
+        # 512: enough headroom for a reasoning model to finish its reasoning
+        # tokens AND emit content. The openrouter/free router may resolve to a
+        # reasoning model; a tiny cap truncates it mid-reasoning -> null content.
+        max_tokens=512,
     )
     assert response["content"] is not None, "model returned null content"
     assert isinstance(response["content"], str)
@@ -70,7 +73,9 @@ async def test_system_message(openrouter_connector):
             {"role": "system", "content": "You are a calculator. Reply with only the number."},
             {"role": "user", "content": "What is 2+2?"},
         ],
-        max_tokens=20,
+        # 512: see note in test_chat_completion — reasoning models need room
+        # to finish reasoning before emitting the answer.
+        max_tokens=512,
     )
     assert response["content"] is not None, "model returned null content"
     assert "4" in response["content"]
