@@ -66,7 +66,35 @@ async def test_chat_completion(openrouter_connector):
 
 @pytest.mark.timeout(60)
 async def test_system_message(openrouter_connector):
-    """System + user messages processed correctly."""
+    """A system+user conversation is accepted and answered.
+
+    ⚠️ DELIBERATELY DOES NOT ASSERT THE MODEL'S ANSWER.
+
+    This used to send "You are a calculator" / "What is 2+2?" and assert `"4" in
+    content`. `_FREE_MODEL` is `openrouter/free`, a ROUTER that resolves to whatever
+    free model is available at that moment — so the assertion tested that minute's
+    model, not this connector. It failed in CI with:
+
+        AssertionError: assert '4' in 'User Safety: safe'
+
+    i.e. the router landed on something that answered with a moderation verdict. Same
+    branch, two commits, opposite results, with nothing changed that the test touches.
+    (blazing#461.)
+
+    The guarantee worth having — that a system message is transmitted with role
+    "system" ahead of the user turn — IS tested, deterministically and without a
+    network call, in the blazing repo:
+
+        tests/test_llm_connector.py::TestOpenAIConnector::test_chat_with_system_message
+            body = mock_connector._client.post.call_args.kwargs["json"]
+            assert body["messages"][0]["role"] == "system"
+            assert body["messages"][1]["role"] == "user"
+
+    So asserting model semantics here added no coverage and one flaky check. What is
+    left is the live-path contract, matching the other tests in this file:
+    test_chat_completion prompts "Reply with exactly: pong" and likewise never asserts
+    "pong".
+    """
     response = await chat_with_fallback(
         openrouter_connector,
         messages=[
@@ -78,7 +106,9 @@ async def test_system_message(openrouter_connector):
         max_tokens=512,
     )
     assert response["content"] is not None, "model returned null content"
-    assert "4" in response["content"]
+    assert isinstance(response["content"], str)
+    assert len(response["content"]) > 0, "a system+user conversation produced no completion"
+    assert openrouter_connector.tokens_used > 0, "the call was not accounted for"
 
 
 @pytest.mark.timeout(30)
